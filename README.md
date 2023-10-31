@@ -13,8 +13,12 @@ Nuestro sitio está diseñado para satisfacer las necesidades de los amantes del
 
 Este proyecto está desarrollado por:
 
-- Federico Jael Canto: 
+- Federico Jael Canto:
+  
 - Noelia Carabajal:
+  
 - Gonzalo Corbal:
+  
 - Facundo Romero:
+  
 - Camila Ventura Dubois: Soy estudiante en el curso FullStack Web Developer de Digital House. Desde chica soy apasionada por el mundo de los videojuegos y todo lo relacionado a computadoras. Empezó a interesarme la programación web el día que monté un servidor para un videojuego y este me vino con una web predeterminada que quería modificar, yo no sabía hacerlo y fui tocando cosas por intuición (No lo recomiendo), pero aprendí con tutoriales un poco y noté que me gustaba, ahora apunto a volverme una profesional aunque no me decido si en el front o en el back. Tengo nivel 4 en inglés, me gusta mucho el diseño gráfico y multimedial, por lo que tengo conocimientos básicos en Phosothop, Vegas Pro, After Effects, entre otros programas.
