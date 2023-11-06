@@ -15,8 +15,8 @@ Este proyecto está desarrollado por:
 
 - Federico Jael Canto:
   
-- Noelia Carabajal:
-  
+- Noelia Carabajal: Tengo 29 años, soy mamá de una nena de casi 3 añitos. Soy una persona activa, sociable y compañera. Este año no queria dejar pasar la gran oportunidad de aprender este emocionante viaje que es la programación, obtener nuevos conocimientos y poder llevarlos al mundo profesional. 
+- 
 - Gonzalo Corbal: Tengo 22 años y hace tiempo estoy interesado por el mundo de la programacion y la informatica. Soy una persona curiosa y me gusta investigar y descubrir cosas nuevas, por eso me gusta la programacion ya que es un area en constante cambio y desarrollo en la que se puede probar y experimentar mucho. Este es mi primer proyecto grande, en el que espero sacarle el mayor provecho y aprender lo maximo posible mientras lo realizamos, para luego tener una solida formacion y poder desarrollarme profesionalmente en este mundo.
   
 - Facundo Romero:
