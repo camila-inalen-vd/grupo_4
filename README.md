@@ -23,7 +23,7 @@ Para la elaboracion del diseño de las distintas paginas de nuestro sitio, nos i
 
 Este proyecto está desarrollado por:
 
-- Federico Jael Canto: Tengo 33 años me siento una persona proactiva y autodidacta. Apasionado por el hardware/software de la computacion. Llego a esta cerrera como   estudiante de FullStack web developer en Digital House ya que laboralmente me encuentro trabajando en una empresa de tecnologia en el departamento de Tecnologia de la informacion, de esta manera busco la manera de crecer laboral y profesionalmente.
+- Federico Jael Canto: Tengo 33 años me siento una persona proactiva y autodidacta. Apasionado por el hardware/software de la computacion. Llego a esta carrera como   estudiante de FullStack web developer en Digital House ya que laboralmente me encuentro trabajando en una empresa de tecnologia en el departamento de Tecnologia de la informacion, de esta manera busco la manera de crecer laboral y profesionalmente.
 Me di cuenta que me gusta programar luego de cursar la materia de programacion I, programacion II en la carrera la cual me recibi como Analista de Sistemas y eso fue lo que desperto mi pasion por esta profesion de programar.
 Este es mi primer proyecto web grande, por lo que prometo dejar todos las ganas y mis conocomientos para poder llevarlo adelante. Tambien ayudar a mi equipo en todo lo que conozca y pueda aportar para sumar en este proyecto.
   
