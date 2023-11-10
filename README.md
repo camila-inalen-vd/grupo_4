@@ -1,9 +1,9 @@
 # Nombre del Proyecto
-Eligiendo...
+The Shoes Market
 
 ## Descripción
 
-¡Bienvenidos a "Nombre del Sitio"! Somos una marca de renombre en la industria del calzado, y en este repositorio, te presentamos nuestra amplia gama de zapatillas de alta calidad. Nuestro compromiso es ofrecer a nuestros clientes la máxima calidad en calzado, combinando una estética excepcional con un confort inigualable.
+¡Bienvenidos a "The Shoes Market"! Somos una marca de renombre en la industria del calzado, y en este repositorio, te presentamos nuestra amplia gama de zapatillas de alta calidad. Nuestro compromiso es ofrecer a nuestros clientes la máxima calidad en calzado, combinando una estética excepcional con un confort inigualable.
 
 ## Público Objetivo
 
