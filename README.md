@@ -9,6 +9,16 @@ Eligiendo...
 
 Nuestro sitio está diseñado para satisfacer las necesidades de los amantes del calzado que buscan más que solo un par de zapatillas. Nos dirigimos a aquellos que valoran tanto el estilo como la comodidad en sus elecciones de calzado, y que desean destacar en cada paso que dan.
 
+## Paginas de referencia
+
+Para la elaboracion del diseño de las distintas paginas de nuestro sitio, nos inspiramos en las siguientes paginas webs:
+
+- mercadolibre.com
+- solodeportes.com
+- facebook.com
+- fravega.com
+- udemy.com
+
 ## Equipo
 
 Este proyecto está desarrollado por:
