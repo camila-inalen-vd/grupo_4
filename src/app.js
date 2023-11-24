@@ -30,3 +30,7 @@ app.get('/register', (req, res) => {
 app.get('/login', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/login.html'))
 })
+
+app.get('/searchproduct', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './views/searchproduct.html'))
+})
