@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url("/images/3.png");
+    background-size: 200px;
+    padding-top: 10%;
+}
+section{
+    width: 90%;
+    border: solid 1px #111;
+    padding: 20px 0;
+    margin: auto;
+    max-width: 500px;
+    text-align: center;
+    background-color: #ebebeb;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+h2{
+    font-size: 2rem;
+}
+.form{
+    font-size: 15px;
+    margin: 10px 0;
+}
+.form label{
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+.form input{
+    width: 80%;
+    padding: 8px;
+}
+form button{
+    color: #ebebeb;
+    background-color: #03264C;
+    border-radius: 5px;
+    font-size: 18px;
+    width: 70%;
+    height: 30px;
+}
+.recuperar{
+    font-size: 0.9rem;
+    color: #111;
+    margin-top: 3px;
+}
+.crear{
+    font-size: 0.9rem;
+    font-weight: 100;
+    width: 65%;
+    margin: auto;
+    margin-top: 3px;
+}
