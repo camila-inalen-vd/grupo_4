@@ -68,6 +68,14 @@ section h1 {
     margin-bottom: 5%;
 }
 
+footer {
+    background-color: #080705;
+    color: white;
+    text-align: center;
+    padding: 10%;
+    margin-top: 20px;
+}
+
 @media (min-width: 361px) {
     article {
         width: 40%;
