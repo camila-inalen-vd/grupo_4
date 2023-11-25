@@ -32,5 +32,5 @@ app.get('/login', (req, res) => {
 })
 
 app.get('/searchproduct', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/searchproduct.html'))
+    res.sendFile(path.resolve(__dirname, './views/searchProduct.html'))
 })
