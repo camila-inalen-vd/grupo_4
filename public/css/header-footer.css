@@ -5,13 +5,10 @@
     font-family: Raleway;
 }
 
-body{
-    background-color: #F1E8B8; 
-}
-
 header {
     /* background-color: #427AA1; */
     background: linear-gradient(135deg, rgb(207, 205, 192) 10%, hsla(205, 42%, 45%, 1) 100%);
+    width: 100%;
 }
 
 /* Contenedor principal de arriba del header */
@@ -75,6 +72,7 @@ header {
 .bottom-header {
     display: flex;
     justify-content: space-between;
+    border-top: solid 1px #CFCFEA;
     /* background-color: aquamarine; */
 }
 
@@ -102,7 +100,9 @@ nav {
     .top-header-main{
         justify-content: space-between;
     }
-
+    .container-flex {
+        display: flex;
+    }
     .top-header1 {
         justify-content: flex-start;
         width: 30%;
