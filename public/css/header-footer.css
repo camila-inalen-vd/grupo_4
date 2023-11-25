@@ -96,6 +96,10 @@ nav {
     display: none;
 }
 
+#banner {
+    width: 100%;
+}
+
 @media (min-width: 361px) {
     .top-header-main{
         justify-content: space-between;
@@ -105,15 +109,19 @@ nav {
     }
     .top-header1 {
         justify-content: flex-start;
-        width: 30%;
+        width: 20%;
     }
     .top-header2 {
         justify-content: center;
-        width: 40%;
+        width: 50%;
     }
     .top-header3 {
         justify-content: flex-end;
         width: 20%;
         align-self: center;
     }
+}
+
+@media (min-width: 1025px) {
+=
 }
