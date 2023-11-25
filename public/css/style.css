@@ -45,22 +45,47 @@ article {
     flex-wrap: wrap;
 }
 
+.categorias-populares {
+    margin-top: 10%;
+}
+
+.categorias-populares article {
+    display: flex;
+    border-radius: 100%;
+    width: 30%;
+}
+
+.categorias-populares img {
+    border-radius: 100%;
+}
+
 .description {
     display: none;
 }
+
+section h1 {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
 @media (min-width: 361px) {
     article {
         width: 40%;
     }
+    .categorias-populares article {
+        width: 20%;
+    }
 }
+
 
 @media (min-width: 1025px) {
     article {
         width: 20%;
     }
-    article:hover .description{
-        margin-top: 10px;
-        display: block;
+    .categorias-populares article {
+        display: flex;
+        border-radius: 100%;
+        width: 10%;
     }
 }
 

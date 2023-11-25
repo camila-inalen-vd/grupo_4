@@ -48,7 +48,7 @@ header {
     border: none;
     outline: none;
     width: 100%;
-    flex: 1; /* Utiliza todo el espacio disponible */
+    flex: 1;
 }
 /* Botón de barra de búsqueda */
 .top-header2 button {
@@ -62,20 +62,69 @@ header {
 
 /* La tercera caja que NO sabemos qué contiene aún en el topheader. Planeo no hacerla visible o desplazarla hacia abajo en mobile.*/
 .top-header3 {
-/*     background-color: gray; */
     width: 100%;
     padding: 5px;
-    order: 1; /* Cambiar el orden para que aparezca después de top-header1 y top-header2 */
+    order: 1;
     text-align: center;
 } 
 
+/*La parte de abajo del header*/
 .bottom-header {
     display: flex;
-    justify-content: space-between;
-    border-top: solid 1px #CFCFEA;
-    /* background-color: aquamarine; */
+    border-top: solid 1px #CFCFEA
 }
 
+/*Haciendo flex el nav*/
+nav {
+    display: flex;
+    flex: 1;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/*Haciendo flex la unorderer list del nav y quitandole estilos*/
+nav ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap; 
+}
+
+/*Quitandole los estilos a los <a> y agregando un margin para que no se junte el texto*/
+nav a {
+    text-decoration: none;
+    margin-left: 10px;
+    color: #080705;
+    text-align: right;
+}
+
+nav a:hover {
+    text-shadow: 2px #080705;
+}
+
+/*Estableciendo tamaño y flex a cajas del bottom-header*/
+ .nav-1 {
+    display: flex;
+    width: 15%;
+ }
+
+ /*Con la caja 2 trabajamos por separado para alinear mejor el contenido*/
+ .nav-2{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+/*Tuve que hacer esto para que el login quede contra la derecha, evitando repetir código lo más posible*/
+.nav-3 {
+    display: flex;
+    justify-content: end;
+    width: 30%;
+    flex: 1;
+}
+
+
+/*Este burger menu es generico (Pienso que se vería mejor en una esquina en vez de en el medio, me guié con el de mercadoLiebre)*/
 .burger-menu {
     background-color: #CFCFEA;
     color: #080705;
@@ -91,14 +140,16 @@ header {
     margin-top: 10px;
 }
 
-
-nav {
-    display: none;
-}
-
+/*Me atreví a usar un ID para el banner que más adelante va a ser un carousel*/
 #banner {
     width: 100%;
 }
+
+/*Testing*/
+
+
+
+/* Media querys */
 
 @media (min-width: 361px) {
     .top-header-main{
@@ -122,13 +173,17 @@ nav {
     }
 }
 
+@media (max-width: 769px) {
+    nav {
+        display: none;
+    }
+}
+
 @media (min-width: 769px) {
     .burger-menu {
         display: none;
     }
-    nav {
-        display: flex;
-    }
+
 }
 
 @media (min-width: 1025px) {
