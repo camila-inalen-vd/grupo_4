@@ -94,7 +94,7 @@ footer {
     box-sizing: border-box;
 }
 
-img {
+.carousel img {
     width: 100%;
     height: auto;
     display: block;
