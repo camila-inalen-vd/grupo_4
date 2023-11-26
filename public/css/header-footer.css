@@ -71,8 +71,9 @@ header {
 /*La parte de abajo del header*/
 .bottom-header {
     display: flex;
-    border-top: solid 1px #CFCFEA;
+/*     border-top: solid 1px #CFCFEA; */
     padding: 10px;
+    background-color: #080705a5;
 }
 
 /*Haciendo flex el nav*/
