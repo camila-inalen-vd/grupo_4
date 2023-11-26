@@ -34,3 +34,11 @@ app.get('/login', (req, res) => {
 app.get('/searchProduct', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/searchProduct.html'))
 })
+
+app.post('/register', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './views/index.html'))
+})
+
+app.post('/login', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './views/index.html'))
+})
