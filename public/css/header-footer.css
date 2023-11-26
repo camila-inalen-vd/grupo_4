@@ -156,6 +156,14 @@ justify-content: center;
     margin-top: 10px;
 }
 
+footer {
+    background-color: #080705;
+    color: white;
+    text-align: center;
+    padding: 10%;
+    margin-top: 20px;
+}
+
 /*Testing*/
 
 

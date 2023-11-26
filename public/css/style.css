@@ -68,14 +68,6 @@ article {
 display: none;
 }
 
-footer {
-    background-color: #080705;
-    color: white;
-    text-align: center;
-    padding: 10%;
-    margin-top: 20px;
-}
-
 /*Carousel robado de internet*/
 .carousel {
     position: relative;
