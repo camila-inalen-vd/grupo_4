@@ -156,12 +156,54 @@ justify-content: center;
     margin-top: 10px;
 }
 
-footer {
+footer{
     background-color: #080705;
+    padding: 15px;
+    margin-top: 5%;
+}
+
+footer h4 {
+    margin-bottom: 10px;
+}
+
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.footer-1 , .footer-2 , .footer-3 , .footer-4 , .footer-5 , .footer-6 {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
     color: white;
+    padding: 10px;
+}
+
+footer ul {
+    list-style: none;
+    font-size: 0.8rem;
+}
+
+footer ul li{
+    margin-top: 10px;
+}
+
+.footer-bottom {
+    border-top: solid 1px #e2e2e2;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    margin-bottom: 15px
+}
+.footer-bottom ul{
     text-align: center;
-    padding: 10%;
-    margin-top: 20px;
+    width: 100%;
+    flex-wrap: wrap;
+    flex: 1;
+    margin-top: 10px;
+    font-size: 0.7rem;
 }
 
 /*Testing*/
@@ -192,6 +234,12 @@ footer {
         width: 20%;
         align-self: center;
     }
+
+    /*Footer*/
+    .footer-1 , .footer-2 , .footer-3 , .footer-4 , .footer-5 , .footer-6 {
+        width: 30%;
+    }
+
 }
 
 @media (max-width: 769px) {
@@ -204,7 +252,22 @@ footer {
     .burger-menu {
         display: none;
     }
-
+    .footer-1 , .footer-2 , .footer-3 , .footer-4 , .footer-5 , .footer-6 {
+        width: 15%;
+    }
+    .footer-bottom ul{
+        display: flex;
+        justify-content: space-around;
+    }
+    .footer-bottom ul li{
+        text-align: center;
+        width: 100%;
+        flex-wrap: wrap;
+        flex: 1;
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-around;
+    }
 }
 
 @media (min-width: 1025px) {
