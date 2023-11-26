@@ -71,7 +71,8 @@ header {
 /*La parte de abajo del header*/
 .bottom-header {
     display: flex;
-    border-top: solid 1px #CFCFEA
+    border-top: solid 1px #CFCFEA;
+    padding: 10px;
 }
 
 /*Haciendo flex el nav*/
@@ -95,6 +96,8 @@ nav a {
     text-decoration: none;
     margin-left: 10px;
     color: #080705;
+ /*    font-weight: bold; */
+    text-transform:uppercase
 }
 
 /*Estableciendo tamaño y flex a cajas del bottom-header*/
@@ -138,11 +141,6 @@ nav a {
     margin: auto;
     margin-bottom: 10px;
     margin-top: 10px;
-}
-
-/*Me atreví a usar un ID para el banner que más adelante va a ser un carousel*/
-#banner {
-    width: 100%;
 }
 
 /*Testing*/
