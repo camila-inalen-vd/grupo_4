@@ -145,9 +145,8 @@ justify-content: center;
 
 /*Este burger menu es generico (Pienso que se vería mejor en una esquina en vez de en el medio, me guié con el de mercadoLiebre)*/
 .burger-menu {
-    background-color: #CFCFEA;
-    color: #080705;
-    border: 1px solid #383838;
+    background-color: #5b0b0b;
+    color: white;
     width: 50px;
     text-align: center;
     padding: 10px;
