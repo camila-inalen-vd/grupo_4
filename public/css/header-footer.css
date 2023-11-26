@@ -96,14 +96,19 @@ nav a {
     text-decoration: none;
     margin-left: 10px;
     color: #080705;
- /*    font-weight: bold; */
-    text-transform:uppercase
+    font-weight: bold;
+    text-transform: uppercase;
+ 
 }
 
 /*Estableciendo tamaño y flex a cajas del bottom-header*/
  .nav-1 {
     display: flex;
     width: 15%;
+ }
+
+ .nav-1 ul {
+    justify-content: center;
  }
 
  /*Con la caja 2 trabajamos por separado para alinear mejor el contenido*/
@@ -113,12 +118,20 @@ nav a {
     width: 50%;
 }
 
+.nav-2 ul{
+justify-content: center;
+}
+
 /*Tuve que hacer esto para que el login quede contra la derecha, evitando repetir código lo más posible*/
 .nav-3 {
     display: flex;
     justify-content: end;
     width: 30%;
     flex: 1;
+}
+
+.nav-3 ul{
+    flex-direction: row-reverse;
 }
 
 .nav-3 i {
