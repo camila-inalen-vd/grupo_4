@@ -17,11 +17,11 @@
 <body>
     <header>
         <div class="top-header-main">
-            <div class="top-header1"><img class="rotar" src="/images/logopng.png" alt=""></div>
+            <div class="top-header1"><a href="/"><img class="rotar" src="/images/logopng.png" alt=""></a></div>
             <div class="top-header2"><div class="search-bar"><input type="text" placeholder="Buscar modelos o marcas..."><button ><i class="fa-solid fa-magnifying-glass"></i></button></div></div>
             <div class="top-header3">Caja 3</div>
         </div>
- 
+
         <div class="bottom-header">
             
             <div class="burger-menu">
@@ -49,15 +49,39 @@
 
             <div class="nav-3" >
                 <ul>
-                    <li><a href="">Crea tu cuenta</a></li>
-                    <li><a href="">Ingresa</a></li>
                     <li><a href="">Mis compras</a><i class="fa-solid fa-cart-shopping"></i></li>
+                    <li><a href="/login">Ingresa</a></li>
+                    <li><a href="/register">Crea tu cuenta</a></li>
+                    
                 </ul>
             </div>
             </nav>  
         </div>
     </header>
-    <img id="banner" src="/images/banner.jpg" alt="">
+    <!-- Carousel robado de internet, toca estudiar como hacerlo solitos o modificar más -->
+    <div class="carousel">
+        <div class="slides">
+            <div class="slide" id="slide-1">
+                <img src="/images/carousel1/banner.jpg" alt="Slide 1">
+            </div>
+            <div class="slide" id="slide-2">
+                <img src="/images/carousel1/banner1.jpg" alt="Slide 2">
+            </div>
+            <div class="slide" id="slide-3">
+                <img src="/images/carousel1/banner2.jpg" alt="Slide 3">
+            </div>
+            <div class="slide" id="slide-4">
+                <img src="/images/carousel1/banner1.jpg" alt="Banner">
+            </div>
+        </div>
+    
+        <div class="controls">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+            <label for="slide3"></label>
+            <label for="slide4"></label>
+        </div>
+    </div>
     <main>
         <section>
             <h1>Ofertas</h1>
@@ -150,7 +174,7 @@
         </main>   	
         </section>
         <section class="categorias-populares">
-            <h1>Categorías populares</h1>
+            <h1>Marcas populares</h1>
             <div class="container-flex">
             <article>
                 <div class="product-card">

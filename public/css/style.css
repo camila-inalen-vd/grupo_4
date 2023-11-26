@@ -68,15 +68,39 @@ article {
 display: none;
 }
 
-footer {
-    background-color: #080705;
-    color: white;
-    text-align: center;
-    padding: 10%;
-    margin-top: 20px;
+/*Carousel robado de internet*/
+.carousel {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
 }
 
-/*Testing*/
+.slides {
+    display: flex;
+    animation: cambioDeSlide 24s infinite; /* Cambia de slide cada 12 segundos (ajusta según tus necesidades) */
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@keyframes cambioDeSlide {
+    0% { transform: translateX(0); }
+    33.33% { transform: translateX(-100%); }
+    66.66% { transform: translateX(-200%); }
+    100% { transform: translateX(-300%); }
+}
+/*Fin del carousel robado de internet*/
+
+/*testing 2*/
 
 main article:hover {
     transform: scale(1.05);
