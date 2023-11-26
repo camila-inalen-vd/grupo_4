@@ -10,10 +10,11 @@ body {
 
 section h1 {
     text-align: center;
-    background: linear-gradient(90deg, hsla(205, 42%, 45%, 1) 0%,hsla(0, 0%, 89%, 1) 99%);
+    background: linear-gradient(90deg, #250907 0%,#130705 99%);
     padding: 10px;
     margin-top: 5%;
     margin-bottom: 5%;
+    color: white;
 }
 
 .container-flex {

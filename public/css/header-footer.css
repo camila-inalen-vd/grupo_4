@@ -6,7 +6,7 @@
 }
 
 header {
-    background: linear-gradient(135deg, #e2e2e2 10%, rgb(171, 218, 252) 100%);
+    background: linear-gradient(135deg, #5b0b0b 10%, rgb(37, 5, 5) 100%);
     width: 100%;
 }
 
@@ -66,6 +66,7 @@ header {
     padding: 5px;
     order: 1;
     text-align: center;
+    color: white;
 } 
 
 /*La parte de abajo del header*/
@@ -73,7 +74,7 @@ header {
     display: flex;
 /*     border-top: solid 1px #CFCFEA; */
     padding: 10px;
-    background-color: #080705a5;
+    background: linear-gradient(90deg, #250907 0%,#130705 99%);;
 }
 
 /*Haciendo flex el nav*/
@@ -96,7 +97,7 @@ nav ul {
 nav a {
     text-decoration: none;
     margin-left: 10px;
-    color: #080705;
+    color: #ffffff;
     font-weight: bold;
     text-transform: uppercase;
  
@@ -138,6 +139,7 @@ justify-content: center;
 .nav-3 i {
     margin-left: 5px;
     margin-right: 5px;
+    color: white;
 }
 
 
