@@ -6,7 +6,7 @@
 }
 
 header {
-    background: linear-gradient(135deg, #e2e2e2 10%, hsla(205, 42%, 45%, 1) 100%);
+    background: linear-gradient(135deg, #e2e2e2 10%, rgb(171, 218, 252) 100%);
     width: 100%;
 }
 

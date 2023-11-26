@@ -17,7 +17,7 @@ body{
 }
 
 .section-right{
-    /* background-color: #CFCFEA; */     
+    /* background-color: #CFCFEA; */
     width: 75vw;
     display: flex;
     flex-wrap: wrap;
@@ -48,10 +48,9 @@ article .cart-class{
 
 .cart-image img{
     width: 100%;
-    height: auto;
+    height: 200px;
     display: block;
     border-bottom: 1px solid rgb(234, 234, 234);
-    box-sizing: border-box;
 }
 
 .item-box {        
