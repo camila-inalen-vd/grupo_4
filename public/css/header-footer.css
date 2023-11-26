@@ -32,6 +32,7 @@ header {
     max-width: 90%;
     max-height: 100px;
 }
+
 /* Barra de búsqueda (está dentro de .top-header2) */
 .search-bar {
     display: flex;
@@ -95,10 +96,6 @@ nav a {
     margin-left: 10px;
     color: #080705;
     text-align: right;
-}
-
-nav a:hover {
-    text-shadow: 2px #080705;
 }
 
 /*Estableciendo tamaño y flex a cajas del bottom-header*/
