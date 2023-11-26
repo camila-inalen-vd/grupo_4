@@ -107,6 +107,7 @@ nav a {
  .nav-1 {
     display: flex;
     width: 15%;
+    color: white;
  }
 
  .nav-1 ul {
