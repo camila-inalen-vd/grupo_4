@@ -8,10 +8,12 @@ body {
     background-color: #e2e2e2; 
 }
 
-main section h1 {
+section h1 {
     text-align: center;
     background: linear-gradient(90deg, hsla(205, 42%, 45%, 1) 0%,hsla(0, 0%, 89%, 1) 99%);
     padding: 10px;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 .container-flex {
@@ -28,6 +30,7 @@ article {
     padding: 15px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
 }
 
 .product-card {
@@ -62,12 +65,7 @@ article {
 }
 
 .description {
-    display: none;
-}
-
-section h1 {
-    margin-top: 5%;
-    margin-bottom: 5%;
+display: none;
 }
 
 footer {
@@ -77,6 +75,22 @@ footer {
     padding: 10%;
     margin-top: 20px;
 }
+
+/*Testing*/
+
+main article:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+
+nav li:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s step;
+}
+
+
+
 
 @media (min-width: 361px) {
     article {
@@ -96,6 +110,19 @@ footer {
         display: flex;
         border-radius: 100%;
         width: 10%;
+    }
+
+    /* Testing */
+    .discount {
+        color: black;
+        transition: color 0.3s ease;
+        transform: translateX(0); /* Inicialmente sin desplazamiento lateral */
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    article:hover .discount  {
+        color: green;
+        transform: scale(1.2) translateX(-20px);
     }
 }
 

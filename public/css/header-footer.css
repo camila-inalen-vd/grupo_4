@@ -95,7 +95,6 @@ nav a {
     text-decoration: none;
     margin-left: 10px;
     color: #080705;
-    text-align: right;
 }
 
 /*Estableciendo tamaño y flex a cajas del bottom-header*/
@@ -147,6 +146,8 @@ nav a {
 }
 
 /*Testing*/
+
+
 
 
 
