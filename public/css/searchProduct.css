@@ -6,48 +6,55 @@
 
 body{
     display: flex;
+    background-color: #e2e2e2;
+    /* background: linear-gradient(135deg, #e2e2e2 10%, hsla(205, 42%,45%,1)100%); */
 }
 
 .aside-left{    
     width: 25vw;       
     justify-content: flex-end;
-    background-color: #F1E8B8;
+    /* background-color: #F1E8B8; */
 }
 
 .section-right{
-    background-color: #CFCFEA;
-    width: 75vw;    
-    justify-content: center;
+    /* background-color: #CFCFEA; */     
+    width: 75vw;
     display: flex;
     flex-wrap: wrap;
     align-content: baseline;
 }
 
-article{  
-    /* border: 1px solid black; */
+article {
     width: 33%;
 }
 
 article .cart-class{
-    margin:  5% 5% 5% 5%;
+    margin:  2% 2% 2% 2%;
 }
 
-.cart-class{
-    /* border: 5px solid red;
-    width: 100%; */
+.cart-class{    
+    border: 1px solid rgb(219, 219, 219);           
+    /*border: 5px solid red; 
+    width: 100%; 
+    cart-class:hover{
+        box-shadow: 0 1px 1px 0 rgba(0,0,0,.1), 0 -1px 2px 0 rgba(0,0,0,.1);
+    }*/
 }
 
-.cart-image{
-   
-    padding: 0%;
+.cart-image {
+    padding: 0%;       
+    width: 100%;
 }
 
 .cart-image img{
-    width: 100%; 
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 1px solid rgb(234, 234, 234);
+    box-sizing: border-box;
 }
 
-.item-box{
-    /* border-top: 15px solid crimson; */
+.item-box {        
     padding: 3%;
     background-color: white;
 }
