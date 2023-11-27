@@ -6,8 +6,7 @@
 }
 
 header {
-    /* background-color: #427AA1; */
-    background: linear-gradient(135deg, rgb(207, 205, 192) 10%, hsla(205, 42%, 45%, 1) 100%);
+    background: linear-gradient(135deg, #5b0b0b 10%, rgb(37, 5, 5) 100%);
     width: 100%;
 }
 
@@ -33,6 +32,7 @@ header {
     max-width: 90%;
     max-height: 100px;
 }
+
 /* Barra de búsqueda (está dentro de .top-header2) */
 .search-bar {
     display: flex;
@@ -48,7 +48,7 @@ header {
     border: none;
     outline: none;
     width: 100%;
-    flex: 1; /* Utiliza todo el espacio disponible */
+    flex: 1;
 }
 /* Botón de barra de búsqueda */
 .top-header2 button {
@@ -62,24 +62,92 @@ header {
 
 /* La tercera caja que NO sabemos qué contiene aún en el topheader. Planeo no hacerla visible o desplazarla hacia abajo en mobile.*/
 .top-header3 {
-/*     background-color: gray; */
     width: 100%;
     padding: 5px;
-    order: 1; /* Cambiar el orden para que aparezca después de top-header1 y top-header2 */
+    order: 1;
     text-align: center;
+    color: white;
 } 
 
+/*La parte de abajo del header*/
 .bottom-header {
     display: flex;
-    justify-content: space-between;
-    border-top: solid 1px #CFCFEA;
-    /* background-color: aquamarine; */
+/*     border-top: solid 1px #CFCFEA; */
+    padding: 10px;
+    background: linear-gradient(90deg, #250907 0%,#130705 99%);;
 }
 
+/*Haciendo flex el nav*/
+nav {
+    display: flex;
+    flex: 1;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/*Haciendo flex la unorderer list del nav y quitandole estilos*/
+nav ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap; 
+}
+
+/*Quitandole los estilos a los <a> y agregando un margin para que no se junte el texto*/
+nav a {
+    text-decoration: none;
+    margin-left: 10px;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+ 
+}
+
+/*Estableciendo tamaño y flex a cajas del bottom-header*/
+ .nav-1 {
+    display: flex;
+    width: 15%;
+    color: white;
+ }
+
+ .nav-1 ul {
+    justify-content: center;
+ }
+
+ /*Con la caja 2 trabajamos por separado para alinear mejor el contenido*/
+ .nav-2{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+.nav-2 ul{
+justify-content: center;
+}
+
+/*Tuve que hacer esto para que el login quede contra la derecha, evitando repetir código lo más posible*/
+.nav-3 {
+    display: flex;
+    justify-content: end;
+    width: 30%;
+    flex: 1;
+}
+
+.nav-3 ul{
+    flex-direction: row-reverse;
+}
+
+.nav-3 i {
+    margin-left: 5px;
+    margin-right: 5px;
+    color: white;
+}
+
+
+/*Este burger menu es generico (Pienso que se vería mejor en una esquina en vez de en el medio, me guié con el de mercadoLiebre)*/
 .burger-menu {
-    background-color: #CFCFEA;
-    color: #080705;
-    border: 1px solid #383838;
+    background-color: #5b0b0b;
+    color: white;
     width: 50px;
     text-align: center;
     padding: 10px;
@@ -91,14 +159,63 @@ header {
     margin-top: 10px;
 }
 
-
-nav {
-    display: none;
+footer{
+    background-color: #080705;
+    padding: 15px;
+    margin-top: 5%;
 }
 
-#banner {
+footer h4 {
+    margin-bottom: 10px;
+}
+
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.footer-1 , .footer-2 , .footer-3 , .footer-4 , .footer-5 , .footer-6 {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    color: white;
+    padding: 10px;
+}
+
+footer ul {
+    list-style: none;
+    font-size: 0.8rem;
+}
+
+footer ul li{
+    margin-top: 10px;
+}
+
+.footer-bottom {
+    border-top: solid 1px #e2e2e2;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    margin-bottom: 15px
+}
+.footer-bottom ul{
+    text-align: center;
     width: 100%;
+    flex-wrap: wrap;
+    flex: 1;
+    margin-top: 10px;
+    font-size: 0.7rem;
 }
+
+/*Testing*/
+
+
+
+
+
+/* Media querys */
 
 @media (min-width: 361px) {
     .top-header-main{
@@ -120,14 +237,39 @@ nav {
         width: 20%;
         align-self: center;
     }
+
+    /*Footer*/
+    .footer-1 , .footer-2 , .footer-3 , .footer-4 , .footer-5 , .footer-6 {
+        width: 30%;
+    }
+
+}
+
+@media (max-width: 769px) {
+    nav {
+        display: none;
+    }
 }
 
 @media (min-width: 769px) {
     .burger-menu {
         display: none;
     }
-    nav {
+    .footer-1 , .footer-2 , .footer-3 , .footer-4 , .footer-5 , .footer-6 {
+        width: 15%;
+    }
+    .footer-bottom ul{
         display: flex;
+        justify-content: space-around;
+    }
+    .footer-bottom ul li{
+        text-align: center;
+        width: 100%;
+        flex-wrap: wrap;
+        flex: 1;
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-around;
     }
 }
 
