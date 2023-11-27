@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Raleway, roboto;
 }
 
 body{
@@ -14,6 +15,43 @@ body{
     width: 25vw;       
     justify-content: flex-end;
     background-color: #F1E8B8;
+}
+
+.aside-left h2, h4, p{
+    margin-bottom: 5%;
+}
+
+.aside-title{
+    padding: 10%;
+}
+
+.filter-class{
+    border: 1px solid rgb(219, 219, 219);
+    padding: 10%;
+}
+
+.gender-class{
+    padding: 10%;
+}
+
+.waist-class{
+    padding: 10%;
+}
+
+.brand-class-aside{
+    padding: 10%;
+}
+
+.condition-class{
+    padding: 10%;
+}
+
+.location-class{
+    padding: 10%;
+}
+
+.filter-class p{
+    border: 1px solid rgb(219, 219, 219);
 }
 
 .section-right{
@@ -75,8 +113,10 @@ article .cart-class{
     .arrives, ::placeholder{
         color: rgb(4, 167, 82);
         background-color: rgb(230, 247, 238);
+        text-align: center;
+        /* margin: 1px 1px; */
     }
-    
+
 }
 
 
