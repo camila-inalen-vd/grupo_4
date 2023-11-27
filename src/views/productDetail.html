@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html>     <!--  -------Noe-------- -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,16 +9,146 @@
 
 </head>
 <body>
-    <main>
-        <article class="volver">
-       <h3> Volver al listado </h3>
-    </article>
-    <section class="contenedor-padre">
-        <article class="contenedor-caja">
-            
+    <header>
+        <div class="top-header-main">
+            <div class="top-header1"><a href="/"><img class="rotar" src="/images/logopng.png" alt=""></a>
+            </div>
+            <div class="top-header2"><div class="search-bar"><input type="text" placeholder="Buscar modelos o marcas..."><button ><i class="fa-solid fa-magnifying-glass"></i></button></div></div>
+            <div class="top-header3">Caja 3</div>
+        </div>
+    </header>
+
+    <div class="titulo-container"> Volver al listado </div>
+
+        <div class="producto">
+        <div class="img-producto">
+            <img src="\images\img-prod-detail\img-grande.jpg.jpg" alt="img-producto"/>
+        </div>
+        <div class="img-prod-peq">
+            <img src="\images\img-prod-detail\img-1.jpg" alt="img-producto"/>
+            <img src="\images\img-prod-detail\img-2.jpg" alt="img-producto"/>
+            <img src="\images\img-prod-detail\img-3.jpg" alt="img-producto"/>
+            <img src="\images\img-prod-detail\img-4.jpg" alt="img-producto"/>
+        </div>
+    </div>
+    <section class="caja-info-producto">
+   <div class="container-info-product">
+    <h3> ver mas productos marca Nike</h3>
+         <article class="nombre-producto">
+            CALZADO ZAPATILLAS LE COQ SPORTIF INDUMENTARIA PARA MUJER DE MODA
+            ZAPATILLAS R1000 LEONA ROSE LE COQ SPORTIF
         </article>
+        <div class="container-precio">
+            <span>$95.00</span>
+            <i class="fa-solid fa-chevron-right"></i>
+        </div>
+            <div class="container-cuotas">
+            <span>en 3 cuotas de $ 31.999 $</span>
+            <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <div class="container-pago">
+            <span> ver los medios de pago </span>
+            <i class="fa-solid fa-chevron-right"></i>
+            </div>
+             <div>
+            <div class="container-entrega">
+            <span>Mas formas de entrega</span>
+            <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <div>
+            <h3>Devolucion gratis</h3>
+            <p>Tenes 30 dias desde que lo recibis.</p>
+        </div>
+   </div>
+        <div class="container-details-product">
+            <div class="form-group">
+                <label for="colour">Color</label>
+                <select name="colour" id="colour">
+                    <option disabled selected value="">
+                        Elige una opción
+                    </option>
+                    <option value="rojo">Rojo</option>
+                    <option value="blanco">Blanco</option>
+                    <option value="azul">Azul</option>
+                </select>
+    </div>
+        <div class="form-group">
+            <label for="size">Talle</label>
+                <select name="size" id="size">
+                <option disabled selected value="">
+                    Elige una opción 
+                </option>
+            <option value="40">40</option>
+                <option value="42">42</option>
+                    <option value="43">43</option>
+                     <option value="44">44</option>
+           </select>
+        </div>
+    <button class="btn-clean">Limpiar</button>
+   
+    <div>
+    <h3>¡Ultima disponible!</h3>
+    <button class="btn-add-to-cart">
+    <i class="fa-solid fa-plus"></i>Comprar ahora</button>
+    </div>
+
+    <div>
+    <button class="btn-add-to-cart">
+    <i class="fa-solid fa-plus"></i>Agregar al carrito</button>
+    </div>
+    
+    <div class="container-description">
+        <div class="title-description">
+            <h4>Descripción</h4>
+            <i class="fa-solid fa-chevron-down"></i>
+        </div>
     </section>
-    </main>
+        <div class="text-description">
+            <p>Zapatillas inspiradas en calzado de running en colaboración con la artista Leona Rose. 
+            Capellada de mesh con estampa tropical . Recortes de suede y cuero sintético. Cordones planos. 
+            Forrería textil. Plantilla confortable. Entresuela de EVA moldeada. Suela de goma. Logotipo lateral bordado. 
+            Logotipo bordado en la lengueta y en el talón.</p>
+       </div>
+
+    <section class="container-related-products">
+        <h2>Productos Relacionados</h2>
+        <div class="card-list-products">
+        <div class="card">
+        <div class="card-img">
+        <img src="\images\zapatillas\adidas 1.webp" />
+
+        <div class="container-additional-information">
+            <div class="title-additional-information">
+                <h4>Información adicional</h4>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="text-additional-information hidden">
+                <p>-----------</p>
+            </div>
+        </div>
+
+        <div class="container-reviews">
+            <div class="title-reviews">
+                <h4>Reseñas</h4>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="text-reviews hidden">
+                <p>-----------</p>
+            </div>
+        </div>
+
+        <div class="container-social">
+            <span>Compartir</span>
+            <div class="container-buttons-social">
+                <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+            </div>
+        </div>
+    </div> 
 </body>
+
 
 </html>

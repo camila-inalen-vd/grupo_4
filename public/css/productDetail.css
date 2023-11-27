@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'ubuntu' ;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* }
+img {
+    max-width: 100%;
+} */
+/* --------------header de Cami------------- */
+header {
+    background: linear-gradient(135deg, #880061 10%, rgb(202, 157, 157) 100%);
+    width: 100%;
+}
+
+/* Contenedor principal de arriba del header */
+.top-header-main{
+    display: flex;
+    padding: 15px;
+    width: 100%;
+   /*  flex-wrap: wrap; */
+   align-items: center;
+}
+
+/* Las dos cajas ocupando las dos mitades de la pantalla en el header */
+.top-header1 , .top-header2 {
+    width: 50%;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+/* La tercera caja que NO sabemos qué contiene aún en el topheader. 
+Planeo no hacerla visible o desplazarla hacia abajo en mobile.*/
+.top-header3 {
+    width: 100%;
+    padding: 5px;
+    order: 1;
+    text-align: center;
+    color: white;
+} 
+
+/* Logo en el header */
+.top-header1 img {
+    max-width: 90%;
+    max-height: 100px;
+}
+
+/* Barra de búsqueda (está dentro de .top-header2) */
+.search-bar {
+    display: flex;
+    background-color: white;
+    width: 90%;
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid #383838;
+}
+/* Input de barra de búsqueda */
+.top-header2 input {
+    padding: 5px;
+    border: none;
+    outline: none;
+    width: 100%;
+    flex: 1;
+}
+/* Botón de barra de búsqueda */
+.top-header2 button {
+    margin: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #666;
+    align-self: stretch;
+}
+
+
+/* ---------------------- */
+.caja-info-producto {
+    display: flex;
+}
+
+.titulo-container {
+    padding: 15px;
+    background-color: #d2c2fd;
+    margin-bottom: 50px;
+    color: white;
+}
+
+main {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 80px;
+}
+.producto {
+    margin-left: 3em;
+    display: flex;
+    flex-direction: column;
+}
+.img-producto img {
+   height: 460px;
+}
+.img-producto {
+   padding: 10px;
+    width: 45%;
+}
+.img-prod-peq img {
+    width: 100%;
+    border: 1px solid rgba(0,0,0,.2);
+    padding: 50px;
+    margin: 10px 10px 15px;
+    cursor: pointer;
+}
+
+.img-prod-peq {
+    width: 8px;
+    display: flex;
+
+}
+
+.container-info-product {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.nombre-producto {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #080705;
+}
+
+.container-precio {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e4e4e4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container-precio span {
+    font-size: 24px;
+    font-weight: 300;
+}
+.container-cuotas  {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e4e4e4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container-cuotas span {
+    font-size: 24px;
+    font-weight: 300;
+}
+.container-pago  {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e4e4e4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container-pago span {
+    font-size: 24px;
+    font-weight: 300;
+}
+.container-entrega  {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e4e4e4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container-entrega span {
+    font-size: 24px;
+    font-weight: 300;
+}
+
+
+
+h3 {
+    color: rgb(243, 96, 96);
+}
+p {
+    color: black;
+    font-size: 10px;
+
+}
+.container-details-product {
+    padding: 30px;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    width: 100px;
+    color: #222;
+    font-weight: 700px;
+}
+
+.form-group select {
+	width: 300px;
+	border: none;
+	padding: 12px 15px;
+	background-color: #f7f7f7;
+	outline: none;
+	color: #666;
+}
+
+.btn-clean {
+	border: none;
+	background: none;
+	color: #666;
+	margin-left: 120px;
+	cursor: pointer;
+}
+
+.btn-clean:hover {
+	color: #1bbeb4;
+}
+
+
+.btn-add-to-cart {
+	border: none;
+	background-color: #252525;
+	padding: 10px;
+	color: #f7f7f7;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+	font-weight: 700;
+	cursor: pointer;
+    margin: 8px;
+}
+
+.btn-add-to-cart:hover {
+	color: #1bbeb4;
+}
+
+.container-add-cart {
+	display: flex;
+	gap: 20px;
+	padding-bottom: 30px;
+	border-bottom: 1px solid #e4e4e4;
+} 
+
+.container-description  {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e4e4e4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container-description span {
+    font-size: 24px;
+    font-weight: 300;
+}
