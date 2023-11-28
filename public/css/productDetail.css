@@ -4,14 +4,12 @@
     box-sizing: border-box;
 }
 body {
-    font-family: 'ubuntu' ;
-    max-width: 1200px;
-    margin: 0 auto;
+   background-color: #e4e4e4;
+  
 }
 
 img {
     width: 100%;
-    display: block;
 }
 /* --------------header de Cami------------- */
 header {
@@ -82,20 +80,19 @@ Planeo no hacerla visible o desplazarla hacia abajo en mobile.*/
 
 /* ---------------------- */
 .total-product-detail {
-      display: flex;
       background-color: #f7f7f7;
-      margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .caja-info-producto {
     display: flex;
-    width: 50%;
+    width: 40%;
 }
 
 .titulo-container {
     padding: 15px;
     background-color: #d2c2fd;
-    margin-bottom: 50px;
     color: white;
 }
 
@@ -105,26 +102,28 @@ main {
     margin-bottom: 80px;
 }
 .producto {
-    margin: 2em;
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 40%;
 }
-/* 
+
 .img-producto  {
 	background-color: #f7f7f9;
-	flex: 1;
-} */
-
-.img-prod-peq img {
-    width: 50%;
-    border: 1px solid rgba(0,0,0,.2);
-    margin: 10px 10px 15px;
-  
+   /*  width: 100%; */
+    margin: 30px;
+    background: #fff;
 }
 
 .img-prod-peq {
- width:30% ;
+    width: 30%;
+    display: flex;
+  
+}
+
+.img-prod-peq img{
+    width: 50%;
+    border: 1px solid rgba(0,0,0,.2);
+    margin: 10px 10px 15px;
 
 }
 
@@ -133,6 +132,7 @@ main {
     display: flex;
     flex-direction: column;
     margin: 15px;
+ 
 }
 .nombre-producto {
     font-size: 20px;
@@ -142,7 +142,7 @@ main {
 
 .container-precio {
     padding-bottom: 20px;
-    border-bottom: 1px solid #e4e4e4;
+   /*  border-bottom: 1px solid #e4e4e4; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -195,6 +195,8 @@ h3 {
     color: rgb(243, 96, 96);
     font-style: italic;
     padding: 5px;
+    margin: 8px;
+   
 
 }
 h3:hover {
@@ -202,7 +204,7 @@ h3:hover {
 }
 p {
     color: black;
-    font-size: 10px;
+   
 
 }
 .container-details-product {
@@ -272,7 +274,7 @@ p {
     padding-bottom: 20px;
     border-bottom: 1px solid #e4e4e4;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: space-between;
 }
 
@@ -310,10 +312,38 @@ p {
 .text-description,
 .text-additional-information,
 .text-reviews {
-	font-size: 13px;
+	/* font-size: 13px; */
 	color: #252525;
 	line-height: 22px;
-	margin-top: 25px;
+	/* margin-top: 25px; */
+   
+}
+
+article .container-related-products {
+    width: 80%;
+    margin: 10px;
+    background-color: rgb(255, 255, 255);
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+}
+
+.product-related {
+    width: 100%;
+}
+
+.product-related img {
+    width: 100%;
+}
+
+.product-detail {
+    border-top: solid 1px #F1E8B8;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    flex-wrap: wrap;
 }
 
 .container-social {
