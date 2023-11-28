@@ -25,9 +25,8 @@ body{
     padding: 10%;
 }
 
-.filter-class{
-    border: 1px solid rgb(219, 219, 219);
-    padding: 10%;
+.filter-class{    
+    padding: 5% 0% 5% 5%;
 }
 
 .filter-class p{
@@ -40,10 +39,19 @@ body{
     flex-direction: row;
     justify-content: space-between;
     background-color: white;
+    align-items: center;
+    margin: 0 0 10% 0;
+    width: 220px;
+    height: 50px;
+    padding: 0 5% 0 5%;
+    border-radius: 5px;
 }
 
+.toggle{
+    /* width: 1%; */
+}
 .gender-class, .waist-class, .brand-class-aside, .condition-class, .location-class{
-    padding: 10%;
+    padding: 2% 10% 5% 10%;
 }
 
 .class-show-more p{
@@ -97,6 +105,8 @@ article .cart-class{
 .item-box {        
     padding: 3%;
     background-color: white;
+    width: 100%;
+    height: 260px;
 
     .reputation-icon{
         color: rgb(52, 131, 250);
@@ -110,7 +120,7 @@ article .cart-class{
         color: rgb(4, 167, 82);
         background-color: rgb(230, 247, 238);
         text-align: center;
-        /* margin: 1px 1px; */
+        /* margin: 1px 0px 1px 0px; */
     }
 
 }
