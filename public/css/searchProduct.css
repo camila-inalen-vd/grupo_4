@@ -66,7 +66,13 @@ body{
 }
 
 article {
-    width: 33%;
+    width: 33%;    
+}
+
+article:hover{
+    
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.1), 0 -1px 100px 0 rgba(0,0,0,.1);
+    
 }
 
 article .cart-class{
@@ -107,6 +113,7 @@ article .cart-class{
     background-color: white;
     width: 100%;
     height: 260px;
+    
 
     .reputation-icon{
         color: rgb(52, 131, 250);
@@ -125,9 +132,13 @@ article .cart-class{
 
 }
 
+.brand-class, .description-class, .reputation-icon, .price-class, .dues-class, .arrives-class  {
+    margin: 0px 0px 5% 0px;
+}
 
 
-@media (min-width: 768px) and (max-width: 1024px){
+
+@media (min-width: px) and (max-width: px){
 
     *{
         margin: 0;
@@ -199,7 +210,7 @@ article .cart-class{
     
 }
 
-@media (max-width: 1025px){
+@media (max-width: px){
 
     *{
         margin: 0;
