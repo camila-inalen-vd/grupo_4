@@ -14,7 +14,7 @@ body{
 .aside-left{    
     width: 25vw;       
     justify-content: flex-end;
-    background-color: #F1E8B8;
+    /* background-color: #F1E8B8; */
 }
 
 .aside-left h2, h4, p{
@@ -30,28 +30,24 @@ body{
     padding: 10%;
 }
 
-.gender-class{
-    padding: 10%;
-}
-
-.waist-class{
-    padding: 10%;
-}
-
-.brand-class-aside{
-    padding: 10%;
-}
-
-.condition-class{
-    padding: 10%;
-}
-
-.location-class{
-    padding: 10%;
-}
-
 .filter-class p{
-    border: 1px solid rgb(219, 219, 219);
+    /* border: 1px solid rgb(219, 219, 219); */
+    margin: 1px 1px 1px 1px;
+}
+
+.class-arrive-today, .class-arrive-free, .class-free, .price-with-discount{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.gender-class, .waist-class, .brand-class-aside, .condition-class, .location-class{
+    padding: 10%;
+}
+
+.class-show-more p{
+    color: rgb(52, 131, 250);
 }
 
 .section-right{
