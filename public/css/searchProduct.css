@@ -6,9 +6,12 @@
 }
 
 body{
-    display: flex;
     background-color: #e2e2e2;
     /* background: linear-gradient(135deg, #e2e2e2 10%, hsla(205, 42%,45%,1)100%); */
+}
+
+.falsobody {
+    display: flex;
 }
 
 .aside-left{    
@@ -47,9 +50,9 @@ body{
     border-radius: 5px;
 }
 
-.toggle{
-    /* width: 1%; */
-}
+/*.toggle{
+     width: 1%;
+} */
 .gender-class, .waist-class, .brand-class-aside, .condition-class, .location-class{
     padding: 2% 10% 5% 10%;
 }
