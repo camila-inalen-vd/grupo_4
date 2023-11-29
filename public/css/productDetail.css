@@ -78,6 +78,89 @@ Planeo no hacerla visible o desplazarla hacia abajo en mobile.*/
 }
 
 
+/* La tercera caja que NO sabemos qué contiene aún en el topheader. Planeo no hacerla visible o desplazarla hacia abajo en mobile.*/
+.top-header3 {
+    width: 100%;
+    padding: 5px;
+    order: 1;
+    text-align: center;
+    color: white;
+} 
+
+/*La parte de abajo del header*/
+.bottom-header {
+    display: flex;
+/*     border-top: solid 1px #CFCFEA; */
+    padding: 10px;
+    background: linear-gradient(90deg, #250907 0%,#130705 99%);;
+}
+
+/*Haciendo flex el nav*/
+nav {
+    display: flex;
+    flex: 1;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/*Haciendo flex la unorderer list del nav y quitandole estilos*/
+nav ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap; 
+}
+
+/*Quitandole los estilos a los <a> y agregando un margin para que no se junte el texto*/
+nav a {
+    text-decoration: none;
+    margin-left: 10px;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+ 
+}
+
+/*Estableciendo tamaño y flex a cajas del bottom-header*/
+ .nav-1 {
+    display: flex;
+    width: 15%;
+    color: white;
+ }
+
+ .nav-1 ul {
+    justify-content: center;
+ }
+
+ /*Con la caja 2 trabajamos por separado para alinear mejor el contenido*/
+ .nav-2{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+.nav-2 ul{
+justify-content: center;
+}
+
+/*Tuve que hacer esto para que el login quede contra la derecha, evitando repetir código lo más posible*/
+.nav-3 {
+    display: flex;
+    justify-content: end;
+    width: 30%;
+    flex: 1;
+}
+
+.nav-3 ul{
+    flex-direction: row-reverse;
+}
+
+.nav-3 i {
+    margin-left: 5px;
+    margin-right: 5px;
+    color: white;
+}
+
 /* ---------------------- */
 .total-product-detail {
       background-color: #f7f7f7;
@@ -372,5 +455,6 @@ article .container-related-products {
 }
 
 .container-buttons-social a:hover {
-	color: #1bbeb4;
+	color: rgb(243, 96, 96);
 }
+
