@@ -281,13 +281,14 @@ p {
 }
    
 .container-related-products {
-    width: 100%;
+    width: 300%;
     margin: 20px;
     border-radius: 6px;
     overflow: hidden;
     box-shadow: 0px 1px 10px rgba(0,0,0,.2);
     cursor: default;
     transition: all 400ms ease;
+    overflow: hidden;
 }
 .container-related-products:hover {
     box-shadow: 5px 5px 20px rgba(0,0,0,.4);
@@ -407,6 +408,7 @@ p {
 
 .card {
     margin-bottom: 15px;
+    width: 45%;
 }
 
 .card-img img {
