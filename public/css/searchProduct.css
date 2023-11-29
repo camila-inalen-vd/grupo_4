@@ -2,18 +2,63 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Raleway, roboto;
 }
 
 body{
-    display: flex;
     background-color: #e2e2e2;
     /* background: linear-gradient(135deg, #e2e2e2 10%, hsla(205, 42%,45%,1)100%); */
+}
+
+.falsobody {
+    display: flex;
 }
 
 .aside-left{    
     width: 25vw;       
     justify-content: flex-end;
-    background-color: #F1E8B8;
+    /* background-color: #F1E8B8; */
+}
+
+.aside-left h2, h4, p{
+    margin-bottom: 5%;
+}
+
+.aside-title{
+    padding: 10%;
+}
+
+.filter-class{    
+    padding: 5% 0% 5% 5%;
+}
+
+.filter-class p{
+    /* border: 1px solid rgb(219, 219, 219); */
+    margin: 1px 1px 1px 1px;
+}
+
+.class-arrive-today, .class-arrive-free, .class-free, .price-with-discount{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+    align-items: center;
+    margin: 0 0 10% 0;
+    width: 220px;
+    height: 50px;
+    padding: 0 5% 0 5%;
+    border-radius: 5px;
+}
+
+/*.toggle{
+     width: 1%;
+} */
+.gender-class, .waist-class, .brand-class-aside, .condition-class, .location-class{
+    padding: 2% 10% 5% 10%;
+}
+
+.class-show-more p{
+    color: rgb(52, 131, 250);
 }
 
 .section-right{
@@ -24,7 +69,13 @@ body{
 }
 
 article {
-    width: 33%;
+    width: 33%;    
+}
+
+article:hover{
+    
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.1), 0 -1px 2px 0 rgba(0,0,0,.1);
+    
 }
 
 article .cart-class{
@@ -39,9 +90,9 @@ article .cart-class{
     background: white;
     border-radius: 8px;
 
-    /*border: 5px solid; 
+    /* border: 5px solid;  
     cart-class:hover{
-        box-shadow: 0 1px 1px 0 rgba(0,0,0,.1), 0 -1px 2px 0 rgba(0,0,0,.1);
+        box-shadow: 0 1px 1px 0 rgba(212, 56, 56, 0.1), 0 -1px 2px 0 rgba(180, 57, 57, 0.1);
     }*/
 
 }
@@ -63,6 +114,9 @@ article .cart-class{
 .item-box {        
     padding: 3%;
     background-color: white;
+    width: 100%;
+    height: 260px;
+    
 
     .reputation-icon{
         color: rgb(52, 131, 250);
@@ -75,13 +129,19 @@ article .cart-class{
     .arrives, ::placeholder{
         color: rgb(4, 167, 82);
         background-color: rgb(230, 247, 238);
+        text-align: center;
+        /* margin: 1px 0px 1px 0px; */
     }
-    
+
+}
+
+.brand-class, .description-class, .reputation-icon, .price-class, .dues-class, .arrives-class  {
+    margin: 0px 0px 5% 0px;
 }
 
 
 
-@media (min-width: 768px) and (max-width: 1024px){
+@media (min-width: px) and (max-width: px){
 
     *{
         margin: 0;
@@ -153,7 +213,7 @@ article .cart-class{
     
 }
 
-@media (max-width: 1025px){
+@media (max-width: px){
 
     *{
         margin: 0;
