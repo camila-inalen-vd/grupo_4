@@ -50,9 +50,9 @@ body{
     border-radius: 5px;
 }
 
-.toggle{
-    /* width: 1%; */
-}
+/*.toggle{
+     width: 1%;
+} */
 .gender-class, .waist-class, .brand-class-aside, .condition-class, .location-class{
     padding: 2% 10% 5% 10%;
 }
