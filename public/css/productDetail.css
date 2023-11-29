@@ -4,14 +4,13 @@
     box-sizing: border-box;
 }
 body {
-    font-family: 'ubuntu' ;
-    max-width: 1200px;
-    margin: 0 auto;
+   background-color: #e4e4e4;
+  
 }
-/* }
+
 img {
-    max-width: 100%;
-} */
+    width: 100%;
+}
 /* --------------header de Cami------------- */
 header {
     background: linear-gradient(135deg, #880061 10%, rgb(202, 157, 157) 100%);
@@ -79,15 +78,104 @@ Planeo no hacerla visible o desplazarla hacia abajo en mobile.*/
 }
 
 
+/* La tercera caja que NO sabemos qué contiene aún en el topheader. Planeo no hacerla visible o desplazarla hacia abajo en mobile.*/
+.top-header3 {
+    width: 100%;
+    padding: 5px;
+    order: 1;
+    text-align: center;
+    color: white;
+} 
+
+/*La parte de abajo del header*/
+.bottom-header {
+    display: flex;
+/*     border-top: solid 1px #CFCFEA; */
+    padding: 10px;
+    background: linear-gradient(90deg, #250907 0%,#130705 99%);;
+}
+
+/*Haciendo flex el nav*/
+nav {
+    display: flex;
+    flex: 1;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/*Haciendo flex la unorderer list del nav y quitandole estilos*/
+nav ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap; 
+}
+
+/*Quitandole los estilos a los <a> y agregando un margin para que no se junte el texto*/
+nav a {
+    text-decoration: none;
+    margin-left: 10px;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+ 
+}
+
+/*Estableciendo tamaño y flex a cajas del bottom-header*/
+ .nav-1 {
+    display: flex;
+    width: 15%;
+    color: white;
+ }
+
+ .nav-1 ul {
+    justify-content: center;
+ }
+
+ /*Con la caja 2 trabajamos por separado para alinear mejor el contenido*/
+ .nav-2{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+.nav-2 ul{
+justify-content: center;
+}
+
+/*Tuve que hacer esto para que el login quede contra la derecha, evitando repetir código lo más posible*/
+.nav-3 {
+    display: flex;
+    justify-content: end;
+    width: 30%;
+    flex: 1;
+}
+
+.nav-3 ul{
+    flex-direction: row-reverse;
+}
+
+.nav-3 i {
+    margin-left: 5px;
+    margin-right: 5px;
+    color: white;
+}
+
 /* ---------------------- */
+.total-product-detail {
+      background-color: #f7f7f7;
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .caja-info-producto {
     display: flex;
+    width: 40%;
 }
 
 .titulo-container {
     padding: 15px;
     background-color: #d2c2fd;
-    margin-bottom: 50px;
     color: white;
 }
 
@@ -97,28 +185,28 @@ main {
     margin-bottom: 80px;
 }
 .producto {
-    margin-left: 3em;
     display: flex;
     flex-direction: column;
+    width: 40%;
 }
-.img-producto img {
-   height: 460px;
-}
-.img-producto {
-   padding: 10px;
-    width: 45%;
-}
-.img-prod-peq img {
-    width: 100%;
-    border: 1px solid rgba(0,0,0,.2);
-    padding: 50px;
-    margin: 10px 10px 15px;
-    cursor: pointer;
+
+.img-producto  {
+	background-color: #f7f7f9;
+   /*  width: 100%; */
+    margin: 30px;
+    background: #fff;
 }
 
 .img-prod-peq {
-    width: 8px;
+    width: 30%;
     display: flex;
+  
+}
+
+.img-prod-peq img{
+    width: 50%;
+    border: 1px solid rgba(0,0,0,.2);
+    margin: 10px 10px 15px;
 
 }
 
@@ -126,6 +214,8 @@ main {
     flex: 1;
     display: flex;
     flex-direction: column;
+    margin: 15px;
+ 
 }
 .nombre-producto {
     font-size: 20px;
@@ -135,7 +225,7 @@ main {
 
 .container-precio {
     padding-bottom: 20px;
-    border-bottom: 1px solid #e4e4e4;
+   /*  border-bottom: 1px solid #e4e4e4; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -186,10 +276,18 @@ main {
 
 h3 {
     color: rgb(243, 96, 96);
+    font-style: italic;
+    padding: 5px;
+    margin: 8px;
+   
+
+}
+h3:hover {
+    color: rgb(84, 27, 190);
 }
 p {
     color: black;
-    font-size: 10px;
+   
 
 }
 .container-details-product {
@@ -220,14 +318,13 @@ p {
 
 .btn-clean {
 	border: none;
-	background: none;
 	color: #666;
-	margin-left: 120px;
 	cursor: pointer;
+
 }
 
 .btn-clean:hover {
-	color: #1bbeb4;
+	color: rgb(84, 27, 190);
 }
 
 
@@ -246,7 +343,7 @@ p {
 }
 
 .btn-add-to-cart:hover {
-	color: #1bbeb4;
+	color: rgb(243, 96, 96);
 }
 
 .container-add-cart {
@@ -260,7 +357,7 @@ p {
     padding-bottom: 20px;
     border-bottom: 1px solid #e4e4e4;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: space-between;
 }
 
@@ -268,3 +365,96 @@ p {
     font-size: 24px;
     font-weight: 300;
 }
+
+.container-description,
+.container-additional-information,
+.container-reviews {
+	display: flex;
+	flex-direction: column;
+	border-bottom: 1px solid #e4e4e4;
+	padding: 10px 0;
+}
+
+.title-description,
+.title-additional-information,
+.title-reviews {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	cursor: pointer;
+}
+
+.title-description h4,
+.title-additional-information h4,
+.title-reviews h4 {
+	font-weight: 300;
+	color: #666;
+	font-size: 14px;
+}
+
+.text-description,
+.text-additional-information,
+.text-reviews {
+	/* font-size: 13px; */
+	color: #252525;
+	line-height: 22px;
+	/* margin-top: 25px; */
+   
+}
+
+article .container-related-products {
+    width: 80%;
+    margin: 10px;
+    background-color: rgb(255, 255, 255);
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+}
+
+.product-related {
+    width: 100%;
+}
+
+.product-related img {
+    width: 100%;
+}
+
+.product-detail {
+    border-top: solid 1px #F1E8B8;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.container-social {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 0;
+	align-items: center;
+	border-bottom: 1px solid #e4e4e4;
+}
+
+.container-social span {
+	font-weight: 300;
+	color: #252525;
+}
+
+.container-buttons-social {
+	display: flex;
+	gap: 15px;
+	align-items: center;
+}
+
+.container-buttons-social a:link,
+.container-buttons-social a:visited {
+	color: #666;
+	font-size: 15px;
+}
+
+.container-buttons-social a:hover {
+	color: rgb(243, 96, 96);
+}
+
