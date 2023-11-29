@@ -29,7 +29,7 @@ header {
 
 /* Logo en el header */
 .top-header1 img {
-    max-width: 90%;
+    max-width: 100%;
     max-height: 100px;
 }
 
@@ -147,8 +147,9 @@ justify-content: center;
 
 /*Este burger menu es generico (Pienso que se vería mejor en una esquina en vez de en el medio, me guié con el de mercadoLiebre)*/
 .burger-menu {
-    background-color: #5b0b0b;
+    background-color: #080705;
     color: white;
+    border: solid 1px white;
     width: 50px;
     text-align: center;
     padding: 10px;
@@ -211,7 +212,19 @@ footer ul li{
 }
 
 /*Testing*/
+.intento-caja3 {
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    list-style: none;
+}
 
+.intento-caja3 a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+}
 
 
 
@@ -271,6 +284,15 @@ footer ul li{
         margin-top: 10px;
         display: flex;
         justify-content: space-around;
+    }
+    .top-header1 {
+    justify-content: center;
+    width: 25%;
+    }
+
+    .top-header2 {
+    justify-content: center;
+    width: 50%;
     }
 }
 
