@@ -6,7 +6,7 @@
 }
 
 header {
-    background: linear-gradient(135deg, #5b0b0b 10%, rgb(37, 5, 5) 100%);
+    background: linear-gradient(90deg, hsla(302, 100%, 50%, 1) 0%, hsla(258, 100%, 36%, 1) 100%);
     width: 100%;
 }
 
@@ -74,7 +74,8 @@ header {
     display: flex;
 /*     border-top: solid 1px #CFCFEA; */
     padding: 10px;
-    background: linear-gradient(90deg, #250907 0%,#130705 99%);;
+    /* background: linear-gradient(90deg, #250907 0%,#130705 99%);; */
+    background-color: #080705;
 }
 
 /*Haciendo flex el nav*/
