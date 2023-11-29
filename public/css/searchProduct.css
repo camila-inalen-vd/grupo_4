@@ -6,9 +6,12 @@
 }
 
 body{
-    display: flex;
     background-color: #e2e2e2;
     /* background: linear-gradient(135deg, #e2e2e2 10%, hsla(205, 42%,45%,1)100%); */
+}
+
+.falsobody {
+    display: flex;
 }
 
 .aside-left{    
