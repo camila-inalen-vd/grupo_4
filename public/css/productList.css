@@ -78,16 +78,13 @@ article .cart-class{
         background-color: rgb(230, 247, 238);
         text-align: center;
     }
-
 }
 
 .brand-class, .description-class, .reputation-icon, .price-class, .dues-class, .arrives-class  {
     margin: 0px 0px 5% 0px;
 }
 
-
-
-@media (min-width: 1024px){   
+@media (min-width: 769px) {   
 
     .aside-left{    
         width: 25vw;    
@@ -131,7 +128,7 @@ article .cart-class{
         background-color: white;
         align-items: center;
         margin: 0 0 10% 0;
-        width: 220px;
+        width: 167px;
         height: 50px;
         padding: 0 5% 0 5%;
         border-radius: 5px;
@@ -157,11 +154,11 @@ article .cart-class{
         width: 75vw;
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
+        flex-wrap: wrap;        
     }
     
     article {
-        width: 33%;    
+        width: 45%;    
     }   
     
     .cart-class{     
@@ -179,6 +176,19 @@ article .cart-class{
     .item-box {      
         height: 260px;
     }
+  
+}
+
+@media (min-width: 1024px){   
+ 
+    .class-arrive-today, .class-arrive-free, .class-free, .price-with-discount{
+
+        width: 220px;
+    }
+    
+    article {
+        width: 33%;    
+    }   
   
 }
 
