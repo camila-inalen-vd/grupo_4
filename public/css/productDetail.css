@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body {
-   background-color: #e4e4e4;
+   background-color: #fff;
 }
 
 img {
@@ -14,8 +14,10 @@ img {
 /*------------------main-------------------------*/
 .titulo-container {
     padding: 15px;
-    background-color: #d2c2fd;
     color: white;
+    background-color:  #4e99c7;
+    
+    
 }
 
 main {
@@ -29,20 +31,19 @@ main {
 }
 
 .total-product-detail {
-    background-color: #f7f7f7;
     display: flex;
     flex-wrap: wrap;
 }
 
 .producto {
     flex: 2 1 0;
-     border: 1px solid rgba(0,0,0,.2);
+    /*   */
 }
  
 .img-producto  {
-/*  width: 100%; */
-     margin: 30px;
-     background: #fff;
+     margin: 50px;
+     margin-left: 50px;
+     background-color: #fff;
 }
  
 .img-prod-peq {
@@ -64,11 +65,14 @@ main {
 }
 
 .caja-info-producto {
-    margin-left: 20px;
-    width: 50%;
-    border: 1px solid rgba(0,0,0,.2);
-    margin: 29px 10px 15px 29px;
-	background-color: #f7f7f9;
+    margin: 68px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+/*     border: 1px solid rgba(0,0,0,.2); */
+   /*  margin: 29px 10px 15px 29px; */
+	/* background-color: #f7f7f9; */
 }
 
 .container-info-product {
@@ -76,52 +80,60 @@ main {
     display: flex;
     flex-direction: column;
     margin: 15px;
+    font-size: 18px;
  }
-
-.nombre-producto {
-    font-size: 20px;
-    margin-bottom: 30px;
-    color: #080705;
+.title-producto h4{
+    font-weight: 300;
+    font-size: 18px;
+    margin: -45px -6px;
+    color:#09ae85;
+    
 }
+.nombre-producto {
+    font-weight: 300;
+    font-size: 30px;
+    margin-bottom: 30px;
+   /*  border-bottom: 1px solid rgb(46, 228, 204); */
+    font-size: 18px;
+}
+
 
 .container-precio,
 .container-cuotas,
 .container-pago,
-.container-entrega {
-    padding-bottom: 20px;
+.container-entrega,
+.container-devolucion {
+    padding-bottom: 15px;
     border-bottom: 1px solid #e4e4e4;
+    font-size: 25px;
+    font-weight: 300;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; 
 }
 
-.container-precio span,
-.container-cuotas span,
-.container-pago span,
-.container-entrega span {
-    font-size: 24px;
+.container-precio span {
+    font-size: 30px;
+    font-weight: 300;
+    color:#09ae85;
+}
+
+h4 {
+    font-size: 18px;
     font-weight: 300;
 }
-
-h3 {
-    color: rgb(243, 96, 96);
-    font-style: italic;
-    padding: 5px;
-    margin: 8px;
+h4:hover {
+    color: #c0b3b3;
 }
 
-h3:hover {
-    color: rgb(84, 27, 190);
-}
 
-p {
-    color: black;
-}
 
 .container-details-product {
-    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     margin-bottom: 5px;
-    margin: -2em;
+   margin-top: 15px;
 }
 
 .form-group {
@@ -150,18 +162,27 @@ p {
 	border: none;
 	color: #666;
 	cursor: pointer;
+    padding: 12px 12px;
 
 }
 
-.btn-clean:hover {
-	color: rgb(84, 27, 190);
+.promo-disponible {
+    display: flex;
+    flex-direction: column-reverse;
+}
+.promo-disponible h4 {
+    padding-top: 50px;
+    padding-left: 150px;
+    font-weight: 300;
+    font-size: 25px;
+    color: orangered;
 }
 
 .btn-add-to-cart {
 	border: none;
-	background-color: #252525;
+	background-color: #09ae85;
 	padding: 10px;
-	color: #f7f7f7;
+	color: #ffffff;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -169,10 +190,16 @@ p {
 	font-weight: 700;
 	cursor: pointer;
     margin: 8px;
+    transition: all 400ms ease;
+    box-shadow: 0px 1px 10px rgba(230, 224, 224, 0.2);
 }
 
+
+
 .btn-add-to-cart:hover {
-	color: rgb(243, 96, 96);
+    background-color: #a9c4bd;
+    box-shadow: 5px 5px 20px rgba(219, 208, 208, 0.4);
+    transform: translateY(-3%);
 }
      /*---------------Description product--------------------*/
 
@@ -204,8 +231,7 @@ p {
 .title-additional-information h4,
 .title-reviews h4 {
      font-weight: 300;
-     color: #666;
-     font-size: 14px;
+    font-size: 25px;
 }
      
 .text-description,
@@ -223,11 +249,12 @@ p {
     padding: 10px 0;
     align-items: center;
     border-bottom: 1px solid #e4e4e4;
+    font-size: 25px;
 }
     
 .container-social span {
     font-weight: 300;
-    color: #252525;
+   
 }
     
 .container-buttons-social {
@@ -243,7 +270,7 @@ p {
 }
     
 .container-buttons-social a:hover {
-    color: rgb(243, 96, 96);
+    color:  rgb(46, 192, 192);
 }
     
      /*-------------------------Product Related----------------------------*/
@@ -346,7 +373,7 @@ p {
 }
 
 .text-product h4:hover{
-    color: rgb(243, 96, 96);
+    color:  #d273d6;
 }
 
 .text-product p{
@@ -355,7 +382,7 @@ p {
 }
 
 .text-product p:hover{
-    color: rgb(243, 96, 96);
+    color:  #d273d6;
 }
     /*--Modificaciones para dispositivos con un ancho de pantalla máximo de 767px--*/
 
