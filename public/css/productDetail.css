@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body {
-   background-color: #fff;
+   background-color: #e2e2e2;
 }
 
 img {
@@ -13,12 +13,16 @@ img {
         
 /*------------------main-------------------------*/
 .titulo-container {
-    padding: 15px;
-    color: white;
-    background-color:  #4e99c7;
-    
-    
+    padding: 15px;    
+    font-size: 15px;
 }
+
+.otros-titulos {
+   display: flex;
+   margin-left: 15px;
+   color: #09ae85;
+}
+
 
 main {
     display: flex;
@@ -85,8 +89,9 @@ main {
 .title-producto h4{
     font-weight: 300;
     font-size: 18px;
-    margin: -45px -6px;
+    margin: -96px 120px;
     color:#09ae85;
+    font-size: 50px;
     
 }
 .nombre-producto {
@@ -104,7 +109,7 @@ main {
 .container-entrega,
 .container-devolucion {
     padding-bottom: 15px;
-    border-bottom: 1px solid #e4e4e4;
+    border-bottom: 1px solid #363131;
     font-size: 25px;
     font-weight: 300;
     display: flex;
@@ -209,8 +214,8 @@ h4:hover {
 }
 
 .container-description,
-.container-additional-information,
-.container-reviews {
+.container-additional-information
+/* .container-reviews  */{
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid #e4e4e4;
@@ -219,8 +224,8 @@ h4:hover {
 }
 
 .title-description,
-.title-additional-information,
-.title-reviews {
+.title-additional-information
+/* .title-reviews */ {
      display: flex;
      align-items: center;
      justify-content: space-between;
@@ -228,15 +233,15 @@ h4:hover {
 }
      
 .title-description h4,
-.title-additional-information h4,
-.title-reviews h4 {
+.title-additional-information h4
+/* .title-reviews h4  */{
      font-weight: 300;
     font-size: 25px;
 }
      
 .text-description,
-.text-additional-information,
-.text-reviews {
+.text-additional-information
+/* .text-reviews */ {
     font-size: 13px;
     color: #252525;
     line-height: 22px;
@@ -302,7 +307,7 @@ h4:hover {
 
 .article-related {
     display: flex;
-    margin-bottom: 80px;
+    padding: 60px 60px;
     width: 100%;
     justify-content: center;
 }
@@ -311,7 +316,6 @@ h4:hover {
     width: 300%;
     margin: 20px;
     border-radius: 6px;
-    overflow: hidden;
     box-shadow: 0px 1px 10px rgba(0,0,0,.2);
     cursor: default;
     transition: all 400ms ease;
@@ -327,7 +331,7 @@ h4:hover {
     height: 210px;
 }
 
-.container-related-products h2 {
+.container-related-products h4 {
 	text-align: center;
 	margin-bottom: 30px;
 }
@@ -351,42 +355,50 @@ h4:hover {
 }
 
 .info-card {
-    border-top: 1px solid #ebebeb;
-    padding: 2em 1em;
+    border-top: 1px solid #a7a7a7;
     margin: 15px;
     display: flex;
-    position: relative;
-    align-items: baseline;
     flex-wrap: wrap;
 }
 
 .text-product {
-	color: #252525;
+	color: #000000;
 	font-weight: 300;
-	line-height: 1.4;
 }
 
 .text-product h4{
-    color: inherit;
-    font-weight: inherit;
-    font-size: 15px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin: 5px 0;
 }
 
+
 .text-product h4:hover{
-    color:  #d273d6;
+    color:  rgb(37, 192, 212);
 }
 
 .text-product p{
-    color: rgb(58, 55, 55)626;
+    color: rgb(0, 0, 0)626;
     font-size: 13px;
 }
 
 .text-product p:hover{
-    color:  #d273d6;
+    color:  #a7a7a7;
+}
+
+.text-product .discount {
+    color: #09ae85;
+}
+
+.info-card .precio {
+    margin: 5px 0;
+    color: #09ae85;
+    font-size: 25px;
 }
     /*--Modificaciones para dispositivos con un ancho de pantalla máximo de 767px--*/
 
-@media(max-width: 767px) {
+@media(max-width: 769px) {
 
 .caja-info-producto {
     flex-direction: column;
@@ -398,9 +410,9 @@ h4:hover {
 }
 
 .container-precio span,
-.container-cuotas span,
-.container-pago span,
-.container-entrega span {
+.container-cuotas h4,
+.container-pago h4,
+.container-entrega h4{
     font-size: 18px;
 }
 
@@ -427,10 +439,7 @@ h4:hover {
 }
 
 .container-related-products {
-    padding: 15px;
     box-shadow: none;
-    margin-top: 2em 2em;
-    width: 45%;
 }
 
 .card {

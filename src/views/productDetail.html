@@ -7,13 +7,72 @@
     <link rel="stylesheet" href="/css/header-footer.css">
     <link rel="stylesheet" href="/css/productDetail.css">
     <script src="https://kit.fontawesome.com/dfa7894c65.js" crossorigin="anonymous"></script>
-    
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Nunito&display=swap" rel="stylesheet">
+    <!--Fuente de banners-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Nunito&family=Permanent+Marker&display=swap" rel="stylesheet">
 
 </head>
 <body>
    
+    <header>
+        <div class="top-header-main">
+            <div class="top-header1"><a href="/"><img src="/images/logopng.png" alt=""></a>
+            </div>
+            <div class="top-header2"><div class="search-bar"><input type="text" placeholder="Buscar modelos o marcas..."><button ><i class="fa-solid fa-magnifying-glass"></i></button></div></div>
+            <div class="top-header3">Caja 3</div>
+        </div>
+
+        <div class="bottom-header">
+            
+            <div class="burger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <nav>
+            <div class="nav-1">
+                <ul>
+                    <li><i class="fa-solid fa-location-dot"></i><a href=""> Ingresa tu domicilio</a></li>
+                </ul>
+            </div>
+
+            <div class="nav-2">
+                <ul>
+                    <li><a href="">Categorías</a></li>
+                    <li><a href="/productDetail">Ofertas</a></li>
+                    <li><a href="">Historial</a></li>
+                    <li><a href="/productList">Listado</a></li>
+                    <li><a href="">Moda</a></li>
+                    <li><a href="">Vender</a></li>
+                    <li><a href="">Ayuda</a></li>
+                </ul>
+            </div>
+
+            <div class="nav-3" >
+                <ul>
+                    <li><a href="">Mis compras</a><i class="fa-solid fa-cart-shopping"></i></li>
+                    <li><a href="/login">Ingresa</a></li>
+                    <li><a href="/register">Crea tu cuenta</a></li>
+                    
+                </ul>
+            </div>
+            </nav>  
+        </div>
+    </header>
+
     <div class="titulo-container"> 
-      <h2>Volver al listado </h2>
+      <h2>
+        <a href="/productList">Volver al listado </a>
+    </h2>
+    </div>
+    <div class="otros-titulos">
+      <h4>Ropa y accesorios  > </h4>
+      <h4>Calsado > </h4>
+      <h4>Zapatillas  > </h4>
         </div>
 <main>
 
@@ -36,7 +95,7 @@
       <section class="caja-info-producto">
          <div class="container-info-product">
             <div class="title-producto">
-                <h4> Ver mas productos marca Nike</h4>
+                <h4>SALE!</h4>
              </div>
          <div class="nombre-producto">
                ZAPATILLAS NIKE MUJER VENTURE RUNNER 7.5 
@@ -121,22 +180,27 @@
        
     <div class="container-additional-information">
     <div class="title-additional-information">
-          <h4>Información adicional</h4>
+          <h4>Especificaciónes</h4>
           <i class="fa-solid fa-chevron-down"></i>
     </div>
     <div class="text-additional-information hidden">
-            <p>-----------</p>
+    <ul>
+        <li>Capellada: Textil, Poliéster, Cuero Vacuno Descarne.</li>
+        <li>Forro: Textil, Poliéster.</li>
+        <li>Suela: Goma.</li>
+        <li>Origen Indonesia.</li>
+    </ul>  
     </div>
-    <div class="container-reviews">
+   <!--  <div class="container-reviews">
     <div class="title-reviews">
         <h4>Reseñas                         </h4>
-        <i class="fa-solid fa-chevron-down"></i>
-    </div>
+        <i class="fa-solid fa-chevron-down"></i> -->
+   <!--  </div>
     <div class="text-reviews hidden">
             <p>-----------</p>
     </div>
-    </div>
-    </div>
+    </div> -->
+    <!-- </div> -->
     <div class="container-social">
         <span>Compartir</span>
     <div class="container-buttons-social">
@@ -156,7 +220,7 @@
  
 
     <div class="titulo-container"> 
-        <h2>Productos Relacionados</h2>
+        <h2>Productos Relacionados |</h2>
     </div>
     <section class="article-related">
     <div class="container-related-products">
@@ -168,10 +232,10 @@
         <div class="info-card">
         <div class="text-product">
             <h4>NIKE - AIR ZOOM PEGASUS </h4>
-            <p class="discount">10% OFF</p>
+            <div class="discount">10% OFF</div>
             <p class="description">ZAPATILLAS RUNNING NIKE AIR ZOOM PEGASUS 37 MUJER ROSA</p>
             </div>
-            <div class="precio">$83.999</div>
+            <p class="precio">$83.999</p>
         </div>
         </div>
       </div>
@@ -188,7 +252,7 @@
                     <p class="discount">15% OFF</p>
                     <p class="description">ZAPATILLAS RUNNING NIKE AIR ZOOM PEGASUS 39 AZUL</p>
                 </div>
-                <div class="precio">$109.999</div>
+                <p class="precio">$109.999</p>
            </div>
         </div>
       </div>
@@ -204,7 +268,7 @@
                 <p class="discount">5% OFF</p>
                 <p class="description">ZAPATILLAS RUNNING ADIDAS GALAXY 6 NEGRA</p>
             </div>
-            <div class="precio">$49.399</div>
+            <p class="precio">$49.399</p>
         </div>
     </div>
     </div>
