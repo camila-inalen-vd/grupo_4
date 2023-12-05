@@ -50,6 +50,7 @@ article {
 }
 
 .discount {
+    color: green;
     transition-property: font-size;
     transition-duration: 0.3s;
 }
@@ -60,7 +61,6 @@ article {
 }
 
 .product-card:hover .discount {
-    color: green;
     text-decoration: none;
 }
 

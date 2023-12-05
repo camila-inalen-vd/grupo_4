@@ -211,6 +211,10 @@ footer ul li{
     font-size: 0.7rem;
 }
 
+#caja3 {
+    width: 90%;
+}
+
 /*Testing*/
 .intento-caja3 {
     display: flex;
@@ -262,6 +266,9 @@ footer ul li{
 @media (max-width: 769px) {
     nav {
         display: none;
+    }
+    #caja3 {
+        width: 100%;
     }
 }
 
