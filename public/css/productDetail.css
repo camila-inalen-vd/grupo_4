@@ -14,7 +14,11 @@ img {
 /*------------------main-------------------------*/
 .titulo-container {
     padding: 15px;    
-    font-size: 15px;
+    font-size: 12px;
+}
+
+.titulo-container a {
+color: #000000;
 }
 
 .otros-titulos {
@@ -105,6 +109,15 @@ main {
     font-size: 18px;
 }
 
+.reputation-icon{
+    color: rgb(52, 131, 250);
+    margin: 15px;
+    font-size: 25px;
+}   
+.reputation-icon a {
+    font-size: 20px;
+    color: #000000;
+}
 
 .container-precio,
 .container-cuotas,
@@ -312,7 +325,6 @@ h4:hover {
     display: flex;
     margin-top: -70px;
     padding: 60px 60px;
-    width: 100%;
     justify-content: center;
 }
    
@@ -400,9 +412,25 @@ h4:hover {
     color: green;
     font-size: 25px;
 }
-    /*--Modificaciones para dispositivos con un ancho de pantalla máximo de 767px--*/
+    /*----*/
 
-@media(min-width: 769px) {
+@media(min-width: 361px) {
 
+.article-related{
+    display: flex;
+}
+.container-related-products {
+    width: 40%;
+}
+}
+@media(max-width:769px) {
     
+    .container-info-product {
+        width: 100%;
+    }
+
+    .description-text {
+        display: flex;
+        width: 100%;
+    }
 }
