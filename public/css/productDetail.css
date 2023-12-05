@@ -20,7 +20,7 @@ img {
 .otros-titulos {
    display: flex;
    margin-left: 15px;
-   color: #09ae85;
+   color: green;
 }
 
 
@@ -93,7 +93,7 @@ main {
     font-weight: 300;
     font-size: 18px;
     margin: -96px 120px;
-    color:#09ae85;
+    color: green;
     font-size: 50px;
     
 }
@@ -123,7 +123,7 @@ main {
 .container-precio span {
     font-size: 30px;
     font-weight: 300;
-    color:#09ae85;
+    color:green;
 }
 
 h4 {
@@ -183,12 +183,12 @@ h4:hover {
     padding-left: 150px;
     font-weight: 300;
     font-size: 25px;
-    color: orangered;
+    color: rgb(130, 206, 17);
 }
 
 .btn-add-to-cart {
 	border: none;
-	background-color: #09ae85;
+	background-color: green;
 	padding: 10px;
 	color: #ffffff;
 	display: flex;
@@ -278,7 +278,7 @@ h4:hover {
 }
     
 .container-buttons-social a:hover {
-    color:  rgb(46, 192, 192);
+    color:  green;
 }
     
      /*-------------------------Product Related----------------------------*/
@@ -379,7 +379,7 @@ h4:hover {
 
 
 .text-product h4:hover{
-    color:  rgb(37, 192, 212);
+    color:  green;
 }
 
 .text-product p{
@@ -392,12 +392,12 @@ h4:hover {
 }
 
 .text-product .discount {
-    color: #09ae85;
+    color: green;
 }
 
 .info-card .precio {
     margin: 5px 0;
-    color: #09ae85;
+    color: green;
     font-size: 25px;
 }
     /*--Modificaciones para dispositivos con un ancho de pantalla máximo de 767px--*/
