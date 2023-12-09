@@ -40,7 +40,7 @@ header {
     width: 90%;
     border-radius: 5px;
     padding: 5px;
-    border: 1px solid #383838;
+    border: 1px solid black;
 }
 /* Input de barra de búsqueda */
 .top-header2 input {
@@ -75,7 +75,7 @@ header {
 /*     border-top: solid 1px #CFCFEA; */
     padding: 10px;
     /* background: linear-gradient(90deg, #250907 0%,#130705 99%);; */
-    background-color: #080705;
+    background-color: black;
 }
 
 /*Haciendo flex el nav*/
@@ -147,7 +147,7 @@ justify-content: center;
 
 /*Este burger menu es generico (Pienso que se vería mejor en una esquina en vez de en el medio, me guié con el de mercadoLiebre)*/
 .burger-menu {
-    background-color: #080705;
+    background-color: black;
     color: white;
     border: solid 1px white;
     width: 50px;
@@ -162,7 +162,7 @@ justify-content: center;
 }
 
 footer{
-    background-color: #080705;
+    background-color: black;
     padding: 15px;
     margin-top: 5%;
 }
@@ -231,6 +231,14 @@ footer ul li{
 }
 
 
+nav li:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s step;
+}
+
+
+
+
 
 
 /* Media querys */
@@ -267,8 +275,8 @@ footer ul li{
     nav {
         display: none;
     }
-    #caja3 {
-        width: 100%;
+    .top-header3 {
+        display: none;
     }
 }
 

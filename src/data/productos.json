@@ -1,0 +1,218 @@
+[
+    {
+        "id": 1,
+        "nombre": "Runner 7.5",
+        "marca": "Nike",
+        "precio": 80000,
+        "cuotas": 3,
+        "descuento": 30,
+        "descripcion":"La NIKE Venture Runner Mujer mejora el estilo con una plantilla acolchada y una ligera parte superior de malla, al tiempo que hace un guiño al icónico calzado de los 80 que comenzó la revolución del running. Las costuras visibles, la parte superior altamente flexible y el pasador del talón con micro detalles de la marca añaden un ADN moderno a tu look relajado. Debido a la naturaleza de exclusiva calidad de los materiales, podría ocurrir que en algunos casos el producto destiñera levemente, sobre todo en condiciones de humedad. Mientras esté mojada, se aconseja que la zapatilla no entre en contacto con otras prendas claras hasta que no esté completamente seca.",
+        "color": ["Rojo", "Blanco", "Azul"],
+        "talle": [36,37,38,39,40],
+        "especificaciones": {
+            "capellada": "Téxtil, Poliéster, Cuero Vacuno Descarne",
+            "forro": "Textil, Poliéster",
+            "suela": "Goma",
+            "origen": "Indonesia"
+        },
+        "punt": 3,
+        "stock": 1,
+        "img": "/images/img-prodDetail/img-grande.jpg",
+        "miniatura": [
+            "/images/img-prodDetail/img-1.jpg",
+            "/images/img-prodDetail/img-2.jpg",
+            "/images/img-prodDetail/img-3.jpg",
+            "/images/img-prodDetail/img-4.jpg",
+            "/images/img-prodDetail/img-5.jpg"
+        ]
+    },
+    {
+        "id": 2,
+        "nombre": "Runner 7.5",
+        "marca": "Nike",
+        "precio": 80000,
+        "cuotas": 3,
+        "descuento": 30,
+        "descripcion":"La NIKE Venture Runner Mujer mejora el estilo con una plantilla acolchada y una ligera parte superior de malla, al tiempo que hace un guiño al icónico calzado de los 80 que comenzó la revolución del running. Las costuras visibles, la parte superior altamente flexible y el pasador del talón con micro detalles de la marca añaden un ADN moderno a tu look relajado. Debido a la naturaleza de exclusiva calidad de los materiales, podría ocurrir que en algunos casos el producto destiñera levemente, sobre todo en condiciones de humedad. Mientras esté mojada, se aconseja que la zapatilla no entre en contacto con otras prendas claras hasta que no esté completamente seca.",
+        "color": ["Rojo", "Blanco", "Azul"],
+        "talle": [36,37,38,39,40],
+        "especificaciones": {
+            "capellada": "Téxtil, Poliéster, Cuero Vacuno Descarne",
+            "forro": "Textil, Poliéster",
+            "suela": "Goma",
+            "origen": "Indonesia"
+        },
+        "punt": 3,
+        "stock": 2,
+        "img": "/images/img-prodDetail/img-grande.jpg",
+        "miniatura": [
+            "/images/img-prodDetail/img-1.jpg",
+            "/images/img-prodDetail/img-2.jpg",
+            "/images/img-prodDetail/img-3.jpg",
+            "/images/img-prodDetail/img-4.jpg",
+            "/images/img-prodDetail/img-5.jpg"
+        ]
+    },
+    {
+        "id": 3,
+        "nombre": "Runner 9.5",
+        "marca": "Nike",
+        "precio": 60000,
+        "cuotas": 3,
+        "descuento": 30,
+        "descripcion":"La NIKE Venture Runner Mujer mejora el estilo con una plantilla acolchada y una ligera parte superior de malla, al tiempo que hace un guiño al icónico calzado de los 80 que comenzó la revolución del running. Las costuras visibles, la parte superior altamente flexible y el pasador del talón con micro detalles de la marca añaden un ADN moderno a tu look relajado. Debido a la naturaleza de exclusiva calidad de los materiales, podría ocurrir que en algunos casos el producto destiñera levemente, sobre todo en condiciones de humedad. Mientras esté mojada, se aconseja que la zapatilla no entre en contacto con otras prendas claras hasta que no esté completamente seca.",
+        "color": ["Rojo", "Blanco", "Azul"],
+        "talle": [36,37,38,39,40],
+        "especificaciones": {
+            "capellada": "Téxtil, Poliéster, Cuero Vacuno Descarne",
+            "forro": "Textil, Poliéster",
+            "suela": "Goma",
+            "origen": "Indonesia"
+        },
+        "punt": 5,
+        "stock": 1,
+        "img": "/images/img-prodDetail/img-grande.jpg",
+        "miniatura": [
+            "/images/img-prodDetail/img-1.jpg",
+            "/images/img-prodDetail/img-2.jpg",
+            "/images/img-prodDetail/img-3.jpg",
+            "/images/img-prodDetail/img-4.jpg",
+            "/images/img-prodDetail/img-5.jpg"
+        ]
+    },
+    {
+        "id": 4,
+        "nombre": "Runner 7.5",
+        "marca": "Nike",
+        "precio": 80000,
+        "cuotas": 3,
+        "descuento": 30,
+        "descripcion":"La NIKE Venture Runner Mujer mejora el estilo con una plantilla acolchada y una ligera parte superior de malla, al tiempo que hace un guiño al icónico calzado de los 80 que comenzó la revolución del running. Las costuras visibles, la parte superior altamente flexible y el pasador del talón con micro detalles de la marca añaden un ADN moderno a tu look relajado. Debido a la naturaleza de exclusiva calidad de los materiales, podría ocurrir que en algunos casos el producto destiñera levemente, sobre todo en condiciones de humedad. Mientras esté mojada, se aconseja que la zapatilla no entre en contacto con otras prendas claras hasta que no esté completamente seca.",
+        "color": ["Rojo", "Blanco", "Azul"],
+        "talle": [36,37,38,39,40],
+        "especificaciones": {
+            "capellada": "Téxtil, Poliéster, Cuero Vacuno Descarne",
+            "forro": "Textil, Poliéster",
+            "suela": "Goma",
+            "origen": "Indonesia"
+        },
+        "punt": 5,
+        "stock": 0,
+        "img": "/images/img-prodDetail/img-grande.jpg",
+        "miniatura": [
+            "/images/img-prodDetail/img-1.jpg",
+            "/images/img-prodDetail/img-2.jpg",
+            "/images/img-prodDetail/img-3.jpg",
+            "/images/img-prodDetail/img-4.jpg",
+            "/images/img-prodDetail/img-5.jpg"
+        ]
+    },
+    {
+        "id": 5,
+        "nombre": "Runner 7.5",
+        "marca": "Nike",
+        "precio": 80000,
+        "cuotas": 3,
+        "descuento": 30,
+        "descripcion":"La NIKE Venture Runner Mujer mejora el estilo con una plantilla acolchada y una ligera parte superior de malla, al tiempo que hace un guiño al icónico calzado de los 80 que comenzó la revolución del running. Las costuras visibles, la parte superior altamente flexible y el pasador del talón con micro detalles de la marca añaden un ADN moderno a tu look relajado. Debido a la naturaleza de exclusiva calidad de los materiales, podría ocurrir que en algunos casos el producto destiñera levemente, sobre todo en condiciones de humedad. Mientras esté mojada, se aconseja que la zapatilla no entre en contacto con otras prendas claras hasta que no esté completamente seca.",
+        "color": ["Rojo", "Blanco", "Azul"],
+        "talle": [36,37,38,39,40],
+        "especificaciones": {
+            "capellada": "Téxtil, Poliéster, Cuero Vacuno Descarne",
+            "forro": "Textil, Poliéster",
+            "suela": "Goma",
+            "origen": "Indonesia"
+        },
+        "punt": 5,
+        "stock": 0,
+        "img": "/images/img-prodDetail/img-grande.jpg",
+        "miniatura": [
+            "/images/img-prodDetail/img-1.jpg",
+            "/images/img-prodDetail/img-2.jpg",
+            "/images/img-prodDetail/img-3.jpg",
+            "/images/img-prodDetail/img-4.jpg",
+            "/images/img-prodDetail/img-5.jpg"
+        ]
+    },
+    {
+        "id": 6,
+        "nombre": "Runner 7.5",
+        "marca": "Nike",
+        "precio": 80000,
+        "cuotas": 3,
+        "descuento": 30,
+        "descripcion":"La NIKE Venture Runner Mujer mejora el estilo con una plantilla acolchada y una ligera parte superior de malla, al tiempo que hace un guiño al icónico calzado de los 80 que comenzó la revolución del running. Las costuras visibles, la parte superior altamente flexible y el pasador del talón con micro detalles de la marca añaden un ADN moderno a tu look relajado. Debido a la naturaleza de exclusiva calidad de los materiales, podría ocurrir que en algunos casos el producto destiñera levemente, sobre todo en condiciones de humedad. Mientras esté mojada, se aconseja que la zapatilla no entre en contacto con otras prendas claras hasta que no esté completamente seca.",
+        "color": ["Rojo", "Blanco", "Azul"],
+        "talle": [36,37,38,39,40],
+        "especificaciones": {
+            "capellada": "Téxtil, Poliéster, Cuero Vacuno Descarne",
+            "forro": "Textil, Poliéster",
+            "suela": "Goma",
+            "origen": "Indonesia"
+        },
+        "punt": 5,
+        "stock": 0,
+        "img": "/images/img-prodDetail/img-grande.jpg",
+        "miniatura": [
+            "/images/img-prodDetail/img-1.jpg",
+            "/images/img-prodDetail/img-2.jpg",
+            "/images/img-prodDetail/img-3.jpg",
+            "/images/img-prodDetail/img-4.jpg",
+            "/images/img-prodDetail/img-5.jpg"
+        ]
+    },
+    {
+        "id": 7,
+        "nombre": "Runner 7.5",
+        "marca": "Nike",
+        "precio": 80000,
+        "cuotas": 3,
+        "descuento": 30,
+        "descripcion":"La NIKE Venture Runner Mujer mejora el estilo con una plantilla acolchada y una ligera parte superior de malla, al tiempo que hace un guiño al icónico calzado de los 80 que comenzó la revolución del running. Las costuras visibles, la parte superior altamente flexible y el pasador del talón con micro detalles de la marca añaden un ADN moderno a tu look relajado. Debido a la naturaleza de exclusiva calidad de los materiales, podría ocurrir que en algunos casos el producto destiñera levemente, sobre todo en condiciones de humedad. Mientras esté mojada, se aconseja que la zapatilla no entre en contacto con otras prendas claras hasta que no esté completamente seca.",
+        "color": ["Rojo", "Blanco", "Azul"],
+        "talle": [36,37,38,39,40],
+        "especificaciones": {
+            "capellada": "Téxtil, Poliéster, Cuero Vacuno Descarne",
+            "forro": "Textil, Poliéster",
+            "suela": "Goma",
+            "origen": "Indonesia"
+        },
+        "punt": 5,
+        "stock": 0,
+        "img": "/images/img-prodDetail/img-grande.jpg",
+        "miniatura": [
+            "/images/img-prodDetail/img-1.jpg",
+            "/images/img-prodDetail/img-2.jpg",
+            "/images/img-prodDetail/img-3.jpg",
+            "/images/img-prodDetail/img-4.jpg",
+            "/images/img-prodDetail/img-5.jpg"
+        ]
+    },
+    {
+        "id": 8,
+        "nombre": "Runner 7.5",
+        "marca": "Nike",
+        "precio": 80000,
+        "cuotas": 3,
+        "descuento": 30,
+        "descripcion":"La NIKE Venture Runner Mujer mejora el estilo con una plantilla acolchada y una ligera parte superior de malla, al tiempo que hace un guiño al icónico calzado de los 80 que comenzó la revolución del running. Las costuras visibles, la parte superior altamente flexible y el pasador del talón con micro detalles de la marca añaden un ADN moderno a tu look relajado. Debido a la naturaleza de exclusiva calidad de los materiales, podría ocurrir que en algunos casos el producto destiñera levemente, sobre todo en condiciones de humedad. Mientras esté mojada, se aconseja que la zapatilla no entre en contacto con otras prendas claras hasta que no esté completamente seca.",
+        "color": ["Rojo", "Blanco", "Azul"],
+        "talle": [36,37,38,39,40],
+        "especificaciones": {
+            "capellada": "Téxtil, Poliéster, Cuero Vacuno Descarne",
+            "forro": "Textil, Poliéster",
+            "suela": "Goma",
+            "origen": "Indonesia"
+        },
+        "punt": 5,
+        "stock": 0,
+        "img": "/images/img-prodDetail/img-grande.jpg",
+        "miniatura": [
+            "/images/img-prodDetail/img-1.jpg",
+            "/images/img-prodDetail/img-2.jpg",
+            "/images/img-prodDetail/img-3.jpg",
+            "/images/img-prodDetail/img-4.jpg",
+            "/images/img-prodDetail/img-5.jpg"
+        ]
+    }
+]
