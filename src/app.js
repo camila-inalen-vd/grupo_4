@@ -5,7 +5,8 @@ const app = express();
 const publicPath = path.resolve(__dirname, '../public')
 
 //Requerir rutas
-const mainRoutes = require('./routes/mainRoutes.js')
+const mainRoutes = require('./routes/mainRoutes.js');
+const productRoutes = require('./routes/productRoutes.js')
 
 //Carpeta views y public.
 app.set('views', path.resolve(__dirname, 'views'));
@@ -15,16 +16,11 @@ app.use(express.static(publicPath))
 app.set('view engine', 'ejs')
 
 //Rutas
-app.use('/', mainRoutes)
+app.use('/', mainRoutes);
+app.use('/detalle', productRoutes)
 
 
 //Estas rutas hay que modificarlas con lo aprendido en MVC. Les puse nombre para que los que estan a cargo de cada una las identifiquen.
-
-
-//Noe
-app.get('/productDetail', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/productDetail.html'))
-})
 
 //Facu Romero
 app.get('/productCart', (req, res) => {
