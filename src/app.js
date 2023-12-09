@@ -6,7 +6,8 @@ const publicPath = path.resolve(__dirname, '../public')
 
 //Requerir rutas
 const mainRoutes = require('./routes/mainRoutes.js');
-const productRoutes = require('./routes/productRoutes.js')
+const productRoutes = require('./routes/productRoutes.js');
+const productlistRoutes = require('./routes/guiaList.js')
 
 //Carpeta views y public.
 app.set('views', path.resolve(__dirname, 'views'));
@@ -18,6 +19,8 @@ app.set('view engine', 'ejs')
 //Rutas
 app.use('/', mainRoutes);
 app.use('/detalle', productRoutes)
+//Esta es la ruta de fede
+app.use('/product', productlistRoutes)
 
 
 //Estas rutas hay que modificarlas con lo aprendido en MVC. Les puse nombre para que los que estan a cargo de cada una las identifiquen.

@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
+    
     <!--Head-->
     <%-include('./partials/head.ejs')%>
+    <link rel="stylesheet" href="css/style.css"> <!--Editar ruta de archivo-->
+</head>
+    <!--Hasta acá-->
+
 <body>
     <!--Header-->
     <%-include('./partials/header.ejs')%>
@@ -37,7 +42,7 @@
             <h1>Ofertas</h1>
             <div class="carousel-productos">
 
-                
+
             <% for(let i = 0 ; i < productos.length ; i++){ %>
             <article class="article">
                 <!--<a href="/product/detail/<%=productos[i].id%>"><div class="product-card"> -->
