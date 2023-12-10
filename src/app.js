@@ -6,7 +6,7 @@ const publicPath = path.resolve(__dirname, '../public')
 
 //Requerir rutas
 const mainRoutes = require('./routes/mainRoutes.js');
-const productRoutes = require('./routes/productRoutes.js');
+const productRoutes = require('./routes/productsRoutes.js');
 const productlistRoutes = require('./routes/guiaList.js')
 const userRoutes = require('./routes/userRoutes.js');
 
@@ -19,8 +19,8 @@ app.set('view engine', 'ejs')
 
 //Rutas
 app.use('/', mainRoutes);
-app.use('/detalle', productRoutes)
-//Esta es la ruta de fede
+//ProductDetail y ProductList
+app.use('/product', productRoutes)
 app.use('/product', productlistRoutes)
 //Rutas login y register
 app.use('/user', userRoutes)
