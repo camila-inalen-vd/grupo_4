@@ -24,7 +24,6 @@ app.use('/product', productRoutes)
 app.use('/product', productlistRoutes)
 //Rutas login y register
 app.use('/user', userRoutes)
-app.use('/user', userRoutes)
 
 //Estas rutas hay que modificarlas con lo aprendido en MVC. Les puse nombre para que los que estan a cargo de cada una las identifiquen.
 
