@@ -7,7 +7,6 @@ const publicPath = path.resolve(__dirname, '../public')
 //Requerir rutas
 const mainRoutes = require('./routes/mainRoutes.js');
 const productRoutes = require('./routes/productsRoutes.js');
-const productlistRoutes = require('./routes/guiaList.js')
 const userRoutes = require('./routes/userRoutes.js');
 
 //Carpeta views y public.
@@ -21,7 +20,6 @@ app.set('view engine', 'ejs')
 app.use('/', mainRoutes);
 //ProductDetail y ProductList
 app.use('/product', productRoutes)
-app.use('/product', productlistRoutes)
 //Rutas login y register
 app.use('/user', userRoutes)
 

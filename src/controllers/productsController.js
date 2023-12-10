@@ -10,6 +10,9 @@ const productsController = {
             return zapatilla.id == idBuscada
         })
         res.render('productDetail', {'producto': productoBuscado})
+    },
+    productList: function (req,res){
+        res.render('productList', {'productos': productos})
     }
 }
 
