@@ -2,7 +2,7 @@ const fs = require('fs')
 const path = require('path')
 const productos = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/productos.json')));
 
-const productController = {
+const productsController = {
 
     productDetail: (req,res) => {
         let idBuscada = req.params.id;
@@ -13,4 +13,4 @@ const productController = {
     }
 }
 
-module.exports = productController;
+module.exports = productsController;
