@@ -1,0 +1,54 @@
+[
+    {
+        "id": 1,
+        "img": "/images/marcas/adidas.webp"
+    },
+    {
+        "id": 2,
+        "img": "/images/marcas/atomik.webp"
+    },
+    {
+        "id": 3,
+        "img": "/images/marcas/converse.webp"
+    },
+    {
+        "id": 4,
+        "img": "/images/marcas/dc-shoes.webp"
+    },
+    {
+        "id": 5,
+        "img": "/images/marcas/fila.webp"
+    },
+    {
+        "id": 6,
+        "img": "/images/marcas/jaguar.webp"
+    },
+    {
+        "id": 7,
+        "img": "/images/marcas/john-foos.webp"
+    },
+    {
+        "id": 8,
+        "img": "/images/marcas/kappa.webp"
+    },
+    {
+        "id": 9,
+        "img": "/images/marcas/new-balance.webp"
+    },
+    {
+        "id": 10,
+        "img": "/images/marcas/puma.webp"
+    },
+    {
+        "id": 11,
+        "img": "/images/marcas/reebok.webp"
+    },
+    {
+        "id": 12,
+        "img": "/images/marcas/topper.webp"
+    },
+    {
+        "id": 13,
+        "img": "/images/marcas/wilson.webp"
+    }
+]

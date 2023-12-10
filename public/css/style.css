@@ -10,7 +10,7 @@ body {
 
 section h1 {
     text-align: center;
-    background: #080705;
+    background: black;
     margin-top: 5%;
     margin-bottom: 5%;
     color: white;
@@ -24,6 +24,29 @@ section h1 {
     flex-wrap: wrap;
     justify-content: center;
     align-items: stretch;
+}
+
+.carousel-productos {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    overflow: scroll;
+
+
+    /*test, para suavizar scroll*/
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    white-space: nowrap; /* Evita el salto de línea entre elementos */
+    transition: transform 0.5s ease; /* Añadido para hacer el desplazamiento más suave */
+}
+.carousel-productos article {
+    flex: 1 0 auto;
+    width: 60%;
+    margin: 0 10px;
+    background-color: rgb(255, 255, 255);
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 article {
@@ -137,17 +160,13 @@ main article:hover {
 }
 
 
-nav li:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s step;
-}
-
-
-
-
 @media (min-width: 361px) {
     article {
         width: 40%;
+    }
+    .carousel-productos article {
+        width: 35%;
+        
     }
     .categorias-populares article {
         width: 20%;
@@ -158,6 +177,10 @@ nav li:hover {
 @media (min-width: 1025px) {
     article {
         width: 20%;
+    }
+    .carousel-productos article {
+        width: 15%;
+        
     }
     .categorias-populares article {
         display: flex;

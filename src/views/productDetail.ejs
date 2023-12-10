@@ -150,11 +150,11 @@
     <div class="form-group"><label for="size">Talle</label>
     <select name="size" id="size">
     <option disabled selected value="">Elige una opción</option>
-    <option value="36">36</option>
-    <option value="37">37</option>
-    <option value="38">38</option>
-    <option value="39">39</option>
-    <option value="40">40</option>
+    <!--Esto aca este-->
+    <% for(let i = 0; i < producto.talle.length; i++){ %>
+    <option value="36"><%=producto.talle[i]%></option>
+    <% } %>
+
     </select>
     </div>
     <div>
@@ -196,8 +196,8 @@
     </div>
     <div class="text-additional-information hidden">
     <ul>
-        <li>Capellada: Textil, Poliéster, Cuero Vacuno Descarne.</li>
-        <li>Forro: Textil, Poliéster.</li>
+        <li>Capellada: <%= producto.especificaciones.capellada %>.</li>
+        <li>Forro: <%= producto.especificaciones.forro %>.</li>
         <li>Suela: Goma.</li>
         <li>Origen Indonesia.</li>
     </ul>  
