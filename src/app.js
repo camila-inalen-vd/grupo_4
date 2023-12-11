@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const app = express();
+const methodOverride = require('method-override')
 //Guardamos la dirección de la carpeta public con path.
 const publicPath = path.resolve(__dirname, '../public')
 
@@ -44,6 +45,11 @@ app.post('/register', (req, res) => {
 app.post('/login', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/index.html'))
 })
+
+//Para manipular datos con form
+app.use(express.urlencoded({extended: false}));
+app.use(express.json());
+app.use(methodOverride('_method'));
 
 //Arranque del servidor (Lo tiré abajo de todo para evitar errores al leerse antes que otras ejecuciones)
 const port = process.env.PORT || 3000;
