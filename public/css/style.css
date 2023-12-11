@@ -31,6 +31,8 @@ section h1 {
     justify-content: center;
     align-items: stretch;
     overflow: scroll;
+
+
     /*test, para suavizar scroll*/
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: x mandatory;

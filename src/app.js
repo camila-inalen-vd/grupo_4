@@ -1,11 +1,14 @@
 const express = require('express');
 const path = require('path');
 const app = express();
+const methodOverride = require('method-override')
 //Guardamos la dirección de la carpeta public con path.
 const publicPath = path.resolve(__dirname, '../public')
 
 //Requerir rutas
-const mainRoutes = require('./routes/mainRoutes.js')
+const mainRoutes = require('./routes/mainRoutes.js');
+const productRoutes = require('./routes/productsRoutes.js');
+const userRoutes = require('./routes/userRoutes.js');
 
 //Carpeta views y public.
 app.set('views', path.resolve(__dirname, 'views'));
@@ -15,16 +18,13 @@ app.use(express.static(publicPath))
 app.set('view engine', 'ejs')
 
 //Rutas
-app.use('/', mainRoutes)
-
+app.use('/', mainRoutes);
+//ProductDetail y ProductList
+app.use('/product', productRoutes)
+//Rutas login y register
+app.use('/user', userRoutes)
 
 //Estas rutas hay que modificarlas con lo aprendido en MVC. Les puse nombre para que los que estan a cargo de cada una las identifiquen.
-
-
-//Noe
-app.get('/productDetail', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/productDetail.html'))
-})
 
 //Facu Romero
 app.get('/productCart', (req, res) => {
@@ -46,11 +46,10 @@ app.post('/login', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/index.html'))
 })
 
-//Fede
-app.get('/productlist', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/productList.html'))
-})
-
+//Para manipular datos con form
+app.use(express.urlencoded({extended: false}));
+app.use(express.json());
+app.use(methodOverride('_method'));
 
 //Arranque del servidor (Lo tiré abajo de todo para evitar errores al leerse antes que otras ejecuciones)
 const port = process.env.PORT || 3000;
