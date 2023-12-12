@@ -224,20 +224,21 @@
             <section class="section-right">
 
                 <!---->
-                <article>
+                <% for( let i = 0; i < productos.length; i++ ) { %>
+                <article>                                       
                     <div class="cart-class">
                         <div class="cart-image">
-                            <img src="/images\searchProduct\salomon.jpg" alt="Cafetera Moulinex">
+                            <img src="<%= productos[i].img %>" alt="Cafetera Moulinex">
                         </div>             
                         <div class="item-box">
                             <div class="brand-class">
-                                <h4><%= productos[0].nombre %></h4>
+                                <h4><%= productos[i].marca %></h4>
                             </div>
                             <div class="description-class">
-                                <p>Salomon Supercross 3 Hombre Adultos</p>
+                                <p><%= productos[i].descripcion %></p>
                             </div>
                             <div by-brand>
-                                <p>por Universo Aventura</p>
+                                <p><%= productos[i].nombre %></p>
                             </div>
                             <div class="reputation-icon">
                                 <i class="fa-solid fa-star"></i>
@@ -247,7 +248,7 @@
                                 <i class="fa-solid fa-star-half-stroke"></i>
                             </div>
                             <div class="price-class">
-                                <h2 class="precio">$ 89.999</h2>                            
+                                <h2 class="precio"><%= productos[i].precio %></h2>                            
                             </div>
                             <div class="arrives-class">
                                 <label for="arrives"></label>
@@ -256,9 +257,10 @@
                         </div>
                     </div>                    
                 </article>
+                <% } %>
 
 
-                <article>
+<!--                 <article>
                     <div class="cart-class">
                         <div class="cart-image">
                             <img src="/images\searchProduct\jaguar.jpg" alt="Cafetera Moulinex">
@@ -645,7 +647,7 @@
                             </div>                            
                         </div>
                     </div>                    
-                </article>
+                </article> -->
             </section>
     </main>
 </div>
