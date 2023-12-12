@@ -51,6 +51,7 @@ article .cart-class{
     border-bottom: 1px solid rgb(234, 234, 234);
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .cart-image img{
