@@ -12,9 +12,15 @@ const productsController = {
         res.render('productDetail', {'producto': productoBuscado})
     },
     
-    productList: function (req,res){
+    productList: (req,res) => {
         res.render('productList', {'productos': productos})
+    },
+
+    create: (req, res) => {
+        res.render('user/admin/create')
     }
+
+
 }
 
 module.exports = productsController;

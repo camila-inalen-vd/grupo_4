@@ -10,6 +10,11 @@ const mainRoutes = require('./routes/mainRoutes.js');
 const productRoutes = require('./routes/productsRoutes.js');
 const userRoutes = require('./routes/userRoutes.js');
 
+//Para manipular datos con form
+app.use(express.urlencoded({extended: false}));
+app.use(express.json());
+app.use(methodOverride('_method'));
+
 //Carpeta views y public.
 app.set('views', path.resolve(__dirname, 'views'));
 app.use(express.static(publicPath))
@@ -45,11 +50,6 @@ app.post('/register', (req, res) => {
 app.post('/login', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/index.html'))
 })
-
-//Para manipular datos con form
-app.use(express.urlencoded({extended: false}));
-app.use(express.json());
-app.use(methodOverride('_method'));
 
 //Arranque del servidor (Lo tiré abajo de todo para evitar errores al leerse antes que otras ejecuciones)
 const port = process.env.PORT || 3000;
