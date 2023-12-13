@@ -1,7 +1,8 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-const methodOverride = require('method-override')
+const methodOverride = require('method-override');
+app.use(methodOverride('_method'));
 //Guardamos la dirección de la carpeta public con path.
 const publicPath = path.resolve(__dirname, '../public')
 
@@ -13,7 +14,6 @@ const userRoutes = require('./routes/userRoutes.js');
 //Para manipular datos con form
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
-app.use(methodOverride('_method'));
 
 //Carpeta views y public.
 app.set('views', path.resolve(__dirname, 'views'));

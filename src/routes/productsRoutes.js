@@ -11,7 +11,10 @@ router.get('/list', productsController.productList)
 
 //Crear y modificar
 router.get('/create', productsController.create)
-//Acá tengo toda la lógica para crear un nuevo objeto en el json.
 router.post('/create', productsController.createConfig);
+
+//editar
+router.get('/:id/edit', productsController.edit)
+router.put('/:id/edit', productsController.editConfig);
 
 module.exports = router;
