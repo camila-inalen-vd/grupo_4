@@ -29,8 +29,8 @@ const productsController = {
         //Logica para poder añadir más de un color al array de colores del objeto.
         let color = req.body.color.split(',')
         //Logica para los talles en array y que se guarden de forma numerica.
-        let talles = req.body.talles.split(',')
-        talles = talles.map((talle) => {
+        let talle = req.body.talle.split(',')
+        talle = talle.map((talle) => {
                 return talle = parseInt(talle)
         })
         let nuevoObjeto = {
@@ -45,7 +45,7 @@ const productsController = {
             descuento: parseInt(req.body.descuento),
             stock: parseInt(req.body.stock),
             color: color,
-            talles: talles,
+            talle: talle,
         }
         //Añadimos el nuevo producto al array de objetos que ya tenemos.
         productos.push(nuevoObjeto)
@@ -54,18 +54,47 @@ const productsController = {
         res.redirect('/');
     },
     editConfig: (req,res) => {
-        productos.forEach((zapatilla, index)=> {
-            if(zapatilla.id == req.params.id){
+        // Logica para capturar body y crearme un nuevo objeto solo con las propiedades que no esten vacías del req.body
+        if(req.body.precio){req.body.precio = parseInt(req.body.precio)}
+        if(req.body.cuotas){req.body.cuotas = parseInt(req.body.cuotas)}
+        if(req.body.descuento){req.body.descuento = parseInt(req.body.descuento)}
+        if(req.body.stock){req.body.stock = parseInt(req.body.stock)}
+        if(req.body.talle){
+        req.body.talle = req.body.talle.split(',')
+        req.body.talle = req.body.talle.map(talle => parseInt(talle));}
+        if(req.body.color){
+        req.body.color = req.body.color.split(',')}
+
+        let recibido = req.body;
+        let recibido2 = {};
+        
+        //Hice una lógica que recorra CADA UNA de las propiedades de recibido, que es lo que obtenemos del body y pregunte si el valor de la propiedad no está vacío. Si no está vacío esa propiedad se agrega a mi nuevo objeto recibido2.
+        //La razón de hacer esto es para que al pisar los valores de mi objeto, solo se reemplacen los que no estaban vacíos al llenar el form.
+        for (x in recibido) {
+            if (recibido[x] !== undefined && recibido[x] !== "") {
+                recibido2 = {
+                    ...recibido2,
+                    [x]: recibido[x]
+                };
+            }
+        }
+        
+
+        //Aca iteramos todo el array y reemplazamos las propiedades del objeto que coincide con el id pasada por parametros. Llamamos a todas las propiedades del objeto existente y las ponemos con spread en el objeto que ibamos iterando referenciandolo con el index (Segunda propiedad de mi forEach) y finalmente las pisamos con las propiedades de recibido2. Haciendo que solo se editen las propiedades de los campos que llenamos en este formulario y que los que dejamos vacíos no me reemplacen mis anteriores propiedades por strings vacíos.
+        productos.forEach((zapatilla, index) => {
+            if (zapatilla.id == req.params.id) {
                 productos[index] = {
                     ...zapatilla,
-                    ...req.body
-                }
-                console.log(productos[index])
+                    ...recibido2,
+                };
+                console.log(productos[index]);
             }
-        })
-            fs.writeFileSync(path.resolve(__dirname, '../data/productos.json'), JSON.stringify(productos, null, 1))
-            res.redirect('/');
-    },
+        });
+    
+        fs.writeFileSync(path.resolve(__dirname, '../data/productos.json'), JSON.stringify(productos, null, 1));
+        res.redirect('/');
+    }
+    
 }
 
 

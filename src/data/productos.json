@@ -37,27 +37,32 @@
  },
  {
   "id": 2,
-  "nombre": "Nike Runner no se que cuanto",
-  "marca": "",
-  "precio": "",
-  "cuotas": "",
-  "descuento": "",
-  "stock": "",
-  "descripcion": "",
-  "descripcionLarga": "La NIKE Venture Runner Mujer mejora el estilo con una plantilla acolchada y una ligera parte superior de malla, al tiempo que hace un guiño al icónico calzado de los 80 que comenzó la revolución del running. Las costuras visibles, la parte superior altamente flexible y el pasador del talón con micro detalles de la marca añaden un ADN moderno a tu look relajado. Debido a la naturaleza de exclusiva calidad de los materiales, podría ocurrir que en algunos casos el producto destiñera levemente, sobre todo en condiciones de humedad. Mientras esté mojada, se aconseja que la zapatilla no entre en contacto con otras prendas claras hasta que no esté completamente seca.",
-  "color": "",
-  "talle": [
-   36,
-   37,
-   38,
-   39,
-   40
+  "nombre": "Runner 3000",
+  "marca": "Olimpo",
+  "precio": 50000,
+  "cuotas": 9,
+  "descuento": 59,
+  "stock": 2,
+  "descripcion": "Descripcion corta",
+  "descripcionLarga": "dsadasdas",
+  "color": [
+   "Rojo",
+   "Morado",
+   "Turquesa"
   ],
-  "capellada": "",
-  "forro": "",
-  "suela": "",
-  "origen": "",
-  "punt": 3,
+  "talle": [
+   34,
+   43,
+   45,
+   40,
+   50,
+   20
+  ],
+  "capellada": "Téxtil, Poliéster, Cuero Vacuno Descarne",
+  "forro": "Textil, Poliéster",
+  "suela": "Goma",
+  "origen": "Indonesia",
+  "punt": 5,
   "img": "/images/img-prodDetail/img-grande.jpg",
   "miniatura": [
    "/images/img-prodDetail/img-1.jpg",
@@ -65,9 +70,7 @@
    "/images/img-prodDetail/img-3.jpg",
    "/images/img-prodDetail/img-4.jpg",
    "/images/img-prodDetail/img-5.jpg"
-  ],
-  "descripcion-larga": "",
-  "talles": ""
+  ]
  },
  {
   "id": 3,
@@ -78,7 +81,7 @@
   "descuento": 30,
   "stock": 1,
   "descripcion": "Salomon Supercross 3 Hombre Adultos, resto de descripcion",
-  "descripcionLarga": "La NIKE Venture Runner Mujer mejora el estilo con una plantilla acolchada y una ligera parte superior de malla, al tiempo que hace un guiño al icónico calzado de los 80 que comenzó la revolución del running. Las costuras visibles, la parte superior altamente flexible y el pasador del talón con micro detalles de la marca añaden un ADN moderno a tu look relajado. Debido a la naturaleza de exclusiva calidad de los materiales, podría ocurrir que en algunos casos el producto destiñera levemente, sobre todo en condiciones de humedad. Mientras esté mojada, se aconseja que la zapatilla no entre en contacto con otras prendas claras hasta que no esté completamente seca.",
+  "descripcionLarga": "dsadsa",
   "color": [
    "Rojo",
    "Blanco",
@@ -215,13 +218,13 @@
  },
  {
   "id": 7,
-  "nombre": "Runner 7.5",
-  "marca": "Nike",
-  "precio": 80000,
+  "nombre": "Runner 9.5",
+  "marca": "Adidas",
+  "precio": 150000,
   "cuotas": 3,
   "descuento": 30,
-  "stock": 0,
-  "descripcion": "Salomon Supercross 3 Hombre Adultos, resto de descripcion",
+  "stock": 1,
+  "descripcion": "Estoy haciendo una prueba a ver si se reemplazan los campos.",
   "descripcionLarga": "La NIKE Venture Runner Mujer mejora el estilo con una plantilla acolchada y una ligera parte superior de malla, al tiempo que hace un guiño al icónico calzado de los 80 que comenzó la revolución del running. Las costuras visibles, la parte superior altamente flexible y el pasador del talón con micro detalles de la marca añaden un ADN moderno a tu look relajado. Debido a la naturaleza de exclusiva calidad de los materiales, podría ocurrir que en algunos casos el producto destiñera levemente, sobre todo en condiciones de humedad. Mientras esté mojada, se aconseja que la zapatilla no entre en contacto con otras prendas claras hasta que no esté completamente seca.",
   "color": [
    "Rojo",
@@ -234,43 +237,6 @@
    38,
    39,
    40
-  ],
-  "capellada": "Téxtil, Poliéster, Cuero Vacuno Descarne",
-  "forro": "Textil, Poliéster",
-  "suela": "Goma",
-  "origen": "Indonesia",
-  "punt": 5,
-  "img": "/images/img-prodDetail/img-grande.jpg",
-  "miniatura": [
-   "/images/img-prodDetail/img-1.jpg",
-   "/images/img-prodDetail/img-2.jpg",
-   "/images/img-prodDetail/img-3.jpg",
-   "/images/img-prodDetail/img-4.jpg",
-   "/images/img-prodDetail/img-5.jpg"
-  ]
- },
- {
-  "id": 8,
-  "nombre": "Runner 7.5",
-  "marca": "Nike",
-  "precio": 80000,
-  "cuotas": 3,
-  "descuento": 30,
-  "stock": 0,
-  "descripcion": "Salomon Supercross 3 Hombre Adultos, resto de descripcion",
-  "descripcionLarga": "La NIKE Venture Runner Mujer mejora el estilo con una plantilla acolchada y una ligera parte superior de malla, al tiempo que hace un guiño al icónico calzado de los 80 que comenzó la revolución del running. Las costuras visibles, la parte superior altamente flexible y el pasador del talón con micro detalles de la marca añaden un ADN moderno a tu look relajado. Debido a la naturaleza de exclusiva calidad de los materiales, podría ocurrir que en algunos casos el producto destiñera levemente, sobre todo en condiciones de humedad. Mientras esté mojada, se aconseja que la zapatilla no entre en contacto con otras prendas claras hasta que no esté completamente seca.",
-  "color": [
-   "Rojo",
-   "Blanco",
-   "Azul"
-  ],
-  "talle": [
-   36,
-   37,
-   38,
-   39,
-   40,
-   42
   ],
   "capellada": "Téxtil, Poliéster, Cuero Vacuno Descarne",
   "forro": "Textil, Poliéster",
