@@ -9,23 +9,23 @@ const productsController = {
         let productoBuscado = productos.find((zapatilla) => {
             return zapatilla.id == idBuscada
         })
-        res.render('productDetail', {'producto': productoBuscado})
+        res.render('products/productDetail', {'producto': productoBuscado})
     },
     productList: (req,res) => {
-        res.render('productList', {'productos': productos})
+        res.render('products/productList', {'productos': productos})
     },
     create: (req, res) => {
-        res.render('user/admin/create')
+        res.render('products/create')
     },
     edit: (req, res) => {
         //Logica para devolver el producto encontrado a la vista y poder usar su ID para incluirla en el form
         let producto = productos.find((zapatilla) => {
             return zapatilla.id == req.params.id
         })
-        res.render('user/admin/edit', {producto})
+        res.render('products/edit', {producto})
     },
     delete: (req, res) => {
-        res.render('user/admin/delete')
+        res.render('products/delete')
     },
     createConfig: (req, res) => {
         let objeto = req.body;

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
         <!--Head-->
-        <%-include('../../partials/head.ejs')%>
+        <%-include('../partials/head.ejs', {title: 'Crear'})%>
         <link rel="stylesheet" href="/css/style.css">
     </head>
 <body>
-    <%-include('../../partials/header.ejs')%>
+    <%-include('../partials/header.ejs')%>
 <style>
     body {
         text-align: center;
@@ -41,8 +41,8 @@
 </style>
     <br>
     <div class="container-flex">
-    <form method="POST" action="/product/<%=producto.id%>/edit?_method=PUT"><br>
-        <h1>Editar</h1><br><hr><br><br>
+    <form method="POST" action="/product/create"><br>
+        <h1>Crear producto</h1><br><hr><br><br>
         <label for="nombre">Nombre</label>
         <input type="text" name="nombre" id="nombre">
         <label for="marca">Marca</label>
@@ -83,6 +83,6 @@
 
 
     <!--Footer-->  
-    <%-include('../../partials/footer.ejs')%>
+    <%-include('../partials/footer.ejs')%>
 </body>
 </html>

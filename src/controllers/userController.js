@@ -1,12 +1,12 @@
 const userController = {
     login: (req, res) => {
-        res.render('login')
+        res.render('user/login')
     },
     validate: (req, res) =>{
         res.redirect("/")
     },
     register: (req, res) => {
-        res.render('register')
+        res.render('user/register')
     },    
     create: (req, res) =>{
         res.redirect("/")
