@@ -36,21 +36,6 @@ app.get('/productCart', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/productCart.html'))
 })
 
-//Gonza
-app.get('/register', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/register.html'))
-})
-app.get('/login', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/login.html'))
-})
-
-app.post('/register', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/index.html'))
-})
-app.post('/login', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/index.html'))
-})
-
 //Arranque del servidor (Lo tiré abajo de todo para evitar errores al leerse antes que otras ejecuciones)
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
