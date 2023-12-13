@@ -24,6 +24,9 @@ const productsController = {
         })
         res.render('user/admin/edit', {producto})
     },
+    delete: (req, res) => {
+        res.render('user/admin/delete')
+    },
     createConfig: (req, res) => {
         let objeto = req.body;
         //Logica para poder añadir más de un color al array de colores del objeto.
@@ -54,14 +57,16 @@ const productsController = {
         res.redirect('/');
     },
     editConfig: (req,res) => {
-        // Logica para capturar body y crearme un nuevo objeto solo con las propiedades que no esten vacías del req.body
+        //Pasando los datos que necesito a valor numerico.
         if(req.body.precio){req.body.precio = parseInt(req.body.precio)}
         if(req.body.cuotas){req.body.cuotas = parseInt(req.body.cuotas)}
         if(req.body.descuento){req.body.descuento = parseInt(req.body.descuento)}
         if(req.body.stock){req.body.stock = parseInt(req.body.stock)}
         if(req.body.talle){
+        //Acá hago que los talles tambien se vuelvan array para despues volverlos dato numerico a cada uno con map.
         req.body.talle = req.body.talle.split(',')
         req.body.talle = req.body.talle.map(talle => parseInt(talle));}
+        //Pasando los colores a array
         if(req.body.color){
         req.body.color = req.body.color.split(',')}
 
@@ -93,8 +98,20 @@ const productsController = {
     
         fs.writeFileSync(path.resolve(__dirname, '../data/productos.json'), JSON.stringify(productos, null, 1));
         res.redirect('/');
-    }
+    },
+    deleteConfig: (req, res) => {
+        productoEliminado = productos.filter((zapatilla) => {
+        return zapatilla.id != req.body.idDelete
+        })
+
+        productoEliminado.forEach((zapatilla , index)=> {
+        zapatilla.id = index + 1
+        })
     
+        fs.writeFileSync(path.resolve(__dirname, '../data/productos.json'), JSON.stringify(productoEliminado, null, 1));
+        res.redirect('/');
+    }
+
 }
 
 

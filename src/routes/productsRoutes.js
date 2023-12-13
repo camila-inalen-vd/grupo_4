@@ -9,12 +9,16 @@ router.get('/detail/:id', productsController.productDetail)
 router.get('/list', productsController.productList)
 
 
-//Crear y modificar
+//Crear
 router.get('/create', productsController.create)
 router.post('/create', productsController.createConfig);
 
-//editar
+//Editar
 router.get('/:id/edit', productsController.edit)
 router.put('/:id/edit', productsController.editConfig);
+
+//Eliminar
+router.get('/delete', productsController.delete)
+router.delete('/delete', productsController.deleteConfig)
 
 module.exports = router;

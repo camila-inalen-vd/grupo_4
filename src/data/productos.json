@@ -215,41 +215,5 @@
    "/images/img-prodDetail/img-4.jpg",
    "/images/img-prodDetail/img-5.jpg"
   ]
- },
- {
-  "id": 7,
-  "nombre": "Runner 9.5",
-  "marca": "Adidas",
-  "precio": 150000,
-  "cuotas": 3,
-  "descuento": 30,
-  "stock": 1,
-  "descripcion": "Estoy haciendo una prueba a ver si se reemplazan los campos.",
-  "descripcionLarga": "La NIKE Venture Runner Mujer mejora el estilo con una plantilla acolchada y una ligera parte superior de malla, al tiempo que hace un guiño al icónico calzado de los 80 que comenzó la revolución del running. Las costuras visibles, la parte superior altamente flexible y el pasador del talón con micro detalles de la marca añaden un ADN moderno a tu look relajado. Debido a la naturaleza de exclusiva calidad de los materiales, podría ocurrir que en algunos casos el producto destiñera levemente, sobre todo en condiciones de humedad. Mientras esté mojada, se aconseja que la zapatilla no entre en contacto con otras prendas claras hasta que no esté completamente seca.",
-  "color": [
-   "Rojo",
-   "Blanco",
-   "Azul"
-  ],
-  "talle": [
-   36,
-   37,
-   38,
-   39,
-   40
-  ],
-  "capellada": "Téxtil, Poliéster, Cuero Vacuno Descarne",
-  "forro": "Textil, Poliéster",
-  "suela": "Goma",
-  "origen": "Indonesia",
-  "punt": 5,
-  "img": "/images/img-prodDetail/img-grande.jpg",
-  "miniatura": [
-   "/images/img-prodDetail/img-1.jpg",
-   "/images/img-prodDetail/img-2.jpg",
-   "/images/img-prodDetail/img-3.jpg",
-   "/images/img-prodDetail/img-4.jpg",
-   "/images/img-prodDetail/img-5.jpg"
-  ]
  }
 ]

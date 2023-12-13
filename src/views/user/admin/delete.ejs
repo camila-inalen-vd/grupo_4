@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+        <!--Head-->
+        <%-include('../../partials/head.ejs')%>
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+<body>
+    <%-include('../../partials/header.ejs')%>
+<style>
+    body {
+        text-align: center;
+    }
+
+    input{
+        display: block;
+        border-radius: 5px;
+        border: none;
+        margin: 10px;
+        width: 100%;
+        text-align: center;
+        height: 30px;
+    }
+
+    form p {
+        color: gray
+    }
+
+    h2{
+        color: rgb(71, 71, 71);
+    }
+
+    button {
+        width: 20;
+        padding: 5px;
+        border-radius: 5px;
+        border: solid 1px gray;
+        background-color: violet;
+        color: white;
+        font-size: 24px;
+    }
+</style>
+    <br>
+    <div class="container-flex">
+    <form method="POST" action="/product/delete?_method=DELETE"><br>
+        <h1>ELIMINAR</h1><br><hr><br><br>
+        <label for="delete">ID del producto a eliminar</label>
+        <input type="number" name="idDelete" id="delete">
+        <button type="submit">ELIMINAR</button>
+    </form>
+</div>
+
+
+    <!--Footer-->  
+    <%-include('../../partials/footer.ejs')%>
+</body>
+</html>
