@@ -216,13 +216,14 @@
 
     <div class="titulo-container"> 
         <h2>Productos Relacionados |</h2>
+        <% for(let i = 0 ; i < producto.length ; i++) {  %>
     </div>
     <section class="article-related">
     <div class="container-related-products">
       <div class="card-list-products">
         <div class="card">
          <div class="img-card">
-          <img src="\images\img-prodDetail\img-related-1-.jpg" alt="product-1"/>
+          <img src="<%= producto.img %>" alt="product-1"/>
         </div>
         <div class="info-card">
         <div class="text-product">
@@ -235,7 +236,7 @@
         </div>
       </div>
     </div>
-    <div class="container-related-products">
+    <!-- <div class="container-related-products">
         <div class="card-list-products">
         <div class="card">
             <div class="img-card">
@@ -267,8 +268,9 @@
         </div>
     </div>
     </div>
-</div>
+</div> -->
     </div>
+    <% } %>
     </section>
     
 

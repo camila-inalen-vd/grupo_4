@@ -9,7 +9,7 @@ const productsController = {
         let productoBuscado = productos.find((zapatilla) => {
             return zapatilla.id == idBuscada
         })
-        res.render('products/productDetail', {'producto': productoBuscado})
+        res.render('products/productDetail', {'producto': productoBuscado, 'productos': productos})
     },
     productList: (req,res) => {
         res.render('products/productList', {'productos': productos})

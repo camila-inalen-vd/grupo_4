@@ -94,23 +94,23 @@
             <h1>Historial</h1>
             <section>
                 <div class="container-flex">
-                <% productos.forEach(product => { %>
+                <% for(let i = 0 ; i < 4     ; i++) { %>
                 <article class="article">
-                    <a href="/product/detail/<%=product.id%>"><div class="product-card">
-                        <img src="<%=product.img%>" alt="">
+                    <a href="/product/detail/<%=productos[i].id%>"><div class="product-card">
+                        <img src="<%=productos[i].img%>" alt="">
                     <div class="product-detail">
-                    <p class="precio">$<%= product.precio%></p>
-                    <p class="marca"><%= product.marca%></p>
-                    <h3><a href="/product/detail"><%= product.nombre%></a></h3>
+                    <p class="precio">$<%= productos[i].precio%></p>
+                    <p class="marca"><%= productos[i].marca%></p>
+                    <h3><a href="/product/detail"><%= productos[i].nombre%></a></h3>
                     <div class="reputation-icon">
-                        <% for(let x = 1 ; x <= product.punt ; x++){ %>
+                        <% for(let x = 1 ; x <= productos[i].punt ; x++){ %>
                         <i class="fa-solid fa-star"></i>
                         <% } %>
                     </div>  
                     </div>
                     </div></a>
                 </article>
-                <% }) %>
+                <% } %>
             </div>
         </main>
 
