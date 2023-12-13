@@ -43,25 +43,24 @@
             <div class="carousel-productos">
 
 
-            <% for(let i = 0 ; i < productos.length ; i++){ %>
+            <% productos.forEach(product => { %>
             <article class="article">
-                    <a href="/product/detail/<%=productos[i].id%>"><div class="product-card">
-                    <img src="<%=productos[0].img%>" alt="">
+                    <a href="/product/detail/<%=product.id%>"><div class="product-card">
+                    <img src="<%=product.img%>" alt="">
                 <div class="product-detail">
-                <p class="discount"><%= productos[i].descuento%>% Off</p>
-                <p class="precio">$<%= productos[i].precio%></p>
-                <p class="marca"><%= productos[i].marca%></p>
-                <h3><a href="/product/detail"><%= productos[i].nombre%></a></h3>
+                <p class="discount"><%= product.descuento%>% Off</p>
+                <p class="precio">$<%= product.precio%></p>
+                <p class="marca"><%= product.marca%></p>
+                <h3><a href="/product/detail"><%= product.nombre%></a></h3>
                 <div class="reputation-icon">
-                    <% for(let x = 1 ; x <= productos[i].punt ; x++){ %>
+                    <% for(let x = 1 ; x <= product.punt ; x++){ %>
                     <i class="fa-solid fa-star"></i>
                     <% } %>
                 </div>  
-                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim veniam asperiores aut quam et quibusdam rerum nobis voluptates dolore repellendus? Dolores sint dolore dolorum reprehenderit sit consequatur molestias a tenetur!</p>
                 </div>
                 </div></a>
             </article>
-            <% } %>
+            <% }) %>
         </div>
         </section>
 
@@ -69,26 +68,26 @@
         <section>
             <h1>Te puede interesar</h1>
             <div class="carousel-productos">
-            <% for(let i = 0 ; i < productos.length ; i++){ %>
-            <article class="article">
-                <a href="/product/detail/<%=productos[i].id%>"><div class="product-card">
-                    <img src="<%=productos[0].img%>" alt="">
-                <div class="product-detail">
-                <p class="discount"><%= productos[i].descuento%>% Off</p>
-                <p class="precio">$<%= productos[i].precio%></p>
-                <p class="marca"><%= productos[i].marca%></p>
-                <h3><a href="/product/detail"><%= productos[i].nombre%></a></h3>
-                <div class="reputation-icon">
-                    <% for(let x = 1 ; x <= productos[i].punt ; x++){ %>
-                    <i class="fa-solid fa-star"></i>
-                    <% } %>
-                </div>  
-                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim veniam asperiores aut quam et quibusdam rerum nobis voluptates dolore repellendus? Dolores sint dolore dolorum reprehenderit sit consequatur molestias a tenetur!</p>
-                </div>
-                </div></a>
-            </article>
-            <% } %>
-        </div>
+
+
+                <% productos.forEach(product => { %>
+                <article class="article">
+                        <a href="/product/detail/<%=product.id%>"><div class="product-card">
+                        <img src="<%=product.img%>" alt="">
+                    <div class="product-detail">
+                    <p class="precio">$<%= product.precio%></p>
+                    <p class="marca"><%= product.marca%></p>
+                    <h3><a href="/product/detail"><%= product.nombre%></a></h3>
+                    <div class="reputation-icon">
+                        <% for(let x = 1 ; x <= product.punt ; x++){ %>
+                        <i class="fa-solid fa-star"></i>
+                        <% } %>
+                    </div>  
+                    </div>
+                    </div></a>
+                </article>
+                <% }) %>
+            </div>
         </section>
 
         <!--El historial lo dejé en un contenedor flex en el que por el momento muestra máximo 4 productos-->
@@ -96,24 +95,23 @@
             <h1>Historial</h1>
             <section>
                 <div class="container-flex">
-                <% for(let i = 0 ; i < 4 ; i++){ %>
+                <% productos.forEach(product => { %>
                 <article class="article">
-                    <a href="/product/detail/<%=productos[i].id%>"><div class="product-card">
-                        <img src="<%=productos[0].img%>" alt="">
+                    <a href="/product/detail/<%=product.id%>"><div class="product-card">
+                        <img src="<%=product.img%>" alt="">
                     <div class="product-detail">
-                    <p class="precio">$<%= productos[i].precio%></p>
-                    <p class="marca"><%= productos[i].marca%></p>
-                    <h3><a href="/product/detail"><%= productos[i].nombre%></a></h3>
+                    <p class="precio">$<%= product.precio%></p>
+                    <p class="marca"><%= product.marca%></p>
+                    <h3><a href="/product/detail"><%= product.nombre%></a></h3>
                     <div class="reputation-icon">
-                        <% for(let x = 1 ; x <= productos[i].punt ; x++){ %>
+                        <% for(let x = 1 ; x <= product.punt ; x++){ %>
                         <i class="fa-solid fa-star"></i>
                         <% } %>
                     </div>  
-                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim veniam asperiores aut quam et quibusdam rerum nobis voluptates dolore repellendus? Dolores sint dolore dolorum reprehenderit sit consequatur molestias a tenetur!</p>
                     </div>
                     </div></a>
                 </article>
-                <% } %>
+                <% }) %>
             </div>
         </main>
 
@@ -122,13 +120,13 @@
         <section class="categorias-populares">
             <h1>Marcas populares</h1>
             <div class="container-flex">
-            <% for(let i = 0 ; i < marcas.length ; i++){ %>
+            <% marcas.forEach(marca => { %>
             <article>
                 <div class="product-card">
-                    <img src="<%= marcas[i].img %>" alt="">
+                    <img src="<%= marca.img %>" alt="">
                 </div>
             </article>
-            <% } %>
+            <% }) %>
         </section>
     
     <!--Footer-->  
