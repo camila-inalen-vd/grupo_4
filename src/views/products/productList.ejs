@@ -1,63 +1,8 @@
 <!DOCTYPE html>  
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <link rel="stylesheet" href="/css/header-footer.css">
-    <link rel="stylesheet" href="/css/productList.css">
-    <!--Icons-->
-    <script src="https://kit.fontawesome.com/f4230ae877.js" crossorigin="anonymous"></script>
-    <title>productList</title>
-    <!--Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Poppins:wght@300&family=Raleway:wght@500&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
-</head>
+    <%- include("../partials/head.ejs", {title: "Listado de producto", style: "productList"}) %>
 <body>
-<header>
-        <div class="top-header-main">
-            <div class="top-header1"><a href="/"><img class="rotar" src="/images/logopng.png" alt=""></a>
-            </div>
-            <div class="top-header2"><div class="search-bar"><input type="text" placeholder="Buscar modelos o marcas..."><button ><i class="fa-solid fa-magnifying-glass"></i></button></div></div>
-            <div class="top-header3">Caja 3</div>
-        </div>
-
-        <div class="bottom-header">
-            
-            <div class="burger-menu">
-                <i class="fas fa-bars"></i>
-            </div>
-
-            <nav>
-            <div class="nav-1">
-                <ul>
-                    <li><i class="fa-solid fa-location-dot"></i><a href=""> Ingresa tu domicilio</a></li>
-                </ul>
-            </div>
-
-            <div class="nav-2">
-                <ul>
-                    <li><a href="">Categorías</a></li>
-                    <li><a href="/productDetail">Ofertas</a></li>
-                    <li><a href="">Historial</a></li>
-                    <li><a href="/productList">Listado</a></li>
-                    <li><a href="">Moda</a></li>
-                    <li><a href="">Vender</a></li>
-                    <li><a href="">Ayuda</a></li>
-                </ul>
-            </div>
-
-            <div class="nav-3" >
-                <ul>
-                    <li><a href="">Mis compras</a><i class="fa-solid fa-cart-shopping"></i></li>
-                    <li><a href="/login">Ingresa</a></li>
-                    <li><a href="/register">Crea tu cuenta</a></li>                    
-                </ul>
-            </div>
-            </nav>  
-        </div>
-</header>
-
+    <%- include("../partials/header.ejs") %>
 <div class="falsobody">
     <!-- Carousel robado de internet, toca estudiar como hacerlo solitos o modificar más -->
 
@@ -248,11 +193,11 @@
                                 <i class="fa-solid fa-star-half-stroke"></i>
                             </div>
                             <div class="price-class">
-                                <h2 class="precio"><%= productos[i].precio %></h2>                            
+                                <h2 class="precio">$<%= productos[i].precio %></h2>                            
                             </div>
                             <div class="arrives-class">
                                 <label for="arrives"></label>
-                                <input type="text" id="arrives" name="arrives" placeholder="LLega gratis hoy sabado">
+                                <input type="text" id="arrives" name="arrives" placeholder="Llega gratis hoy sabado">
                             </div>                            
                         </div>
                     </div>                    
@@ -262,89 +207,6 @@
     </main>
 </div>
 
-    <footer>
-        <div class="footer-main">
-        <div class="footer-1">
-            <h4>Acerca de</h3>
-                <ul>
-                    <li>The Shoes</li>
-                    <li>Investor relations</li>
-                    <li>Tendencias</li>
-                    <li>Sustentabilidad</li>
-                    <li>Blog</li>
-                </ul>
-        </div>
-        <div class="footer-2">
-            <h4>Otros sitios</h3>
-                <ul>
-                    <li>Developers</li>
-                    <li>Shoe Pago</li>
-                    <li>Shoe shops</li>
-                    <li>Envíos</li>
-                    <li>Shoe Ads</li>
-                </ul>
-        </div>
-        <div class="footer-3">
-            <h4>Ayuda</h3>
-                <ul>
-                    <li>Comprar</li>
-                    <li>Vender</li>
-                    <li>Resolución de problemas</li>
-                    <li>Centro de seguridad</li>
-                    <li>Preguntas frecuentes</li>
-                </ul>
-        </div>
-        <div class="footer-4">
-            <h4>Redes sociales</h3>
-                <ul>
-                    <li>Twitter</li>
-                    <li>Facebook</li>
-                    <li>Instagram</li>
-                    <li>Youtube</li>
-                    <li>Tiktok</li>
-                </ul>
-        </div>
-        <div class="footer-5">
-            <h4>Mi Cuenta</h3>
-                <ul>
-                    <li>Ingresar</li>
-                    <li>Vender</li>
-                    <li>Perfil</li>
-                    <li>Privacidad</li>
-                </ul>
-        </div>
-        <div class="footer-6">
-            <h4>Shoe Puntos</h3>
-                <ul>
-                    <li>Nivel 5</li>
-                    <li>Disney+</li>
-                    <li>Star+</li>
-                    <li>HBO MAX</li>
-                    <li>Paramount+</li>
-                </ul>
-        </div>
-    </div>
-
-    <div class="footer-bottom">
-      <ul>
-          <li>Trabaja con nosotros</li>
-          <li>Terminos y condiciones</li>
-          <li>Cómo cuidamos tu privacidad</li>
-          <li>Accesibilidad</li>
-          <li>Información al usuario financiero</li>
-          <li>Ayuda</li>
-          <li>Defensa al consumidor</li>
-          <li>Información</li>
-          <li>Seguros</li>
-      </ul>
-    </div>
-    <div class="footer-bottom">
-      <ul>
-          <li>Copyright 1999-2023 The Shoes Market S.R.L</li>
-          <li>Av. Falsa 123, Piso 2, CP 1234, Parque Avellaneda, CABA</li>
-      </ul>
-    </div>
-    </footer>
+    <%- include("../partials/footer.ejs") %>
 </body>
-
 </html>
