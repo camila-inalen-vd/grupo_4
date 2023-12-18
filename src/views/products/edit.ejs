@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
         <!--Head-->
-        <%-include('../partials/head.ejs', {title: "Editar"})%>
+        <%-include('../partials/head.ejs', {title: "Editar", style:''})%>
         <link rel="stylesheet" href="/css/style.css">
     </head>
 <body>
@@ -44,38 +44,38 @@
     <form method="POST" action="/product/<%=producto.id%>/edit?_method=PUT"><br>
         <h1>Editar</h1><br><hr><br><br>
         <label for="nombre">Nombre</label>
-        <input type="text" name="nombre" id="nombre">
+        <input type="text" name="nombre" value="<%=producto.nombre%>" id="nombre">
         <label for="marca">Marca</label>
-        <input type="text" name="marca" id="marca">
+        <input type="text" name="marca" id="marca" value="<%=producto.marca%>">
         <label for="precio">Precio</label>
-        <input type="number" name="precio" id="precio">
+        <input type="number" name="precio" id="precio" value="<%=producto.precio%>">
         <label for="cuotas">Cuotas</label>
-        <input type="number" name="cuotas" id="cuotas">
+        <input type="number" name="cuotas" id="cuotas" value="<%=producto.cuotas%>">
         <label for="descuento">Descuento</label>
-        <input type="number" name="descuento" id="descuento">
+        <input type="number" name="descuento" id="descuento" value="<%=producto.descuento%>">
         <label for="Stock">Stock</label>
-        <input type="number" name="stock" id="stock">
+        <input type="number" name="stock" id="stock" value="<%=producto.stock%>">
         <label for="descripcion">Descripcion</label>
-        <input type="text" name="descripcion" id="descripcion">
+        <input type="text" name="descripcion" id="descripcion" value="<%=producto.descripcion%>">
         <label for="descripcion">Descripcion Larga</label>
         <p>
-        <textarea id="descripcionLarga" name="descripcionLarga" rows="4" cols="50"></textarea>
+        <textarea id="descripcionLarga" name="descripcionLarga" rows="4" cols="50"><%=producto.descripcionLarga%></textarea>
         </p>
         <label for="descuento">Color</label>
         <p>Escribir los colores separados por coma, sin espacios y con mayus al inicio: Rojo,Verde,Amarillo</p>
-        <input type="text" name="color" id="color">
+        <input type="text" name="color" id="color" value="<%=producto.color%>">
         <label for="talles">Talles</label>
         <p>Escribir los talles separados por coma y sin espacios: 42,37,38</p>
-        <input type="text" name="talle" id="talles"><br>
+        <input type="text" name="talle" id="talles" value="<%=producto.talle%>"><br>
         <h2>Especificaciones</h2><br>
         <label for="talles">Capellada</label>
-        <input type="text" name="capellada" id="capellada">
+        <input type="text" name="capellada" id="capellada" value="<%=producto.capellada%>">
         <label for="forro">Forro</label>
-        <input type="text" name="forro" id="forro">
+        <input type="text" name="forro" id="forro" value="<%=producto.forro%>">
         <label for="suela">Suela</label>
-        <input type="text" name="suela" id="suela">
+        <input type="text" name="suela" id="suela" value="<%=producto.suela%>">
         <label for="origen">Origen</label>
-        <input type="text" name="origen" id="origen">
+        <input type="text" name="origen" id="origen" value="<%=producto.origen%>">
 
         <button type="submit">Enviar</button>
     </form>

@@ -74,7 +74,7 @@
  },
  {
   "id": 3,
-  "nombre": "Runner 9.5",
+  "nombre": "Runner 10",
   "marca": "Nike",
   "precio": 60000,
   "cuotas": 3,
@@ -647,5 +647,26 @@
    "/images/img-prodDetail/img-4.jpg",
    "/images/img-prodDetail/img-5.jpg"
   ]
+ },
+ {
+  "id": 19,
+  "nombre": "",
+  "marca": "",
+  "precio": null,
+  "cuotas": null,
+  "descuento": null,
+  "stock": null,
+  "descripcion": "",
+  "descripcionLarga": "",
+  "color": [
+   ""
+  ],
+  "talle": [
+   null
+  ],
+  "capellada": "",
+  "forro": "dsa",
+  "suela": "",
+  "origen": ""
  }
 ]
