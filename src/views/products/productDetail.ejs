@@ -21,7 +21,7 @@
      <article class="total-product-detail">
         <div class="producto">
          <div class="img-producto">
-          <img src="<%= product.img %>" alt="img-producto"/>
+          <img src="<%= producto.img %>" alt="img-producto"/>
 
      <div class="img-prod-peq">
         <% for(let i= 0; i < producto.miniatura.length; i ++) { %>
@@ -52,11 +52,11 @@
                <%= producto.nombre %> 
          </div>
          <div class="container-precio">
-         <span>$95.00</span>
+         <span>$<%= producto.precio%></span>
             <!-- <i class="fa-solid fa-chevron-right"></i> -->
          </div>
          <div class="container-cuotas">
-             <h4> 3 cuotas de $ 31.999 </h4>
+             <h4> <%= producto.cuotas%> Cuotas</h4>
              <i class="fa-solid fa-chevron-right"></i>
          </div>
          <div class="container-pago">
@@ -122,10 +122,7 @@
          <i class="fa-solid fa-chevron-down"></i>
     </div>
     <div class="text-description">
-        <p>La NIKE Venture Runner Mujer mejora el estilo con una plantilla acolchada y una ligera parte superior de malla, al tiempo que hace un guiño al icónico calzado de los 80 que comenzó la revolución del running.
-           Las costuras visibles, la parte superior altamente flexible y el pasador del talón con micro detalles de la marca añaden un ADN moderno a tu look relajado.
-           Debido a la naturaleza de exclusiva calidad de los materiales, podría ocurrir que en algunos casos el producto destiñera levemente, sobre todo en condiciones de humedad.
-           Mientras esté mojada, se aconseja que la zapatilla no entre en contacto con otras prendas claras hasta que no esté completamente seca.</p>
+        <p> <%= producto.descripcionLarga %></p>
     </div>
        
        
@@ -138,20 +135,11 @@
     <ul>
         <li>Capellada: <%= producto.capellada %>.</li>
         <li>Forro: <%= producto.forro %>.</li>
-        <li>Suela: Goma.</li>
-        <li>Origen Indonesia.</li>
+        <li>Suela: <%= producto.suela %>.</li>
+        <li>Origen:  <%= producto.origen %>.</li>
     </ul>  
     </div>
-   <!--  <div class="container-reviews">
-    <div class="title-reviews">
-        <h4>Reseñas                         </h4>
-        <i class="fa-solid fa-chevron-down"></i> -->
-   <!--  </div>
-    <div class="text-reviews hidden">
-            <p>-----------</p>
-    </div>
-    </div> -->
-    <!-- </div> -->
+
     <div class="container-social">
         <span>Compartir</span>
     <div class="container-buttons-social">
@@ -179,15 +167,15 @@
       <div class="card-list-products">
         <div class="card">
          <div class="img-card">
-          <img src="\images\img-prodDetail\img-related-1-.jpg" alt="product-1"/>
+          <img src="<%= producto.img %>" alt="product-1"/>
         </div>
         <div class="info-card">
         <div class="text-product">
-            <h4>NIKE - AIR ZOOM PEGASUS </h4>
-            <div class="discount"><%=productos[i].descuento%> % OFF</div>
-            <p class="description"><%=productos[i].descripcion%></p>
+            <h4><%=producto.nombre%> </h4>
+            <div class="discount"><%=producto.descuento%> % OFF</div>
+            <p class="description"><%=producto.descripcion%></p>
             </div>
-            <p class="precio"><%=productos[i].precio%>$</p>
+            <p class="precio"><%=producto.precio%>$</p>
         </div>
         </div>
       </div>
