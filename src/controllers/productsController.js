@@ -14,6 +14,9 @@ const productsController = {
     productList: (req,res) => {
         res.render('products/productList', {'productos': productos})
     },
+    productCart: (req,res) => {
+        res.render('products/productCart', {'productos': productos})
+    },
     create: (req, res) => {
         res.render('products/create')
     },

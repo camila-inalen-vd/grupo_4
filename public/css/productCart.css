@@ -14,17 +14,25 @@ main{
     margin: auto;
 }
 section{
+    display: flex;
+    flex-wrap: wrap;
     width: 90%;
-    margin: auto;
+    margin: 20px auto;
+    justify-content: center;
+    align-content: flex-start;
 }
 .caja-producto{
     display: flex;
     flex-wrap: wrap;
     padding: 5px;
+    font-size: 1.2rem;
     margin: 15px 0;
     justify-content: space-around;
     align-items: center; 
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    border-radius: 10px;
+    transition: all 450ms;
+
 }
 .detalle-producto{
     display: block;
@@ -32,13 +40,20 @@ section{
     padding: 10px;
 }
 
-.productos img{
+section img{
     width: 30%;
+    border-radius: 10px;
 }
 .resumen{
     display: block;
-    padding: 5px;
+    font-size: 1.2rem;
+    max-width: 400px;
+    padding: 10px;
+    margin: 2rem 0;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    border-radius: 10px;
+    width: 90%;
+    transition: all 450ms;
 }
 .resumen div{
     display: flex;
@@ -51,14 +66,16 @@ section{
 }
 .boton-comprar{
     display: flex;
-    justify-content: center
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
 }
-.boton-comprar input{
+section input{
     width: 50%;
-    height: 1.8rem;
-    font-size: 1rem;
+    height: 2.5rem;
+    font-size: 1.2rem;
     background-color: rgb(55, 0, 184);
-    border-radius: 5px;
+    border-radius: 10px;
     color: white;
     margin-top: 15px;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
@@ -68,7 +85,20 @@ section{
     section{
         width: 45%;
     }
-    .boton-comprar input:hover{
+    section input:hover{
         background-color: rgb(255, 0, 247);
+        transform: scale(1.05);
+        transition: transform 0.3s ease-in-out;        
+        font-size: 1.3rem;
+    }
+    .caja-producto:hover{
+        transform: scale(1.05);
+        transition: transform 0.3s ease-in-out;
+        font-size: 1.3rem;
+    }
+    .resumen:hover{
+        transform: scale(1.05);
+        transition: transform 0.3s ease-in-out;
+        font-size: 1.3rem;
     }
 }

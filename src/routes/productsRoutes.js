@@ -7,7 +7,7 @@ const productos = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/pr
 
 router.get('/detail/:id', productsController.productDetail)
 router.get('/list', productsController.productList)
-
+router.get('/cart', productsController.productCart)
 
 //Crear
 router.get('/create', productsController.create)
