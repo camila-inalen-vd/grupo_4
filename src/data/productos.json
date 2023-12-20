@@ -668,5 +668,26 @@
   "forro": "dsa",
   "suela": "",
   "origen": ""
+ },
+ {
+  "id": 20,
+  "nombre": "Dsa",
+  "marca": "",
+  "precio": null,
+  "cuotas": null,
+  "descuento": null,
+  "stock": null,
+  "descripcion": "",
+  "descripcionLarga": "",
+  "color": [
+   ""
+  ],
+  "talle": [
+   null
+  ],
+  "capellada": "",
+  "forro": "",
+  "suela": "",
+  "origen": ""
  }
 ]
