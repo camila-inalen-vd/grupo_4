@@ -29,13 +29,6 @@ app.use('/product', productRoutes)
 //Rutas login y register
 app.use('/user', userRoutes)
 
-//Estas rutas hay que modificarlas con lo aprendido en MVC. Les puse nombre para que los que estan a cargo de cada una las identifiquen.
-
-//Facu Romero
-app.get('/productCart', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/productCart.html'))
-})
-
 //Arranque del servidor (Lo tiré abajo de todo para evitar errores al leerse antes que otras ejecuciones)
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
