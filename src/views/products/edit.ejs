@@ -41,7 +41,7 @@
 </style>
     <br>
     <div class="container-flex">
-    <form method="POST" action="/product/<%=producto.id%>/edit?_method=PUT"><br>
+    <form method="POST" action="/product/<%=producto.id%>/edit?_method=PUT" enctype="multipart/form-data"   ><br>
         <h1>Editar</h1><br><hr><br><br>
         <label for="nombre">Nombre</label>
         <input type="text" name="nombre" value="<%=producto.nombre%>" id="nombre">
