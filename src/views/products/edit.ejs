@@ -2,7 +2,7 @@
 <html lang="en">
         <!--Head-->
         <%-include('../partials/head.ejs', {title: "Editar", style:''})%>
-        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/index.css">
     </head>
 <body>
     <%-include('../partials/header.ejs')%>
@@ -76,6 +76,8 @@
         <input type="text" name="suela" id="suela" value="<%=producto.suela%>">
         <label for="origen">Origen</label>
         <input type="text" name="origen" id="origen" value="<%=producto.origen%>">
+        <label>Imagen del producto</label>
+        <input type="file" name="product-image">
 
         <button type="submit">Enviar</button>
     </form>

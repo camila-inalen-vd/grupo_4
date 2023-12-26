@@ -21,12 +21,14 @@
      <article class="total-product-detail">
         <div class="producto">
          <div class="img-producto">
-          <img src="<%= producto.img %>" alt="img-producto"/>
+          <img src="/images/products/<%=producto.img%>" alt="img-producto"/>
 
      <div class="img-prod-peq">
+        <% if(producto.miniatura != "" && producto.miniatura != undefined){ %>
         <% for(let i= 0; i < producto.miniatura.length; i ++) { %>
-        <img src="<%=producto.miniatura[i]%>" alt=""/>
+        <img src="/images/products/miniaturas/<%=producto.miniatura[i]%>" alt=""/>
         <%}%>
+        <% } %>
        </div>
       </div>
      </div>
@@ -167,7 +169,7 @@
       <div class="card-list-products">
         <div class="card">
          <div class="img-card">
-          <img src="<%= producto.img %>" alt="product-1"/>
+          <img src="/images/products/<%=producto.img %>" alt="product-1"/>
         </div>
         <div class="info-card">
         <div class="text-product">

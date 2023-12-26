@@ -2,7 +2,7 @@
 <html lang="es">
     
     <!--Head-->
-    <%-include('./partials/head.ejs', {title: 'Home', style: 'style'})%>
+    <%-include('./partials/head.ejs', {title: 'Home', style: 'index'})%>
 
     <!--Hasta acá-->
 
@@ -45,7 +45,7 @@
             <% productos.forEach(product => { %>
             <article class="article">
                     <a href="/product/detail/<%=product.id%>"><div class="product-card">
-                    <img src="<%=product.img%>" alt="">
+                    <img src="/images/products/<%=product.img%>" alt="">
                 <div class="product-detail">
                 <p class="discount"><%= product.descuento%>% Off</p>
                 <p class="precio">$<%= product.precio%></p>
@@ -72,7 +72,7 @@
                 <% productos.forEach(product => { %>
                 <article class="article">
                         <a href="/product/detail/<%=product.id%>"><div class="product-card">
-                        <img src="<%=product.img%>" alt="">
+                        <img src="/images/products/<%=product.img%>" alt="">
                     <div class="product-detail">
                     <p class="precio">$<%= product.precio%></p>
                     <p class="marca"><%= product.marca%></p>
@@ -97,7 +97,7 @@
                 <% for(let i = 0 ; i < 4     ; i++) { %>
                 <article class="article">
                     <a href="/product/detail/<%=productos[i].id%>"><div class="product-card">
-                        <img src="<%=productos[i].img%>" alt="">
+                        <img src="/images/products/<%=productos[i].img%>" alt="">
                     <div class="product-detail">
                     <p class="precio">$<%= productos[i].precio%></p>
                     <p class="marca"><%= productos[i].marca%></p>

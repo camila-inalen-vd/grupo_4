@@ -50,12 +50,13 @@ const productsController = {
             stock: parseInt(req.body.stock),
             color: req.body.color.split(','),
             talle: talle,
+            img: req.file.filename
         }
         //Añadimos el nuevo producto al array de objetos que ya tenemos.
         productos.push(nuevoObjeto)
         //Sobreescribimos el json.
         fs.writeFileSync(path.resolve(__dirname, '../data/productos.json'), JSON.stringify(productos, null, 1))
-        res.redirect('/');
+        res.redirect('/product/detail/'+ nuevoObjeto.id);
     },
     editConfig: (req,res) => {
         //Pasando los datos que necesito a valor numerico.
