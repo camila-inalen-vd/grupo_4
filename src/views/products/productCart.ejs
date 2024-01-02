@@ -1,7 +1,7 @@
 <!-- Facu -->
 <!DOCTYPE html>
 <html lang="en">
-    <%-include('../partials/head.ejs', {title: 'Carrito', style: 'productCart'})%>
+    <%-include('../partials/head.ejs', {title: 'Carrito', style: '/products/productCart'})%>
 <body>
     <%-include('../partials/header.ejs')%>
     <main>
@@ -10,7 +10,7 @@
         <section>
             <% for( let i = 0; i < 3; i++) { %>
                 <div class="caja-producto">
-                    <img src="<%= productos[i].img %>" alt="">
+                    <img src="/images/products/<%=productos[i].img %>" alt="">
                     <div class="detalle-producto">
                         <h3><%= productos[i].marca %> <%= productos[i].nombre %></h3>
                         <p>$<%= productos[i].precio %></p>

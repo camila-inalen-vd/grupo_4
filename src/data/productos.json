@@ -26,13 +26,13 @@
   "suela": "Goma",
   "origen": "Indonesia",
   "punt": 3,
-  "img": "/images/img-prodDetail/img-grande.jpg",
+  "img": "img-grande.jpg",
   "miniatura": [
-   "/images/img-prodDetail/img-1.jpg",
-   "/images/img-prodDetail/img-2.jpg",
-   "/images/img-prodDetail/img-3.jpg",
-   "/images/img-prodDetail/img-4.jpg",
-   "/images/img-prodDetail/img-5.jpg"
+   "img-1.jpg",
+   "img-2.jpg",
+   "img-3.jpg",
+   "img-4.jpg",
+   "img-5.jpg"
   ]
  },
  {
@@ -63,7 +63,7 @@
   "suela": "Goma",
   "origen": "Indonesia",
   "punt": 5,
-  "img": "/images/img-prodDetail/img-grande.jpg",
+  "img": "product-image-1703632769409.jpg",
   "miniatura": [
    "/images/img-prodDetail/img-1.jpg",
    "/images/img-prodDetail/img-2.jpg",
@@ -99,13 +99,13 @@
   "suela": "Goma",
   "origen": "Indonesia",
   "punt": 5,
-  "img": "/images/img-prodDetail/img-grande.jpg",
+  "img": "img-grande.jpg",
   "miniatura": [
-   "/images/img-prodDetail/img-1.jpg",
-   "/images/img-prodDetail/img-2.jpg",
-   "/images/img-prodDetail/img-3.jpg",
-   "/images/img-prodDetail/img-4.jpg",
-   "/images/img-prodDetail/img-5.jpg"
+   "img-1.jpg",
+   "img-2.jpg",
+   "img-3.jpg",
+   "img-4.jpg",
+   "img-5.jpg"
   ]
  },
  {
@@ -135,13 +135,13 @@
   "suela": "Goma",
   "origen": "Indonesia",
   "punt": 5,
-  "img": "/images/img-prodDetail/img-grande.jpg",
+  "img": "img-grande.jpg",
   "miniatura": [
-   "/images/img-prodDetail/img-1.jpg",
-   "/images/img-prodDetail/img-2.jpg",
-   "/images/img-prodDetail/img-3.jpg",
-   "/images/img-prodDetail/img-4.jpg",
-   "/images/img-prodDetail/img-5.jpg"
+   "img-1.jpg",
+   "img-2.jpg",
+   "img-3.jpg",
+   "img-4.jpg",
+   "img-5.jpg"
   ]
  },
  {
@@ -171,13 +171,13 @@
   "suela": "Goma",
   "origen": "Indonesia",
   "punt": 5,
-  "img": "/images/img-prodDetail/img-grande.jpg",
+  "img": "img-grande.jpg",
   "miniatura": [
-   "/images/img-prodDetail/img-1.jpg",
-   "/images/img-prodDetail/img-2.jpg",
-   "/images/img-prodDetail/img-3.jpg",
-   "/images/img-prodDetail/img-4.jpg",
-   "/images/img-prodDetail/img-5.jpg"
+   "img-1.jpg",
+   "img-2.jpg",
+   "img-3.jpg",
+   "img-4.jpg",
+   "img-5.jpg"
   ]
  },
  {
@@ -207,13 +207,13 @@
   "suela": "Goma",
   "origen": "Indonesia",
   "punt": 5,
-  "img": "/images/img-prodDetail/img-grande.jpg",
+  "img": "img-grande.jpg",
   "miniatura": [
-   "/images/img-prodDetail/img-1.jpg",
-   "/images/img-prodDetail/img-2.jpg",
-   "/images/img-prodDetail/img-3.jpg",
-   "/images/img-prodDetail/img-4.jpg",
-   "/images/img-prodDetail/img-5.jpg"
+   "img-1.jpg",
+   "img-2.jpg",
+   "img-3.jpg",
+   "img-4.jpg",
+   "img-5.jpg"
   ]
  },
  {
@@ -243,13 +243,13 @@
   "suela": "Goma",
   "origen": "Indonesia",
   "punt": 5,
-  "img": "/images/img-prodDetail/img-grande.jpg",
+  "img": "img-grande.jpg",
   "miniatura": [
-   "/images/img-prodDetail/img-1.jpg",
-   "/images/img-prodDetail/img-2.jpg",
-   "/images/img-prodDetail/img-3.jpg",
-   "/images/img-prodDetail/img-4.jpg",
-   "/images/img-prodDetail/img-5.jpg"
+   "img-1.jpg",
+   "img-2.jpg",
+   "img-3.jpg",
+   "img-4.jpg",
+   "img-5.jpg"
   ]
  },
  {
@@ -279,13 +279,13 @@
   "suela": "Goma",
   "origen": "Indonesia",
   "punt": 5,
-  "img": "/images/img-prodDetail/img-grande.jpg",
+  "img": "img-grande.jpg",
   "miniatura": [
-   "/images/img-prodDetail/img-1.jpg",
-   "/images/img-prodDetail/img-2.jpg",
-   "/images/img-prodDetail/img-3.jpg",
-   "/images/img-prodDetail/img-4.jpg",
-   "/images/img-prodDetail/img-5.jpg"
+   "img-1.jpg",
+   "img-2.jpg",
+   "img-3.jpg",
+   "img-4.jpg",
+   "img-5.jpg"
   ]
  },
  {
@@ -315,13 +315,13 @@
   "suela": "Goma",
   "origen": "Indonesia",
   "punt": 5,
-  "img": "/images/img-prodDetail/img-grande.jpg",
+  "img": "img-grande.jpg",
   "miniatura": [
-   "/images/img-prodDetail/img-1.jpg",
-   "/images/img-prodDetail/img-2.jpg",
-   "/images/img-prodDetail/img-3.jpg",
-   "/images/img-prodDetail/img-4.jpg",
-   "/images/img-prodDetail/img-5.jpg"
+   "img-1.jpg",
+   "img-2.jpg",
+   "img-3.jpg",
+   "img-4.jpg",
+   "img-5.jpg"
   ]
  },
  {
@@ -351,13 +351,13 @@
   "suela": "Goma",
   "origen": "Indonesia",
   "punt": 5,
-  "img": "/images/img-prodDetail/img-grande.jpg",
+  "img": "img-grande.jpg",
   "miniatura": [
-   "/images/img-prodDetail/img-1.jpg",
-   "/images/img-prodDetail/img-2.jpg",
-   "/images/img-prodDetail/img-3.jpg",
-   "/images/img-prodDetail/img-4.jpg",
-   "/images/img-prodDetail/img-5.jpg"
+   "img-1.jpg",
+   "img-2.jpg",
+   "img-3.jpg",
+   "img-4.jpg",
+   "img-5.jpg"
   ]
  },
  {
@@ -387,13 +387,13 @@
   "suela": "Goma",
   "origen": "Indonesia",
   "punt": 5,
-  "img": "/images/img-prodDetail/img-grande.jpg",
+  "img": "img-grande.jpg",
   "miniatura": [
-   "/images/img-prodDetail/img-1.jpg",
-   "/images/img-prodDetail/img-2.jpg",
-   "/images/img-prodDetail/img-3.jpg",
-   "/images/img-prodDetail/img-4.jpg",
-   "/images/img-prodDetail/img-5.jpg"
+   "img-1.jpg",
+   "img-2.jpg",
+   "img-3.jpg",
+   "img-4.jpg",
+   "img-5.jpg"
   ]
  },
  {
@@ -423,13 +423,13 @@
   "suela": "Goma",
   "origen": "Indonesia",
   "punt": 5,
-  "img": "/images/img-prodDetail/img-grande.jpg",
+  "img": "img-grande.jpg",
   "miniatura": [
-   "/images/img-prodDetail/img-1.jpg",
-   "/images/img-prodDetail/img-2.jpg",
-   "/images/img-prodDetail/img-3.jpg",
-   "/images/img-prodDetail/img-4.jpg",
-   "/images/img-prodDetail/img-5.jpg"
+   "img-1.jpg",
+   "img-2.jpg",
+   "img-3.jpg",
+   "img-4.jpg",
+   "img-5.jpg"
   ]
  },
  {
@@ -459,13 +459,13 @@
   "suela": "Goma",
   "origen": "Indonesia",
   "punt": 5,
-  "img": "/images/img-prodDetail/img-grande.jpg",
+  "img": "img-grande.jpg",
   "miniatura": [
-   "/images/img-prodDetail/img-1.jpg",
-   "/images/img-prodDetail/img-2.jpg",
-   "/images/img-prodDetail/img-3.jpg",
-   "/images/img-prodDetail/img-4.jpg",
-   "/images/img-prodDetail/img-5.jpg"
+   "img-1.jpg",
+   "img-2.jpg",
+   "img-3.jpg",
+   "img-4.jpg",
+   "img-5.jpg"
   ]
  },
  {
@@ -495,13 +495,13 @@
   "suela": "Goma",
   "origen": "Indonesia",
   "punt": 5,
-  "img": "/images/img-prodDetail/img-grande.jpg",
+  "img": "img-grande.jpg",
   "miniatura": [
-   "/images/img-prodDetail/img-1.jpg",
-   "/images/img-prodDetail/img-2.jpg",
-   "/images/img-prodDetail/img-3.jpg",
-   "/images/img-prodDetail/img-4.jpg",
-   "/images/img-prodDetail/img-5.jpg"
+   "img-1.jpg",
+   "img-2.jpg",
+   "img-3.jpg",
+   "img-4.jpg",
+   "img-5.jpg"
   ]
  },
  {
@@ -531,13 +531,13 @@
   "suela": "Goma",
   "origen": "Indonesia",
   "punt": 5,
-  "img": "/images/img-prodDetail/img-grande.jpg",
+  "img": "img-grande.jpg",
   "miniatura": [
-   "/images/img-prodDetail/img-1.jpg",
-   "/images/img-prodDetail/img-2.jpg",
-   "/images/img-prodDetail/img-3.jpg",
-   "/images/img-prodDetail/img-4.jpg",
-   "/images/img-prodDetail/img-5.jpg"
+   "img-1.jpg",
+   "img-2.jpg",
+   "img-3.jpg",
+   "img-4.jpg",
+   "img-5.jpg"
   ]
  },
  {
@@ -567,13 +567,13 @@
   "suela": "Goma",
   "origen": "Indonesia",
   "punt": 5,
-  "img": "/images/img-prodDetail/img-grande.jpg",
+  "img": "img-grande.jpg",
   "miniatura": [
-   "/images/img-prodDetail/img-1.jpg",
-   "/images/img-prodDetail/img-2.jpg",
-   "/images/img-prodDetail/img-3.jpg",
-   "/images/img-prodDetail/img-4.jpg",
-   "/images/img-prodDetail/img-5.jpg"
+   "img-1.jpg",
+   "img-2.jpg",
+   "img-3.jpg",
+   "img-4.jpg",
+   "img-5.jpg"
   ]
  },
  {
@@ -603,13 +603,13 @@
   "suela": "Goma",
   "origen": "Indonesia",
   "punt": 5,
-  "img": "/images/img-prodDetail/img-grande.jpg",
+  "img": "img-grande.jpg",
   "miniatura": [
-   "/images/img-prodDetail/img-1.jpg",
-   "/images/img-prodDetail/img-2.jpg",
-   "/images/img-prodDetail/img-3.jpg",
-   "/images/img-prodDetail/img-4.jpg",
-   "/images/img-prodDetail/img-5.jpg"
+   "/images/products/miniatura/img-1.jpg",
+   "/images/products/miniatura/img-2.jpg",
+   "/images/products/miniatura/img-3.jpg",
+   "/images/products/miniatura/img-4.jpg",
+   "/images/products/miniatura/img-5.jpg"
   ]
  },
  {
@@ -639,55 +639,41 @@
   "suela": "Goma",
   "origen": "Indonesia",
   "punt": 5,
-  "img": "/images/img-prodDetail/img-grande.jpg",
+  "img": "img-grande.jpg",
   "miniatura": [
-   "/images/img-prodDetail/img-1.jpg",
-   "/images/img-prodDetail/img-2.jpg",
-   "/images/img-prodDetail/img-3.jpg",
-   "/images/img-prodDetail/img-4.jpg",
-   "/images/img-prodDetail/img-5.jpg"
+   "img-1.jpg",
+   "img-2.jpg",
+   "img-3.jpg",
+   "img-4.jpg",
+   "img-5.jpg"
   ]
  },
  {
   "id": 19,
-  "nombre": "",
-  "marca": "",
-  "precio": null,
-  "cuotas": null,
-  "descuento": null,
-  "stock": null,
-  "descripcion": "",
-  "descripcionLarga": "",
+  "nombre": "Zapas nuevas",
+  "marca": "Nike",
+  "precio": 20000,
+  "cuotas": 2,
+  "descuento": 10,
+  "stock": 2,
+  "descripcion": "Que tus pies te lleven a mejores lugares con Zapas nuevas",
+  "descripcionLarga": "Dasddasddasddasddasddasddasddasddasddasddasddasddasddasddasddasddasddasddasddasddasddasddasddasddasddasddasddasddasddasddasddasddasddasddasddasddasddasddasd",
   "color": [
-   ""
+   "Rojo",
+   "Azul",
+   "Verde"
   ],
   "talle": [
-   null
+   27,
+   32,
+   36,
+   37,
+   40
   ],
-  "capellada": "",
-  "forro": "dsa",
-  "suela": "",
-  "origen": ""
- },
- {
-  "id": 20,
-  "nombre": "Dsa",
-  "marca": "",
-  "precio": null,
-  "cuotas": null,
-  "descuento": null,
-  "stock": null,
-  "descripcion": "",
-  "descripcionLarga": "",
-  "color": [
-   ""
-  ],
-  "talle": [
-   null
-  ],
-  "capellada": "",
-  "forro": "",
-  "suela": "",
-  "origen": ""
+  "capellada": "Téxtil, Poliéster, Cuero Vacuno Descarne",
+  "forro": "Textil, Poliéster",
+  "suela": "Goma",
+  "origen": "China",
+  "img": "product-image-1703629897605.jpg"
  }
 ]

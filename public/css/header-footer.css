@@ -75,7 +75,7 @@ header {
 /*     border-top: solid 1px #CFCFEA; */
     padding: 10px;
     /* background: linear-gradient(90deg, #250907 0%,#130705 99%);; */
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.911);
 }
 
 /*Haciendo flex el nav*/
@@ -147,7 +147,7 @@ justify-content: center;
 
 /*Este burger menu es generico (Pienso que se vería mejor en una esquina en vez de en el medio, me guié con el de mercadoLiebre)*/
 .burger-menu {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.77);
     color: white;
     border: solid 1px white;
     width: 50px;

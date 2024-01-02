@@ -2,7 +2,7 @@
 <html lang="en">
         <!--Head-->
         <%-include('../partials/head.ejs', {title: "Editar", style:''})%>
-        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/index.css">
     </head>
 <body>
     <%-include('../partials/header.ejs')%>
@@ -41,7 +41,7 @@
 </style>
     <br>
     <div class="container-flex">
-    <form method="POST" action="/product/<%=producto.id%>/edit?_method=PUT"><br>
+    <form method="POST" action="/product/<%=producto.id%>/edit?_method=PUT" enctype="multipart/form-data"   ><br>
         <h1>Editar</h1><br><hr><br><br>
         <label for="nombre">Nombre</label>
         <input type="text" name="nombre" value="<%=producto.nombre%>" id="nombre">
@@ -76,6 +76,8 @@
         <input type="text" name="suela" id="suela" value="<%=producto.suela%>">
         <label for="origen">Origen</label>
         <input type="text" name="origen" id="origen" value="<%=producto.origen%>">
+        <label>Imagen del producto</label>
+        <input type="file" name="product-image">
 
         <button type="submit">Enviar</button>
     </form>

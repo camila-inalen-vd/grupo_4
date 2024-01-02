@@ -2,7 +2,7 @@
 <html lang="en">
         <!--Head-->
         <%-include('../partials/head.ejs', {title: 'Crear', style:''})%>
-        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/index.css">
     </head>
 <body>
     <%-include('../partials/header.ejs')%>
@@ -41,7 +41,7 @@
 </style>
     <br>
     <div class="container-flex">
-    <form method="POST" action="/product/create"><br>
+    <form method="POST" action="/product/create" enctype="multipart/form-data"><br>
         <h1>Crear producto</h1><br><hr><br><br>
         <label for="nombre">Nombre</label>
         <input type="text" name="nombre" id="nombre">
@@ -76,6 +76,8 @@
         <input type="text" name="suela" id="suela">
         <label for="origen">Origen</label>
         <input type="text" name="origen" id="origen">
+        <label>Imagen del producto</label>
+        <input type="file" name="product-image">
 
         <button type="submit">Enviar</button>
     </form>

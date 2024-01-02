@@ -50,12 +50,13 @@ const productsController = {
             stock: parseInt(req.body.stock),
             color: req.body.color.split(','),
             talle: talle,
+            img: req.file.filename
         }
         //Añadimos el nuevo producto al array de objetos que ya tenemos.
         productos.push(nuevoObjeto)
         //Sobreescribimos el json.
         fs.writeFileSync(path.resolve(__dirname, '../data/productos.json'), JSON.stringify(productos, null, 1))
-        res.redirect('/');
+        res.redirect('/product/detail/' + nuevoObjeto.id);
     },
     editConfig: (req,res) => {
         //Pasando los datos que necesito a valor numerico.
@@ -77,13 +78,14 @@ const productsController = {
                 productos[index] = {
                     ...zapatilla,
                     ...req.body,
+                    img: req.file ? req.file.filename : zapatilla.img
                 };
                 console.log(productos[index]);
             }
         });
     
         fs.writeFileSync(path.resolve(__dirname, '../data/productos.json'), JSON.stringify(productos, null, 1));
-        res.redirect('/');
+        res.redirect('/product/detail/' + req.params.id);
     },
     deleteConfig: (req, res) => {
         //Acá hago que se devuelvan TODOS los productos del array menos el que coincida con el id que pasé en el input. (Es como borrarlo al revés, en realidad creas un nuevo array con todos menos ese producto)

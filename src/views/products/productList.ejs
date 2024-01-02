@@ -1,6 +1,6 @@
 <!DOCTYPE html>  
 <html lang="en">
-    <%- include("../partials/head.ejs", {title: "Listado de producto", style: "productList"}) %>
+    <%- include("../partials/head.ejs", {title: "Listado de producto", style: "/products/productList"}) %>
 <body>
     <%- include("../partials/header.ejs") %>
 <div class="falsobody">
@@ -173,7 +173,7 @@
                 <article>                                       
                     <div class="cart-class">
                         <div class="cart-image">
-                            <img src="<%= productos[i].img %>" alt="Cafetera Moulinex">
+                            <img src="/images/products/<%=productos[i].img %>" alt="Cafetera Moulinex">
                         </div>             
                         <div class="item-box">
                             <div class="brand-class">
