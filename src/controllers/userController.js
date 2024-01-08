@@ -25,7 +25,6 @@ const userController = {
         let usuario = {
             nombre: req.body.nombre,
             apellido: req.body.apellido,
-            username: req.body.username,
             email: req.body.email,
             password: bcrypt.hashSync(req.body.contraseña, 10)
         }

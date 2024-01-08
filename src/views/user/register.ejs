@@ -30,16 +30,6 @@
                     <% } %>
                 </div>
                 <div class="form">
-                    <label>Nombre de usuario</label>
-                    <input type="text" name="username"
-                    value="<%=locals.oldData ? oldData.username : null %>">
-                    <% if (locals.errorsObjeto && errorsObjeto.username) { %>
-                        <div>
-                            <p> <%= errorsObjeto.username.msg %> </p>
-                        </div>
-                    <% } %>
-                </div>
-                <div class="form">
                     <label>Email</label>
                     <input type="email" name="email"
                     value="<%=locals.oldData ? oldData.email : null %>">

@@ -6,8 +6,6 @@ const registerValidations = [
         .notEmpty().withMessage("Debes completar el nombre"),
     body("apellido")
         .notEmpty().withMessage("Debes completar el apellido"),
-    body("username")
-        .notEmpty().withMessage("Debes completar el nombre de usuario"),
     body("email")
         .notEmpty().withMessage('Debes completar el email'),
     body('contraseña')
