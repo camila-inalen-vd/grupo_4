@@ -1,26 +1,23 @@
 [
  {
-  "nombre": "Pedro",
-  "apellido": "Perez",
-  "username": "pepe35",
-  "email": "pep@gmail.com"
- },
- {
-  "nombre": "Juan",
-  "apellido": "Lopez",
-  "username": "Joni181",
-  "email": "juanlopez@gmail.com"
+  "nombre": "Martin",
+  "apellido": "Montero",
+  "username": "mmont76",
+  "email": "mmont@gmail.com",
+  "password": "$2a$10$o0iXIQIvFfRGUBiVv.9vl.fqA2A8ujd8Ab8M/hQVEda2ynN3GC2me"
  },
  {
   "nombre": "Pedro",
   "apellido": "Perez",
   "username": "pepe35",
-  "email": "pep@gmail.com"
+  "email": "pep@gmail.com",
+  "password": "$2a$10$g7jLOyEekjhGgw1e8VY/xuP.M3ASkHvI5URSorA0eoOUJGht8fFpy"
  },
  {
-  "nombre": "Juan",
-  "apellido": "Lopez",
-  "username": "jjlopez12",
-  "email": "juanlopez@gmail.com"
+  "nombre": "Santiago",
+  "apellido": "Aguilar",
+  "username": "santiaguilar10",
+  "email": "santiaguilar10@gmail.com",
+  "password": "$2a$10$v6.jKjdSMF/bv0FaoHNQt.ZjOBXIn3euv5IQ15bWjNCIDQq7nRfmG"
  }
 ]

@@ -1,5 +1,5 @@
 const {body} = require("express-validator");
-const { equal } = require('assert');
+const bcrypt = require('bcryptjs')
 
 const registerValidations = [
     body("nombre")
@@ -14,7 +14,13 @@ const registerValidations = [
         .notEmpty().withMessage('Debes completar la contraseña').bail()
         .isLength({ min: 5 }).withMessage('La contraseña debe tener al  menos 5 caracteres'),
     body('repetirContraseña')
-        .notEmpty().withMessage('Debes completar la contraseña')
+        .custom((value, {req}) => {
+            console.log((req.body.contraseña));
+            if(req.body.repetirContraseña != req.body.contraseña){
+                throw new Error('Las contraseñas deben coincidir')
+            }
+            return true 
+        })
 ]
 
 module.exports = registerValidations
