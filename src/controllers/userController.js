@@ -1,6 +1,8 @@
 const fs = require('fs');
 const path = require('path')
 
+const { validationResult } = require('express-validator');
+
 const userController = {
     login: (req, res) => {
         res.render('user/login')
@@ -12,6 +14,13 @@ const userController = {
         res.render('user/register')
     },    
     create: (req, res) =>{
+        const resultValidation = validationResult(req);
+        if(resultValidation.errors.length > 0){
+            res.render("user/register", {
+				errorsObjeto: resultValidation.mapped(),
+				oldData: req.body
+			})
+        } else {
         let usuario = {
             nombre: req.body.nombre,
             apellido: req.body.apellido,
@@ -29,11 +38,10 @@ const userController = {
 
         usuarios.push(usuario);
 
-        let usuariosJOSN = JSON.stringify(usuarios);
-
-        fs.writeFileSync(path.resolve(__dirname, '../data/users.json'), usuariosJOSN)
+        fs.writeFileSync(path.resolve(__dirname, '../data/users.json'), JSON.stringify(usuarios, null, 1))
 
         res.redirect("/");
+        }
     }
 }
 

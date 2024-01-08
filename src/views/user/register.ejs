@@ -11,27 +11,63 @@
             <form action="/user/register" method="POST">
                 <div class="form">
                     <label>Nombre</label>
-                    <input type="text" name="nombre">
+                    <input type="text" name="nombre"
+                    value="<%=locals.oldData ? oldData.nombre : null %>">
+                    <% if (locals.errorsObjeto && errorsObjeto.nombre) { %>
+                        <div>
+                            <p> <%= errorsObjeto.nombre.msg %> </p>
+                        </div>
+                    <% } %>
                 </div>
                 <div class="form"> 
                     <label>Apellido</label>
-                    <input type="text" name="apellido">
+                    <input type="text" name="apellido"
+                    value="<%=locals.oldData ? oldData.apellido : null %>">
+                    <% if (locals.errorsObjeto && errorsObjeto.apellido) { %>
+                        <div>
+                            <p> <%= errorsObjeto.apellido.msg %> </p>
+                        </div>
+                    <% } %>
                 </div>
                 <div class="form">
                     <label>Nombre de usuario</label>
-                    <input type="text" name="username">
+                    <input type="text" name="username"
+                    value="<%=locals.oldData ? oldData.username : null %>">
+                    <% if (locals.errorsObjeto && errorsObjeto.username) { %>
+                        <div>
+                            <p> <%= errorsObjeto.username.msg %> </p>
+                        </div>
+                    <% } %>
                 </div>
                 <div class="form">
                     <label>Email</label>
-                    <input type="email" name="email">
+                    <input type="email" name="email"
+                    value="<%=locals.oldData ? oldData.email : null %>">
+                    <% if (locals.errorsObjeto && errorsObjeto.email) { %>
+                        <div>
+                            <p> <%= errorsObjeto.email.msg %> </p>
+                        </div>
+                    <% } %>
                 </div>
                 <div class="form">
                     <label>Contraseña</label> 
-                    <input type="password" name="contraseña">
+                    <input type="password" name="contraseña"
+                    value="<%=locals.oldData ? oldData.contraseña : null %>">
+                    <% if (locals.errorsObjeto && errorsObjeto.contraseña) { %>
+                        <div>
+                            <p> <%= errorsObjeto.contraseña.msg %> </p>
+                        </div>
+                    <% } %>
                 </div>
                 <div class="form">
                     <label>Repetir contraseña</label> 
-                    <input type="password" name="contraseña">
+                    <input type="password" name="repetirContraseña"
+                    value="<%=locals.oldData ? oldData.repetirContraseña : null %>">
+                    <% if (locals.errorsObjeto && errorsObjeto.repetirContraseña) { %>
+                        <div>
+                            <p> <%= errorsObjeto.repetirContraseña.msg %> </p>
+                        </div>
+                    <% } %>
                 </div>
                 <div class="boton">
                     <button type="submit">Crear cuenta</button>
