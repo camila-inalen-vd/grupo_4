@@ -1,5 +1,6 @@
-const fs = require('fs')
-const path = require('path')
+const fs = require('fs');
+const path = require('path');
+const {validationResult} = require('express-validator');
 const productos = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/productos.json')));
 
 const productsController = {
@@ -31,6 +32,8 @@ const productsController = {
         res.render('products/delete')
     },
     createConfig: (req, res) => {
+        let errors = validationResult(req);
+        if(errors.isEmpty()){
         let objeto = req.body;
         //Logica para los talles en array y que se guarden de forma numerica.
         let talle = req.body.talle.split(',')
@@ -50,13 +53,16 @@ const productsController = {
             stock: parseInt(req.body.stock),
             color: req.body.color.split(','),
             talle: talle,
-            img: req.file.filename
+            img: req.file? req.file.filename : ''
         }
         //Añadimos el nuevo producto al array de objetos que ya tenemos.
         productos.push(nuevoObjeto)
         //Sobreescribimos el json.
         fs.writeFileSync(path.resolve(__dirname, '../data/productos.json'), JSON.stringify(productos, null, 1))
         res.redirect('/product/detail/' + nuevoObjeto.id);
+    }else {
+        res.render('products/create', {errors: errors.array(), old: req.body})
+    }
     },
     editConfig: (req,res) => {
         //Pasando los datos que necesito a valor numerico.

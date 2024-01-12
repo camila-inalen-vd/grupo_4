@@ -675,5 +675,27 @@
   "suela": "Goma",
   "origen": "China",
   "img": "product-image-1703629897605.jpg"
+ },
+ {
+  "id": 20,
+  "nombre": "",
+  "marca": "",
+  "precio": null,
+  "cuotas": null,
+  "descuento": null,
+  "stock": null,
+  "descripcion": "",
+  "descripcionLarga": "",
+  "color": [
+   ""
+  ],
+  "talle": [
+   null
+  ],
+  "capellada": "",
+  "forro": "",
+  "suela": "",
+  "origen": "",
+  "img": ""
  }
 ]
