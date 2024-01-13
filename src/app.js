@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const app = express();
+const session = require('express-session')
 const methodOverride = require('method-override');
 app.use(methodOverride('_method'));
 //Guardamos la dirección de la carpeta public con path.
@@ -14,6 +15,9 @@ const userRoutes = require('./routes/userRoutes.js');
 //Para manipular datos con form
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
+
+//Session
+app.use(session({secret: 'Sh, es un secreto'}))
 
 //Carpeta views y public.
 app.set('views', path.resolve(__dirname, 'views'));

@@ -38,6 +38,8 @@ router.get('/list', productsController.productList)
 router.get('/cart', productsController.productCart)
 
 //Crear
+
+//Validaciones para el formulario   
 const createValidator = [
     body('nombre').notEmpty().withMessage('Este campo es obligatorio'),
     body('marca').notEmpty().withMessage('Este campo es obligatorio'),
