@@ -110,28 +110,29 @@
         <!--El historial lo dejé en un contenedor flex en el que por el momento muestra máximo 4 productos-->
         <section class="productos-a">
             <h1>INSPIRADO EN LO QUE VISTE</h1>
-            <section>
-                <div class="container-flex">
-                <% for(let i = 0 ; i < 4     ; i++) { %>
-                <div class="article-container">
-                <article class="article">
-                    <a href="/product/detail/<%=productos[i].id%>"><div class="product-card">
-                        <img src="/images/products/<%=productos[i].img%>" alt="">
-                    <div class="product-detail">
-                    <p class="precio">$<%= productos[i].precio.toLocaleString('es-ES')%></p>
-                    <p class="marca"><%= productos[i].marca%></p>
-                    <h3><a href="/product/detail"><%= productos[i].nombre%></a></h3>
-                    <div class="reputation-icon">
-                        <% for(let x = 1 ; x <= productos[i].punt ; x++){ %>
-                        <i class="fa-solid fa-star"></i>
-                        <% } %>
-                    </div>
-                    </div>  
-                    </div>
-                    </div></a>
-                </article>
-                <% } %>
+            <div class="container-flex">
+                <% for(let i = 0 ; i < 4 ; i++){ %>
+                    <div class="article-container">
+                    <article class="article">
+                            <a href="/product/detail/<%=productos[i].id%>"><div class="product-card">
+                            <img src="/images/products/<%=productos[i].img%>" alt="">
+                        <div class="product-detail">
+                        <p class="precio">$<%= productos[i].precio.toLocaleString('es-ES')%></p>
+                        <p class="marca"><%= productos[i].marca%></p>
+                        <h3><a href="/product/detail"><%= productos[i].nombre%></a></h3>
+                        <div class="reputation-icon">
+                            <% for(let x = 1 ; x <= productos[i].punt ; x++){ %>
+                            <i class="fa-solid fa-star"></i>
+                            <% } %>
+                        </div>
+                        </div>
+                        </div>  
+                        </div></a>
+                    </article>
+                    <% } %>
             </div>
+            
+        </section>
         </main>
     <!--Footer-->  
     <%-include('./partials/footer.ejs')%>
