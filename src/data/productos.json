@@ -37,7 +37,7 @@
  },
  {
   "id": 2,
-  "nombre": "Zapatillas Pacer 23 Unisex",
+  "nombre": "Zapatillas Pacer",
   "marca": "Puma",
   "precio": 59999,
   "cuotas": 3,
@@ -65,12 +65,12 @@
   "punt": 5,
   "img": "product-image-1705202755023.jpg",
   "miniatura": [
-    "img-1.jpg",
-    "img-2.jpg",
-    "img-3.jpg",
-    "img-4.jpg",
-    "img-5.jpg"
-   ]
+   "img-1.jpg",
+   "img-2.jpg",
+   "img-3.jpg",
+   "img-4.jpg",
+   "img-5.jpg"
+  ]
  },
  {
   "id": 3,
