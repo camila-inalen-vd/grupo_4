@@ -30,9 +30,16 @@ section h1 {
     align-items: stretch;
 }
 
+.article-container  {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+}
+
 article {
-    width: 80%;
-    margin: 10px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 10px;
     background-color: rgb(255, 255, 255);
     padding: 15px;
     border-radius: 15px;
@@ -135,8 +142,8 @@ display: none;
 
 .ver-mas{
     width: 40%;
+    margin-top: 20px;
     padding: 5px;
-    margin-top: 30px;
     border: solid 1px rgb(169, 169, 169);
     background-color: rgba(43, 79, 146, 0.617);
     color: white;
@@ -169,7 +176,7 @@ header {
 
 
 @media (min-width: 361px) {
-    article {
+    .article-container{
         width: 40%;
     }
     .carousel-productos article {
@@ -179,28 +186,34 @@ header {
     .categorias-populares article {
         width: 20%;
     }
+    .ver-mas{
+        margin-top: 100px;
+    }
 }
 
 
 @media (min-width: 1025px) {
-    article {
+    .article-container  {
         width: 20%;
+        height: 400px;
+        margin: 10px;
+    }
+    article {
+        margin: 0 auto;
+        width: 90%;
     }
 
     .categorias-populares {
         display: flex;
+        justify-content: center;
     }
 
-    .carousel-productos article {
-        width: 15%;
-        
-    }
     .categorias-populares article {
         display: flex;
         border-radius: 100%;
-        width: 5%;
+        width: 100px;
+        margin: 5px;
     }
-
 
     section {
         width: 90%;
