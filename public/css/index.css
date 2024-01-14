@@ -28,15 +28,17 @@ section h1 {
     flex-wrap: wrap;
     justify-content: center;
     align-items: stretch;
+    
 }
 
 article {
     width: 80%;
-    margin: 10px;
+    height: 500px;
+    margin: 10px;   
     background-color: rgb(255, 255, 255);
     padding: 15px;
-    border-radius: 5px;
-    box-shadow: 1px 3px 9px 2px rgba(0, 0, 0, 0.364);
+    border-radius: 15px;
+    box-shadow: 1px 3px 9px 2px rgba(0, 0, 0, 0.244);
 }
 
 .marcas {
