@@ -54,15 +54,16 @@
             <h1>OFERTAS</h1>
             <div class="container-flex">
 
-
+            <!--Implementada la lógica para que solo cargue productos que tengan el descuento mayor a 0-->
             <% for(let i = 0 ; i < 4 ; i++){ %>
+                <% if(productos[i].descuento > 0) {%>
             <div class="article-container">
             <article class="article">
                     <a href="/product/detail/<%=productos[i].id%>"><div class="product-card">
                     <img src="/images/products/<%=productos[i].img%>" alt="">
                 <div class="product-detail">
                 <p class="discount"><%= productos[i].descuento%>% Off</p>
-                <p class="precio">$<%= productos[i].precio%></p>
+                <p class="precio">$<%= productos[i].precio.toLocaleString('es-ES')%></p>
                 <p class="marca"><%= productos[i].marca%></p>
                 <h3><a href="/product/detail"><%= productos[i].nombre%></a></h3>
                 <div class="reputation-icon">
@@ -74,7 +75,7 @@
                 </div>
                 </div></a>
             </article>
-            <% } %>
+            <% }} %>
             <button class="ver-mas">Ver más</button>
         </div>
         </section>
@@ -88,8 +89,7 @@
                             <a href="/product/detail/<%=productos[i].id%>"><div class="product-card">
                             <img src="/images/products/<%=productos[i].img%>" alt="">
                         <div class="product-detail">
-                        <p class="discount"><%= productos[i].descuento%>% Off</p>
-                        <p class="precio">$<%= productos[i].precio%></p>
+                        <p class="precio">$<%= productos[i].precio.toLocaleString('es-ES')%></p>
                         <p class="marca"><%= productos[i].marca%></p>
                         <h3><a href="/product/detail"><%= productos[i].nombre%></a></h3>
                         <div class="reputation-icon">
@@ -117,7 +117,7 @@
                     <a href="/product/detail/<%=productos[i].id%>"><div class="product-card">
                         <img src="/images/products/<%=productos[i].img%>" alt="">
                     <div class="product-detail">
-                    <p class="precio">$<%= productos[i].precio%></p>
+                    <p class="precio">$<%= productos[i].precio.toLocaleString('es-ES')%></p>
                     <p class="marca"><%= productos[i].marca%></p>
                     <h3><a href="/product/detail"><%= productos[i].nombre%></a></h3>
                     <div class="reputation-icon">

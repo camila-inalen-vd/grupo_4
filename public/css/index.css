@@ -57,6 +57,7 @@ article {
 
 .product-card img {
     width: 100%;
+    border-radius: 5px;
 }
 
 .product-card a {
@@ -65,22 +66,28 @@ article {
 }
 
 .discount {
-    color: green;
+    color: white;
+    text-align: center;
+    background-color: green;
     transition-property: font-size;
     transition-duration: 0.3s;
 }
 
 .precio {
+    font-size: 1.3rem;
     transition-property: font-size;
     transition-duration: 0.3s ;
+    margin: 5px;
+    font-weight: bold;
+    color: green;
 }
 
-.product-card:hover .discount {
+.product-card:hover .discount { 
     text-decoration: none;
 }
 
-.product-card:hover .precio , .product-card:hover .discount {
-    font-size: 1.2rem;
+.product-card:hover .precio  {
+    font-size: 1.5rem;
 }
 
 .product-detail {
@@ -118,6 +125,7 @@ display: none;
     width: 100%;
     margin: auto;
     overflow: hidden;
+    box-shadow: 1px 3px 9px 2px rgba(0, 0, 0, 0.244);   
 }
 
 .carousel img {
@@ -169,19 +177,14 @@ header {
 
 .productos-a article:hover {
     transform: scale(1.03);
-    transition: transform 0.5s ease-in-out;
-    transform-origin: center top;
-    
+    transition: transform 0.3s ease-in-out;
+    transform-origin: center center;
 }
 
 
 @media (min-width: 361px) {
     .article-container{
         width: 40%;
-    }
-    .carousel-productos article {
-        width: 35%;
-        
     }
     .categorias-populares article {
         width: 20%;
