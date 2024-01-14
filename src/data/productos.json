@@ -37,14 +37,14 @@
  },
  {
   "id": 2,
-  "nombre": "Runner 3000",
-  "marca": "Olimpo",
-  "precio": 50000,
-  "cuotas": 9,
-  "descuento": 59,
-  "stock": 2,
-  "descripcion": "Descripcion corta",
-  "descripcionLarga": "dsadasdas",
+  "nombre": "Zapatillas Pacer 23 Unisex",
+  "marca": "Puma",
+  "precio": 59999,
+  "cuotas": 3,
+  "descuento": 30,
+  "stock": 4,
+  "descripcion": "Zapatillas Puma Pacer 23 Unisex",
+  "descripcionLarga": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quae esse, minima magni repudiandae quo perferendis amet commodi quas unde ullam. Quibusdam molestiae soluta consequatur consequuntur rem velit iusto eius.\r\nVoluptatibus atque optio accusamus eveniet odit eius corrupti, modi deserunt necessitatibus eaque aspernatur fuga assumenda porro dolor, qui enim cupiditate ullam a sed. Inventore expedita, consectetur nesciunt natus facere nam?\r\nOfficiis quasi molestiae nihil quisquam, vero iusto sapiente vel nisi recusandae veniam accusamus fuga ratione quia repellendus velit qui voluptatibus repudiandae ad eum. Hic eligendi laborum ea? Pariatur, veniam minus?\r\nEius, odio pariatur natus quasi nihil aut nesciunt saepe consequatur fugiat maiores facere? Ut voluptates molestiae consequuntur! Aut obcaecati expedita maxime eaque aliquam, explicabo qui dolorum molestias rem tempora assumenda?",
   "color": [
    "Rojo",
    "Morado",
@@ -63,14 +63,14 @@
   "suela": "Goma",
   "origen": "Indonesia",
   "punt": 5,
-  "img": "product-image-1703632769409.jpg",
+  "img": "product-image-1705202755023.jpg",
   "miniatura": [
-   "/images/img-prodDetail/img-1.jpg",
-   "/images/img-prodDetail/img-2.jpg",
-   "/images/img-prodDetail/img-3.jpg",
-   "/images/img-prodDetail/img-4.jpg",
-   "/images/img-prodDetail/img-5.jpg"
-  ]
+    "img-1.jpg",
+    "img-2.jpg",
+    "img-3.jpg",
+    "img-4.jpg",
+    "img-5.jpg"
+   ]
  },
  {
   "id": 3,
@@ -99,7 +99,7 @@
   "suela": "Goma",
   "origen": "Indonesia",
   "punt": 5,
-  "img": "img-grande.jpg",
+  "img": "product-image-1705202784808.jpg",
   "miniatura": [
    "img-1.jpg",
    "img-2.jpg",
@@ -135,7 +135,7 @@
   "suela": "Goma",
   "origen": "Indonesia",
   "punt": 5,
-  "img": "img-grande.jpg",
+  "img": "product-image-1705202809232.jpg",
   "miniatura": [
    "img-1.jpg",
    "img-2.jpg",
@@ -611,91 +611,5 @@
    "/images/products/miniatura/img-4.jpg",
    "/images/products/miniatura/img-5.jpg"
   ]
- },
- {
-  "id": 18,
-  "nombre": "Runner 7.5",
-  "marca": "Nike",
-  "precio": 80000,
-  "cuotas": 3,
-  "descuento": 30,
-  "stock": 0,
-  "descripcion": "Salomon Supercross 3 Hombre Adultos, resto de descripcion",
-  "descripcionLarga": "La NIKE Venture Runner Mujer mejora el estilo con una plantilla acolchada y una ligera parte superior de malla, al tiempo que hace un guiño al icónico calzado de los 80 que comenzó la revolución del running. Las costuras visibles, la parte superior altamente flexible y el pasador del talón con micro detalles de la marca añaden un ADN moderno a tu look relajado. Debido a la naturaleza de exclusiva calidad de los materiales, podría ocurrir que en algunos casos el producto destiñera levemente, sobre todo en condiciones de humedad. Mientras esté mojada, se aconseja que la zapatilla no entre en contacto con otras prendas claras hasta que no esté completamente seca.",
-  "color": [
-   "Rojo",
-   "Blanco",
-   "Azul"
-  ],
-  "talle": [
-   36,
-   37,
-   38,
-   39,
-   40
-  ],
-  "capellada": "Téxtil, Poliéster, Cuero Vacuno Descarne",
-  "forro": "Textil, Poliéster",
-  "suela": "Goma",
-  "origen": "Indonesia",
-  "punt": 5,
-  "img": "img-grande.jpg",
-  "miniatura": [
-   "img-1.jpg",
-   "img-2.jpg",
-   "img-3.jpg",
-   "img-4.jpg",
-   "img-5.jpg"
-  ]
- },
- {
-  "id": 19,
-  "nombre": "Zapas nuevas",
-  "marca": "Nike",
-  "precio": 20000,
-  "cuotas": 2,
-  "descuento": 10,
-  "stock": 2,
-  "descripcion": "Que tus pies te lleven a mejores lugares con Zapas nuevas",
-  "descripcionLarga": "Dasddasddasddasddasddasddasddasddasddasddasddasddasddasddasddasddasddasddasddasddasddasddasddasddasddasddasddasddasddasddasddasddasddasddasddasddasddasddasd",
-  "color": [
-   "Rojo",
-   "Azul",
-   "Verde"
-  ],
-  "talle": [
-   27,
-   32,
-   36,
-   37,
-   40
-  ],
-  "capellada": "Téxtil, Poliéster, Cuero Vacuno Descarne",
-  "forro": "Textil, Poliéster",
-  "suela": "Goma",
-  "origen": "China",
-  "img": "product-image-1703629897605.jpg"
- },
- {
-  "id": 20,
-  "nombre": "",
-  "marca": "",
-  "precio": null,
-  "cuotas": null,
-  "descuento": null,
-  "stock": null,
-  "descripcion": "",
-  "descripcionLarga": "",
-  "color": [
-   ""
-  ],
-  "talle": [
-   null
-  ],
-  "capellada": "",
-  "forro": "",
-  "suela": "",
-  "origen": "",
-  "img": ""
  }
 ]
