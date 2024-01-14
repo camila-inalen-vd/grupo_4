@@ -50,7 +50,7 @@
                 <% }) %>
             </section>
         
-        <section>
+        <section class="productos-a">
             <h1>OFERTAS</h1>
             <div class="container-flex">
 
@@ -77,12 +77,9 @@
         </div>
         </section>
 
-        <!--Falta modificar estilo, añadí esta section porque se veía vacío el index después de poner todos los productos en carousel-->
-        <section>
+        <section class="productos-a">
             <h1>RECOMENDADO PARA VOS</h1>
             <div class="container-flex">
-
-
                 <% for(let i = 0 ; i < 4 ; i++){ %>
                     <article class="article">
                             <a href="/product/detail/<%=productos[i].id%>"><div class="product-card">
@@ -97,16 +94,16 @@
                             <i class="fa-solid fa-star"></i>
                             <% } %>
                         </div>  
-                        </div>
                         </div></a>
                     </article>
                     <% } %>
+                </div>
             </div>
             
         </section>
 
         <!--El historial lo dejé en un contenedor flex en el que por el momento muestra máximo 4 productos-->
-        <section>
+        <section class="productos-a">
             <h1>INSPIRADO EN LO QUE VISTE</h1>
             <section>
                 <div class="container-flex">

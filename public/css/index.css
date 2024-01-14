@@ -28,13 +28,11 @@ section h1 {
     flex-wrap: wrap;
     justify-content: center;
     align-items: stretch;
-    
 }
 
 article {
     width: 80%;
-    height: 500px;
-    margin: 10px;   
+    margin: 10px;
     background-color: rgb(255, 255, 255);
     padding: 15px;
     border-radius: 15px;
@@ -162,7 +160,7 @@ header {
 
 /*testing 2*/
 
-main article:hover {
+.productos-a article:hover {
     transform: scale(1.03);
     transition: transform 0.5s ease-in-out;
     transform-origin: center top;
