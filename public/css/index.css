@@ -191,6 +191,11 @@ header {
     }
 }
 
+@media (max-width: 761px){
+    header {
+        position: static;
+    }
+}
 
 @media (min-width: 1025px) {
     .article-container  {

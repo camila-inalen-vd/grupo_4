@@ -7,7 +7,6 @@
 }
 
 header {
-
     width: 100%;
     z-index: 1;
 }
@@ -24,7 +23,7 @@ header {
 }
 
 /* Las dos cajas ocupando las dos mitades de la pantalla en el header */
-.top-header1 , .top-header2 {
+.top-header1, .top-header2 {
     max-height: 100%;
     width: 50%;
     padding: 5px;
@@ -160,16 +159,15 @@ justify-content: center;
 
 /*Este burger menu es generico (Pienso que se vería mejor en una esquina en vez de en el medio, me guié con el de mercadoLiebre)*/
 .burger-menu {
-    background-color: rgba(0, 0, 0, 0.77);
+    background-color: rgba(0, 0, 0, 0.768);
     color: white;
     border: solid 1px white;
     width: 50px;
     text-align: center;
-    padding: 10px;
+    padding: 5px;
     border-radius: 5px;
     display: block;
     font-size: 1.5rem;
-    margin: auto;
     margin-bottom: 10px;
     margin-top: 10px;
 }
@@ -268,7 +266,6 @@ nav li:hover {
         width: 30%;
     }
     .top-header2 {
-        justify-content: center;
         width: 50%;
     }
     .top-header3 {
@@ -291,7 +288,15 @@ nav li:hover {
     .top-header3 {
         display: none;
     }
-/*    */
+    .top-header2 {
+        justify-content: end;
+    }
+    .bottom-header {
+        display: none;
+    }
+
+
+    
 }
 
 @media (min-width: 769px) {
@@ -323,8 +328,4 @@ nav li:hover {
     justify-content: center;
     width: 50%;
     }
-}
-
-@media (min-width: 1025px) {
-
 }
