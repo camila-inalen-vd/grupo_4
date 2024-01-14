@@ -19,8 +19,6 @@ section h1 {
     font-family: Nunito;
     text-align: center;
     font-weight:bold;
-    /* background: linear-gradient(90deg, rgba(147, 104, 255, 0.677) 0%, rgba(67, 0, 101, 0) 100%); */
-
 }
 
 .container-flex {
@@ -80,10 +78,6 @@ article {
     margin: 5px;
     font-weight: bold;
     color: green;
-}
-
-.product-card:hover .discount { 
-    text-decoration: none;
 }
 
 .product-card:hover .precio  {
