@@ -13,6 +13,7 @@ const productRoutes = require('./routes/productsRoutes.js');
 const userRoutes = require('./routes/userRoutes.js');
 
 //Para manipular datos con form
+app.use(session({secret: 'Mensaje secreto'}))
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
