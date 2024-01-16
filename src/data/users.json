@@ -1,26 +1,16 @@
 [
  {
+  "id": 1,
+  "nombre": "Carlo",
+  "apellido": "Magno",
+  "email": "carlos35@gmail.com",
+  "contraseña": "$2a$10$yKzTggeanWasFq89tt4OjuB8u0FvZXefc06leANFOmrUPIie2q6LG"
+ },
+ {
+  "id": 2,
   "nombre": "Martin",
   "apellido": "Montero",
   "email": "mmont@gmail.com",
-  "password": "$2a$10$o0iXIQIvFfRGUBiVv.9vl.fqA2A8ujd8Ab8M/hQVEda2ynN3GC2me"
- },
- {
-  "nombre": "Pedro",
-  "apellido": "Perez",
-  "email": "pep@gmail.com",
-  "password": "$2a$10$g7jLOyEekjhGgw1e8VY/xuP.M3ASkHvI5URSorA0eoOUJGht8fFpy"
- },
- {
-  "nombre": "Santiago",
-  "apellido": "Aguilar",
-  "email": "santiaguilar10@gmail.com",
-  "password": "$2a$10$v6.jKjdSMF/bv0FaoHNQt.ZjOBXIn3euv5IQ15bWjNCIDQq7nRfmG"
- },
- {
-  "nombre": "Eric",
-  "apellido": "Gonzalez",
-  "email": "ericgonz@hotmail.com",
-  "password": "$2a$10$6VswE0Kg5eNAUWBSDtAdd.flgSU0ayCvdSG1vNCiXMxv7P971bbO2"
+  "contraseña": "$2a$10$HsFoXt6rboq9CNHYGnUhXO.dQE1OYG6bDliw7tCQ1pMoqrluCKE86"
  }
 ]

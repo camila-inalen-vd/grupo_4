@@ -1,48 +1,66 @@
 const fs = require('fs');
 const path = require('path')
 const bcrypt = require('bcryptjs')
+const User = require('../models/User')
 
 const { validationResult } = require('express-validator');
 
 const userController = {
     login: (req, res) => {
-        res.render('user/login')
+        return res.render('user/login')
     },
-    validate: (req, res) =>{
-        res.redirect("/")
+    processLogin: (req, res) =>{
+        let userToLogin = User.findByField('email', req.body.email)
+
+        if(userToLogin){
+            let isOkPassword = bcrypt.compareSync(req.body.contraseña, userToLogin.contraseña)
+            if(isOkPassword){
+                return res.redirect('/')
+            }
+        }
+        return res.render('user/login', { 
+            errors:{
+                email:{
+                    msg: 'Credenciales invalidas'
+                }
+            }
+        })
     },
+
     register: (req, res) => {
-        res.render('user/register')
-    },    
-    create: (req, res) =>{
+        return res.render('user/register')
+    },
+
+    processRegister: (req, res) =>{
         const resultValidation = validationResult(req);
         if(resultValidation.errors.length > 0){
-            res.render("user/register", {
+            return res.render("user/register", {
 				errorsObjeto: resultValidation.mapped(),
 				oldData: req.body
 			})
-        } else {
-        let usuario = {
-            nombre: req.body.nombre,
-            apellido: req.body.apellido,
-            email: req.body.email,
-            password: bcrypt.hashSync(req.body.contraseña, 10)
-        }
-        let archivoUsuarios = fs.readFileSync(path.resolve(__dirname, '../data/users.json'), {encoding: 'utf-8'});
-        let usuarios;
-
-        if (archivoUsuarios == ""){
-            usuarios = [];
-        } else {
-            usuarios = JSON.parse(archivoUsuarios);
         }
 
-        usuarios.push(usuario);
+        let userInDB = User.findByField('email', req.body.email)
 
-        fs.writeFileSync(path.resolve(__dirname, '../data/users.json'), JSON.stringify(usuarios, null, 1))
-
-        res.redirect("/");
+        if(userInDB) {
+            return res.render("user/register", {
+				errorsObjeto:{
+                    email:{
+                        msg: 'Este email ya esta registrado'
+                    }
+                },
+				oldData: req.body
+			})
         }
+
+        let usertoCreate = {
+            ...req.body,
+            contraseña: bcrypt.hashSync(req.body.contraseña, 10)
+        }
+
+        User.create(usertoCreate)
+
+        return res.redirect('/')
     }
 }
 

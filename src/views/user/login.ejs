@@ -14,6 +14,11 @@
                 <div class="form">
                     <label>Contraseña</label> 
                     <input type="password" name="contraseña">
+                    <% if (locals.errors && errors.email) { %>
+                        <div>
+                            <p> <%= errors.email.msg %></p>
+                        </div>
+                    <% } %>
                     <div><a class="recuperar" href="recuperarcontraseña">¿Olvidaste tu contraseña?</a></div>
                 </div>
                 <div class="boton">
