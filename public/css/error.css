@@ -46,6 +46,10 @@ header {
     border-radius: 15px;
 }
 
+.bottom-header {
+    background-color: rgb(29, 52, 63);
+}
+
 @media (min-width: 361px) {
     .flex-container {
         flex-direction: row;

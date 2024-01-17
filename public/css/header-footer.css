@@ -83,10 +83,8 @@ header {
 /*La parte de abajo del header*/
 .bottom-header {
     display: flex;
-/*     border-top: solid 1px #CFCFEA; */
     padding: 10px;
-    /* background: linear-gradient(90deg, #250907 0%,#130705 99%);; */
-    background-color: rgba(0, 0, 0, 0.382);
+    background-color: rgb(29, 52, 63);
 }
 
 /*Haciendo flex el nav*/

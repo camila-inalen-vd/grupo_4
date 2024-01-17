@@ -146,6 +146,11 @@ article {
     border-radius: 43px 0 43px 0;
 }
 
+.bottom-header {
+    background-color: rgba(0, 0, 0, 0.382);
+}
+
+
 @keyframes cambioDeSlide {
     0%, 100% { transform: translateX(0); }
     33.33% { transform: translateX(-100%); }
