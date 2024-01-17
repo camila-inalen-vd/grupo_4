@@ -41,21 +41,10 @@
                 </div>
                 <div class="form">
                     <label>Contraseña</label> 
-                    <input type="password" name="contraseña"
-                    value="<%=locals.oldData ? oldData.contraseña : null %>">
+                    <input type="password" name="contraseña">
                     <% if (locals.errorsObjeto && errorsObjeto.contraseña) { %>
                         <div>
                             <p> <%= errorsObjeto.contraseña.msg %> </p>
-                        </div>
-                    <% } %>
-                </div>
-                <div class="form">
-                    <label>Repetir contraseña</label> 
-                    <input type="password" name="repetirContraseña"
-                    value="<%=locals.oldData ? oldData.repetirContraseña : null %>">
-                    <% if (locals.errorsObjeto && errorsObjeto.repetirContraseña) { %>
-                        <div>
-                            <p> <%= errorsObjeto.repetirContraseña.msg %> </p>
                         </div>
                     <% } %>
                 </div>

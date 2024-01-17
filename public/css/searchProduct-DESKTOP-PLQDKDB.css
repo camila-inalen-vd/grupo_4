@@ -31,12 +31,12 @@ article{
 article .cart-class{
     margin:  5% 5% 5% 5%;
 }
-
+/* 
 .cart-class{
     /* border: 5px solid red; 
     width: 100%;*/
-}
 
+ 
 .cart-image{   
     padding: 0;
     border: 5px solid crimson;
