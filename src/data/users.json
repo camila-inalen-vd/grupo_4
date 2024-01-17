@@ -12,5 +12,12 @@
   "apellido": "Montero",
   "email": "mmont@gmail.com",
   "contraseña": "$2a$10$HsFoXt6rboq9CNHYGnUhXO.dQE1OYG6bDliw7tCQ1pMoqrluCKE86"
+ },
+ {
+  "id": 3,
+  "nombre": "Cami",
+  "apellido": "Ventura",
+  "email": "dwsad@gdas.com",
+  "contraseña": "$2a$10$m76FqEZpBJqQkndL/ryyfejtQlOGmtnzKrWxX4VZpJ9.rAwice1ui"
  }
 ]
