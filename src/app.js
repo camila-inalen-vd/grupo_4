@@ -12,13 +12,12 @@ const mainRoutes = require('./routes/mainRoutes.js');
 const productRoutes = require('./routes/productsRoutes.js');
 const userRoutes = require('./routes/userRoutes.js');
 
-//Para manipular datos con form
+//Middlewares
 app.use(session({secret: 'Mensaje secreto'}))
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
-//Session
-app.use(session({secret: 'Sh, es un secreto'}))
+
 
 //Carpeta views y public.
 app.set('views', path.resolve(__dirname, 'views'));
@@ -33,6 +32,12 @@ app.use('/', mainRoutes);
 app.use('/product', productRoutes)
 //Rutas login y register
 app.use('/user', userRoutes)
+
+//Error 404, página no encontrada.
+app.use((req, res, next) => {
+    res.status(404).render('errors/404-page');
+    next();
+});
 
 //Arranque del servidor (Lo tiré abajo de todo para evitar errores al leerse antes que otras ejecuciones)
 const port = process.env.PORT || 3000;

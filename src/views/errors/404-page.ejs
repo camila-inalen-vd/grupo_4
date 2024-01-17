@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+  <!-- Head -->
+  <%- include('../partials/head.ejs', {title: 'Error 404', style: 'index'}) %>
+  <link rel="stylesheet" href="/css/error.css">
+  <body>
+        <!-- Header -->
+        <%- include('../partials/header.ejs') %>
+    <main>
+        <div class="flex-container">
+            <div class="box-1">
+                <img src="/images/404.jpeg" alt="">
+            </div>
+            <div class="box-2">
+                <h1>PÁGINA NO ENCONTRADA</h1><br>
+                <p>Parece que hubo un error al encontrar la página a la que intentas acceder. <br>Revisa que la URL ingresada sea correcta.</p>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <%- include('../partials/footer.ejs') %>
+  </body>
+</html>
