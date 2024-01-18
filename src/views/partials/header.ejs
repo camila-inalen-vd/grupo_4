@@ -33,9 +33,13 @@
 
         <div class="nav-3" >
             <ul>
-                    <li><a href="/user/login">Ingresa</a></li>
-                    <li><a href="/user/register">Crea tu cuenta</a></li>
-                
+                    <% if(locals.isLogged) { %>
+                        <li><a href="/user/logout">Cerrar sesion</a></li>                
+                        <li><a href="/user/profile">Perfil</a></li>  
+                    <% } else { %>
+                        <li><a href="/user/login">Ingresa</a></li>
+                        <li><a href="/user/register">Crea tu cuenta</a></li>
+                    <% } %>
             </ul>
         </div>
         </nav>  

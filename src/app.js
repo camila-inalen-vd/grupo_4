@@ -1,9 +1,12 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-const session = require('express-session')
+const session = require('express-session');
+const cookieParser = require('cookie-parser');
 const methodOverride = require('method-override');
 app.use(methodOverride('_method'));
+const userLoggedMiddleware = require('./middlewares/global/userLoggedMiddleware.js')
+
 //Guardamos la dirección de la carpeta public con path.
 const publicPath = path.resolve(__dirname, '../public')
 
@@ -20,7 +23,8 @@ app.use(session({
 }))
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
-
+app.use(cookieParser());
+app.use(userLoggedMiddleware);
 
 
 //Carpeta views y public.

@@ -9,13 +9,20 @@ const userController = {
     login: (req, res) => {
         return res.render('user/login')
     },
+
     processLogin: (req, res) =>{
         let userToLogin = User.findByField('email', req.body.email)
 
         if(userToLogin){
             let isOkPassword = bcrypt.compareSync(req.body.contraseña, userToLogin.contraseña)
             if(isOkPassword){
-                return res.redirect('/')
+                delete userToLogin.contraseña;
+                req.session.userLogged = userToLogin;
+                if(req.body.recordar){
+                    res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60 * 60 * 24 * 365)})
+                }
+
+                return res.redirect('profile');
             }
         }
         return res.render('user/login', { 
@@ -28,7 +35,7 @@ const userController = {
     },
 
     register: (req, res) => {
-        return res.render('user/register')
+        return res.render('user/register');
     },
 
     processRegister: (req, res) =>{
@@ -61,6 +68,18 @@ const userController = {
         User.create(usertoCreate)
 
         return res.redirect('/')
+    },
+
+    profile: (req, res) => {
+        return res.render('user/profile', {
+            user: req.session.userLogged
+        })
+    },
+
+    logout: (req, res) => {
+        res.clearCookie('userEmail');
+        req.session.destroy();
+        return res.redirect('/');
     }
 }
 

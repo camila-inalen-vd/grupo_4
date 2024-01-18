@@ -7,6 +7,9 @@ const {body} = require('express-validator')
 //Controllers
 const productsController = require('../controllers/productsController');
 
+// Midllewares
+const authMiddleware = require('../middlewares/routes/authMiddleware')
+
 //Multer
 const storage = multer.diskStorage({
     destination: function(req, file, cb){
@@ -35,7 +38,7 @@ const upload = multer({
 //Rutas
 router.get('/detail/:id', productsController.productDetail)
 router.get('/list', productsController.productList)
-router.get('/cart', productsController.productCart)
+router.get('/cart', authMiddleware, productsController.productCart)
 
 //Crear
 

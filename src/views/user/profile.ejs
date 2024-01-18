@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%-include('../partials/head.ejs', {title: 'Iniciar sesion', style: '/user/login'})%>
+<body>
+    <%-include('../partials/header.ejs')%>
+    <main>
+        <div>
+            <h2>Hi <%= user.nombre %></h2>
+            <p><%= user.email %></p>
+        </div>
+    </main>
+    <%-include('../partials/footer.ejs')%>
+</body>
+</html>
