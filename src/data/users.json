@@ -19,5 +19,12 @@
   "apellido": "Ventura",
   "email": "dwsad@gdas.com",
   "contraseña": "$2a$10$m76FqEZpBJqQkndL/ryyfejtQlOGmtnzKrWxX4VZpJ9.rAwice1ui"
+ },
+ {
+  "id": 4,
+  "nombre": "Santiago",
+  "apellido": "Aguilar",
+  "email": "santi10@gmail.com",
+  "contraseña": "$2a$10$exjsWMp.Q3ko1SYOtAQ0eOwI8h.VFCCnHTJQ8q0knBeRKk/Ku.lFW"
  }
 ]
