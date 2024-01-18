@@ -13,7 +13,11 @@ const productRoutes = require('./routes/productsRoutes.js');
 const userRoutes = require('./routes/userRoutes.js');
 
 //Middlewares
-app.use(session({secret: 'Mensaje secreto'}))
+app.use(session({
+    secret: 'Mensaje secreto',
+    resave: false,
+    saveUninitialized: false
+}))
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
