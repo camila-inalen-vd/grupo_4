@@ -8,7 +8,7 @@
     <main>
         <section>
             <h2>Crear cuenta<h2>
-            <form action="/user/register" method="POST">
+            <form action="/user/register" method="POST" enctype="multipart/form-data">
                 <div class="form">
                     <label>Nombre</label>
                     <input type="text" name="nombre"
@@ -47,6 +47,11 @@
                             <p> <%= errorsObjeto.contraseña.msg %> </p>
                         </div>
                     <% } %>
+                </div>
+                <div class="form">
+                    <label>Foto del perfil</label>
+                    <input type="file" name="avatar"
+                    value="<%=locals.oldData ? oldData.avatar : null %>">
                 </div>
                 <div class="boton">
                     <button type="submit">Crear cuenta</button>
