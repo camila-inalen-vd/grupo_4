@@ -14,9 +14,9 @@ const userController = {
         let userToLogin = User.findByField('email', req.body.email)
 
         if(userToLogin){
-            let isOkPassword = bcrypt.compareSync(req.body.contraseña, userToLogin.contraseña)
+            let isOkPassword = bcrypt.compareSync(req.body.password, userToLogin.password)
             if(isOkPassword){
-                delete userToLogin.contraseña;
+                delete userToLogin.password;
                 req.session.userLogged = userToLogin;
                 if(req.body.recordar){
                     res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60 * 60 * 24 * 365)})
@@ -61,8 +61,11 @@ const userController = {
         }
 
         let usertoCreate = {
-            ...req.body,
-            contraseña: bcrypt.hashSync(req.body.contraseña, 10)
+            nombre:req.body.nombre,
+            apellido: req.body.apellido,
+            email: req.body.email,
+            password: bcrypt.hashSync(req.body.password, 10),
+            avatar: req.file.filename
         }
 
         User.create(usertoCreate)

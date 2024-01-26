@@ -13,13 +13,13 @@
                 </div>
                 <div class="form">
                     <label>Contraseña</label> 
-                    <input type="password" name="contraseña">
+                    <input type="password" name="password">
                     <% if (locals.errors && errors.email) { %>
                         <div>
                             <p> <%= errors.email.msg %></p>
                         </div>
                     <% } %>
-                    <div><a class="recuperar" href="recuperarcontraseña">¿Olvidaste tu contraseña?</a></div>
+                    <div><a class="recuperar" href="recuperarpassword">¿Olvidaste tu contraseña?</a></div>
                 </div>
                 <div class="recordar">
                         <input type="checkbox" name ="recordar"> Recordarme

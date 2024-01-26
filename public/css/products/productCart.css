@@ -74,7 +74,7 @@ section input{
     width: 50%;
     height: 2.5rem;
     font-size: 1.2rem;
-    background-color: rgb(55, 0, 184);
+    background-color: rgb(29, 52, 63);
     border-radius: 10px;
     color: white;
     margin-top: 15px;
@@ -86,7 +86,7 @@ section input{
         width: 45%;
     }
     section input:hover{
-        background-color: rgb(255, 0, 247);
+        background-color: rgba(58, 125, 159, 0.975);
         transform: scale(1.05);
         transition: transform 0.3s ease-in-out;        
         font-size: 1.3rem;

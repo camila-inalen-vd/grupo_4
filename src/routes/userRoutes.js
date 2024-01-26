@@ -38,7 +38,7 @@ router.get('/login', guestMiddleware, userController.login);
 router.post('/login', userController.processLogin)
 
 router.get('/register', guestMiddleware, userController.register)
-router.post('/register', upload.single('product-image'), registerMiddleware, userController.processRegister)
+router.post('/register', upload.single('avatar'), registerMiddleware, userController.processRegister)
 
 router.get('/profile', authMiddleware, userController.profile)
 

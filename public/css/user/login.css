@@ -41,7 +41,7 @@ h2{
 }
 form button{
     color: white;
-    background-color: rgb(55, 0, 184);
+    background-color: rgb(29, 52, 63);
     border-radius: 5px;
     border: solid 1px;
     font-size: 18px;
@@ -50,7 +50,7 @@ form button{
     transition: all 300ms;
 }
 form button:hover{
-    background-color: rgb(200, 0, 247);
+    background-color:  rgba(58, 125, 159, 0.975)
 }
 .recuperar{
     font-size: 0.9rem;

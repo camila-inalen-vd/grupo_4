@@ -4,27 +4,35 @@
   "nombre": "Carlo",
   "apellido": "Magno",
   "email": "carlos35@gmail.com",
-  "contraseña": "$2a$10$yKzTggeanWasFq89tt4OjuB8u0FvZXefc06leANFOmrUPIie2q6LG"
+  "password": "$2a$10$yKzTggeanWasFq89tt4OjuB8u0FvZXefc06leANFOmrUPIie2q6LG"
  },
  {
   "id": 2,
   "nombre": "Martin",
   "apellido": "Montero",
   "email": "mmont@gmail.com",
-  "contraseña": "$2a$10$HsFoXt6rboq9CNHYGnUhXO.dQE1OYG6bDliw7tCQ1pMoqrluCKE86"
+  "password": "$2a$10$HsFoXt6rboq9CNHYGnUhXO.dQE1OYG6bDliw7tCQ1pMoqrluCKE86"
  },
  {
   "id": 3,
   "nombre": "Cami",
   "apellido": "Ventura",
   "email": "dwsad@gdas.com",
-  "contraseña": "$2a$10$m76FqEZpBJqQkndL/ryyfejtQlOGmtnzKrWxX4VZpJ9.rAwice1ui"
+  "password": "$2a$10$m76FqEZpBJqQkndL/ryyfejtQlOGmtnzKrWxX4VZpJ9.rAwice1ui"
  },
  {
   "id": 4,
   "nombre": "Santiago",
   "apellido": "Aguilar",
   "email": "santi10@gmail.com",
-  "contraseña": "$2a$10$exjsWMp.Q3ko1SYOtAQ0eOwI8h.VFCCnHTJQ8q0knBeRKk/Ku.lFW"
+  "password": "$2a$10$exjsWMp.Q3ko1SYOtAQ0eOwI8h.VFCCnHTJQ8q0knBeRKk/Ku.lFW"
+ },
+ {
+  "id": 5,
+  "nombre": "Homero",
+  "apellido": "Simpsons",
+  "email": "homer@gmail.com",
+  "password": "$2a$10$.wxUQ01A/n1cm/dr4Z1fUObU6Sy7DXir8JIOkTj9HQ8MX6GkoSk1i",
+  "avatar": "avatar-1706295997289.jpg"
  }
 ]

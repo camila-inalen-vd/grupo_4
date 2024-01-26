@@ -7,9 +7,15 @@ const registerValidations = [
         .notEmpty().withMessage("Debes completar el apellido"),
     body("email")
         .notEmpty().withMessage('Debes completar el email'),
-    body('contraseña')
+    body('password')
         .notEmpty().withMessage('Debes completar la contraseña').bail()
         .isLength({ min: 5 }).withMessage('La contraseña debe tener al  menos 5 caracteres'),
+    body('avatar').custom((value, { req }) => {
+        if (!req.file) {
+            throw new Error("Debes elegir una foto de perfil");
+         }
+        return true;
+    })
 ]
 
 module.exports = registerValidations
