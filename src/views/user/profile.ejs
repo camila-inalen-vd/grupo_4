@@ -1,13 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%-include('../partials/head.ejs', {title: 'Iniciar sesion', style: '/user/login'})%>
+    <%-include('../partials/head.ejs', {title: 'Iniciar sesion', style: '/user/profile'})%>
 <body>
     <%-include('../partials/header.ejs')%>
     <main>
-        <div>
-            <h2>Hi <%= user.nombre %></h2>
-            <p><%= user.email %></p>
-        </div>
+        <section class="perfil">
+            <div class="encabezado">
+                <div>
+                    <img src="/images/user/default.jpeg" class="avatar" alt="">
+                </div>
+                <div>
+                   <p class="nombre"><%= user.nombre %> <%= user.apellido %></p>
+                </div>
+            </div>
+            <div class="datos">
+                <div>
+                    <p>Email: <%= user.email %></p>
+                </div>
+            </div>
+        </section>
     </main>
     <%-include('../partials/footer.ejs')%>
 </body>
