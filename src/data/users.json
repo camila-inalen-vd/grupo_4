@@ -34,5 +34,21 @@
   "email": "homer@gmail.com",
   "password": "$2a$10$.wxUQ01A/n1cm/dr4Z1fUObU6Sy7DXir8JIOkTj9HQ8MX6GkoSk1i",
   "avatar": "avatar-1706295997289.jpg"
+ },
+ {
+  "id": 6,
+  "nombre": "Bart",
+  "apellido": "Simpsons",
+  "email": "barto@gmaill.com",
+  "password": "$2a$10$8.5PjgyNgXOXh3h0/HpTrOIndgKX9yziOCtXEMXKJmO0v4aR4ayDy",
+  "avatar": "avatar-1706297690297.jpg"
+ },
+ {
+  "id": 7,
+  "nombre": "monty",
+  "apellido": "burns",
+  "email": "burns@gmail.com",
+  "password": "$2a$10$UAvgeU/xMKXWe3dkUQrrG.He4ZyGhSMTKYk.4lMGWMDx.m8ChsuO2",
+  "avatar": "avatar-1706297941011.jpg"
  }
 ]

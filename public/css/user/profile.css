@@ -28,6 +28,7 @@ section{
 }
 .avatar{
     width: 8rem;
+    height: 8rem;
     border-radius: 50%;
 }
 .nombre{
@@ -43,7 +44,7 @@ section{
 @media (min-width: 769px) {
     .avatar{
         width: 10rem;
-        border-radius: 50%;
+        height: 10rem;
     }
     .nombre{
         font-size: 2rem;
