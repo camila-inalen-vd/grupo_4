@@ -8,9 +8,9 @@
             <div class="encabezado">
                 <div>
                     <% if (user.avatar) { %>
-                        <img src="/images/user/<%= user.avatar %>" class="avatar" alt="">
+                        <div style="background-image: url('/images/user/<%= user.avatar %>')" class="avatar"></div>
                     <% } else { %>
-                        <img src="/images/user/default.jpeg" class="avatar" alt="">
+                        <div style="background-image: url('/images/user/default.jpeg')" class="avatar"></div>
                     <% } %>
                 </div>
                 <div>

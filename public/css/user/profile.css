@@ -30,6 +30,8 @@ section{
     width: 8rem;
     height: 8rem;
     border-radius: 50%;
+    background-size: cover;  
+    background-position: center;
 }
 .nombre{
     font-size: 1.5rem;
