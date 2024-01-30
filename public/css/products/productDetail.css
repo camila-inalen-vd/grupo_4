@@ -366,7 +366,7 @@ h4:hover {
 }
 
 .img-card img {
-	height: 400px;
+	height: 400px; 
 	object-fit: cover;
 }
 
