@@ -14,7 +14,7 @@ img {
 /*------------------main-------------------------*/
 .titulo-container {
     padding: 15px;    
-    font-size: 12px;
+   /*  font-size: 12px; */
 }
 
 .titulo-container a {
@@ -331,7 +331,7 @@ h4:hover {
     margin-top: -25px;
     padding: 60px 60px;
     justify-content: center;
-} */
+}  */
    
 .container-related-products {
     width: 300%;
@@ -422,7 +422,7 @@ h4:hover {
 .article-related{
     display: flex;
     margin: 30px;
-    margin-top: -28px;
+ /*    margin-top: -28px; */
    
 }
 
@@ -441,8 +441,10 @@ h4:hover {
     }
 
     .article-related {
+        display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        
+    /*     justify-content: center; */
       
     }
     .container-related-products {

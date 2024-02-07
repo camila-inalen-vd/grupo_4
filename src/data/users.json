@@ -50,5 +50,13 @@
   "email": "burns@gmail.com",
   "password": "$2a$10$UAvgeU/xMKXWe3dkUQrrG.He4ZyGhSMTKYk.4lMGWMDx.m8ChsuO2",
   "avatar": "avatar-1706297941011.jpg"
+ },
+ {
+  "id": 8,
+  "nombre": "noelia",
+  "apellido": "carabajal",
+  "email": "noeliacarabajal94@gmail.com",
+  "password": "$2a$10$DOi4KCiK5h50.XOJVqNUfu5H4xldS4kOJvmemZsdknTUr9sP75Wu.",
+  "avatar": "avatar-1706661751921.png"
  }
 ]
