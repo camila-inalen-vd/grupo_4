@@ -5,11 +5,11 @@ const cols = {
         primaryKey: true,
         autoIncrement: true 
     },
-
+        // llenar  
     color_id: {
 
     },
-
+       // llenar
     product_id: {
 
     }
