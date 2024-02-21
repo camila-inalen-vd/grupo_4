@@ -1,3 +1,5 @@
+module.exports = (sequelize, DataTypes) => {
+
 const alias = "Brand";
 const cols = {
     id: {
@@ -17,3 +19,5 @@ const config = {
 const Brand = sequelize.define(alias, cols, config);
 
 return Brand;
+
+}

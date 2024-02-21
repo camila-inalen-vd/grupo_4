@@ -1,3 +1,4 @@
+module.exports = (sequelize, DataTypes) => {
 const alias = "Product_color";
 const cols = {
     id: {
@@ -6,13 +7,13 @@ const cols = {
         autoIncrement: true 
     },
         // llenar  
-    color_id: {
+/*     color_id: {
 
-    },
+    }, */
        // llenar
-    product_id: {
+/*     product_id: {
 
-    }
+    } */
 };
 const config = {
     tableName: "product_color",
@@ -23,3 +24,4 @@ const Product_color = sequelize.define(alias, cols, config);
 
 return Product_color;
 
+}

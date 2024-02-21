@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const {validationResult} = require('express-validator');
 const productos = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/productos.json')));
+const db = require("../../database/models")
 
 const productsController = {
 
@@ -34,7 +35,7 @@ const productsController = {
     createConfig: (req, res) => {
         let errors = validationResult(req);
         if(errors.isEmpty()){
-        let objeto = req.body;
+        /* let objeto = req.body;
         //Logica para los talles en array y que se guarden de forma numerica.
         let talle = req.body.talle.split(',')
         talle = talle.map((talle) => {
@@ -60,6 +61,10 @@ const productsController = {
         //Sobreescribimos el json.
         fs.writeFileSync(path.resolve(__dirname, '../data/productos.json'), JSON.stringify(productos, null, 1))
         res.redirect('/product/detail/' + nuevoObjeto.id);
+     */
+    
+    
+    
     }else {
         res.render('products/create', {errors: errors.array(), old: req.body})
     }

@@ -1,3 +1,4 @@
+module.exports = (sequelize, DataTypes) => {
 const alias = "Miniature";
 const cols = {
     id: {
@@ -9,9 +10,9 @@ const cols = {
         type: DataTypes.STRING,
         allowNull: false
     },
-    product_id: {
+/*     product_id: {
 
-    }
+    } */
 };
 const config = {
     tableName: "miniatures",
@@ -21,3 +22,4 @@ const config = {
 const Miniature = sequelize.define(alias, cols, config);
 
 return Miniature;
+}

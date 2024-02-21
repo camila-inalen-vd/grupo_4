@@ -1,3 +1,4 @@
+module.exports = (sequelize, DataTypes) => {
 const alias = "Product_size";
 const cols = {
     id: {
@@ -5,13 +6,13 @@ const cols = {
         primaryKey: true,
         autoIncrement: true 
     },
-
+/* 
     size_id: {
 
     }, 
     product_id: {
 
-    }
+    } */
 };
 const config = {
     tableName: "product_size",
@@ -21,3 +22,4 @@ const config = {
 const Product_size = sequelize.define(alias, cols, config);
 
 return Product_size;
+}
