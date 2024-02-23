@@ -44,7 +44,7 @@ router.get('/cart', authMiddleware, productsController.productCart)
 
 //Validaciones para el formulario   
 const createValidator = [
-    body('nombre').notEmpty().withMessage('Este campo es obligatorio'),
+/*     body('nombre').notEmpty().withMessage('Este campo es obligatorio'),
     body('marca').notEmpty().withMessage('Este campo es obligatorio'),
     body('precio').notEmpty().withMessage('Este campo es obligatorio'),
     body('cuotas').notEmpty().withMessage('Este campo es obligatorio'),
@@ -63,13 +63,13 @@ const createValidator = [
             throw new Error('Tu producto necesita una imagen que lo represente. Solo se aceptan imagenes PNG, JPG o GIF.');
         }
         return true;
-    }).bail(),
+    }).bail(), */
 ]
 
 //Validaciones
 
 router.get('/create', productsController.create)
-router.post('/create',upload.single('product-image'), createValidator, productsController.createConfig);
+router.post('/create',/* upload.single('product-image'), */ createValidator, productsController.createConfig);
 
 //Editar
 router.get('/:id/edit', productsController.edit)
