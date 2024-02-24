@@ -77,7 +77,7 @@ const productsController = {
     upper: req.body.capellada,
     cover: req.body.forro,
     sole: req.body.suela,
-    origin: req.body.origen,
+    origin: req.body.origen, 
     /* image: req.file */
 })
     res.redirect('/product/list')

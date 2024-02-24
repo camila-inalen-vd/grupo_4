@@ -21,15 +21,15 @@ const config = {
 
 const Miniature = sequelize.define(alias, cols, config);
 
-Miniature.associate = function(models){
+/* Miniature.associate = function(models){
     Miniature.belongsToMany(models.Product, {
         as: "products",
-        through: "product_miniature",
+        through: "product_miniature", 
         foreignKey: "miniature_id",
         otherKey: "product_id",
         timestamps: false
     });
-}
+} */
 
 return Miniature;
 }

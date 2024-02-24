@@ -52,7 +52,7 @@
                <%= producto.nombre %>
          </div>
          <div class="container-precio">
-         <span>$<%= producto.precio.toLocaleString('es-ES')%></span>
+         <span>$ <%= producto.precio.toLocaleString('es-ES')%></span>
             <!-- <i class="fa-solid fa-chevron-right"></i> -->
          </div>
          <div class="container-cuotas">
@@ -187,7 +187,7 @@
             <div class="discount"><%=producto.descuento%> % OFF</div>
             <p class="description"><%=producto.descripcion%></p>
             </div>
-            <p class="precio"><%=producto.precio.toLocaleString('es-ES')%>$</p>
+            <p class="precio">$ <%=producto.precio.toLocaleString('es-ES')%></p>
         </div>
         </div>
       </div>

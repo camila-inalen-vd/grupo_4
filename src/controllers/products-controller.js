@@ -1,5 +1,35 @@
 const db = require("../../database/models")
 
+// probando 
+
+/* let productsController = {
+   productList: function(req,res){
+    db.Product.findAll()
+    .then(function(product){
+    res.render("listadoDeProductos", {product:product})
+    })
+}
+productList: function(req,res){
+    db.Products.findAll()
+    .then(function(productos){
+    res.render("producList", {productos:productos})
+    })
+
+}, 
+product: function(){
+    db.product.findOne({
+        where: {
+            name: 'Nike'
+        }
+    })
+    .then(function(producto){
+        console.log(producto)
+    })
+}  */
+
+//------------------- // -----------------
+
+
 const productsController = {
 
     productDetail: (req,res) => {
@@ -8,7 +38,10 @@ const productsController = {
             return zapatilla.id == idBuscada
         })
         res.render('products/productDetail', {'producto': productoBuscado, 'productos': productos})
+
+       
     },
+
     productList: (req,res) => {
         res.render('products/productList', {'productos': productos})
     },
