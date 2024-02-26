@@ -115,11 +115,24 @@ const productsController = {
         res.redirect('/product/detail/' + req.params.id);
     },
     deleteConfig: (req, res) => {
-        //Acá hago que se devuelvan TODOS los productos del array menos el que coincida con el id que pasé en el input. (Es como borrarlo al revés, en realidad creas un nuevo array con todos menos ese producto)
+
+        db.Product.destroy({
+            where: {
+                id:req.params.id
+            }
+        })
+        res.redirect('/products')
+
+
+
+
+
+
+       /*  //Acá hago que se devuelvan TODOS los productos del array menos el que coincida con el id que pasé en el input. (Es como borrarlo al revés, en realidad creas un nuevo array con todos menos ese producto)
         productoEliminado = productos.filter((zapatilla) => {
         return zapatilla.id != req.body.idDelete
         })
-        
+         */
         //Sobrescribo el json con el nuevo array de objetos.
         fs.writeFileSync(path.resolve(__dirname, '../data/productos.json'), JSON.stringify(productoEliminado, null, 1));
         res.redirect('/');
