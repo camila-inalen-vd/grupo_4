@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path')
 const bcrypt = require('bcryptjs')
-const User = require('../models/User')
+const db = require('../../database/models/index')
 
 const { validationResult } = require('express-validator');
 
@@ -10,8 +10,8 @@ const userController = {
         return res.render('user/login')
     },
 
-    processLogin: (req, res) =>{
-        let userToLogin = User.findByField('email', req.body.email)
+    processLogin: async (req, res) =>{
+        let userToLogin = await db.User.findOne({where: {email: req.body.email}})
 
         if(userToLogin){
             let isOkPassword = bcrypt.compareSync(req.body.password, userToLogin.password)
@@ -38,7 +38,7 @@ const userController = {
         return res.render('user/register');
     },
 
-    processRegister: (req, res) =>{
+    processRegister: async (req, res) =>{
         const resultValidation = validationResult(req);
         if(resultValidation.errors.length > 0){
             return res.render("user/register", {
@@ -47,7 +47,7 @@ const userController = {
 			})
         }
 
-        let userInDB = User.findByField('email', req.body.email)
+        let userInDB = await db.User.findOne({ where: { email: req.body.email}})
 
         if(userInDB) {
             return res.render("user/register", {
@@ -60,15 +60,14 @@ const userController = {
 			})
         }
 
-        let usertoCreate = {
-            nombre:req.body.nombre,
-            apellido: req.body.apellido,
+        db.User.create({
+            name:req.body.nombre,
+            last_name: req.body.apellido,
             email: req.body.email,
             password: bcrypt.hashSync(req.body.password, 10),
-            avatar: req.file.filename
-        }
-
-        User.create(usertoCreate)
+            image: req.file.filename,
+            admin: 1
+        })
 
         return res.redirect('/')
     },
