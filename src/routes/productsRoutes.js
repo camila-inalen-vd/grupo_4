@@ -5,7 +5,7 @@ const multer = require('multer');
 const path = require('path')
 const {body} = require('express-validator')
 //Controllers
-const productsController = require('../controllers/productsController');
+const productsController = require('../controllers/products-controller');
 
 // Midllewares
 const authMiddleware = require('../middlewares/routes/authMiddleware')
