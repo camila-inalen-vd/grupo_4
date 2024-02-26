@@ -42,7 +42,7 @@ router.get('/cart', authMiddleware, productsController.productCart)
 
 //Crear
 
-//Validaciones para el formulario   
+//Validaciones para el formulario, tenemos que pasarlo a middlewares.
 const createValidator = [
 /*     body('nombre').notEmpty().withMessage('Este campo es obligatorio'),
     body('marca').notEmpty().withMessage('Este campo es obligatorio'),
@@ -69,11 +69,11 @@ const createValidator = [
 //Validaciones
 
 router.get('/create', productsController.create)
-router.post('/create',/* upload.single('product-image'), */ createValidator, productsController.createConfig);
+router.post('/create', upload.single('product-image'),  /* createValidator */ productsController.createConfig);
 
 //Editar
 router.get('/:id/edit', productsController.edit)
-router.put('/:id/edit',upload.single('product-image'), productsController.editConfig);
+router.put('/:id/edit', upload.single('product-image'), productsController.editConfig);
 
 //Eliminar
 router.get('/delete', productsController.delete)

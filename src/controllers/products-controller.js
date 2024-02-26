@@ -1,4 +1,11 @@
+//Para que no se rompan las vistas que estan usando los JSON.
+const fs = require('fs');
+const path = require('path');
+const productos = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/productos.json')));
+
+//Pasando a BD
 const db = require("../../database/models")
+const {validationResult} = require('express-validator');
 
 // probando 
 
@@ -102,7 +109,7 @@ const productsController = {
     cover: req.body.forro,
     sole: req.body.suela,
     origin: req.body.origen,
-    /* image: req.file */
+    image: req.file? req.file.filename : ''
 })
     res.redirect('/product/list')
     
