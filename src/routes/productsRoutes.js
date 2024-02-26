@@ -23,12 +23,12 @@ const storage = multer.diskStorage({
 const upload = multer({
     storage: storage,
     fileFilter: function(req, file, cb) {
-        const allowedExtensions = ['png', 'jpg', 'gif'];
+        const allowedExtensions = ['png', 'jpg', 'gif', 'jpeg', "webp"];
         const fileExtension = path.extname(file.originalname).toLowerCase().substring(1);
 
         if (!allowedExtensions.includes(fileExtension)) {
-            req.fileValidationError = 'La imagen debe estar en formato PNG, JPG o GIF.';
-            return cb(null, false, new Error('La imagen debe estar en formato PNG, JPG o GIF.'));
+            req.fileValidationError = 'La imagen debe estar en formato PNG, JPG, JPEG o GIF.';
+            return cb(null, false, new Error('La imagen debe estar en formato PNG, JPG, JPEG o GIF.'));
         }
 
         cb(null, true);
@@ -44,7 +44,7 @@ router.get('/cart', authMiddleware, productsController.productCart)
 
 //Validaciones para el formulario, tenemos que pasarlo a middlewares.
 const createValidator = [
-/*     body('nombre').notEmpty().withMessage('Este campo es obligatorio'),
+     body('nombre').notEmpty().withMessage('Este campo es obligatorio'),
     body('marca').notEmpty().withMessage('Este campo es obligatorio'),
     body('precio').notEmpty().withMessage('Este campo es obligatorio'),
     body('cuotas').notEmpty().withMessage('Este campo es obligatorio'),
@@ -52,24 +52,24 @@ const createValidator = [
     body('stock').notEmpty().withMessage('Este campo es obligatorio'),
     body('descripcion').notEmpty().withMessage('Este campo es obligatorio'),
     body('descripcionLarga').notEmpty().withMessage('Este campo es obligatorio'),
-    body('color').notEmpty().withMessage('Este campo es obligatorio'),
-    body('talle').notEmpty().withMessage('Este campo es obligatorio'),
+/*     body('color').notEmpty().withMessage('Este campo es obligatorio'),
+    body('talle').notEmpty().withMessage('Este campo es obligatorio'), */
     body('capellada').notEmpty().withMessage('Este campo es obligatorio'),
     body('forro').notEmpty().withMessage('Este campo es obligatorio'),
     body('suela').notEmpty().withMessage('Este campo es obligatorio'),
     body('origen').notEmpty().withMessage('Este campo es obligatorio'),
     body('product-image').custom((value, { req }) => {
         if (!req.file) {
-            throw new Error('Tu producto necesita una imagen que lo represente. Solo se aceptan imagenes PNG, JPG o GIF.');
+            throw new Error('Tu producto necesita una imagen que lo represente. Solo se aceptan imagenes PNG, JPG, JPEG, WEBP o GIF.');
         }
         return true;
-    }).bail(), */
+    }).bail() 
 ]
 
 //Validaciones
 
 router.get('/create', productsController.create)
-router.post('/create', upload.single('product-image'),  /* createValidator */ productsController.createConfig);
+router.post('/create', upload.single('product-image'),  createValidator, productsController.createConfig);
 
 //Editar
 router.get('/:id/edit', productsController.edit)

@@ -71,33 +71,6 @@ const productsController = {
     createConfig: (req, res) => {
         let errors = validationResult(req);
         if(errors.isEmpty()){
-        /* let objeto = req.body;
-        //Logica para los talles en array y que se guarden de forma numerica.
-        let talle = req.body.talle.split(',')
-        talle = talle.map((talle) => {
-                return talle = parseInt(talle)
-        })
-        let nuevoObjeto = {
-            //Para que el id asignado sea igual al largo del array + 1
-            id: productos[productos.length - 1].id + 1,
-            //Todas las propiedades del objeto recibido por form.
-            ...objeto,
-            //Las propiedades que quiero que se "pisen" con la nueva lógica y los parseInt para que los campos que lo requieran sean dato numerico.
-            descripcionLarga: req.body.descripcionLarga,
-            precio: parseInt(req.body.precio),
-            cuotas: parseInt(req.body.cuotas),
-            descuento: parseInt(req.body.descuento),
-            stock: parseInt(req.body.stock),
-            color: req.body.color.split(','),
-            talle: talle,
-            img: req.file? req.file.filename : ''
-        }
-        //Añadimos el nuevo producto al array de objetos que ya tenemos.
-        productos.push(nuevoObjeto)
-        //Sobreescribimos el json.
-        fs.writeFileSync(path.resolve(__dirname, '../data/productos.json'), JSON.stringify(productos, null, 1))
-        res.redirect('/product/detail/' + nuevoObjeto.id);
-     */
      
     db.Product.create({
     name: req.body.nombre,
@@ -120,30 +93,25 @@ const productsController = {
     }
     },
     editConfig: (req,res) => {
-        //Pasando los datos que necesito a valor numerico.
-        if(req.body.precio){req.body.precio = parseInt(req.body.precio)}
-        if(req.body.cuotas){req.body.cuotas = parseInt(req.body.cuotas)}
-        if(req.body.descuento){req.body.descuento = parseInt(req.body.descuento)}
-        if(req.body.stock){req.body.stock = parseInt(req.body.stock)}
-        if(req.body.talle){
-        //Acá hago que los talles tambien se vuelvan array para despues volverlos dato numerico a cada uno con map.
-        req.body.talle = req.body.talle.split(',')
-        req.body.talle = req.body.talle.map(talle => parseInt(talle));}
-        //Pasando los colores a array
-        if(req.body.color){
-        req.body.color = req.body.color.split(',')}
 
-        //Aca iteramos todo el array y reemplazamos las propiedades del objeto que coincide con el id pasada por parametros. Llamamos a todas las propiedades del objeto existente y las ponemos con spread en el objeto que ibamos iterando referenciandolo con el index (Segunda propiedad de mi forEach) y finalmente las pisamos con las propiedades de recibido2. Haciendo que solo se editen las propiedades de los campos que llenamos en este formulario y que los que dejamos vacíos no me reemplacen mis anteriores propiedades por strings vacíos.
-        productos.forEach((zapatilla, index) => {
-            if (zapatilla.id == req.params.id) {
-                productos[index] = {
-                    ...zapatilla,
-                    ...req.body,
-                    img: req.file ? req.file.filename : zapatilla.img
-                };
-                console.log(productos[index]);
-            }
-        });
+        db.Product.update({
+            name: req.body.nombre,
+            price: req.body.precio,
+            dues: req.body.cuotas,
+            discount: req.body.descuento,
+            stock: req.body.stock,
+            description: req.body.descripcion,
+            large_description: req.body.descripcionLarga,
+            upper: req.body.capellada,
+            cover: req.body.forro,
+            sole: req.body.suela,
+            origin: req.body.origen,
+            image: req.file? req.file.filename : ''
+        }, 
+        {
+            where: {id: req.params.id}
+        })
+            res.redirect('/product/list')
     
         fs.writeFileSync(path.resolve(__dirname, '../data/productos.json'), JSON.stringify(productos, null, 1));
         res.redirect('/product/detail/' + req.params.id);
