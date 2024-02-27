@@ -42,6 +42,10 @@ const productsController = {
 
 
     //Aca vamos a usar un findByPk para obtener un solo producto, el que coincida con la ID recibida por parametro y poder mostrarlo en el detalle.
+/*     productDetail: (req,res) => {
+        let productoBuscado = db.Product.findByPk(req.params.id)
+        res.render('products/productDetail', {'producto': productoBuscado, 'productos': productos}) 
+    }, */
     productDetail: (req,res) => {
         let idBuscada = req.params.id;
         let productoBuscado = productos.find((zapatilla) => {
@@ -50,6 +54,9 @@ const productsController = {
         res.render('products/productDetail', {'producto': productoBuscado, 'productos': productos}) 
     },
     //Aca vamos a usar un findAll para obtener toda la lista de productos y mostrarlos en el product list.
+  /*   productList: (req,res) => {
+        res.render('products/productList', {'productos': db.Product.findAll()})
+    }, */
     productList: (req,res) => {
         res.render('products/productList', {'productos': productos})
     },
@@ -64,11 +71,14 @@ const productsController = {
     },
 
     //Renderizacion de la vista de editar producto. Aca vamos a usar un findByPk para devolver el producto que necesitamos a la vista, el mismo que la id que se recibe por parametro. Hay que modificarlo para que use la DB en vez el JSON. 
+    /* edit: (req, res) => {
+        //Logica para devolver el producto encontrado a la vista y poder usar su ID para incluirla en el form
+        res.render('products/edit', {producto: db.Product.findByPk(req.params.id)})
+    }, */
+    
     edit: (req, res) => {
         //Logica para devolver el producto encontrado a la vista y poder usar su ID para incluirla en el form
-        let producto = productos.find((zapatilla) => {
-            return zapatilla.id == req.params.id
-        })
+        let producto = db.Product.findByPk(req.params.id) 
         res.render('products/edit', {producto})
     },
 
@@ -131,27 +141,12 @@ const productsController = {
 
     //Esta es la config del delete. Deberiamos usar el metodo destroy con un where donde como condicion ponemos la ID que pasamos por form (req.body.idDelete) (si o si el where va o sino borran todos los registros)
     deleteConfig: (req, res) => {
-
         db.Product.destroy({
             where: {
-                id:req.params.id
+                id: req.body.idDelete
             }
         })
-        res.redirect('/products')
-
-
-
-
-
-
-       /*  //Acá hago que se devuelvan TODOS los productos del array menos el que coincida con el id que pasé en el input. (Es como borrarlo al revés, en realidad creas un nuevo array con todos menos ese producto)
-        productoEliminado = productos.filter((zapatilla) => {
-        return zapatilla.id != req.body.idDelete
-        })
-         */
-        //Sobrescribo el json con el nuevo array de objetos.
-        fs.writeFileSync(path.resolve(__dirname, '../data/productos.json'), JSON.stringify(productoEliminado, null, 1));
-        res.redirect('/');
+        res.redirect('/product/list')
     }
 
 }
