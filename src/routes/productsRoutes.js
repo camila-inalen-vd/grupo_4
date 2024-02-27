@@ -44,7 +44,7 @@ router.get('/cart', authMiddleware, productsController.productCart)
 
 //Validaciones para el formulario, tenemos que pasarlo a middlewares.
 const createValidator = [
-     body('nombre').notEmpty().withMessage('Este campo es obligatorio'),
+    body('nombre').notEmpty().withMessage('Este campo es obligatorio'),
     body('marca').notEmpty().withMessage('Este campo es obligatorio'),
     body('precio').notEmpty().withMessage('Este campo es obligatorio'),
     body('cuotas').notEmpty().withMessage('Este campo es obligatorio'),
@@ -77,6 +77,6 @@ router.put('/:id/edit', upload.single('product-image'), productsController.editC
 
 //Eliminar
 router.get('/delete', productsController.delete)
-router.delete('/delete/:id', productsController.deleteConfig)
+router.delete('/delete', productsController.deleteConfig)
 
 module.exports = router;
