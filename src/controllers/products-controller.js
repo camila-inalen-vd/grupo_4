@@ -122,11 +122,7 @@ const productsController = {
     deleteConfig: (req, res) => {
         db.Product.destroy({
             where: {
-<<<<<<< HEAD
                 id: req.params.id
-=======
-                id: req.body.idDelete
->>>>>>> ed7e674f2fc272265cf53eb1d9a3ce799d45d6e9
             }
         })
         res.redirect('/product/list')
