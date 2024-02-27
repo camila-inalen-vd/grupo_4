@@ -77,6 +77,6 @@ router.put('/:id/edit', upload.single('product-image'), productsController.editC
 
 //Eliminar
 router.get('/delete', productsController.delete)
-router.delete('/delete', productsController.deleteConfig)
+router.delete('/delete/:id', productsController.deleteConfig)
 
 module.exports = router;

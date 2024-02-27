@@ -32,7 +32,8 @@ product: function(){
     .then(function(producto){
         console.log(producto)
     })
-}  */
+}
+} */
 
 //------------------- // -----------------
 
@@ -46,9 +47,7 @@ const productsController = {
         let productoBuscado = productos.find((zapatilla) => {
             return zapatilla.id == idBuscada
         })
-        res.render('products/productDetail', {'producto': productoBuscado, 'productos': productos})
-
-       
+        res.render('products/productDetail', {'producto': productoBuscado, 'productos': productos}) 
     },
     //Aca vamos a usar un findAll para obtener toda la lista de productos y mostrarlos en el product list.
     productList: (req,res) => {
@@ -132,11 +131,24 @@ const productsController = {
 
     //Esta es la config del delete. Deberiamos usar el metodo destroy con un where donde como condicion ponemos la ID que pasamos por form (req.body.idDelete) (si o si el where va o sino borran todos los registros)
     deleteConfig: (req, res) => {
-        //Acá hago que se devuelvan TODOS los productos del array menos el que coincida con el id que pasé en el input. (Es como borrarlo al revés, en realidad creas un nuevo array con todos menos ese producto)
+
+        db.Product.destroy({
+            where: {
+                id:req.params.id
+            }
+        })
+        res.redirect('/products')
+
+
+
+
+
+
+       /*  //Acá hago que se devuelvan TODOS los productos del array menos el que coincida con el id que pasé en el input. (Es como borrarlo al revés, en realidad creas un nuevo array con todos menos ese producto)
         productoEliminado = productos.filter((zapatilla) => {
         return zapatilla.id != req.body.idDelete
         })
-        
+         */
         //Sobrescribo el json con el nuevo array de objetos.
         fs.writeFileSync(path.resolve(__dirname, '../data/productos.json'), JSON.stringify(productoEliminado, null, 1));
         res.redirect('/');

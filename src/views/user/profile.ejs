@@ -7,14 +7,14 @@
         <section class="perfil">
             <div class="encabezado">
                 <div>
-                    <% if (user.avatar) { %>
-                        <div style="background-image: url('/images/user/<%= user.avatar %>')" class="avatar"></div>
+                    <% if (user.image) { %>
+                        <div style="background-image: url('/images/user/<%= user.image %>')" class="avatar"></div>
                     <% } else { %>
                         <div style="background-image: url('/images/user/default.jpeg')" class="avatar"></div>
                     <% } %>
                 </div>
                 <div>
-                   <p class="nombre"><%= user.nombre %> <%= user.apellido %></p>
+                   <p class="nombre"><%= user.name %> <%= user.last_name %></p>
                 </div>
             </div>
             <div class="datos">
