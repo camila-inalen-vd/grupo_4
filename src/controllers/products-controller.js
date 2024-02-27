@@ -95,7 +95,7 @@ const productsController = {
     cover: req.body.forro,
     sole: req.body.suela,
     origin: req.body.origen,
-    image: req.file? req.file.filename : ''
+    image: req.file ? req.file.filename : ''
 })
     res.redirect('/product/list')
     
@@ -119,7 +119,7 @@ const productsController = {
             cover: req.body.forro,
             sole: req.body.suela,
             origin: req.body.origen,
-            image: req.file? req.file.filename : ''
+            image: req.file ? req.file.filename : db.Product.findByPk(req.params.id).image
         }, 
         {
             where: {id: req.params.id}
