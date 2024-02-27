@@ -169,21 +169,23 @@
             <section class="section-right">
 
                 <!---->
-                <% for( let i = 0; i < productos.length; i++ ) { %>
+                
+
+                <% productos.forEach(product => {  %>                
                 <article>                                       
                     <div class="cart-class">
                         <div class="cart-image">
-                           <a href="/product/detail/<%=productos[i].id %>"> <img src="/images/products/<%=productos[i].img %>" alt="Cafetera Moulinex"></a>
+                           <a href="/product/detail/<%=product.id %>"> <img src="/images/products/<%=product.img %>" alt="Cafetera Moulinex"></a>
                         </div>             
                         <div class="item-box">
                             <div class="brand-class">
-                                <h4><%= productos[i].marca %></h4>
+                                <h4> MARCA </h4> 
                             </div>
                             <div class="description-class">
-                                <p><%= productos[i].descripcion %></p>
+                                <p><%= product.description %></p>
                             </div>
                             <div by-brand>
-                                <p><%= productos[i].nombre %></p>
+                                <p><%= product.name %></p>
                             </div>
                             <div class="reputation-icon">
                                 <i class="fa-solid fa-star"></i>
@@ -193,7 +195,7 @@
                                 <i class="fa-solid fa-star-half-stroke"></i>
                             </div>
                             <div class="price-class">
-                                <h2 class="precio">$ <%= productos[i].precio.toLocaleString('es-ES')%></h2>                            
+                                <h2 class="precio">$ <%= product.price.toLocaleString('es-ES')%></h2>                            
                             </div>
                             <div class="arrives-class">
                                 <label for="arrives"></label>
@@ -202,7 +204,7 @@
                         </div>
                     </div>                    
                 </article>
-                <% } %>
+                <%    }); %>
             </section>
     </main>
 </div>

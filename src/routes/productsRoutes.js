@@ -44,7 +44,7 @@ router.get('/cart', authMiddleware, productsController.productCart)
 
 //Validaciones para el formulario, tenemos que pasarlo a middlewares.
 const createValidator = [
-     body('nombre').notEmpty().withMessage('Este campo es obligatorio'),
+    body('nombre').notEmpty().withMessage('Este campo es obligatorio'),
     body('marca').notEmpty().withMessage('Este campo es obligatorio'),
     body('precio').notEmpty().withMessage('Este campo es obligatorio'),
     body('cuotas').notEmpty().withMessage('Este campo es obligatorio'),

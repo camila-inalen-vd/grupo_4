@@ -7,48 +7,37 @@ const productos = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/pr
 const db = require("../../database/models")
 const {validationResult} = require('express-validator');
 
-// probando 
-
-/* let productsController = {
-   productList: function(req,res){
-    db.Product.findAll()
-    .then(function(product){
-    res.render("listadoDeProductos", {product:product})
-    })
-}
-productList: function(req,res){
-    db.Products.findAll()
-    .then(function(productos){
-    res.render("producList", {productos:productos})
-    })
-
-}, 
-product: function(){
-    db.product.findOne({
-        where: {
-            name: 'Nike'
-        }
-    })
-    .then(function(producto){
-        console.log(producto)
-    })
-}
-} */
-
-//------------------- // -----------------
-
-
 const productsController = {
 
-    productDetail: (req,res) => {
+/*     productDetail: (req,res) => {
         let idBuscada = req.params.id;
         let productoBuscado = productos.find((zapatilla) => {
             return zapatilla.id == idBuscada
         })
         res.render('products/productDetail', {'producto': productoBuscado, 'productos': productos}) 
+    }, */
+    productDetail: async (req, res) => {
+        try {
+            const productos = await db.Product.findByPk(req.params.id/* , {
+                include: []
+            } */)
+            res.render("products/productDetail", {productos: productos})
+        } catch (error) {
+            res.render(error)
+        }
     },
-    productList: (req,res) => {
-        res.render('products/productList', {'productos': productos})
+/*     productList: (req,res) => {
+         res.render('products/productList', {'productos': productos}) 
+    }
+    , */
+    productList: async (req, res) => {
+        try {
+            const productos = await db.Product.findAll()
+            res.render('products/productList', {productos: productos}) 
+        } catch (error) {
+            res.render(error)
+        }
+        
     },
     productCart: (req,res) => {
         res.render('products/productCart', {'productos': productos})
