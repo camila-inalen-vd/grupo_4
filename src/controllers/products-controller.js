@@ -19,37 +19,37 @@ const productsController = {
     productDetail: async (req, res) => {
         try {
             const productos = await db.Product.findByPk(req.params.id, {
-                include: [
+            /*   include: [
                     {association: 'Product_color'},
                     {association: 'Product_size'},
                     {association: 'Product_brand'}
-                ]
+                ] */
             })
-            res.render("products/productDetail", {producto: productos})
+            res.render("products/productDetail", {'producto': productos})
         } catch (error) {
             res.render(error)
         }
     },
 
-    products_color: async (req,res) => {
+   /*   products_color: async (req,res) => {
         try {
             const productos = await db.Product.findByPk(req.params.id)
-            res.render("products/productDetail", {productos: productos})
+            res.render("products/productDetail", {'producto': productos})
         } catch (error) {
             res.render(error)
         }
 
-    },
-    
+    }, */
+     
 
-/*     productList: (req,res) => {
+    productList: (req,res) => {
          res.render('products/productList', {'productos': productos}) 
     }
-    , */
+    ,
     productList: async (req, res) => {
         try {
             const productos = await db.Product.findAll()
-            res.render('products/productList', {productos: productos}) 
+            res.render('products/productList', {'productos': productos}) 
         } catch (error) {
             res.render(error)
         }

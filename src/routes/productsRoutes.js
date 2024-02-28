@@ -36,10 +36,10 @@ const upload = multer({
 });
 
 //Rutas
-router.get('/detail/:id', productsController.productDetail)
+
 router.get('/list', productsController.productList)
 router.get('/cart', authMiddleware, productsController.productCart)
-
+router.get('/detail/:id', productsController.productDetail)
 //Crear
 
 //Validaciones para el formulario, tenemos que pasarlo a middlewares.
