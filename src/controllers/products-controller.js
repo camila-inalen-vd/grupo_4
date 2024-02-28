@@ -18,9 +18,13 @@ const productsController = {
     }, */
     productDetail: async (req, res) => {
         try {
-            const productos = await db.Product.findByPk(req.params.id/* , {
-                include: []
-            } */)
+            const productos = await db.Product.findByPk(req.params.id, {
+                include: [
+                    {association: 'Product_color'},
+                    {association: 'Product_size'},
+                    {association: 'Product_brand'}
+                ]
+            })
             res.render("products/productDetail", {producto: productos})
         } catch (error) {
             res.render(error)
