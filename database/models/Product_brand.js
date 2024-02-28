@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false
     };
     
-    const Product_color = sequelize.define(alias, cols, config);
+    const Product_brand = sequelize.define(alias, cols, config);
 
     Product_brand.associate = function(models){
         Product_brand.belongsToMany(models.Product_brand,{
@@ -21,6 +21,6 @@ module.exports = (sequelize, DataTypes) => {
         });
     }
     
-    return Product_color;
+    return Product_brand;
     
     }

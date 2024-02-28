@@ -26,6 +26,18 @@ const productsController = {
             res.render(error)
         }
     },
+
+    products_color: async (req,res) => {
+        try {
+            const productos = await db.Product.findByPk(req.params.id)
+            res.render("products/productDetail", {productos: productos})
+        } catch (error) {
+            res.render(error)
+        }
+
+    },
+    
+
 /*     productList: (req,res) => {
          res.render('products/productList', {'productos': productos}) 
     }
@@ -39,6 +51,8 @@ const productsController = {
         }
         
     },
+
+    
 
     //Me gustaria que le hagamos la logica con cookies y session si no vamos a hacerle la tabla a parte.
     productCart: (req,res) => {
