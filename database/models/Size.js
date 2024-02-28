@@ -22,8 +22,7 @@ Size.associate = function(models){
         as: "products",
         through: "product_size",
         foreignKey: "size_id",
-        otherKey: "product_id",
-        timestamps: false
+        otherKey: "product_id"
     });
 }
 return Size;

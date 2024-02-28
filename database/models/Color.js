@@ -22,8 +22,7 @@ Color.associate = function(models){
         as: "Product",
         through: "product_color",
         foreignKey: "color_id",
-        otherKey: "product_id",
-        timestamps: false
+        otherKey: "product_id"
     });
 }
 return Color;

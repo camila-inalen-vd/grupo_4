@@ -21,7 +21,7 @@ const productsController = {
             const productos = await db.Product.findByPk(req.params.id/* , {
                 include: []
             } */)
-            res.render("products/productDetail", {productos: productos})
+            res.render("products/productDetail", {producto: productos})
         } catch (error) {
             res.render(error)
         }
@@ -122,7 +122,7 @@ const productsController = {
     deleteConfig: (req, res) => {
         db.Product.destroy({
             where: {
-                id: req.body.idDelete
+                id: req.params.id
             }
         })
         res.redirect('/product/list')

@@ -6,20 +6,25 @@ const cols = {
         primaryKey: true,
         autoIncrement: true 
     },
-/* 
-    size_id: {
 
-    }, 
-    product_id: {
-
-    } */
 };
+
+
 const config = {
     tableName: "product_size",
     timestamps: false
 };
 
 const Product_size = sequelize.define(alias, cols, config);
+
+// Aca nos ayudo fran
+
+Product_size.associate = function(models){
+    Product_size.belongsToMany(models.Product_size,{
+        as: "products",
+        through: "product_size",
+    });
+}
 
 return Product_size;
 }
