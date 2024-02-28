@@ -24,7 +24,6 @@ Brand.associate = function(models){
         through: "product_brand",
         foreignKey: "product_id",
         otherKey: "brand_id",
-        timestamps: false
     });
  }
 return Brand;
