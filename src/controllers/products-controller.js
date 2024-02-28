@@ -21,7 +21,7 @@ const productsController = {
             const productos = await db.Product.findByPk(req.params.id/* , {
                 include: []
             } */)
-            res.render("products/productDetail", {productos: productos})
+            res.render("products/productDetail", {producto: productos})
         } catch (error) {
             res.render(error)
         }

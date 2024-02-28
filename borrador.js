@@ -25,3 +25,11 @@ let objeto = req.body;
         fs.writeFileSync(path.resolve(__dirname, '../data/productos.json'), JSON.stringify(productos, null, 1))
         res.redirect('/product/detail/' + nuevoObjeto.id);
     
+
+        //Product detail de la 77 a la 88
+        //Esto va en el div de los colores.
+        
+        //TALLES
+        
+
+        
