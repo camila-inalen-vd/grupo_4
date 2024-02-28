@@ -22,6 +22,13 @@ const config = {
 
 const Product_color = sequelize.define(alias, cols, config);
 
+Product_color.associate = function(models){
+    Product_color.belongsToMany(models.Product_color,{
+        as: "products",
+        through: "product_color",
+    });
+}
+
 return Product_color;
 
 }

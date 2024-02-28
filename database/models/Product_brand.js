@@ -13,6 +13,13 @@ module.exports = (sequelize, DataTypes) => {
     };
     
     const Product_color = sequelize.define(alias, cols, config);
+
+    Product_brand.associate = function(models){
+        Product_brand.belongsToMany(models.Product_brand,{
+            as: "products",
+            through: "product_brand",
+        });
+    }
     
     return Product_color;
     

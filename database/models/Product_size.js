@@ -17,8 +17,6 @@ const config = {
 
 const Product_size = sequelize.define(alias, cols, config);
 
-// Aca nos ayudo fran
-
 Product_size.associate = function(models){
     Product_size.belongsToMany(models.Product_size,{
         as: "products",
