@@ -42,10 +42,9 @@ const productsController = {
     }, */
      
 
-    productList: (req,res) => {
+/*     productList: (req,res) => {
          res.render('products/productList', {'productos': productos}) 
-    }
-    ,
+    }, */
     productList: async (req, res) => {
         try {
             const productos = await db.Product.findAll()
