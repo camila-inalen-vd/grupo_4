@@ -72,9 +72,9 @@ const productsController = {
         res.render('products/edit', {producto: db.Product.findByPk(req.params.id)})
     }, */
     
-    edit: (req, res) => {
+    edit: async (req, res) => {
         //Logica para devolver el producto encontrado a la vista y poder usar su ID para incluirla en el form
-        let producto = db.Product.findByPk(req.params.id) 
+        let producto = await db.Product.findByPk(req.params.id) 
         res.render('products/edit', {producto})
     },
 
