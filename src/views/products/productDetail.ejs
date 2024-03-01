@@ -115,6 +115,9 @@
                         </button>
                         <div>
                             <button class="btn-add-to-cart">
+                            <form action="/product/<%= producto.id %>/edit" method="GET">
+                                    <button type="submit">Editar producto</button>
+                            </form>
                                 <a href="">
                                     <i class="fa-solid fa-plus"></i>Agregar al carrito</button>
                             </a>
