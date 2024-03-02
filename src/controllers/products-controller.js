@@ -143,6 +143,7 @@ const productsController = {
             }
         })
         res.redirect('/product/list')
+        
     }
 
 }
