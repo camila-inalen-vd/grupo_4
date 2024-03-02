@@ -9,29 +9,30 @@ const {validationResult} = require('express-validator');
 
 const productsController = {
 
-/*     productDetail: (req,res) => {
+   /*  productDetail: (req,res) => {
         let idBuscada = req.params.id;
         let productoBuscado = productos.find((zapatilla) => {
             return zapatilla.id == idBuscada
         })
         res.render('products/productDetail', {'producto': productoBuscado, 'productos': productos}) 
     }, */
-    productDetail: async (req, res) => {
+
+       productDetail: async (req, res) => {
         try {
-            const productos = await db.Product.findByPk(req.params.id, {
-            /*   include: [
+            const productos = await db.Products.findByPk(req.params.id, {
+             /* include: [
                     {association: 'Product_color'},
                     {association: 'Product_size'},
                     {association: 'Product_brand'}
-                ] */
-            })
+                ]  */
+        })
             res.render("products/productDetail", {'producto': productos})
         } catch (error) {
             res.render(error)
         }
-    },
+    }, 
 
-   /*   products_color: async (req,res) => {
+     /*  products_color: async (req,res) => {
         try {
             const productos = await db.Product.findByPk(req.params.id)
             res.render("products/productDetail", {'producto': productos})
@@ -42,9 +43,9 @@ const productsController = {
     }, */
      
 
-/*     productList: (req,res) => {
+   /*   productList: (req,res) => {
          res.render('products/productList', {'productos': productos}) 
-    }, */
+    }, */ 
     productList: async (req, res) => {
         try {
             const productos = await db.Product.findAll()
