@@ -115,9 +115,6 @@
                         </button>
                         <div>
                             <button class="btn-add-to-cart">
-                            <!-- <form action="/product/<%= producto.id %>/edit" method="GET">
-                                    <button type="submit">Editar producto</button> -->
-                            </form>
                                 <a href="">
                                     <i class="fa-solid fa-plus"></i>Agregar al carrito</button>
                             </a>
@@ -125,22 +122,24 @@
                         <% } else { %>
                             <i class="fa-solid fa-plus"></i>SIN STOCK</button>
                             <% } %>
-
+                        <form action="/product/<%= producto.id %>/edit" method="GET">
+                                    <button type="submit">Editar producto</button>
+                        </form>
 
                     </div>
                 </div>
             </section>
 
-            <!--  /*------------Description de producto----------------------*/ -->
+            /*------------Description de producto----------------------*/ 
             <section class="description-text">
                 <div class="container-description">
                     <div class="title-description">
-                        <h4>Descripción</h4>
+                        <h4>Descriptión</h4>
                         <i class="fa-solid fa-chevron-down"></i>
                     </div>
                     <div class="text-description" style="display:none">
                         <p>
-                            <%= producto.descripcionLarga %>
+                            <%= producto.large_description %>
                         </p>
                     </div>
 
@@ -152,10 +151,10 @@
                         </div>
                         <div class="text-additional-information hidden">
                             <ul>
-                                <li>Capellada: <%= producto.capellada %>.</li>
-                                <li>Forro: <%= producto.forro %>.</li>
-                                <li>Suela: <%= producto.suela %>.</li>
-                                <li>Origen: <%= producto.origen %>.</li>
+                                <li>Capellada: <%= producto.upper %>.</li>
+                                <li>Forro: <%= producto.cover %>.</li>
+                                <li>Suela: <%= producto.sole %>.</li>
+                                <li>Origen: <%= producto.origin %>.</li>
                             </ul>
                         </div>
 
@@ -191,16 +190,16 @@
                                 <div class="info-card">
                                     <div class="text-product">
                                         <h4>
-                                            <%=producto.nombre%>
+                                            <%=producto.name%>
                                         </h4>
                                         <div class="discount">
-                                            <%=producto.descuento%> % OFF
+                                            <%=producto.discount%> % OFF
                                         </div>
                                         <p class="description">
-                                            <%=producto.descripcion%>
+                                            <%=producto.description%>
                                         </p>
                                     </div>
-                                    <p class="precio">$ <%=producto.precio%>
+                                    <p class="precio">$ <%=producto.price%>
                                     </p>
                                 </div>
                             </div>

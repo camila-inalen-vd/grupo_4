@@ -6,6 +6,7 @@ const productos = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/pr
 //Pasando a BD
 const db = require("../../database/models")
 const {validationResult} = require('express-validator');
+const { Console } = require('console');
 
 const productsController = {
 
