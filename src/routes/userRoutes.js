@@ -21,12 +21,12 @@ const storage = multer.diskStorage({
 const upload = multer({
     storage: storage,
     fileFilter: function(req, file, cb) {
-        const allowedExtensions = ['png', 'jpg', 'gif'];
+        const allowedExtensions = ['png', 'jpg', 'gif', 'jpeg'];
         const fileExtension = path.extname(file.originalname).toLowerCase().substring(1);
 
         if (!allowedExtensions.includes(fileExtension)) {
-            req.fileValidationError = 'La imagen debe estar en formato PNG, JPG o GIF.';
-            return cb(null, false, new Error('La imagen debe estar en formato PNG, JPG o GIF.'));
+            req.fileValidationError = 'La imagen debe estar en formato PNG, JPG, JPEG o GIF.';
+            return cb(null, false, new Error('La imagen debe estar en formato PNG, JPG, JPEG o GIF.'));
         }
 
         cb(null, true);

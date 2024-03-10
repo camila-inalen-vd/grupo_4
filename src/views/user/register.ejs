@@ -7,31 +7,31 @@
     <%-include('../partials/header.ejs')%>
     <main>
         <section>
-            <h2>Crear cuenta<h2>
+            <h2>Crear cuenta</h2>
             <form action="/user/register" method="POST" enctype="multipart/form-data">
                 <div class="form">
-                    <label>Nombre</label>
-                    <input type="text" name="nombre"
-                    value="<%=locals.oldData ? oldData.nombre : null %>">
-                    <% if (locals.errorsObjeto && errorsObjeto.nombre) { %>
+                    <label for="name">Nombre</label>
+                    <input type="text" name="name" id="name"
+                    value="<%=locals.oldData ? oldData.name : null %>">
+                    <% if (locals.errorsObjeto && errorsObjeto.name) { %>
                         <div>
-                            <p> <%= errorsObjeto.nombre.msg %> </p>
+                            <p> <%= errorsObjeto.name.msg %> </p>
                         </div>
                     <% } %>
                 </div>
                 <div class="form"> 
-                    <label>Apellido</label>
-                    <input type="text" name="apellido"
-                    value="<%=locals.oldData ? oldData.apellido : null %>">
-                    <% if (locals.errorsObjeto && errorsObjeto.apellido) { %>
+                    <label for="last_name">Apellido</label>
+                    <input type="text" name="last_name" id="last_name"
+                    value="<%=locals.oldData ? oldData.last_name : null %>">
+                    <% if (locals.errorsObjeto && errorsObjeto.last_name) { %>
                         <div>
-                            <p> <%= errorsObjeto.apellido.msg %> </p>
+                            <p> <%= errorsObjeto.last_name.msg %> </p>
                         </div>
                     <% } %>
                 </div>
                 <div class="form">
-                    <label>Email</label>
-                    <input type="email" name="email"
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email"
                     value="<%=locals.oldData ? oldData.email : null %>">
                     <% if (locals.errorsObjeto && errorsObjeto.email) { %>
                         <div>
@@ -40,8 +40,8 @@
                     <% } %>
                 </div>
                 <div class="form">
-                    <label>Contraseña</label> 
-                    <input type="password" name="password">
+                    <label for="password">Contraseña</label> 
+                    <input type="password" name="password" id="password">
                     <% if (locals.errorsObjeto && errorsObjeto.password) { %>
                         <div>
                             <p> <%= errorsObjeto.password.msg %> </p>
@@ -49,14 +49,19 @@
                     <% } %>
                 </div>
                 <div class="form">
-                    <label>Foto de perfil</label>
-                    <input type="file" name="avatar"
+                    <label for="avatar">Foto de perfil</label>
+                    <input type="file" name="avatar" id="avatar"
                     value="<%=locals.oldData ? oldData.avatar : null %>">
                     <% if (locals.errorsObjeto && errorsObjeto.avatar) { %>
                         <div>
                             <p> <%= errorsObjeto.avatar.msg %> </p>
                         </div>
                     <% } %>
+                </div>
+                <div class="caja-errors">
+                    <div class="errors">
+                        <ul></ul>
+                    </div>
                 </div>
                 <div class="boton">
                     <button type="submit">Crear cuenta</button>
@@ -66,5 +71,6 @@
         </section>
     </main>
     <%-include('../partials/footer.ejs')%>
+    <script src="/js/register.js"></script>
 </body>
 </html>
