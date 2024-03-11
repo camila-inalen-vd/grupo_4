@@ -24,7 +24,11 @@ Color.associate = function(models){
         foreignKey: "color_id",
         otherKey: "product_id",
         timestamps: false
-    });
+    })
+    Color.hasMany(models.Product_color, {
+        foreignKey: 'color_id',
+        as: 'color'
+    })
 }
 return Color;
 

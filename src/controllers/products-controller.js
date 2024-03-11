@@ -21,7 +21,6 @@ const productsController = {
             const producto = await db.Product.findByPk(req.params.id, {
                 include: [
                     {association:'color' , attributes: ['name']},
-                    {association: 'size'},
                     {association: 'brand', attributes: ['name']}
                 ]
             });
@@ -67,8 +66,15 @@ const productsController = {
         res.render('products/productCart', {'productos': productos})
     },
     //Renderizacion de vista de crear producto (La idea es que esto solo lo vea un admin, lo vamos a lograr con la tabla de usuarios donde si es admin o no es un binario, session y cookies)
-    create: (req, res) => {
-        res.render('products/create')
+    create: async (req, res) => {
+        try {
+        let brand = await db.Brand.findAll()
+        let color = await db.Color.findAll()
+        res.render('products/create', {brand, color})
+    }
+    catch (error) {
+        res.send(error)
+    }
     },
 
     //Renderizacion de la vista de editar producto. Aca vamos a usar un findByPk para devolver el producto que necesitamos a la vista, el mismo que la id que se recibe por parametro. Hay que modificarlo para que use la DB en vez el JSON. 
@@ -89,10 +95,10 @@ const productsController = {
     },
 
     //Metodo create, para crear un nuevo producto.
-    createConfig: (req, res) => {
+    createConfig: async (req, res) => {
         let errors = validationResult(req);
         if(errors.isEmpty()){
-     
+
     db.Product.create({
     name: req.body.nombre,
     price: req.body.precio,
@@ -105,8 +111,20 @@ const productsController = {
     cover: req.body.forro,
     sole: req.body.suela,
     origin: req.body.origen,
+    brand_id: req.body.marca,
     image: req.file ? req.file.filename : ''
-})
+})  
+let ultimoProducto = await db.Product.findOne({
+    order: [['id', 'DESC']]
+  })
+    let coloresRecibidos = req.body.color
+
+    coloresRecibidos.forEach(color => {
+        db.Product_color.create({
+            product_id: ultimoProducto.id + 1,
+            color_id: color
+        })
+    })
     res.redirect('/product/list')
     
     }else {

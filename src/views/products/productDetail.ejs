@@ -1,4 +1,4 @@
-<!--Head-->
+ <!--Head-->
 <%-include('../partials/head.ejs', {title: 'Detalle del producto' , style: '/products/productDetail' })%>
 
     <body>
@@ -83,8 +83,9 @@
                                 <option disabled selected value="">
                                     Elige una opción
                                 </option>
-                                
-                                <option value="">Tabla relacional de colores</option>
+                                <% producto.color.forEach(colores => { %>
+                                    <option value=""><%= colores.name %></option>
+                                <% }) %>
                             </select>
                         </div>
 

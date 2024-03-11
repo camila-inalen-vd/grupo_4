@@ -69,6 +69,10 @@ Product.associate = function(models){
             as: "brand",
             foreignKey: "brand_id"
     })
+    Product.hasMany(models.Product_color, {
+        foreignKey: 'product_id',
+        as: 'product'
+      })
     }
     return Product;
     }
