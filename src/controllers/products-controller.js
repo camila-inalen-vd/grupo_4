@@ -6,8 +6,6 @@ const productos = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/pr
 //Pasando a BD
 const db = require("../../database/models")
 const {validationResult} = require('express-validator');
-const { Console } = require('console');
-
 const productsController = {
 
    /*  productDetail: (req,res) => {
@@ -18,18 +16,19 @@ const productsController = {
         res.render('products/productDetail', {'producto': productoBuscado, 'productos': productos}) 
     }, */
 
-       productDetail: async (req, res) => {
+    productDetail: async (req, res) => {
         try {
-            const productos = await db.Products.findByPk(req.params.id, {
-             /* include: [
-                    {association: 'Product_color'},
-                    {association: 'Product_size'},
-                    {association: 'Product_brand'}
-                ]  */
-        })
-            res.render("products/productDetail", {'producto': productos})
+            const producto = await db.Product.findByPk(req.params.id, {
+                include: [
+                    {association:'color' , attributes: ['name']},
+                    {association: 'size'},
+                    {association: 'brand', attributes: ['name']}
+                ]
+            });
+    
+            res.render("products/productDetail", { producto });
         } catch (error) {
-            res.render(error)
+            res.send(error);
         }
     }, 
 
@@ -49,10 +48,14 @@ const productsController = {
     }, */ 
     productList: async (req, res) => {
         try {
-            const productos = await db.Product.findAll()
+            const productos = await db.Product.findAll({
+                include: [{association:'color'}],
+                raw: true,
+                nest: true
+          })
             res.render('products/productList', {'productos': productos}) 
         } catch (error) {
-            res.render(error)
+            res.send(error)
         }
         
     },

@@ -18,14 +18,14 @@ const config = {
 };
 const Brand = sequelize.define(alias, cols, config);
 
-Brand.associate = function(models){
-    Brand.belongsToMany(models.Product, {
-        as: "products",
-        through: "product_brand",
-        foreignKey: "product_id",
-        otherKey: "brand_id",
+ Brand.associate = function(models){
+    Brand.hasMany(models.Product, {
+        as: "product",
+        foreignKey: "id",
     });
- }
+ } 
 return Brand;
 
 }
+
+

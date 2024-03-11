@@ -59,35 +59,35 @@ const Product = sequelize.define(alias, cols, config);
 
 Product.associate = function(models){
     Product.belongsToMany(models.Color, {
-            as: "color",
-            through: "product_color",
-            foreignKey: "color_id",
-            otherKey: "product_id"
-    }),
+        as: "color",
+        through: "product_color",
+        foreignKey: "product_id",
+        otherKey: "color_id",
+        timestamps: false})
 
-    Product.belongsToMany(models.Size, {
+     Product.belongsTo(models.Brand, {
+            as: "brand",
+            foreignKey: "brand_id"
+    })
+    }
+    return Product;
+    }
+/*
+        Product.belongsToMany(models.Size, {
             as: "size",
             through: "product_size",
             foreignKey: "size_id",
             otherKey: "product_id"
     }),
 
-    Product.belongsTo(models.Brand, {
-            as: "Brand",
-            through: "product_brand",
-            foreignKey: "brand_id",
-            otherKey: "product_id" 
-    }),
 
+    //Pedir ayuda para entender la manera correcta de plantear las miniaturas   
     Product.belongsToMany(models.Miniature, {
-           as: "Miniature",
+           as: "miniature",
            through: "product_Product",
            foreignKey: "miniature_id",
            otherKey: "product_id"
-    })
-}
+    }) */
 
-    return Product;
-}
 
 

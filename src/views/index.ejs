@@ -28,6 +28,7 @@
         <label for="slide4"></label>
       </div>
     </div>
+  
     <!-- Comienzo del main y sus productos -->
     <!-- Se accede al json a través del controlador, se convierten los productos en objetos y se manipulan acá -->
     <main>
@@ -45,25 +46,22 @@
       </section>
       <section class="productos-a">
         <h1>OFERTAS</h1>
+       
         <div class="container-flex">
           <!-- Implementada la lógica para que solo cargue productos que tengan el descuento mayor a 0 -->
-          <% for(let i = 0; i < 4; i++){ %>
-          <% if(productos[i].descuento > 0) { %>
+          <% for(let i = 0; i < productos.length; i++){ %>
+          <% if(productos[i].discount > 0) { %>
           <div class="article-container">
             <article class="article">
               <a href="/product/detail/<%= productos[i].id %>">
                 <div class="product-card">
-                  <img src="/images/products/<%= productos[i].img %>" alt="">
+                  <img src="/images/products/<%= productos[i].image %>" alt="">
                   <div class="product-detail">
-                    <p class="discount"><%= productos[i].descuento %>% Off</p>
-                    <p class="precio">$<%= productos[i].precio.toLocaleString('es-ES') %></p>
-                    <p class="marca"><%= productos[i].marca %></p>
+                    <p class="discount"><%= productos[i].discount %>% Off</p>
+                    <p class="precio">$<%= productos[i].price.toLocaleString('es-ES')%></p>
+                    <p class="marca"><%= productos[i].brand ? productos[i].brand.name : "" %></p>
+                   
                     <h3><a href="/product/detail"><%= productos[i].nombre %></a></h3>
-                    <div class="reputation-icon">
-                      <% for(let x = 1; x <= productos[i].punt; x++){ %>
-                      <i class="fa-solid fa-star"></i>
-                      <% } %>
-                    </div>
                   </div>
                 </div>
               </a>
@@ -72,9 +70,9 @@
           <% } %>
           <% } %>
           <!-- Arreglar la redireccion -->
-          <button class="ver-mas">Ver más</button>
         </div>
       </section>
+      <button class="ver-mas">Ver más</button>
       <section class="productos-a">
         <h1>RECOMENDADO PARA VOS</h1>
         <div class="container-flex">
@@ -83,16 +81,12 @@
             <article class="article">
               <a href="/product/detail/<%= productos[i].id %>">
                 <div class="product-card">
-                  <img src="/images/products/<%= productos[i].img %>" alt="">
+                  <img src="/images/products/<%= productos[i].image %>" alt="">
                   <div class="product-detail">
-                    <p class="precio">$<%= productos[i].precio.toLocaleString('es-ES') %></p>
-                    <p class="marca"><%= productos[i].marca %></p>
-                    <h3><a href="/product/detail"><%= productos[i].nombre %></a></h3>
-                    <div class="reputation-icon">
-                      <% for(let x = 1; x <= productos[i].punt; x++){ %>
-                      <i class="fa-solid fa-star"></i>
-                      <% } %>
-                    </div>
+                    <p class="precio">$<%= productos[i].price.toLocaleString('es-ES')%></p>
+                    <p class="marca"><%= productos[i].brand ? productos[i].brand.name : "" %></p>
+                    <p><%= productos[i].color.name%></p>
+                    <h3><a href="/product/detail"><%= productos[i].name %></a></h3>
                   </div>
                 </div>
               </a>
@@ -110,16 +104,11 @@
             <article class="article">
               <a href="/product/detail/<%= productos[i].id %>">
                 <div class="product-card">
-                  <img src="/images/products/<%= productos[i].img %>" alt="">
+                  <img src="/images/products/<%= productos[i].image %>" alt="">
                   <div class="product-detail">
-                    <p class="precio">$<%= productos[i].precio.toLocaleString('es-ES') %></p>
-                    <p class="marca"><%= productos[i].marca %></p>
-                    <h3><a href="/product/detail"><%= productos[i].nombre %></a></h3>
-                    <div class="reputation-icon">
-                      <% for(let x = 1; x <= productos[i].punt; x++){ %>
-                      <i class="fa-solid fa-star"></i>
-                      <% } %>
-                    </div>
+                    <p class="precio">$<%= productos[i].price.toLocaleString('es-ES') %></p>
+                    <p class="marca"><%= productos[i].brand ? productos[i].brand.name : "" %></p>
+                    <h3><a href="/product/detail"><%= productos[i].name %></a></h3>
                   </div>
                 </div>
               </a>
