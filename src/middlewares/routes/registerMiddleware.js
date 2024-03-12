@@ -1,9 +1,9 @@
 const {body} = require("express-validator");
 
 const registerValidations = [
-    body("nombre")
+    body("name")
         .notEmpty().withMessage("Debes completar el nombre"),
-    body("apellido")
+    body("last_name")
         .notEmpty().withMessage("Debes completar el apellido"),
     body("email")
         .notEmpty().withMessage('Debes completar el email'),

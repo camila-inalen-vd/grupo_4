@@ -79,3 +79,8 @@ form button:hover{
     font-size: 1rem;
     text-align: start;
 }
+.error-msg{
+    color: red;
+    font-size: 1rem;
+    margin-top: 5px;
+}

@@ -40,6 +40,7 @@ const userController = {
 
     processRegister: async (req, res) =>{
         const resultValidation = validationResult(req);
+
         if(resultValidation.errors.length > 0){
             return res.render("user/register", {
 				errorsObjeto: resultValidation.mapped(),
@@ -50,14 +51,19 @@ const userController = {
         let userInDB = await db.User.findOne({ where: { email: req.body.email}})
 
         if(userInDB) {
+            const errorsObjeto = {
+                ...resultValidation.mapped(),
+                email: {
+                    msg: 'Este email ya está registrado'
+                }
+            };
+            
+            console.log(errorsObjeto);
+        
             return res.render("user/register", {
-				errorsObjeto:{
-                    email:{
-                        msg: 'Este email ya esta registrado'
-                    }
-                },
-				oldData: req.body
-			})
+                errorsObjeto,
+                oldData: req.body
+            });
         }
 
         db.User.create({

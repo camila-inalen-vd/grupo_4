@@ -16,7 +16,7 @@
                     <input type="password" name="password" id="password">
                     <% if (locals.errors && errors.email) { %>
                         <div>
-                            <p> <%= errors.email.msg %></p>
+                            <p class="error-msg"> <%= errors.email.msg %></p>
                         </div>
                     <% } %>
                     <div><a class="recuperar" href="recuperarpassword">¿Olvidaste tu contraseña?</a></div>
