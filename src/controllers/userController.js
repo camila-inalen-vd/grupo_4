@@ -42,6 +42,8 @@ const userController = {
         const resultValidation = validationResult(req);
 
         if(resultValidation.errors.length > 0){
+            const filePath = path.join(__dirname, '../../public/images/user', req.file.filename);
+            fs.unlinkSync(filePath);
             return res.render("user/register", {
 				errorsObjeto: resultValidation.mapped(),
 				oldData: req.body
@@ -51,6 +53,9 @@ const userController = {
         let userInDB = await db.User.findOne({ where: { email: req.body.email}})
 
         if(userInDB) {
+            const filePath = path.join(__dirname, '../../public/images/user', req.file.filename);
+            fs.unlinkSync(filePath);
+
             const errorsObjeto = {
                 ...resultValidation.mapped(),
                 email: {

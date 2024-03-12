@@ -33,7 +33,6 @@
                     <label for="email">Email</label>
                     <input type="email" name="email" id="email"
                     value="<%=locals.oldData ? oldData.email : null %>">
-                    <% console.log(locals.errorsObjeto); %>
                     <% if (locals.errorsObjeto && errorsObjeto.email) { %>
                         <div>
                             <p class="error-msg"> <%= errorsObjeto.email.msg %> </p>
