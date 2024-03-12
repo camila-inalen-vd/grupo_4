@@ -72,19 +72,18 @@ Product.associate = function(models){
     Product.hasMany(models.Product_color, {
         foreignKey: 'product_id',
         as: 'product'
-      })
+    })
+    Product.belongsToMany(models.Size, {
+        as: "size",
+        through: "product_size",
+        foreignKey: "product_id",
+        otherKey: "size_id"
+    })
     }
     return Product;
     }
-/*
-        Product.belongsToMany(models.Size, {
-            as: "size",
-            through: "product_size",
-            foreignKey: "size_id",
-            otherKey: "product_id"
-    }),
 
-
+ /*
     //Pedir ayuda para entender la manera correcta de plantear las miniaturas   
     Product.belongsToMany(models.Miniature, {
            as: "miniature",

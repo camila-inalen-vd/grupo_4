@@ -179,7 +179,7 @@
                         </div>             
                         <div class="item-box">
                             <div class="brand-class">
-                                <h4> MARCA </h4>
+                                <h4> <%= product.brand ? product.brand.name : ""%> </h4>  
                             </div>
                             <div class="description-class">
                                 <p><%= product.description %></p>
