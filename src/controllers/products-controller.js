@@ -9,7 +9,8 @@ const productsController = {
             const producto = await db.Product.findByPk(req.params.id, {
                 include: [
                     { association: 'color', attributes: ['name'] },
-                    { association: 'brand', attributes: ['name'] }
+                    { association: 'brand', attributes: ['name'] },
+                    { association: 'size', attributes: ['number'] }
                 ]
             });
 

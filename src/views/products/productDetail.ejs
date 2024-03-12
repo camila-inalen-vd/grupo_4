@@ -91,12 +91,12 @@
 
                         <div class="form-group"><label for="size">Talle</label>
                             <select name="size" id="size">
-                                <option disabled selected value="">Elige una opción</option>
-                                <!--Esto aca este-->
-                                    <option value="">
-                                        Tabla relacional de talles
-                                    </option>
-                                    
+                                <option disabled selected value="">
+                                    Elige una opción
+                                </option>
+                                <% producto.size.forEach(talle => { %>
+                                    <option value=""><%= talle.number %></option>
+                                <% }) %>
                             </select>
                         </div>
                         <div>

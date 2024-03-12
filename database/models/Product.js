@@ -65,6 +65,13 @@ Product.associate = function(models){
         otherKey: "color_id",
         timestamps: false})
 
+    Product.belongsToMany(models.Size, {
+        as: "size",
+        through: "product_size",
+        foreignKey: "product_id",
+        otherKey: "size_id",
+        timestamps: false})        
+
      Product.belongsTo(models.Brand, {
             as: "brand",
             foreignKey: "brand_id"
@@ -73,12 +80,7 @@ Product.associate = function(models){
         foreignKey: 'product_id',
         as: 'product'
     })
-    Product.belongsToMany(models.Size, {
-        as: "size",
-        through: "product_size",
-        foreignKey: "product_id",
-        otherKey: "size_id"
-    })
+    
     }
     return Product;
     }
