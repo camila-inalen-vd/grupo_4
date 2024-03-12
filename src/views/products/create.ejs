@@ -2,7 +2,7 @@
 <html lang="en">
 <!--Head-->
 <%-include('../partials/head.ejs', {title: 'Crear' , style:'/products/createForm'})%>
-    <link rel="stylesheet" href="/css/index.css">
+
     </head>
 
     <body>
@@ -12,13 +12,16 @@
                 <form method="POST" action="/product/create" enctype="multipart/form-data"><br>
                     <h1>Crear producto</h1><br>
                     <hr><br><br>
+                    <p>
                     <label for="nombre">Nombre</label>
-                    <p class="form-error error-nombre">(Este campo no puede estar vacío)</p>
+                    <p class="form-error error-nombre">*(Este campo no puede estar vacío)</p>
                     <input type="text" name="nombre" id="nombre"
                         value="<%= locals.errors && old.nombre ? old.nombre : ''%>">
-                    <label for="marca">Marca</label>
-                    <p class="form-error error-marca">(Este campo no puede estar vacío)</p>
-                    <p>
+                    </p>
+                        <label for="marca">Marca</label>
+                    <p class="form-error error-marca">*(Este campo no puede estar vacío)</p>
+                    
+                    <!--Marcas-->
                         <select name="marca" id="marca">
                             <% brand.forEach(marca=> { %>
                                 <option value="<%= marca.id %>">
@@ -26,75 +29,79 @@
                                 </option>
                                 <% }) %>
                         </select>
-                    </p>
+                    <p>
                     <label for="precio">Precio</label>
-                    <p class="form-error error-precio">(Este campo no puede estar vacío)</p>
+                    <p class="form-error error-precio">*(Este campo no puede estar vacío)</p>
                     <input type="number" name="precio" id="precio"
                         value="<%= locals.errors && old.precio ? old.precio : ''%>">
-                    <label for="cuotas">Cuotas</label>
-                    <p class="form-error error-cuotas">(Este campo no puede estar vacío)</p>
+                    </p>
+                        <label for="cuotas">Cuotas</label>
+                    <p class="form-error error-cuotas">*(Este campo no puede estar vacío)</p>
                     <input type="number" name="cuotas" id="cuotas"
                         value="<%= locals.errors && old.cuotas ? old.cuotas : ''%>">
                     <label for="descuento">Descuento</label>
-                    <p class="form-error error-descuento">(Este campo no puede estar vacío)</p>
+                    <p class="form-error error-descuento">*(Este campo no puede estar vacío)</p>
                     <input type="number" name="descuento" id="descuento"
                         value="<%= locals.errors && old.descuento ? old.descuento : ''%>">
                     <label for="Stock">Stock</label>
-                    <p class="form-error error-stock">(Este campo no puede estar vacío)</p>
+                    <p class="form-error error-stock">*(Este campo no puede estar vacío)</p>
                     <input type="number" name="stock" id="stock"
                         value="<%= locals.errors && old.stock ? old.stock : ''%>">
                     <label for="descripcion">Descripcion</label>
-                    <p class="form-error error-descripcion">(Este campo no puede estar vacío)</p>
+                    <p class="form-error error-descripcion">*(Este campo no puede estar vacío)</p>
                     <input type="text" name="descripcion" id="descripcion"
                         value="<%= locals.errors && old.descripcion ? old.descripcion : ''%>">
                     <label for="descripcion">Descripcion Larga</label>
-                    <p class="form-error error-descripcionLarga">(Este campo no puede estar vacío)</p>
+                    <p class="form-error error-descripcionLarga">*(Este campo no puede estar vacío)</p>
                     <p>
                         <textarea id="descripcionLarga" name="descripcionLarga" rows="4" cols="50"></textarea>
                     </p>
 
                     <!--COLORES-->
-                    <hr>
                     <h3>Colores</h3>
-                    <p class="form-error error-color">(Debes elegir un color)</p>
+                    <p class="form-error error-color">*(Debes elegir un color)</p>
+                    <div class="talles-colores-div">
+                    
 
                     <% color.forEach(colores => { %>
-                    <label for="color<%=colores.name%>>"><%=colores.name%></label>
-                    <input name="color" type="checkbox" value="<%=colores.id%>" id="color<%=colores.name%>">
+                    <label for="color<%=colores.name%>>"><%=colores.name%>
+                    <input name="color" type="checkbox" value="<%=colores.id%>" id="color<%=colores.name%>"></label>
                     <% }) %>
-
-                    <!--Talles-->
-                    <hr>
+                    </div>
                     <h3>Talles</h3>
-                    <p class="form-error error-color">(Debes elegir los talles)</p>
+                    <p class="form-error error-color">*(Debes elegir los talles)</p>
+                    <div class="talles-colores-div">
+                    <!--Talles-->
+                    
 
                     <% size.forEach(talles => { %>
-                    <label for="talle<%=talles.number%>>"><%=talles.number%></label>
-                    <input name="talle" type="checkbox" value="<%=talles.id%>" id="talle<%=talles.number%>">
+                    <label for="talle<%=talles.number%>>"><%=talles.number%>
+                    <input name="talle" type="checkbox" value="<%=talles.id%>" id="talle<%=talles.number%>"></label>
                     <% }) %>
+                    </div>
 
-                    <h2>Especificaciones</h2><br>
+                    <h3>Especificaciones</h3>
                     <label for="capellada">Capellada</label>
-                    <p class="form-error error-capellada">(Este campo no puede estar vacío)</p>
+                    <p class="form-error error-capellada">*(Este campo no puede estar vacío)</p>
                     <input type="text" name="capellada" id="capellada"
                         value="<%= locals.errors && old.capellada ? old.capellada : ''%>">
                     <label for="forro">Forro</label>
-                    <p class="form-error error-forro">(Este campo no puede estar vacío)</p>
+                    <p class="form-error error-forro">*(Este campo no puede estar vacío)</p>
                     <input type="text" name="forro" id="forro"
                         value="<%= locals.errors && old.forro ? old.forro : ''%>">
                     <label for="suela">Suela</label>
-                    <p class="form-error error-suela">(Este campo no puede estar vacío)</p>
+                    <p class="form-error error-suela">*(Este campo no puede estar vacío)</p>
                     <input type="text" name="suela" id="suela"
                         value="<%= locals.errors && old.suela ? old.suela : ''%>">
                     <label for="origen">Origen</label>
-                    <p class="form-error error-origen">(Este campo no puede estar vacío)</p>
+                    <p class="form-error error-origen">*(Este campo no puede estar vacío)</p>
                     <input type="text" name="origen" id="origen"
                         value="<%= locals.errors && old.origen ? old.origen : ''%>">
                     <label>Imagen del producto</label>
                     <% if(locals.errors) {%>
                         <% errors.forEach(error=> { %>
                             <% if(error.path=='product-image' ) {%>
-                                <p style="color: red">
+                                <p style="color: white; background-color: rgb(87, 10, 10); padding: 5px; border-radius: 5px; margin: 5px;">
                                     <%= error.msg %>
                                 </p>
                                 <% }})} %>

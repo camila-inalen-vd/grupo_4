@@ -106,7 +106,16 @@ const productsController = {
                 res.send(error);
             }
         } else {
-            res.render('products/create', { errors: errors.array(), old: req.body });
+            try {
+                let brand = await db.Brand.findAll()
+                let color = await db.Color.findAll()
+                let size = await db.Size.findAll()
+                res.render('products/create', { errors: errors.array(), old: req.body, brand, color, size });
+            }
+            catch (error) {
+                res.send(error)
+            }
+            
         }
     },
 

@@ -8,8 +8,8 @@ const createValidator = [
     body('stock').notEmpty().withMessage('Este campo es obligatorio'),
     body('descripcion').notEmpty().withMessage('Este campo es obligatorio'),
     body('descripcionLarga').notEmpty().withMessage('Este campo es obligatorio'),
-/*     body('color').notEmpty().withMessage('Este campo es obligatorio'),
-    body('talle').notEmpty().withMessage('Este campo es obligatorio'), */
+    body('color').notEmpty().withMessage('Este campo es obligatorio'),
+    body('talle').notEmpty().withMessage('Este campo es obligatorio'),
     body('capellada').notEmpty().withMessage('Este campo es obligatorio'),
     body('forro').notEmpty().withMessage('Este campo es obligatorio'),
     body('suela').notEmpty().withMessage('Este campo es obligatorio'),
