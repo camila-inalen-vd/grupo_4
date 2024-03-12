@@ -63,12 +63,16 @@
                     <input name="color" type="checkbox" value="<%=colores.id%>" id="color<%=colores.name%>">
                     <% }) %>
 
+                    <!--Talles-->
+                    <hr>
+                    <h3>Talles</h3>
+                    <p class="form-error error-color">(Debes elegir los talles)</p>
 
-                    <label for="talles">Talles</label>
-                    <p>Escribir los talles separados por coma y sin espacios: 42,37,38</p>
-                    <p class="form-error error-talle">(Este campo no puede estar vacío)</p>
-                    <input type="text" name="talle" id="talles"
-                        value="<%= locals.errors && old.talle ? old.talle : ''%>"><br>
+                    <% size.forEach(talles => { %>
+                    <label for="talle<%=talles.number%>>"><%=talles.number%></label>
+                    <input name="talle" type="checkbox" value="<%=talles.id%>" id="talle<%=talles.number%>">
+                    <% }) %>
+
                     <h2>Especificaciones</h2><br>
                     <label for="capellada">Capellada</label>
                     <p class="form-error error-capellada">(Este campo no puede estar vacío)</p>
