@@ -77,7 +77,7 @@ const userController = {
             email: req.body.email,
             password: bcrypt.hashSync(req.body.password, 10),
             image: req.file.filename,
-            admin: 1
+            admin: 0
         })
 
         return res.redirect('/')
