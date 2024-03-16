@@ -49,44 +49,43 @@
        
         <div class="container-flex">
           <!-- Implementada la lógica para que solo cargue productos que tengan el descuento mayor a 0 -->
-          <% for(let i = 0; i < productos.length; i++){ %>
-          <% if(productos[i].discount > 0) { %>
+          <% for(let i = 0; i < offers.length; i++){ %>
+          
           <div class="article-container">
             <article class="article">
-              <a href="/product/detail/<%= productos[i].id %>">
+              <a href="/product/detail/<%= offers[i].id %>">
                 <div class="product-card">
-                  <img src="/images/products/<%= productos[i].image %>" alt="">
+                  <img src="/images/products/<%= offers[i].image %>" alt="">
                   <div class="product-detail">
-                    <p class="discount"><%= productos[i].discount %>% Off</p>
-                    <p class="precio">$<%= productos[i].price.toLocaleString('es-ES')%></p>
-                    <p class="marca"><%= productos[i].brand ? productos[i].brand.name : "" %></p>
+                    <p class="discount"><%= offers[i].discount %>% Off</p>
+                    <p class="precio">$<%= offers[i].price.toLocaleString('es-ES')%></p>
+                    <p class="marca"><%= offers[i].brand ? offers[i].brand.name : "" %></p>
                    
-                    <h3><a href="/product/detail"><%= productos[i].nombre %></a></h3>
+                    <h3><a href="/product/detail"><%= offers[i].nombre %></a></h3>
                   </div>
                 </div>
               </a>
             </article>
           </div>
           <% } %>
-          <% } %>
+  
           <!-- <button class="ver-mas">Ver más</button> -->
           <!-- Arreglar la redireccion -->
         </div>
       </section>
       <section class="productos-a">
-        <h1>RECOMENDADO PARA VOS</h1>
+        <h1>DESTACADO</h1>
         <div class="container-flex">
-          <% for(let i = 0; i < 4; i++){ %>
+          <% for(let i = 0; i < featured.length; i++){ %>
           <div class="article-container">
             <article class="article">
-              <a href="/product/detail/<%= productos[i].id %>">
+              <a href="/product/detail/<%= featured[i].id %>">
                 <div class="product-card">
-                  <img src="/images/products/<%= productos[i].image %>" alt="">
+                  <img src="/images/products/<%= featured[i].image %>" alt="">
                   <div class="product-detail">
-                    <p class="precio">$<%= productos[i].price.toLocaleString('es-ES')%></p>
-                    <p class="marca"><%= productos[i].brand ? productos[i].brand.name : "" %></p>
-                    <p><%= productos[i].color.name%></p>
-                    <h3><a href="/product/detail"><%= productos[i].name %></a></h3>
+                    <p class="precio">$<%= featured[i].price.toLocaleString('es-ES')%></p>
+                    <p class="marca"><%= featured[i].brand ? productos[i].brand.name : "" %></p>
+                    <h3><a href="/product/detail"><%= featured[i].name %></a></h3>
                   </div>
                 </div>
               </a>
@@ -95,20 +94,21 @@
           <% } %>
         </div>
       </section>
-      
+      <% if(productosVistosBD.length > 0){ %>
       <section class="productos-a">
-        <h1>INSPIRADO EN LO QUE VISTE</h1>
+        <h1>ALGO DE LO QUE VISTE</h1>
         <div class="container-flex">
-          <% for(let i = 0; i < 4; i++){ %>
+         
+          <% for(let i = 0; i < productosVistosBD.length; i++){ %>
           <div class="article-container">
             <article class="article">
-              <a href="/product/detail/<%= productos[i].id %>">
+              <a href="/product/detail/<%= productosVistosBD[i].id %>">
                 <div class="product-card">
-                  <img src="/images/products/<%= productos[i].image %>" alt="">
+                  <img src="/images/products/<%= productosVistosBD[i].image %>" alt="">
                   <div class="product-detail">
-                    <p class="precio">$<%= productos[i].price.toLocaleString('es-ES') %></p>
-                    <p class="marca"><%= productos[i].brand ? productos[i].brand.name : "" %></p>
-                    <h3><a href="/product/detail"><%= productos[i].name %></a></h3>
+                    <p class="precio">$<%= productosVistosBD[i].price.toLocaleString('es-ES') %></p>
+                    <p class="marca"><%= productosVistosBD[i].brand ? productosVistosBD[i].brand.name : "" %></p>
+                    <h3><a href="/product/detail"><%= productosVistosBD[i].name %></a></h3>
                   </div>
                 </div>
               </a>
@@ -117,6 +117,7 @@
           <% } %>
         </div>
       </section>
+      <% } %>
     </main>
     <!-- Footer -->
     <%- include('./partials/footer.ejs') %>
