@@ -1,8 +1,8 @@
 /* Este codigo basicamente es para poblar las bases y tablas con informacion necesaria para hacer pruebas */
 
 INSERT INTO brands
-(id,name)
-VALUES (1,'Adidas'),(2,'Nike'),(3,'Atomik'),(4,'Converse'),(5,'Dc Shoes'),(6,'Fila'),(7,'Jaguar'),(8,'John Foos'),(9,'Kappa'),(10,'New Balance'),(11,'Puma'),(12,'Reebok'),(13,'Topper'),(14,'Wilson');
+(id,name,brand_image)
+VALUES (1,'Adidas', 'adidas.webp'),(2,'Nike','nike.webp'),(3,'Atomik','atomik.webp'),(4,'Converse','converse.webp'),(5,'Dc Shoes','dc-shoes.webp'),(6,'Fila','fila.webp'),(7,'Jaguar','jaguar.webp'),(8,'John Foos','john-foos.webp'),(9,'Kappa','kappa.webp'),(10,'New Balance','new-balance.webp'),(11,'Puma','puma.webp'),(12,'Reebok','reebok.webp'),(13,'Topper', 'topper.webp'),(14,'Wilson','wilson.webp');
 
 INSERT INTO colors
 (id,name)
