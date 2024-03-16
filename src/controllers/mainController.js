@@ -1,6 +1,5 @@
 const fs = require('fs');
 const path = require('path')
-/* const productos = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/productos.json'))); */
 const marcasPopulares = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/marcasPopulares.json')));
 const db = require("../../database/models")
 const { Op } = require('sequelize');
@@ -16,10 +15,11 @@ const mainController = {
                 ]
             });
             
-            let offers = await db.Product.findAll({
+            let offers = await db.Product.findAll(
+                {
                 where: {
                     discount: {
-                        [Op.gt]: 0
+                        [Op.ne]: 0
                     }
                 },
                 limit: 4
