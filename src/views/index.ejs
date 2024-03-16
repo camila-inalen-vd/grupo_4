@@ -60,7 +60,6 @@
                   <div class="product-detail">
                     <p class="discount"><%= offers[i].discount %>% Off</p>
                     <p class="precio">$<%= offers[i].price.toLocaleString('es-ES')%></p>
-                    <p class="marca"><%=offers[i].brand.name%></p>
                     <h3><a href="/product/detail"><%= offers[i].name %></a></h3>
                   </div>
                   <img src="/images/brands/<%=offers[i].brand.brand_image%>" alt="" style="width: 75px;">
@@ -88,7 +87,6 @@
                   <img src="/images/products/<%= featured[i].image %>" alt="">
                   <div class="product-detail">
                     <p class="precio">$<%= featured[i].price.toLocaleString('es-ES')%></p>
-                    <p class="marca"><%=featured[i].brand.name%></p>
                     <h3><a href="/product/detail"><%= featured[i].name %></a></h3>
                     <img src="/images/brands/<%=featured[i].brand.brand_image%>" alt="" style="width: 75px;">
                   </div>
@@ -113,7 +111,6 @@
                   <img src="/images/products/<%= productosVistosBD[i].image %>" alt="">
                   <div class="product-detail">
                     <p class="precio">$<%= productosVistosBD[i].price.toLocaleString('es-ES') %></p>
-                    <p class="marca"><%=offers[i].brand.name%></p>
                     <h3><a href="/product/detail"><%= productosVistosBD[i].name %></a></h3>
                     <img src="/images/brands/<%=productosVistosBD[i].brand.brand_image%>" alt="" style="width: 75px;">
                   </div>
