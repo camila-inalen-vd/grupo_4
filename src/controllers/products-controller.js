@@ -128,9 +128,8 @@ const productsController = {
     },
 
     //Falta configurar para colores y talles
-    editConfig: (req, res) => {
-
-        db.Product.update({
+    editConfig:  (req, res) => {
+            db.Product.update({
             name: req.body.nombre,
             price: req.body.precio,
             dues: req.body.cuotas,
@@ -148,7 +147,7 @@ const productsController = {
                 where: { id: req.params.id }
             })
         res.redirect('/product/list')
-
+            {}
         fs.writeFileSync(path.resolve(__dirname, '../data/productos.json'), JSON.stringify(productos, null, 1));
         res.redirect('/product/detail/' + req.params.id);
     },
