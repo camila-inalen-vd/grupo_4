@@ -8,8 +8,9 @@ const productsController = {
     productDetail: async (req, res) => {
         const productId = req.params.id;
         req.session.productosVistos
+        if(req.session.productosVistos){
         req.session.productosVistos.push(parseInt(productId));
-        console.log(req.session.productosVistos)
+        }
         
         try {
             const producto = await db.Product.findByPk(req.params.id, {
