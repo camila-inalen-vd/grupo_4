@@ -8,6 +8,7 @@ const productsController = require('../controllers/products-controller');
 // Midllewares
 const authMiddleware = require('../middlewares/routes/authMiddleware')
 const createValidator = require('../middlewares/routes/createValidator')
+const adminMiddleware = require('../middlewares/routes/adminMiddleware')
 
 //Multer
 const storage = multer.diskStorage({
@@ -39,15 +40,15 @@ router.get('/cart', authMiddleware, productsController.productCart)
 router.get('/detail/:id', productsController.productDetail)
 
 //Create
-router.get('/create', productsController.create)
+router.get('/create', authMiddleware, adminMiddleware, productsController.create)
 router.post('/create', upload.single('product-image'),  createValidator, productsController.createConfig);
 
 //Editar
-router.get('/:id/edit', productsController.edit)
+router.get('/:id/edit', authMiddleware, adminMiddleware, productsController.edit)
 router.put('/:id/edit', upload.single('product-image'), productsController.editConfig);
 
 //Eliminar
-router.get('/delete', productsController.delete)
+router.get('/delete', authMiddleware, adminMiddleware, productsController.delete)
 router.delete('/delete', productsController.deleteConfig)
 
 module.exports = router;
