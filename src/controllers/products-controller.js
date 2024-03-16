@@ -100,8 +100,9 @@ const productsController = {
                         size_id: talle
                     });
                 });
-    
-                res.redirect('/product/list');
+                
+                return res.redirect('/product/list');
+                
             } catch (error) {
                 res.send(error);
             }
