@@ -60,8 +60,15 @@ const productsController = {
         }
     },
     edit: async (req, res) => {
-        let producto = await db.Product.findByPk(req.params.id)
-        res.render('products/edit', { producto })
+        let producto = await db.Product.findByPk(req.params.id, {
+            include: [
+                { association: 'brand', attributes: ['name'] }
+            ]
+        })
+        let brand = await db.Brand.findAll()
+        let color = await db.Color.findAll()
+        let size = await db.Size.findAll()
+        res.render('products/edit', { producto, 'brand': brand, 'size':size, 'color':color })
     },
 
     //Por ahora hice una vista llamada delete que recibe un ID en un form para borrar el producto que matchee con la misma.
@@ -127,30 +134,54 @@ const productsController = {
         }
     },
 
-    //Falta configurar para colores y talles
-    editConfig:  (req, res) => {
-            db.Product.update({
-            name: req.body.nombre,
-            price: req.body.precio,
-            dues: req.body.cuotas,
-            discount: req.body.descuento,
-            stock: req.body.stock,
-            description: req.body.descripcion,
-            large_description: req.body.descripcionLarga,
-            upper: req.body.capellada,
-            cover: req.body.forro,
-            sole: req.body.suela,
-            origin: req.body.origen,
-            image: req.file ? req.file.filename : db.Product.findByPk(req.params.id).image
-        },
+    editConfig: async (req, res) => {
+        try {
+            await db.Product.update({
+                name: req.body.nombre,
+                price: req.body.precio,
+                dues: req.body.cuotas,
+                discount: req.body.descuento,
+                stock: req.body.stock,
+                description: req.body.descripcion,
+                large_description: req.body.descripcionLarga,
+                upper: req.body.capellada,
+                cover: req.body.forro,
+                sole: req.body.suela,
+                origin: req.body.origen,
+                brand_id: req.body.marca,
+                image: req.file ? req.file.filename : db.Product.findByPk(req.params.id).image
+            },
             {
                 where: { id: req.params.id }
-            })
-        res.redirect('/product/list')
-            {}
-        fs.writeFileSync(path.resolve(__dirname, '../data/productos.json'), JSON.stringify(productos, null, 1));
-        res.redirect('/product/detail/' + req.params.id);
-    },
+            });
+    
+            const productoNuevo = await db.Product.findByPk(req.params.id);
+    
+            await db.Product_color.destroy({ where: { product_id: req.params.id } });
+            await db.Product_size.destroy({ where: { product_id: req.params.id } });
+    
+            const coloresRecibidos = req.body.color || [];
+            const tallesRecibidos = req.body.talle || [];
+    
+            await Promise.all(coloresRecibidos.map(color => {
+                return db.Product_color.create({
+                    product_id: productoNuevo.id,
+                    color_id: color
+                });
+            }));
+    
+            await Promise.all(tallesRecibidos.map(talle => {
+                return db.Product_size.create({
+                    product_id: productoNuevo.id,
+                    size_id: talle
+                });
+            }));
+    
+            res.redirect('/product/detail/' + req.params.id);
+        } catch (error) {   
+            res.send(error); 
+        }
+    },    
 
     //Esta es la config del delete. Deberiamos usar el metodo destroy con un where donde como condicion ponemos la ID que pasamos por form (req.body.idDelete) (si o si el where va o sino borran todos los registros)
     deleteConfig: (req, res) => {

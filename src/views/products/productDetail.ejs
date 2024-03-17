@@ -36,7 +36,7 @@
 
             <section class="caja-info-producto">
                 <div class="container-info-product">
-                    <div class="title-producto"> SALE </div>
+                    <div class="title-producto"> SALE </div> 
                     <div class="reputation-icon">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -51,6 +51,12 @@
                     <div class="nombre-producto">
                         <%= producto.name %>
                     </div>
+                    <div class="nombre-producto">
+                        <%= producto.brand.name %>
+                    </div>
+
+                
+                    
                     <div class="container-precio">
                         <span>$ <%= producto.price.toLocaleString('es-ES')%></span>
                         <!-- <i class="fa-solid fa-chevron-right"></i> -->
