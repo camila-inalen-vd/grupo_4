@@ -81,6 +81,8 @@ const productsController = {
         let errors = validationResult(req);
         if (errors.isEmpty()) {
             try {
+                console.log(req.body)
+
                 const productoCreado = await db.Product.create({
                     name: req.body.nombre,
                     price: req.body.precio,

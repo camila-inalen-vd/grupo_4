@@ -41,12 +41,13 @@ header {
 /* Barra de búsqueda (está dentro de .top-header2) */
 .search-bar {
     display: none;
-    background-color: rgba(255, 255, 255, 0);
+    background-color: rgba(64, 84, 94, 0.783);
     width: 50%;
-    height: 30px;
+    height: 40px;
     border: none;
+    border-radius: 5px;
     padding: 5px;
-    border-bottom: solid 1px black;
+    
 }
 /* Input de barra de búsqueda */
 .top-header2 input {
@@ -56,9 +57,10 @@ header {
     width: 100%;
     flex: 1;
     background-color: #19000000;
+    color: white;
 }
 /* Botón de barra de búsqueda */
-.top-header3 button {
+.top-header3 button, .top-header2 button {
     margin: 0;
     border: none;
     background: none;
@@ -298,6 +300,9 @@ nav li:hover {
 }
 
 @media (min-width: 769px) {
+    .search-bar {
+        display: flex;
+    }
     .burger-menu {
         display: none;
     }
