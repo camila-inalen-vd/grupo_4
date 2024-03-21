@@ -1,47 +1,36 @@
 <%-include('../partials/head.ejs', {title: 'Detalle del producto' , style: '/products/productDetail' })%>
 
-<body>
+    <body>
 
-    <!--Header-->
-    <%-include('../partials/header.ejs')%>
+        <!--Header-->
+        <%-include('../partials/header.ejs')%>
 
-        <div class="titulo-container">
-            <h2>
-                <a href=""> Volver al listado </a>
-            </h2>
-        </div>
+            <div class="titulo-container">
+                <h2>
+                    <a href=""> Volver al listado </a>
+                </h2>
+    
+                <main>
+               <div>
+                    <article class="total-product-detail">
+                        <div class="producto">
+                            <div class="img-producto">
+                                <img src="/images/products/<%=producto ? producto.image : ''%>" alt="img-producto" />
 
-        <main>
-            <div class="total-product-detail">
-                <div class="producto">
-                    <div class="img-producto">
-                        <img src="/images/products/<%=producto ? producto.image : ''%>" alt="img-producto" />
+                                <div class="img-prod-peq">
+                                    <% if(producto.miniatura !="" && producto.miniatura !=undefined){ %>
+                                        <% for(let i=0; i < producto.miniatura.length; i ++) { %>
+                                            <img src="/images/products/miniaturas/<%=producto.miniatura[i]%>" alt="" />
+                                            <%}%>
+                                                <% } %>
+                                                    </div>
+                                                           </div>
+                                      </div>
+            <!-- ---------------Informacion del producto---------------- -->
 
-                        <div class="img-prod-peq">
-                            <% if(producto.miniatura !="" && producto.miniatura !=undefined){ %>
-                                <% for(let i=0; i < producto.miniatura.length; i ++) { %>
-                                    <img src="/images/products/miniaturas/<%=producto.miniatura[i]%>" alt="" />
-                                    <%}%>
-                                        <% } %>
-                                            </div>
-                                                   </div>
-                                  </div>
-                    <!-- ---------------Informacion del producto---------------- -->
-
-<<<<<<< HEAD
-                    <section class="caja-info-producto">
-                        <div class="container-info-product">
-                            <div class="title-producto"> SALE </div>
-                            <div class="reputation-icon">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star-half-stroke"></i>
-=======
             <section class="caja-info-producto">
                 <div class="container-info-product">
-                    <div class="title-producto"> SALE </div> 
+                    <div class="title-producto"> SALE </div>
                     <div class="reputation-icon">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -56,12 +45,6 @@
                     <div class="nombre-producto">
                         <%= producto.name %>
                     </div>
-                    <div class="nombre-producto">
-                        <%= producto.brand.name %>
-                    </div>
-
-                
-                    
                     <div class="container-precio">
                         <span>$ <%= producto.price.toLocaleString('es-ES')%></span>
                         <!-- <i class="fa-solid fa-chevron-right"></i> -->
@@ -70,20 +53,20 @@
                         <h4>
                             <%= producto.dues%> Cuotas
                         </h4>
-                        <i class="fa-solid fa-chevron-right"></i>
+                     <!--    <i class="fa-solid fa-chevron-right"></i> -->
                     </div>
                     <div class="container-pago">
                         <h4> Ver medios de pago </h4>
-                        <i class="fa-solid fa-chevron-right"></i>
+                     <!--    <i class="fa-solid fa-chevron-right"></i> -->
                     </div>
                     <div>
                         <div class="container-entrega">
                             <h4>Mas formas de entrega</h4>
-                            <i class="fa-solid fa-chevron-right"></i>
+                         <!--    <i class="fa-solid fa-chevron-right"></i> -->
                         </div>
                         <div class="container-devolucion">
                             <h4>Devolucion gratis</h4>
-                            <i class="fa-solid fa-chevron-right"></i>
+                         <!--    <i class="fa-solid fa-chevron-right"></i> -->
                         </div>
                     </div>
 
@@ -113,6 +96,15 @@
                         <div>
                             <button class="btn-clean">Limpiar</button>
                         </div>
+
+                       
+                     <div>
+                             <form action="/product/<%= producto.id %>/edit" method="GET">
+                                <button class="btn-edit"type="submit">Editar producto</button>
+                       </form> 
+                           
+                          </div>  
+
                     </div>
                     <div class="promo-disponible">
 
@@ -127,147 +119,63 @@
                         </button>
                         <div>
                             <button class="btn-add-to-cart">
->>>>>>> 469b1ce1c72af3656d959e32c98bdff80b9f410f
                                 <a href="">
-                                    <span>1</span>
-                                    Reseñas
-                                </a>
-                            </div>
-                            <div class="nombre-producto">
-                                <%= producto.name %>
-                            </div>
-                            <div class="container-precio">
-                                <span>$ <%= producto.price.toLocaleString('es-ES')%></span>
-                                <!-- <i class="fa-solid fa-chevron-right"></i> -->
-                            </div>
-                            <div class="container-cuotas">
-                                <h4>
-                                    <%= producto.dues%> Cuotas
-                                </h4>
-                             <!--    <i class="fa-solid fa-chevron-right"></i> -->
-                            </div>
-                          <!--   <div class="container-pago">
-                                <h4> Ver medios de pago </h4> -->
-                             <!--    <i class="fa-solid fa-chevron-right"></i> -->
-                          <!--   </div>
-                            <div>
-                                <div class="container-entrega">
-                                    <h4>Mas formas de entrega</h4> -->
-                                 <!--    <i class="fa-solid fa-chevron-right"></i> -->
-                              <!--   </div>
-                                <div class="container-devolucion">
-                                    <h4>Devolucion gratis</h4> -->
-                                 <!--    <i class="fa-solid fa-chevron-right"></i> -->
-                             <!--    </div>
-                            </div> -->
+                                    <i class=""></i>Agregar al carrito</button>
+                            </a>
+                        </div>
+                        <% } else { %>
+                            <i class="fa-solid fa-plus"></i>SIN STOCK</button>
+                            <% } %>
+                           
 
-                            <div class="container-details-product">
-                                <div class="form-group">
-                                    <label for="colour">Color</label>
-                                    <select name="colour" id="colour">
-                                        <option disabled selected value="">
-                                            Elige una opción
-                                        </option>
-                                        <% producto.color.forEach(colores => { %>
-                                            <option value=""><%= colores.name %></option>
-                                        <% }) %>
-                                    </select>
-                                </div>
+                    </div>
+                </div>
+            </section>
 
-                                <div class="form-group"><label for="size">Talle</label>
-                                    <select name="size" id="size">
-                                        <option disabled selected value="">
-                                            Elige una opción
-                                        </option>
-                                        <% producto.size.forEach(talle => { %>
-                                            <option value=""><%= talle.number %></option>
-                                        <% }) %>
-                                    </select>
-                                </div>
-                                <div>
-                                    <!-- <button class="btn-clean">Limpiar</button> -->
-                                </div>
+          <!--   ------------Description de producto----------------------  -->
+            <section class="description-text">
+                <div class="container-description">
+                    <div class="title-description">
+                        <h4>Descripción</h4>
+                        
+                    <!--     <i class="fa-solid fa-chevron-down"></i> -->
+                    </div>
+                    <div class="text-description" style="display:none">
+                        <p>
+                            <%= producto.large_description %>
+                        </p>
+                    </div>
 
-                               
-                             <div>
 
-                            
-                                     <form action="/product/<%= producto.id %>/edit" method="GET">
-                                        <button class="btn-edit"type="submit">Editar producto</button>
-                                     </form>
-                            
-                                  </div>  
+                    <div class="container-additional-information">
+                        <div class="title-additional-information">
+                            <h4>Especificaciones</h4>
+                            <!-- <i class="fa-solid fa-chevron-down"></i> -->
+                        </div>
+                        <div class="text-additional-information hidden">
+                            <ul>
+                                <li>Capellada: <%= producto.upper %>.</li>
+                                <li>Forro: <%= producto.cover %>.</li>
+                                <li>Suela: <%= producto.sole %>.</li>
+                                <li>Origen: <%= producto.origin %>.</li>
+                            </ul>
+                        </div>
 
-                            </div>
-                            <div class="promo-disponible">
-
-                                <!--Un if para que solo aparezca cuando hay stock-->
-                                <h4>¡Ultima disponible!</h4>
-                                <!--fin del if-->
-
-                                <button class="btn-add-to-cart">
-                                    <!--Comprar ahora con if-->
-                                    <% if(producto.stock> 0) {%>
-                                        <i class="fa-solid fa-plus"></i>Comprar ahora
-                                </button>
-                                <div>
-                                    <button class="btn-add-to-cart">
-                                        <a href="">
-                                            <i class=""></i>Agregar al carrito</button>
-                                    </a>
-                                </div>
-                                <% } else { %>
-                                    <i class="fa-solid fa-plus"></i>SIN STOCK</button>
-                                    <% } %>
-                                   
-
+                        <div class="container-social">
+                            <span>Compartir</span>
+                            <div class="container-buttons-social">
+                                <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                              </div>
                             </div>
                         </div>
                     </section>
-
-                  <!--   ------------Description de producto----------------------  -->
-                    <section class="description-text">
-                        <div class="container-description">
-                            <div class="title-description">
-                                <h4>Descripción</h4>
-                                <li><%= producto.description %></li>
-                                
-                            </div>
-                            <div class="text-description" style="display:none">
-                                <p> <h4>Especificaciones</h4>
-                                    <%= producto.large_description %>
-                                </p>
-                            </div>
-
-
-                            <div class="container-additional-information">
-                                <div class="title-additional-information">
-                                    <h4>Especificaciones</h4>
-                                </div>
-                                <div class="text-additional-information hidden">
-                                    <ul>
-                                        <li>Capellada: <%= producto.upper %>.</li>
-                                        <li>Forro: <%= producto.cover %>.</li>
-                                        <li>Suela: <%= producto.sole %>.</li>
-                                        <li>Origen: <%= producto.origin %>.</li>
-                                    </ul>
-                                </div>
-
-                                <div class="container-social">
-                                    <span>Compartir</span>
-                                    <div class="container-buttons-social">
-                                        <a href="#"><i class="fa-solid fa-envelope"></i></a>
-                                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                                        <a href="#"><i class="fa-brands fa-pinterest"></i></a>
-                                      </div>
-                                    </div>
-                                </div>
-                            </section>
-                        </div>
-            </main>
-
+                </article>
+            </div>
+        </main>
             <!--   __________________Productos Relacionados_______________________ -->
 
 
@@ -280,7 +188,7 @@
                         <div class="card-list-products">
                             <div class="card">
                                 <div class="img-card">
-                                    <img  src="/images/products/<%=producto.image %>" alt="product-1" />
+                                    <img src="/images/products/<%=producto.image %>" alt="product-1" />
                                 </div>
                                 <div class="info-card">
                                     <div class="text-product">
