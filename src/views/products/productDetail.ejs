@@ -28,6 +28,7 @@
                                   </div>
                     <!-- ---------------Informacion del producto---------------- -->
 
+<<<<<<< HEAD
                     <section class="caja-info-producto">
                         <div class="container-info-product">
                             <div class="title-producto"> SALE </div>
@@ -37,6 +38,96 @@
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star-half-stroke"></i>
+=======
+            <section class="caja-info-producto">
+                <div class="container-info-product">
+                    <div class="title-producto"> SALE </div> 
+                    <div class="reputation-icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <a href="">
+                            <span>1</span>
+                            Reseñas
+                        </a>
+                    </div>
+                    <div class="nombre-producto">
+                        <%= producto.name %>
+                    </div>
+                    <div class="nombre-producto">
+                        <%= producto.brand.name %>
+                    </div>
+
+                
+                    
+                    <div class="container-precio">
+                        <span>$ <%= producto.price.toLocaleString('es-ES')%></span>
+                        <!-- <i class="fa-solid fa-chevron-right"></i> -->
+                    </div>
+                    <div class="container-cuotas">
+                        <h4>
+                            <%= producto.dues%> Cuotas
+                        </h4>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                    <div class="container-pago">
+                        <h4> Ver medios de pago </h4>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                    <div>
+                        <div class="container-entrega">
+                            <h4>Mas formas de entrega</h4>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </div>
+                        <div class="container-devolucion">
+                            <h4>Devolucion gratis</h4>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </div>
+                    </div>
+
+                    <div class="container-details-product">
+                        <div class="form-group">
+                            <label for="colour">Color</label>
+                            <select name="colour" id="colour">
+                                <option disabled selected value="">
+                                    Elige una opción
+                                </option>
+                                <% producto.color.forEach(colores => { %>
+                                    <option value=""><%= colores.name %></option>
+                                <% }) %>
+                            </select>
+                        </div>
+
+                        <div class="form-group"><label for="size">Talle</label>
+                            <select name="size" id="size">
+                                <option disabled selected value="">
+                                    Elige una opción
+                                </option>
+                                <% producto.size.forEach(talle => { %>
+                                    <option value=""><%= talle.number %></option>
+                                <% }) %>
+                            </select>
+                        </div>
+                        <div>
+                            <button class="btn-clean">Limpiar</button>
+                        </div>
+                    </div>
+                    <div class="promo-disponible">
+
+                        <!--Un if para que solo aparezca cuando hay stock-->
+                        <h4>¡Ultima disponible!</h4>
+                        <!--fin del if-->
+
+                        <button class="btn-add-to-cart">
+                            <!--Comprar ahora con if-->
+                            <% if(producto.stock> 0) {%>
+                                <i class="fa-solid fa-plus"></i>Comprar ahora
+                        </button>
+                        <div>
+                            <button class="btn-add-to-cart">
+>>>>>>> 469b1ce1c72af3656d959e32c98bdff80b9f410f
                                 <a href="">
                                     <span>1</span>
                                     Reseñas
