@@ -8,10 +8,10 @@ const productsController = {
     productDetail: async (req, res) => {
         const productId = req.params.id;
         req.session.productosVistos
-        if(req.session.productosVistos){
-        req.session.productosVistos.push(parseInt(productId));
+        if (req.session.productosVistos) {
+            req.session.productosVistos.push(parseInt(productId));
         }
-        
+
         try {
             const producto = await db.Product.findByPk(req.params.id, {
                 include: [
@@ -69,7 +69,7 @@ const productsController = {
         let brand = await db.Brand.findAll()
         let color = await db.Color.findAll()
         let size = await db.Size.findAll()
-        res.render('products/edit', { producto, 'brand': brand, 'size':size, 'color':color })
+        res.render('products/edit', { producto, 'brand': brand, 'size': size, 'color': color })
     },
 
     //Por ahora hice una vista llamada delete que recibe un ID en un form para borrar el producto que matchee con la misma.
@@ -99,27 +99,27 @@ const productsController = {
                     brand_id: req.body.marca,
                     image: req.file ? req.file.filename : ''
                 });
-                
+
                 let ultimoProducto = productoCreado;
                 let coloresRecibidos = req.body.color;
                 let tallesRecibidos = req.body.talle;
-    
+
                 coloresRecibidos.forEach(color => {
                     db.Product_color.create({
                         product_id: ultimoProducto.id,
                         color_id: color
                     });
                 });
-    
+
                 tallesRecibidos.forEach(talle => {
                     db.Product_size.create({
                         product_id: ultimoProducto.id,
                         size_id: talle
                     });
                 });
-                
+
                 return res.redirect('/product/list');
-                
+
             } catch (error) {
                 res.send(error);
             }
@@ -133,7 +133,7 @@ const productsController = {
             catch (error) {
                 res.send(error)
             }
-            
+
         }
     },
 
@@ -154,37 +154,37 @@ const productsController = {
                 brand_id: req.body.marca,
                 image: req.file ? req.file.filename : db.Product.findByPk(req.params.id).image
             },
-            {
-                where: { id: req.params.id }
-            });
-    
+                {
+                    where: { id: req.params.id }
+                });
+
             const productoNuevo = await db.Product.findByPk(req.params.id);
-    
+
             await db.Product_color.destroy({ where: { product_id: req.params.id } });
             await db.Product_size.destroy({ where: { product_id: req.params.id } });
-    
+
             const coloresRecibidos = req.body.color || [];
             const tallesRecibidos = req.body.talle || [];
-    
+
             await Promise.all(coloresRecibidos.map(color => {
                 return db.Product_color.create({
                     product_id: productoNuevo.id,
                     color_id: color
                 });
             }));
-    
+
             await Promise.all(tallesRecibidos.map(talle => {
                 return db.Product_size.create({
                     product_id: productoNuevo.id,
                     size_id: talle
                 });
             }));
-    
+
             res.redirect('/product/detail/' + req.params.id);
-        } catch (error) {   
-            res.send(error); 
+        } catch (error) {
+            res.send(error);
         }
-    },    
+    },
 
     //Esta es la config del delete. Deberiamos usar el metodo destroy con un where donde como condicion ponemos la ID que pasamos por form (req.body.idDelete) (si o si el where va o sino borran todos los registros)
     deleteConfig: (req, res) => {
@@ -198,8 +198,5 @@ const productsController = {
     }
 
 }
-
-//Implementar las validaciones para que solo los admin puedan acceder a crear, editar y eliminar productos.
-
 
 module.exports = productsController;
