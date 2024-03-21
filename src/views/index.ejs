@@ -54,17 +54,17 @@
           
           <div class="article-container">
             <article class="article">
-              <a href="/product/detail/<%= offers[i].id %>">
+              <p class = id-producto style="display: none;"><%= offers[i].id %></p>
                 <div class="product-card">
                   <img src="/images/products/<%= offers[i].image %>" alt="">
                   <div class="product-detail">
                     <p class="discount"><%= offers[i].discount %>% Off</p>
                     <p class="precio">$<%= offers[i].price.toLocaleString('es-ES')%></p>
-                    <h3><a href="/product/detail"><%= offers[i].name %></a></h3>
+                    <p class="descripcion-larga" style='display:none;'><%= offers[i].large_description%></p>
+                    <h3><%= offers[i].name %></h3>
                   </div>
                   <img src="/images/brands/<%=offers[i].brand.brand_image%>" alt="" style="width: 75px;">
                 </div>
-              </a>
             </article>
           </div>
           <% } %>
@@ -82,16 +82,16 @@
           <% for(let i = 0; i < featured.length; i++){ %>
           <div class="article-container">
             <article class="article">
-              <a href="/product/detail/<%= featured[i].id %>">
+              <p class = id-producto style="display: none;"><%= featured[i].id %></p>
                 <div class="product-card">
                   <img src="/images/products/<%= featured[i].image %>" alt="">
                   <div class="product-detail">
                     <p class="precio">$<%= featured[i].price.toLocaleString('es-ES')%></p>
-                    <h3><a href="/product/detail"><%= featured[i].name %></a></h3>
+                    <p class="descripcion-larga" style='display:none;'><%= offers[i].large_description%></p>
+                    <h3><%= featured[i].name %></h3>
                     <img src="/images/brands/<%=featured[i].brand.brand_image%>" alt="" style="width: 75px;">
                   </div>
                 </div>
-              </a>
             </article>
           </div>
           <% } %>
@@ -106,25 +106,28 @@
           <% for(let i = 0; i < productosVistosBD.length; i++){ %>
           <div class="article-container">
             <article class="article">
-              <a href="/product/detail/<%= productosVistosBD[i].id %>">
+              <p class = id-producto style="display: none;"><%= productosVistosBD[i].id %></p>
                 <div class="product-card">
                   <img src="/images/products/<%= productosVistosBD[i].image %>" alt="">
                   <div class="product-detail">
                     <p class="precio">$<%= productosVistosBD[i].price.toLocaleString('es-ES') %></p>
-                    <h3><a href="/product/detail"><%= productosVistosBD[i].name %></a></h3>
+                    <h3><%= productosVistosBD[i].name %></h3>
+                    <p class="descripcion-larga" style='display:none;'><%= offers[i].large_description%></p>  
                     <img src="/images/brands/<%=productosVistosBD[i].brand.brand_image%>" alt="" style="width: 75px;">
                   </div>
                 </div>
-              </a>
             </article>
           </div>
           <% } %>
         </div>
       </section>
       <% } %>
+      <div class="overlay"></div>
+      <div class="modalUno"></div>
     </main>
+    
     <!-- Footer -->
     <%- include('./partials/footer.ejs') %>
-    <script src="./index.js"></script>
+    <script src="/js/index.js"></script>
   </body>
 </html>
