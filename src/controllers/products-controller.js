@@ -26,6 +26,7 @@ const productsController = {
             res.send(error);
         }
     },
+
     productList: async (req, res) => {
         try {
             const productos = await db.Product.findAll({
