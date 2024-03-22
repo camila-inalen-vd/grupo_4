@@ -3,6 +3,7 @@ const path = require('path')
 const marcasPopulares = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/marcasPopulares.json')));
 const db = require("../../database/models")
 const { Op } = require('sequelize');
+const nodemailer = require('nodemailer');
 
 //Métodos para la ruta de cada vista.
 const mainController = {
@@ -59,7 +60,46 @@ const mainController = {
         catch (err) {
             res.send('Este es el error de la linea 50')
         }
+    },
+    support: (req, res) => {
+        res.render('support')
+    },
+
+
+    supportConfig: (req, res) => {
+    const { nombre, apellido, email, mensaje } = req.body;
+
+    // Configurar transporte SMTP
+    const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+            user: 'camila.proyectointegrador@gmail.com',
+            pass: 'wzfw ppur whrz xhcd'
+        }
+    });
+
+    // Detalles del correo
+    const mailOptions = {
+        from: email,
+        to: 'camila.proyectointegrador@gmail.com',
+        subject: "Ayuda ShoesMarket",
+        text: `Nombre: ${nombre}\nApellido: ${apellido}\nEmail: ${email}\nMensaje: ${mensaje}`
+    };
+
+    // Enviar el correo
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            console.error(error);
+            res.send('Error al enviar el correo');
+        } else {
+            console.log('Correo enviado: ' + info.response);
+            let mensaje = "Correo enviado correctamente."
+            res.render('support', {mensaje})
+        }
+    });
+    console.log(email)
     }
+    
 }
 
 module.exports = mainController;
