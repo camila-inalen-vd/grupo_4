@@ -49,6 +49,9 @@ header {
     padding: 5px;
     
 }
+.search-bar input::placeholder {
+    color: rgba(255, 255, 255, 0.758); 
+}
 /* Input de barra de búsqueda */
 .top-header2 input {
     padding: 5px;

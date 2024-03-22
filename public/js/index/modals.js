@@ -24,7 +24,7 @@ if (window.innerWidth > 1024) {
         if (i === 1) {
             modalUno.classList.remove('mostrar');
             overlay.classList.remove('mostrar');
-            
+
             i = 0;
         }
     });
@@ -35,7 +35,7 @@ if (window.innerWidth > 1024) {
             i = 0;
         }
     });
-    
+
 }
 
 
