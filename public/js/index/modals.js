@@ -40,4 +40,25 @@ if (window.innerWidth > 1024) {
 
 }
 
+//Esta parte me la regaló chatGPT
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    // Escucha el evento click de cada enlace
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault(); // Previene el comportamiento predeterminado de redirigir a una nueva página
+
+        // Obtiene el elemento destino basado en el valor del atributo href del enlace
+        const destino = document.querySelector(this.getAttribute('href'));
+
+        if (destino) {
+            // Calcula la posición de desplazamiento del elemento destino
+            const offsetTop = destino.offsetTop;
+
+            // Realiza el desplazamiento suave
+            window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth' // Agrega un efecto de desplazamiento suave
+            });
+        }
+    });
+});
 
