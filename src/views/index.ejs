@@ -37,10 +37,12 @@
         <div class="container-flex">
           <% brands.forEach(marca => { %>
           <article class="marcas">
+            <a href="product/list?searchBar=<%=marca.name%>">
             <div class="product-card">
               <img src="/images/brands/<%= marca.brand_image %>" alt="">
             </div>
           </article>
+          </a>
           <% }) %>
         </div>
       </section>
