@@ -8,6 +8,14 @@ body {
     background-color: #f5f5f5;
 }
 
+header {
+    position: absolute;
+}
+
+.bottom-header {
+    background-color: rgba(0, 0, 0, 0.382);
+}
+
 section h1 {
     margin: 5% 0;
     padding: 10px;
@@ -25,9 +33,24 @@ section h1 {
     align-items: stretch;
 }
 
-.article-container, article {
+.article-container,
+article {
     width: 90%;
     margin: 0 auto;
+}
+
+article {
+    margin-top: 10px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 1px 3px 9px 2px rgba(0, 0, 0, 0.244);
+}
+
+.productos-a article:hover {
+    transform: scale(1.03);
+    transition: transform 0.3s ease-in-out;
+    transform-origin: center center;
 }
 
 .overlay {
@@ -50,12 +73,14 @@ section h1 {
     width: 25%;
     background-color: white;
     border: 1px solid rgb(82, 82, 82);
-    border-radius: 10px;
+    border-radius: 25px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    padding: 15px;
-    opacity: 0;
     z-index: -1;
+    padding: 15px;
+    border-radius: 10px;
+    opacity: 0;
     transition: opacity 0.5s ease;
+
 }
 
 .modalUno img {
@@ -65,6 +90,7 @@ section h1 {
 .modalUno h3 {
     font-size: 25px;
     text-align: center;
+
 }
 
 .modal-ver-mas {
@@ -77,29 +103,22 @@ section h1 {
     font-size: 25px;
     background-color: skyblue;
     border-radius: 5px;
+
 }
 
 .modal-ver-mas:hover {
     background-color: rgb(85, 133, 152);
 }
 
-article {
-    margin-top: 10px;
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 15px;
-    box-shadow: 1px 3px 9px 2px rgba(0, 0, 0, 0.244);
-}
 
-.modalUno.mostrar,
-.overlay.mostrar {
+.modalUno.mostrar {
     opacity: 1;
     z-index: 10;
 }
 
-.marcas {
-    border: none;
-    box-shadow: none;
+.overlay.mostrar {
+    opacity: 1;
+    z-index: 10;
 }
 
 .product-card {
@@ -121,6 +140,11 @@ article {
     text-align: center;
     background-color: green;
     transition: font-size 0.3s;
+}
+
+.marcas {
+    border: none;
+    box-shadow: none;
 }
 
 .precio {
@@ -159,9 +183,6 @@ article {
     width: 100%;
 }
 
-.description {
-    display: none;
-}
 
 .carousel {
     position: relative;
@@ -186,33 +207,33 @@ article {
     min-width: 100%;
     box-sizing: border-box;
 }
-.bottom-header {
-    background-color: rgba(0, 0, 0, 0.382);
-}
 
+/* Animación para que se muestre una imagen distinta, literalmente, moviendonos en el ege de X para ir cambiando las posiciones, la primera está en 0 y 100 porque volvemos ahí para volver a comenzar mostrando un "bucle" */
 @keyframes cambioDeSlide {
-    0%, 100% { transform: translateX(0); }
-    33.33% { transform: translateX(-100%); }
-    66.66% { transform: translateX(-200%); }
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    33.33% {
+        transform: translateX(-100%);
+    }
+
+    66.66% {
+        transform: translateX(-200%);
+    }
 }
 
-header {
-    position: absolute;
-}
-
-.productos-a article:hover {
-    transform: scale(1.03);
-    transition: transform 0.3s ease-in-out;
-    transform-origin: center center;
-}
 
 @media (min-width: 361px) {
     .article-container {
         width: 40%;
     }
+
     .categorias-populares article {
         width: 20%;
     }
+
     .ver-mas {
         margin-top: 100px;
     }
@@ -230,9 +251,26 @@ header {
         height: 400px;
         margin: 10px;
     }
+
     article {
         margin: 0 auto;
         width: 90%;
     }
-   
+
+    .categorias-populares {
+        display: flex;
+        justify-content: center;
+    }
+
+    .categorias-populares article {
+        display: flex;
+        border-radius: 100%;
+        width: 100px;
+        margin: 5px;
+    }
+
+    section {
+        width: 90%;
+        margin: 0 auto;
+    }
 }
