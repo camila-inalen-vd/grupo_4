@@ -40,7 +40,7 @@ section h1 {
     opacity: 0;
     transition: opacity 0.5s ease;
     z-index: -1;
-  }
+}
 
 .modalUno {
     position: fixed;
@@ -50,14 +50,11 @@ section h1 {
     width: 25%;
     background-color: white;
     border: 1px solid rgb(82, 82, 82);
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    z-index: -1;
-    padding: 15px;
     border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    padding: 15px;
     opacity: 0;
     transition: opacity 0.5s ease;
-    
 }
 
 .modalUno img {
@@ -67,7 +64,6 @@ section h1 {
 .modalUno h3 {
     font-size: 25px;
     text-align: center;
-
 }
 
 .modal-ver-mas {
@@ -80,8 +76,8 @@ section h1 {
     font-size: 25px;
     background-color: skyblue;
     border-radius: 5px;
-    
 }
+
 .modal-ver-mas:hover {
     background-color: rgb(85, 133, 152);
 }
@@ -94,10 +90,7 @@ article {
     box-shadow: 1px 3px 9px 2px rgba(0, 0, 0, 0.244);
 }
 
-.modalUno.mostrar {
-    opacity: 1;
-    z-index: 10;
-}
+.modalUno.mostrar,
 .overlay.mostrar {
     opacity: 1;
     z-index: 10;
@@ -169,7 +162,6 @@ article {
     display: none;
 }
 
-/* Carousel robado de internet */
 .carousel {
     position: relative;
     width: 100%;
@@ -193,15 +185,9 @@ article {
     min-width: 100%;
     box-sizing: border-box;
 }
-
-.fa-star, .fa-star-half-stroke {
-    color: rgb(52, 131, 250);
-}
-
 .bottom-header {
     background-color: rgba(0, 0, 0, 0.382);
 }
-
 
 @keyframes cambioDeSlide {
     0%, 100% { transform: translateX(0); }
@@ -213,9 +199,6 @@ header {
     position: absolute;
 }
 
-/* Fin del carousel robado de internet */
-
-/* Testing 2 */
 .productos-a article:hover {
     transform: scale(1.03);
     transition: transform 0.3s ease-in-out;
@@ -250,21 +233,5 @@ header {
         margin: 0 auto;
         width: 90%;
     }
-
-    .categorias-populares {
-        display: flex;
-        justify-content: center;
-    }
-
-    .categorias-populares article {
-        display: flex;
-        border-radius: 100%;
-        width: 100px;
-        margin: 5px;
-    }
-
-    section {
-        width: 90%;
-        margin: 0 auto;
-    }
+   
 }
