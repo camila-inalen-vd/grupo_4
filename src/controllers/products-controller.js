@@ -2,9 +2,9 @@ const path = require('path');
 const db = require("../../database/models")
 const { validationResult } = require('express-validator');
 const fs = require('fs');
+const { Op } = require('sequelize');
+
 const productsController = {
-
-
     productDetail: async (req, res) => {
         const productId = req.params.id;
         req.session.productosVistos
@@ -29,13 +29,47 @@ const productsController = {
 
     productList: async (req, res) => {
         try {
-            const productos = await db.Product.findAll({
+            let productos = await db.Product.findAll({
                 include: [
                     { association: 'color', attributes: ['name'] },
                     { association: 'brand', attributes: ['name'] }
                 ]
-            })
-            res.render('products/productList', { 'productos': productos })
+            });
+
+            if (req.query.searchBar) {
+                const productosBuscados = await db.Product.findAll({
+                    include: [
+                        { association: 'color', attributes: ['name'] },
+                        { association: 'brand', attributes: ['name'] },
+                        { association: 'size', attributes: ['number'] }
+                    ],
+                    where: {
+                        [Op.or]: [
+                            {
+                                name: {
+                                    [Op.like]: '%' + req.query.searchBar + '%'
+                                }
+                            },
+                            {
+                                '$brand.name$': { // Accede al nombre de la marca utilizando la relación 'brand'
+                                    [Op.like]: '%' + req.query.searchBar + '%'
+                                }
+                            }
+                        ]
+                    }
+                });
+
+                //Uso de $ en la Sintaxis de Sequelize: La razón por la que se utiliza $brand.name$ en la condición de búsqueda es porque estás accediendo al nombre de la marca a través de una relación (brand) entre las tablas Product y Brand. Al utilizar $brand.name$, le estás diciendo a Sequelize que busque el nombre de la marca a través de esta relación. Los signos de dólar $ se utilizan para indicar a Sequelize que se está accediendo a través de una relación.
+
+                // Combinar los productos buscados con los productos existentes
+                if (productosBuscados.length > 0) {
+                    productos = productosBuscados;
+                }
+            } else if (req.query.searchBar == "") {
+                res.redirect('list')
+            }
+
+            return res.render('products/productList', { productos });
         } catch (error) {
             res.send(error)
         }
