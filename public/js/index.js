@@ -28,4 +28,14 @@ if (window.innerWidth > 1024) {
             i = 0;
         }
     });
+    document.addEventListener('keydown', (e) => {
+        if (i === 1 && e.key === 'Escape') {
+            modalUno.classList.remove('mostrar');
+            overlay.classList.remove('mostrar');
+            i = 0;
+        }
+    });
+    
 }
+
+
