@@ -31,19 +31,19 @@ section h1 {
 }
 
 .overlay {
-    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
-    z-index: 1; /* Asegura que el fondo oscuro esté detrás del modal */
+    background-color: rgba(0, 0, 0, 0.665);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: -1;
   }
 
 .modalUno {
-    display: none;
-    position:fixed;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -52,9 +52,11 @@ section h1 {
     border: 1px solid rgb(82, 82, 82);
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    z-index: 10;
+    z-index: -1;
     padding: 15px;
     border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
     
 }
 
@@ -90,6 +92,15 @@ article {
     padding: 15px;
     border-radius: 15px;
     box-shadow: 1px 3px 9px 2px rgba(0, 0, 0, 0.244);
+}
+
+.modalUno.mostrar {
+    opacity: 1;
+    z-index: 10;
+}
+.overlay.mostrar {
+    opacity: 1;
+    z-index: 10;
 }
 
 .marcas {
@@ -185,19 +196,6 @@ article {
 
 .fa-star, .fa-star-half-stroke {
     color: rgb(52, 131, 250);
-}
-
-.ver-mas {
-    width: 40%;
-    margin-top: 20px;
-    padding: 5px;
-    border: solid 1px rgb(169, 169, 169);
-    background-color: rgba(43, 79, 146, 0.617);
-    color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    font-size: 20px;
-    border-radius: 43px 0 43px 0;
 }
 
 .bottom-header {
