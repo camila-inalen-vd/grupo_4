@@ -1,36 +1,36 @@
 <%-include('../partials/head.ejs', {title: 'Detalle del producto' , style: '/products/productDetail' })%>
 
     <body>
-
         <!--Header-->
         <%-include('../partials/header.ejs')%>
-
-            <div class="titulo-container">
+             <div class="titulo-container">
                 <h2>
-                    <a href=""> Volver al listado </a>
+                    <a href=""> VOLVER AL LISTADO  </a>
                 </h2>
     
-                <main>
-               <div>
-                    <article class="total-product-detail">
-                        <div class="producto">
-                            <div class="img-producto">
-                                <img src="/images/products/<%=producto ? producto.image : ''%>" alt="img-producto" />
+    <main>
+            <div>
+                 <article class="total-product-detail">
+                    <div class="producto">
+                    <div class="img-producto">
+                    <img src="/images/products/<%=producto ? producto.image : ''%>" alt="img-producto" />
 
-                                <div class="img-prod-peq">
-                                    <% if(producto.miniatura !="" && producto.miniatura !=undefined){ %>
-                                        <% for(let i=0; i < producto.miniatura.length; i ++) { %>
-                                            <img src="/images/products/miniaturas/<%=producto.miniatura[i]%>" alt="" />
-                                            <%}%>
-                                                <% } %>
-                                                    </div>
-                                                           </div>
-                                      </div>
+                    <div class="img-prod-peq">
+                    <% if(producto.miniatura !="" && producto.miniatura !=undefined){ %>
+                    <% for(let i=0; i < producto.miniatura.length; i ++) { %>
+                    <img src="/images/products/miniaturas/<%=producto.miniatura[i]%>" alt="" />
+                      <%}%>
+                    <% } %>
+                    </div>
+                    </div>
+                    </div>
+                 
+            </div>
             <!-- ---------------Informacion del producto---------------- -->
 
             <section class="caja-info-producto">
                 <div class="container-info-product">
-                    <div class="title-producto"> SALE </div>
+                    <div class="title-ofert"> SALE </div>
                     <div class="reputation-icon">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -53,22 +53,22 @@
                         <h4>
                             <%= producto.dues%> Cuotas
                         </h4>
-                     <!--    <i class="fa-solid fa-chevron-right"></i> -->
+                   <!--  <i class="fa-solid fa-chevron-right"></i> 
                     </div>
                     <div class="container-pago">
                         <h4> Ver medios de pago </h4>
-                     <!--    <i class="fa-solid fa-chevron-right"></i> -->
+                      <i class="fa-solid fa-chevron-right"></i> 
                     </div>
                     <div>
                         <div class="container-entrega">
                             <h4>Mas formas de entrega</h4>
-                         <!--    <i class="fa-solid fa-chevron-right"></i> -->
+                          <i class="fa-solid fa-chevron-right"></i> 
                         </div>
                         <div class="container-devolucion">
                             <h4>Devolucion gratis</h4>
-                         <!--    <i class="fa-solid fa-chevron-right"></i> -->
+                          <i class="fa-solid fa-chevron-right"></i> 
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="container-details-product">
                         <div class="form-group">
@@ -93,9 +93,9 @@
                                 <% }) %>
                             </select>
                         </div>
-                        <div>
+                        <!-- <div>
                             <button class="btn-clean">Limpiar</button>
-                        </div>
+                        </div> -->
 
                        
                      <div>
@@ -108,9 +108,9 @@
                     </div>
                     <div class="promo-disponible">
 
-                        <!--Un if para que solo aparezca cuando hay stock-->
+                        <% if (producto.stock) { %> <!--Un if para que solo aparezca cuando hay stock-->
                         <h4>¡Ultima disponible!</h4>
-                        <!--fin del if-->
+                        <% } %> <!--fin del if-->
 
                         <button class="btn-add-to-cart">
                             <!--Comprar ahora con if-->
@@ -119,9 +119,9 @@
                         </button>
                         <div>
                             <button class="btn-add-to-cart">
-                                <a href="">
+                        
                                     <i class=""></i>Agregar al carrito</button>
-                            </a>
+                    
                         </div>
                         <% } else { %>
                             <i class="fa-solid fa-plus"></i>SIN STOCK</button>
@@ -130,26 +130,22 @@
 
                     </div>
                 </div>
-            </section>
-
+            
+        </article>
           <!--   ------------Description de producto----------------------  -->
             <section class="description-text">
                 <div class="container-description">
                     <div class="title-description">
-                        <h4>Descripción</h4>
-                        
+                      <h4>Descripción</h4>
+                        <%= producto.description %>
                     <!--     <i class="fa-solid fa-chevron-down"></i> -->
                     </div>
                     <div class="text-description" style="display:none">
-                        <p>
-                            <%= producto.large_description %>
-                        </p>
-                    </div>
-
-
-                    <div class="container-additional-information">
+                        <p> <%= producto.large_description %> </p>
+            </div>
+                      <div class="container-additional-information">
                         <div class="title-additional-information">
-                            <h4>Especificaciones</h4>
+                          <h4>Especificaciones</h4> 
                             <!-- <i class="fa-solid fa-chevron-down"></i> -->
                         </div>
                         <div class="text-additional-information hidden">
@@ -175,12 +171,14 @@
                     </section>
                 </article>
             </div>
+        </section>
+    </article>
         </main>
             <!--   __________________Productos Relacionados_______________________ -->
 
 
             <div class="titulo-container">
-                <h2>Productos Relacionados |</h2>
+                <h2>Productos Relacionados</h2>
             </div>
             <section class="article-related">
                 <% for(let i=0; i < 4; i ++) {%>
