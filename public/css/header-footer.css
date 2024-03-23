@@ -49,6 +49,16 @@ header {
     padding: 5px;
     
 }
+
+.search-bar form {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+}
+
+.search-bar input::placeholder {
+    color: rgba(255, 255, 255, 0.758); 
+}
 /* Input de barra de búsqueda */
 .top-header2 input {
     padding: 5px;
@@ -175,7 +185,7 @@ justify-content: center;
 footer{
     background-color: rgb(0, 16, 29);
     padding: 15px;
-    margin-top: 5%;
+    margin-top: 10%;
 }
 
 footer h4 {

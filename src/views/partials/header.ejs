@@ -6,7 +6,7 @@
             <div class="burger-menu">
             <i class="fas fa-bars"></i>
         </div>
-        <div class="search-bar"><input type="text" placeholder="Buscar modelos o marcas..."><button ><i class="fa-solid fa-magnifying-glass"></i></button></div></div>
+        <div class="search-bar"><form action="/product/list" method="get"><input class="searchBar" name="searchBar" type="text" placeholder="Busca tu calzado favorito..."><button type="submit"></form><i class="fa-solid fa-magnifying-glass"></i></button></div></div>
         <div class="top-header3"><a href='/product/list'><!-- <button ><i class="fa-solid fa-magnifying-glass"></i></button> --></a><button><i class="fa-solid fa-location-dot"></i></button><a href="/product/cart"><button><i class="fa-solid fa-bag-shopping"></i></button></a></div>
     </div>
 
@@ -21,13 +21,12 @@
 
         <div class="nav-2">
             <ul>
-                <li><a href="#">Categorías</a></li>
-                <li><a href="#">Ofertas</a></li>
+                <li><a href="#marcas">Categorías</a></li>
+                <li><a href="#ofertas">Ofertas</a></li>
                 <!-- <li><a href="#">Historial</a></li> --> <!--Esto va a ir en la parte de usuarios loggeados-->
                 <li><a href="/product/list">Listado</a></li>
-                <li><a href="#">Moda</a></li>
                 <!-- <li><a href="#">Vender</a></li> --> <!--Esto tambien en la parte de usuarios loggeados-->
-                <li><a href="#">Ayuda</a></li>
+                <li><a href="/support">Ayuda</a></li>
             </ul>
         </div>
 

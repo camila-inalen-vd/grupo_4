@@ -4,7 +4,6 @@
 <body>
     <%- include("../partials/header.ejs") %>
 <div class="falsobody">
-    <!-- Carousel robado de internet, toca estudiar como hacerlo solitos o modificar más -->
 
     <!-- Fede -->
     <aside class="aside-left">
@@ -56,7 +55,7 @@
             </div>
             <div class="waist-class">
                 <div>
-                    <h2>Talle</h2>
+                    </a><h2>Talle</h2>
                 </div>
                 <div>
                     <p>38</p>
@@ -88,10 +87,11 @@
                     <h2>Marca</h2>
                 </div>
                 <div>
-                    <p>Topper</p>
+                    <!-- ejemplo de filtro marca, y esto mismo podemos usar para buscar por talle o colores si los incluimos en lo que se obtiene query del searchBar -->
+                    <a href="/product/list?searchBar=topper"><p>Topper</p></a> <!--Tenes que ponerle text-decoration: none; a los a de los filtros  de esta vista-->
                 </div>
                 <div>
-                    <p>Jaguar</p>
+                    <a href="/product/list?searchBar=jaguar"><p>Jaguar</p></a>
                 </div>
                 <div>
                     <p>New Balance</p>

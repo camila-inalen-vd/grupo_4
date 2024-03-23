@@ -33,20 +33,22 @@
     <!-- Se accede al json a través del controlador, se convierten los productos en objetos y se manipulan acá -->
     <main>
       <!-- Esta section también tiene su json a parte con marcas populares y es dinámica -->
-      <section class="categorias-populares">
+      <section id="marcas" class="categorias-populares">
         <div class="container-flex">
           <% brands.forEach(marca => { %>
           <article class="marcas">
+            <a href="product/list?searchBar=<%=marca.name%>">
             <div class="product-card">
               <img src="/images/brands/<%= marca.brand_image %>" alt="">
             </div>
           </article>
+          </a>
           <% }) %>
         </div>
       </section>
       
       <section class="productos-a">
-        <h1>OFERTAS</h1>
+        <h1 id="ofertas">OFERTAS</h1>
        
         <div class="container-flex">
           <!-- Implementada la lógica para que solo cargue productos que tengan el descuento mayor a 0 -->
@@ -128,6 +130,6 @@
     
     <!-- Footer -->
     <%- include('./partials/footer.ejs') %>
-    <script src="/js/index.js"></script>
+    <script src="/js/index/modals.js"></script>
   </body>
 </html>
