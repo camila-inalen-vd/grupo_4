@@ -36,7 +36,6 @@ const upload = multer({
 
 //Rutas
 router.get('/list', productsController.productList)
-router.get('/cart', authMiddleware, productsController.productCart)
 router.get('/detail/:id', productsController.productDetail)
 
 //Create
@@ -50,5 +49,11 @@ router.put('/:id/edit', upload.single('product-image'), productsController.editC
 //Eliminar
 router.get('/delete', authMiddleware, adminMiddleware, productsController.delete)
 router.delete('/delete', productsController.deleteConfig)
+
+//Carrito
+router.get('/cart', authMiddleware, productsController.productCart)
+router.post('/addToCart/:id', authMiddleware, productsController.addToCart)
+router.post('/removeOneFromCart/:id', authMiddleware, productsController.removeOneFromCart)
+router.delete('/removeFromCart/:id', authMiddleware, productsController.removeFromCart)
 
 module.exports = router;
