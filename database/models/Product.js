@@ -79,6 +79,11 @@ Product.associate = function(models){
     Product.hasMany(models.Product_color, {
         foreignKey: 'product_id',
         as: 'product'
+    });
+    Product.hasMany(models.Cart, {
+        as: "carts",
+        foreignKey: "product_id",
+        timestamps: false
     })
     
     }

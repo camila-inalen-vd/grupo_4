@@ -132,10 +132,10 @@
                                 <i class="fa-solid fa-plus"></i>Comprar ahora
                         </button>
                         <div>
-                            <button class="btn-add-to-cart">
-                        
-                                    <i class=""></i>Agregar al carrito</button>
-                    
+                            <form action="/product/addToCart/<%= producto.id %>" method="POST">
+                                    <button type="submit" class="btn-add-to-cart">Agregar al carrito</button>
+                            </form>
+
                         </div>
                         <% } else { %>
                             <i class="fa-solid fa-plus"></i>SIN STOCK</button>

@@ -79,9 +79,79 @@ const productsController = {
 
 
     //Me gustaria que le hagamos la logica con cookies y session si no vamos a hacerle la tabla a parte.
-    productCart: (req, res) => {
-        res.render('products/productCart', { 'productos': productos })
+    productCart: async (req, res) => {
+        let id = req.session.userLogged.id
+        let carts = await db.Cart.findAll({
+            where: {user_id: id},
+            include: {association: "product"}
+        })
+        res.render('products/productCart', {carts})
     },
+
+    addToCart: async (req, res) => {
+        let product = await db.Cart.findOne({
+            where: {
+                product_id: req.params.id, 
+                user_id : req.session.userLogged.id
+            }
+        })
+
+        if(!product){
+            await db.Cart.create({
+                user_id: req.session.userLogged.id,
+                product_id: req.params.id,
+                quantity: 1
+            });
+        } else {
+            await db.Cart.increment(
+                'quantity', 
+                { by: 1, where: { 
+                    product_id: req.params.id, 
+                    user_id : req.session.userLogged.id
+                }})
+        }
+
+        res.redirect('/product/cart');
+    },
+
+    removeOneFromCart: async (req, res) => {
+        let product = await db.Cart.findOne({
+            where: {
+                product_id: req.params.id, 
+                user_id : req.session.userLogged.id
+            }
+        })
+
+        if(product.quantity > 1){
+            await db.Cart.decrement(
+                'quantity', 
+                { by: 1, where: { 
+                    product_id: req.params.id, 
+                    user_id : req.session.userLogged.id
+                }})
+        } else {
+            await db.Cart.destroy({
+                where : {
+                    product_id: req.params.id, 
+                    user_id : req.session.userLogged.id
+                }
+            });
+        }
+
+        res.redirect('back')
+    },
+
+    removeFromCart: async (req, res) => {
+        await db.Cart.destroy({
+            where : {
+                product_id: req.params.id, 
+                user_id : req.session.userLogged.id
+            }
+        });
+
+        res.redirect('back')
+    },
+
     //Renderizacion de vista de crear producto (La idea es que esto solo lo vea un admin, lo vamos a lograr con la tabla de usuarios donde si es admin o no es un binario, session y cookies)
     create: async (req, res) => {
         try {

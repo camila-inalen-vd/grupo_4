@@ -3,7 +3,6 @@
     padding: 0;
     margin: 0;
 }
-
 body {
     background-color: #e2e2e2; 
 }
@@ -12,6 +11,7 @@ main{
     flex-wrap: wrap;
     max-width: 1200px;
     margin: auto;
+    min-height: 50vh;
 }
 section{
     display: flex;
@@ -20,6 +20,27 @@ section{
     margin: 20px auto;
     justify-content: center;
     align-content: flex-start;
+}
+.msg{
+    display: block;
+    text-align: center;
+    margin-top: 2.5rem;
+}
+.msg h2{
+    font-size: 2rem;
+}
+.msg div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(29, 52, 63);
+    border-radius: 5px;
+    width: 200px;
+    margin: 15px auto;
+}
+.msg div a{
+    color: white;
+    text-decoration: none;
 }
 .caja-producto{
     display: flex;
@@ -80,6 +101,16 @@ section input{
     margin-top: 15px;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
     transition: all 450ms;
+}
+.boton, .boton-eliminar{
+    margin: 0 0.3rem;
+    background-color: #e2e2e2;
+}
+.boton button{
+    width: 1.2rem;
+}
+.boton-eliminar button{
+    width: 3.8rem;
 }
 @media(min-width: 768px){
     section{
