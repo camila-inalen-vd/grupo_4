@@ -15,7 +15,8 @@ img {
 }
 
 /* Estilos del contenedor del título */
-.titulo-container{
+.titulo-container a:visited{
+    color: #8f8f8f;
     padding: 10px;
       
 }
@@ -45,17 +46,18 @@ img {
 }
 
 .img-producto img {
-    width: 80%;
-   /*  max-width: 100%;
+  /*  max-width: 80%; */
     height: auto;
-    margin-bottom: 10px; */
+    margin-top:10px ;
+    margin-bottom: 10px;
+    margin-left: auto;
 }
 
 /* Estilos de la información del producto */
-.caja-info-producto {
-   /*  width: 50%; */
+/* .caja-info-producto {
+    width: 50%; 
     padding: 0 20px;
-}
+} */
 
 .container-info-product {
   /*   border: 1px solid #ddd; */
@@ -285,6 +287,8 @@ h4 {
 .info-card .text-product h4 {
     font-size: 18px;
     margin-bottom: 5px;
+    border-top: 1px solid #c9c3c3;
+
 }
 
 .info-card .text-product .discount {
@@ -331,15 +335,14 @@ h4 {
 .container-precio,
 .container-cuotas {
     padding-bottom: 15px;
-    border-bottom: 1px solid #c9c3c3;
     font-size: 25px;
     font-weight: 300;
 }
 
 .container-info-product{
-    display: flex;
-    flex-direction: column;
-    /* width: 100%; */
+   /*  display: flex;
+    flex-direction: column; */
+    width: 100%;
 }
 /* .article-related {
     display: flex;
@@ -383,25 +386,29 @@ h4 {
    /*  margin: 10%;
     margin-bottom: 10px; */
 }
-/* .container-related-products img{
-    height: 358px;
-} */
-.article-related{
+.container-description{
+   margin-left: 20px;
+} 
+/* .article-related{
     display: flex;
     flex-wrap: wrap;
-}
+} */
 }
 @media(min-width:1024px){
 .caja-info-producto{
     width: 50%;
+    background-color: #ffffff;
 }
     main {
+       background-color: #ffffff;
        display: flex;
-       margin: 30px;
-       margin-left: 50px;
-       margin-right: -36px;
+       margin: 10%;
+       margin-top: 30px;
+       /* margin-left: 50px;
+       margin-right: -36px; */
     }
     .container-info-product{
+        margin: 10px;
         margin-right: 50px;
     }
    
@@ -418,9 +425,11 @@ h4 {
         width: 50%; */
     }
     .container-description{
+       /*  display: flex;
+        flex-direction: column;
+        align-items: stretch; */
         margin: 10px;
-        margin-left: -730px;
-        background-color: #f0f0f0;
+        background-color: #ffffff;
     }
     .img-banner{
         margin-bottom: -100px;

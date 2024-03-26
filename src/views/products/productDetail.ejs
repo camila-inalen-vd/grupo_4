@@ -1,11 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Include Head -->
 <%-include('../partials/head.ejs', {title: 'Detalle del producto' , style: '/products/productDetail' })%>
 
-    <body>
-        <!--Header-->
-        <%-include('../partials/header.ejs')%>
-             <div class="titulo-container">
-                <h2>
-                    <a href="/product/list"> VOLVER AL LISTADO  </a>
+<body>
+    <!--Header-->
+    <%-include('../partials/header.ejs')%>
+   <!-- /header -->
+
+ <!-- product detail -->
+    <div class="titulo-container">
+                <h2><li>
+                    <a href="/"> INICIO </a>
+                    </li>
+                    <li>
+                    <a href="/product/list"> IR AL LISTADO</a>
+                    </li>
                 </h2>
                 </div>
     
@@ -15,6 +25,9 @@
                     <div class="producto">
                     <div class="img-producto">
                     <img src="/images/products/<%=producto ? producto.image : ''%>" alt="img-producto" />
+
+
+                    
 
                     <div class="img-prod-peq">
                     <% if(producto.miniatura !="" && producto.miniatura !=undefined){ %>
