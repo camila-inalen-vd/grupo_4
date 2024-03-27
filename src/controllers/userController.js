@@ -93,6 +93,21 @@ const userController = {
         res.clearCookie('userEmail');
         req.session.destroy();
         return res.redirect('/');
+    },
+
+    list: async (req, res) => {
+        let users = await db.User.findAll();
+        res.render('user/list', {users})
+    },
+
+    deleteUser: async (req, res) => {
+        await db.User.destroy({
+            where : {
+                id : req.params.id
+            }
+        });
+
+        res.redirect('back')
     }
 }
 

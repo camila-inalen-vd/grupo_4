@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%-include('../partials/head.ejs', {title: 'Iniciar sesion', style: '/user/list'})%>
+<body>
+    <%-include('../partials/header.ejs')%>
+    <main>
+        <div class="title">
+            <h1>Usuarios</h1>
+        </div>
+        <% if (users.length > 0) {%>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>NOMBRE</th>
+                    <th>APELLIDO</th>
+                    <th>EMAIL</th>
+                    <th>ELIMINAR</th>
+                </tr>
+                <% users.forEach(user => { %>
+                    <tr>
+                        <th><%= user.id %></th>
+                        <td><%= user.name %></td>
+                        <td><%= user.last_name %></td>
+                        <td><%= user.email %></td>
+                        <td>
+                            <form action="/user/delete/<%= user.id %>?_method=DELETE" method="POST">
+                                <div>
+                                    <button type="submit" class="icon-button"><i class="fa-solid fa-trash"></i></button>
+                                </div>
+                            </form> 
+                        </td>
+                    </tr>
+                <% }) %>
+            </table>
+        <% } %>
+    </main>
+    <%-include('../partials/footer.ejs')%>
+</body>
+</html>
