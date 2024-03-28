@@ -48,6 +48,12 @@ article {
     box-shadow: 1px 3px 9px 2px rgba(0, 0, 0, 0.244);
 }
 
+article h3 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .productos-a article:hover {
     transform: scale(1.03);
     transition: transform 0.3s ease-in-out;
@@ -72,26 +78,28 @@ article {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 25%;
-    background-color: white;
+    background-color: #f5f5f5;
     border: 1px solid rgb(82, 82, 82);
     border-radius: 25px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.598);
     z-index: -1;
     padding: 15px;
     border-radius: 10px;
     opacity: 0;
     transition: opacity 0.5s ease;
+    border: solid 4px rgb(85, 133, 152);
 
 }
 
 .modalUno img {
     width: 100%;
+    border-radius: 15px; 
 }
 
 .modalUno h3 {
-    font-size: 25px;
+    font-size: 35px;
     text-align: center;
-
+    color: rgb(85, 133, 152);   
 }
 
 .modal-ver-mas {
@@ -161,7 +169,7 @@ article {
 }
 
 .product-detail {
-    border-top: solid 1px #f1e8b8;
+    border-top: solid 1px #a4a4a4;
     padding-top: 10px;
     margin-top: 10px;
     flex-wrap: wrap;

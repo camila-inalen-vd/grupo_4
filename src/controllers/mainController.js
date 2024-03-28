@@ -80,7 +80,7 @@ const mainController = {
 
     // Detalles del correo
     const mailOptions = {
-        from: email,
+        from:'camila.proyectointegrador@gmail.com',
         to: 'camila.proyectointegrador@gmail.com',
         subject: "Ayuda ShoesMarket",
         text: `Nombre: ${nombre}\nApellido: ${apellido}\nEmail: ${email}\nMensaje: ${mensaje}`

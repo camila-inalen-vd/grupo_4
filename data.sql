@@ -1,4 +1,4 @@
-/* Este codigo basicamente es para poblar las bases y tablas con informacion necesaria para hacer pruebas */
+np/* Este codigo basicamente es para poblar las bases y tablas con informacion necesaria para hacer pruebas */
 
 INSERT INTO brands
 (id,name,brand_image)
