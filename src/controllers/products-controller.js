@@ -76,8 +76,6 @@ const productsController = {
 
     },
 
-
-
     //Me gustaria que le hagamos la logica con cookies y session si no vamos a hacerle la tabla a parte.
     productCart: async (req, res) => {
         let id = req.session.userLogged.id

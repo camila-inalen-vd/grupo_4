@@ -6,236 +6,162 @@
 <body>
     <!--Header-->
     <%-include('../partials/header.ejs')%>
-   <!-- /header -->
 
  <!-- product detail -->
-    <div class="titulo-container">
-                <h2><li>
-                    <a href="/"> INICIO </a>
-                    </li>
-                    <li>
-                    <a href="/product/list"> IR AL LISTADO</a>
-                    </li>
-                </h2>
-                </div>
-    
-    <main>
-            <div>
-                 <article class="total-product-detail">
-                    <div class="producto">
-                    <div class="img-producto">
+             <div class="container-title">
+                 <a href="/">INICIO </a>
+                 <a href="/product/list">LISTADO </a>
+             </div>
+
+             <article class="Detail-product">
+                <div class="product">
+                 <div class="product-img">
                     <img src="/images/products/<%=producto ? producto.image : ''%>" alt="img-producto" />
-
-
-                    
-
-                    <div class="img-prod-peq">
-                    <% if(producto.miniatura !="" && producto.miniatura !=undefined){ %>
-                    <% for(let i=0; i < producto.miniatura.length; i ++) { %>
-                    <img src="/images/products/miniaturas/<%=producto.miniatura[i]%>" alt="" />
-                      <%}%>
-                    <% } %>
-                    </div>
-                    </div>
-                    </div>
-                 
-            </div>
-            <!-- ---------------Informacion del producto---------------- -->
-
-            <section class="caja-info-producto">
-                <div class="container-info-product">
-                    <div class="title-ofert"> SALE </div>
-                    <div class="reputation-icon">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star-half-stroke"></i>
-                        <a href="">
-                            <span>1</span>
-                            Reseñas
-                        </a>
-                    </div>
-                    <div class="nombre-producto">
-                        <%= producto.name %>
-                    </div>
-                    <div class="container-precio">
-                        <span>$ <%= producto.price.toLocaleString('es-ES')%></span>
-                        <!-- <i class="fa-solid fa-chevron-right"></i> -->
-                    </div>
-                    <div class="container-cuotas">
-                        <h4>
-                            <%= producto.dues%> Cuotas
-                        </h4>
-                   <!--  <i class="fa-solid fa-chevron-right"></i> 
-                    </div>
-                    <div class="container-pago">
-                        <h4> Ver medios de pago </h4>
-                      <i class="fa-solid fa-chevron-right"></i> 
-                    </div>
-                    <div>
-                        <div class="container-entrega">
-                            <h4>Mas formas de entrega</h4>
-                          <i class="fa-solid fa-chevron-right"></i> 
-                        </div>
-                        <div class="container-devolucion">
-                            <h4>Devolucion gratis</h4>
-                          <i class="fa-solid fa-chevron-right"></i> 
-                        </div>
-                    </div> -->
-
-                    <div class="container-details-product">
-                        <div class="form-group">
-                            <label for="colour">Color</label>
-                            <select name="colour" id="colour">
-                                <option disabled selected value="">
-                                    Elige una opción
-                                </option>
-                                <% producto.color.forEach(colores => { %>
-                                    <option value=""><%= colores.name %></option>
-                                <% }) %>
-                            </select>
-                        </div>
-
-                        <div class="form-group"><label for="size">Talle Arg: </label>
-                            <select name="size" id="size">
-                                <option disabled selected value="">
-                                    Elige una opción
-                                </option>
-                                <% producto.size.forEach(talle => { %>
-                                    <option value=""><%= talle.number %></option>
-                                <% }) %>
-                            </select>
-                        </div>
-                        <!-- <div>
-                            <button class="btn-clean">Limpiar</button>
-                        </div> -->
-
-                       
-                     <div>
-                             <form action="/product/<%= producto.id %>/edit" method="GET">
-                                <button class="btn-edit"type="submit">Editar producto</button>
-                       </form> 
-                           
-                          </div>  
-
-                    </div>
-                    <div class="promo-disponible">
-
-                        <% if (producto.stock) { %> <!--Un if para que solo aparezca cuando hay stock-->
-                        <h4>¡Ultima disponible!</h4>
-                        <% } %> <!--fin del if-->
-
-                        <button class="btn-add-to-cart">
-                            <!--Comprar ahora con if-->
-                            <% if(producto.stock> 0) {%>
-                                <i class="fa-solid fa-plus"></i>Comprar ahora
-                        </button>
-                        <div>
-                            <form action="/product/addToCart/<%= producto.id %>" method="POST">
-                                    <button type="submit" class="btn-add-to-cart">Agregar al carrito</button>
-                            </form>
-
-                        </div>
-                        <% } else { %>
-                            <i class="fa-solid fa-plus"></i>SIN STOCK</button>
-                            <% } %>
-                           
-
-                    </div>
-                </div>
-            
-        </article>
-          <!--   ------------Description de producto----------------------  -->
-            <section class="description-text">
+                 </div>
                 <div class="container-description">
-                    <div class="title-description">
-                      <h4>Descripción</h4>
-                        <%= producto.description %>
-                    <!--     <i class="fa-solid fa-chevron-down"></i> -->
-                    </div>
-                    <div class="text-description" style="display:none">
-                        <p> <%= producto.large_description %> </p>
-            </div>
-                      <div class="container-additional-information">
+                    <p class="title-description">
+                    <%= producto.description %>
+                    </p>
+                    <div class="container-additional-information">
                         <div class="title-additional-information">
-                          <h4>Especificaciones</h4> 
-                            <!-- <i class="fa-solid fa-chevron-down"></i> -->
-                        </div>
-                        <div class="text-additional-information hidden">
-                            <ul>
+                            <h4>ESPECIFICACIÓNES</h4>
+                            <ul class="text-additional">
                                 <li>Capellada: <%= producto.upper %>.</li>
                                 <li>Forro: <%= producto.cover %>.</li>
                                 <li>Suela: <%= producto.sole %>.</li>
                                 <li>Origen: <%= producto.origin %>.</li>
                             </ul>
                         </div>
+                   </div>
+            </div>
+            </div>
+        <section class="container-info-detail">
+           <div class="info-product">
+              <div class="title-ofert"> SALE </div>
+              <div class="product-name">
+              <h4><%= producto.name %> </h4>
+              </div>
+             <div class="reputation-icon">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+                <a href=""><span>3</span> RESEÑAS</a>
+            </div> 
+                <div class="container-pri-due-dev">
+                    <p class="container-price">
+                       <span>$ <%= producto.price.toLocaleString('es-ES')%></span>
+                    </p>
+                   <p class="container-dues">
+                        PAGÁ EN  <%= producto.dues%> CUOTAS
+                    </p>
+                  <p class="free-return">
+                        DEVOLUCIÓN GRATIS
+                    </p>
+                </div>
 
-                        <div class="container-social">
-                            <span>Compartir</span>
+                <div class="container-form-group">
+                    <div class="form-group">
+                        <label for="colour">COLOR</label>
+                           <select name="colour" id="colour">
+                                <option disabled selected value="">
+                                    ELIGE UNA OPCIÓN
+                                </option>
+                                  <% producto.color.forEach(colores => { %>
+                                <option value=""><%= colores.name %></option>
+                                  <% }) %>
+                           </select>
+                   </div>
+
+                            <div class="form-group"><label for="size">TALLE </label>
+                                <select name="size" id="size">
+                                   <option disabled selected value="">
+                                         ELIGE UNA OPCIÓN
+                                   </option>
+                                       <% producto.size.forEach(talle => { %>
+                                   <option value=""><%= talle.number %></option>
+                                       <% }) %>
+                               </select>
+                           </div>
+            </div>
+                 <div class="containers-buttons">
+                    <button class="btn-add-to-cart">
+                <!--Comprar ahora con if-->
+                        <% if(producto.stock> 0) {%>
+                            <p>COMPRAR AHORA</p>
+                    </button>
+                    <% } %>
+                    <form action="/product/addToCart/<%= producto.id %>" method="POST">
+                        <button type="submit" class="btn-add-to-cart">AGREGAR AL CARRITO</button>
+                   </form>
+                 
+                    <form action="/product/<%= producto.id %>/edit" method="GET">
+                        <button class="btn-edit"type="submit">EDITAR PRODUCTO</button>
+                    </form> 
+                    <form action="/product/<%= producto.id %>/delete" method="GET">
+                        <button class="btn-delete"type="submit">ELIMINAR PRODUCTO</button>
+                    </form> 
+                 
+                </div>
+                    <div class="last-product">
+                      <% if(producto.stock) { %>
+                      <h4>¡ÚLTIMA DISPONIBLE!</h4>
+                      <% }else { %>
+                      <i class="fa-solid-fa-plus"></i>SIN STOCK</button>
+                      <% } %>
+                    </div>
+                </div>
+           </div>
+        </section>
+        </article>
+         <!--   __________________Productos Relacionados_______________________ -->
+
+                       <div class="container-title-2">
+                      <p> TE PUEDE INTERESAR </hp>
+                    </div>
+
+             <article class="articles-related">
+                <% for(let i=0; i < 4; i ++) {%>
+                    <div class="container-article-related">
+                       <div class="product-card">
+                        <div class="img-card">
+                            <img src="/images/products/<%=producto.image %>" alt="product-1"/>
+                        </div>
+                    <div class="info-card">
+                        <div class="text-product">
+                            <h4><% producto.name %></h4>
+                              <p class="discount">
+                                 <%=producto.discount%> % OFF
+                              </p>
+                              <p class="description">
+                                <%=producto.description%>
+                             </p>
+                             <p class="precio">$ <%=producto.price%>
+                        </div>
+                    </div>
+                      </div>
+                          </div>
+                                <% } %>
+             </article>
+
+                <section class="container-social">
+                     <span>COMPARTIR</span>
                             <div class="container-buttons-social">
                                 <a href="#"><i class="fa-solid fa-envelope"></i></a>
                                 <a href="#"><i class="fa-brands fa-facebook"></i></a>
                                 <a href="#"><i class="fa-brands fa-twitter"></i></a>
                                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
                                 <a href="#"><i class="fa-brands fa-pinterest"></i></a>
-                              </div>
                             </div>
-                        </div>
-                    </section>
-                </article>
-            </div>
-        </section>
-    </article>
-        </main>
-            <!--   __________________Productos Relacionados_______________________ -->
+                </section>
 
-
-            <div class="titulo-container2">
-                <h2>Productos Relacionados</h2>
-            </div>
-            <section class="article-related">
-                <% for(let i=0; i < 4; i ++) {%>
-                    <div class="container-related-products">
-                        <div class="card-list-products">
-                            <div class="card">
-                                <div class="img-card">
-                                    <img src="/images/products/<%=producto.image %>" alt="product-1" />
-                                </div>
-                                <div class="info-card">
-                                    <div class="text-product">
-                                        <h4>
-                                            <%=producto.name%>
-                                        </h4>
-                                        <div class="discount">
-                                            <%=producto.discount%> % OFF
-                                        </div>
-                                        <p class="description">
-                                            <%=producto.description%>
-                                        </p>
-                                    </div>
-                                    <p class="precio">$ <%=producto.price%>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <% } %>
-            </section>
-
-            <article>
-                <div class="img-banner">
+                <section class="banner-img">
                     <img src="/images/Banner-prodDetail/banner-card.jpg" alt="" />
-                </div>
-            </article>
-            </div>
+                </section>
 
+<%-include('../partials/footer.ejs') %>
 
+</body>
+</html>
 
-
-            <%-include('../partials/footer.ejs') %>
-
-    </body>
-
-
-    </html>
