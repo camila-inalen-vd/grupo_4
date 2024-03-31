@@ -1,4 +1,3 @@
-np/* Este codigo basicamente es para poblar las bases y tablas con informacion necesaria para hacer pruebas */
 
 INSERT INTO brands
 (id,name,brand_image)
@@ -77,7 +76,7 @@ INSERT INTO sizes
 (id,number)
 VALUES (1,35),(2,36),(3,37),(4,38),(5,39),(6,40),(7,41),(8,42),(9,43),(10,44);
 
-INSERT INTO shoesmarket.products
+INSERT INTO products
 (id, name, price, dues, discount, stock, description, large_description, upper, cover, sole, origin, brand_id, image)
 VALUES
 (1, 'ZAPATILLAS RUNNING NIKE AIR ZOOM PEGASUS 39', 209999, 3, 20, 23, 'Que tus pies te lleven a nuevos lugares con Nike.', 'El running es tu ritual diario, y cada pisada te acerca a tus objetivos personales.Las NIKE Air Zoom Pegasus 39 te hacen llegar a nuevas alturas al entrenar y correr con su diseño intuitivo. Son más ligeras en la parte superior que las Pegasus 38 e ideales para cualquier temporada, ofrecen sujeción y contención, y la amortiguación de la planta del pie combinada con unidades Zoom Air dobles (1 más que en las Peg 38) aportan un toque adicional a cada pisada. Vuelve un modelo todoterreno con alas.', 'Téxtil, Poliéster, Cuero Vacuno Descarne', 'Téxtil, Poliéster', 'Goma', 'Argentina', 2, 'img-related-1.jpg'),
