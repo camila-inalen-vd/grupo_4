@@ -12,8 +12,8 @@ if (window.innerWidth > 1024) {
                 let rutaRelativa = imagen.substring(imagen.indexOf('/images')); // En esto me ayudó ChatGPT, ya que con .src obtenía la ruta absoluta y no me servía. Básicamente me devuelve el string desde donde empieza la palabra '/images' gracias al indexOf dentro del substring. Substring te deja darle un parametro de inicio y de corte. Si solo le das un indice desde donde empezar, te devuelve desde donde empieza ese índice hasta el final del string. 
                 modalUno.innerHTML += "<img src=" + rutaRelativa + "></img>";
                 modalUno.innerHTML += "<h3>" + tarjeta.querySelector("h3").innerHTML + "</h3><br>";
-                modalUno.innerHTML += "<p><hr><br>" + tarjeta.querySelector('.descripcion-larga').innerHTML + "</p><br>";
-                modalUno.innerHTML += '<a class="modal-ver-mas" href="/product/detail/' + tarjeta.querySelector(".id-producto").innerHTML + '">Detalle</a>';
+                modalUno.innerHTML += "<p>" + tarjeta.querySelector('.descripcion-larga').innerHTML + "</p><br>";
+                modalUno.innerHTML += '<a class="modal-ver-mas" href="/product/detail/' + tarjeta.querySelector(".id-producto").innerHTML + '">Ver más</a>';
                 modalUno.classList.add('mostrar'); //Le añado la clase mostrar para que se ejecute la animación mostrar y aparezca progresivamente, cambiando su opacidad a 1. Se logró con opacity y transition.
                 overlay.classList.add('mostrar'); //Lo mismo que arriba.
                 i = 1;

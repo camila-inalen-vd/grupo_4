@@ -102,6 +102,14 @@ article h3 {
     color: rgb(85, 133, 152);   
 }
 
+.modalUno p {
+    max-height: calc(1.2em * 7); 
+    overflow: scroll;
+    text-overflow: ellipsis;
+    white-space: pre-line;
+}
+
+
 .modal-ver-mas {
     display: block;
     text-align: center;
