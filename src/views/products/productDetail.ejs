@@ -86,23 +86,23 @@
                            </div>
             </div>
                  <div class="containers-buttons">
+                    <!--Comprar ahora con if--> 
+                    <% if(producto.stock > 0) {%>
                     <button class="btn-add-to-cart">
-                <!--Comprar ahora con if-->
-                        <% if(producto.stock> 0) {%>
-                            <p>COMPRAR AHORA</p>
+                   <p>COMPRAR AHORA</p>
                     </button>
-                    <% } %>
                     <form action="/product/addToCart/<%= producto.id %>" method="POST">
                         <button type="submit" class="btn-add-to-cart">AGREGAR AL CARRITO</button>
                    </form>
-                 
+                   <% } %>
+                 <% if(isLogged && userLogged.admin === 1) {%>
                     <form action="/product/<%= producto.id %>/edit" method="GET">
                         <button class="btn-edit"type="submit">EDITAR PRODUCTO</button>
                     </form> 
                     <form action="/product/<%= producto.id %>/delete" method="GET">
                         <button class="btn-delete"type="submit">ELIMINAR PRODUCTO</button>
                     </form> 
-                 
+                 <% } %>
                 </div>
                     <div class="last-product">
                       <% if(producto.stock) { %>
@@ -122,27 +122,27 @@
                     </div>
 
              <article class="articles-related">
-                <% for(let i=0; i < 4; i ++) {%>
+                <% interes.forEach(productoI => { %>
                     <div class="container-article-related">
                        <div class="product-card">
                         <div class="img-card">
-                            <img src="/images/products/<%=producto.image %>" alt="product-1"/>
+                            <img src="/images/products/<%=productoI.image %>" alt="product-1"/>
                         </div>
                     <div class="info-card">
                         <div class="text-product">
-                            <h4><%= producto.name %></h4>
+                            <h4><%= productoI.name %></h4>
                               <p class="discount">
-                                 <%=producto.discount%> % OFF
+                                 <%=productoI.discount%> % OFF
                               </p>
                               <p class="description">
-                                <%=producto.description%>
+                                <%=productoI.description%>
                              </p>
-                             <p class="precio">$ <%=producto.price%>
+                             <p class="precio">$ <%=productoI.price%>
                         </div>
                     </div>
                       </div>
                           </div>
-                                <% } %>
+                    <% }) %>
              </article>
 
                 <section class="container-social">

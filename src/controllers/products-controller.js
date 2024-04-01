@@ -21,7 +21,17 @@ const productsController = {
                 ]
             });
 
-            res.render("products/productDetail", { producto });
+            let interes = await db.Product.findAll({
+                include: [
+                    { association: 'brand', attributes: ['name', 'brand_image'] }
+                ],
+                order: [
+                    ['id', 'DESC']
+                ],
+                limit: 4
+            });
+    
+            res.render("products/productDetail", { producto, interes});
         } catch (error) {
             res.send(error);
         }
