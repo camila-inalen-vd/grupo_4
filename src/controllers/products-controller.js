@@ -52,7 +52,7 @@ const productsController = {
                         { association: 'color', attributes: ['name'] },
                         { association: 'brand', attributes: ['name'] },
                         { association: 'size', attributes: ['number'] }
-                    ],
+                    ], 
                     where: {
                         [Op.or]: [
                             {
