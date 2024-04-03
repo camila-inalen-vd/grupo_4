@@ -6,6 +6,8 @@ const cookieParser = require('cookie-parser');
 const methodOverride = require('method-override');
 app.use(methodOverride('_method'));
 const userLoggedMiddleware = require('./middlewares/global/userLoggedMiddleware.js')
+const apiRoutes = require('./routes/apiRoutes.js')
+const cors = require('cors');
 
 //Guardamos la dirección de la carpeta public con path.
 const publicPath = path.resolve(__dirname, '../public')
@@ -25,6 +27,8 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 app.use(cookieParser());
 app.use(userLoggedMiddleware);
+// Habilitar CORS para todas las solicitudes
+app.use(cors());
 
 
 //Carpeta views y public.
@@ -40,7 +44,8 @@ app.use('/', mainRoutes);
 app.use('/product', productRoutes)
 //Rutas login y register
 app.use('/user', userRoutes)
-
+//Rutas apis
+app.use('/', apiRoutes)
 //Error 404, página no encontrada.
 app.use((req, res, next) => {
     res.status(404).render('errors/404-page');
@@ -48,7 +53,7 @@ app.use((req, res, next) => {
 });
 
 //Arranque del servidor (Lo tiré abajo de todo para evitar errores al leerse antes que otras ejecuciones)
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 app.listen(`${port}`, () => {
     console.log(`Servidor corriendo en http://localhost:${port}`);
 })
