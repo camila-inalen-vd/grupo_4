@@ -21,7 +21,7 @@ const productsController = {
                 ]
             });
 
-            let interes = await db.Product.findAll({
+             interes = await db.Product.findAll({
                 include: [
                     { association: 'brand', attributes: ['name', 'brand_image'] }
                 ],
