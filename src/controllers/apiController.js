@@ -58,6 +58,6 @@ getAllBrands: async (req, res) => {
             });
     } catch (error) {
         res.json('Hubo un error al obtener las marcas')
-    }
+    }   
 }
 };
