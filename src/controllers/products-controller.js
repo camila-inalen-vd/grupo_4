@@ -299,14 +299,24 @@ const productsController = {
     },
 
     //Esta es la config del delete. Deberiamos usar el metodo destroy con un where donde como condicion ponemos la ID que pasamos por form (req.body.idDelete) (si o si el where va o sino borran todos los registros)
-    deleteConfig: (req, res) => {
-        db.Product.destroy({
-            where: {
-                id: req.body.idDelete
-            }
-        })
-        res.redirect('/product/list')
 
+    Adminlist: async (req, res) => {
+        let products = await db.Product.findAll({
+                include: [
+                    { association: 'brand', attributes: ['name', 'brand_image'] }
+                ]
+            });
+        res.render('products/admin-products', {products})
+    },
+
+    deleteProduct: async (req, res) => {
+        await db.Product.destroy({
+            where : {
+                id : req.params.id
+            }
+        });
+
+        res.redirect('back')
     }
 
 }

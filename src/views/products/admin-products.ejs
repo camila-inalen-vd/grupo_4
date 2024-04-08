@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%-include('../partials/head.ejs', {title: 'Administración de productos', style: '/user/list'})%>
+<body>
+    <%-include('../partials/header.ejs')%>
+    <main>
+        <div class="title">
+            <h1>Productos</h1>
+        </div>
+        <% if (products.length > 0) {%>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>NOMBRE</th>
+                    <th>PRECIO</th>
+                    <th>MARCA</th>
+                    <th>EDITAR</th>
+                    <th>ELIMINAR</th>
+                </tr>
+                <% products.forEach(product => { %>
+                    <tr>
+                        <th><%= product.id %></th>
+                        <td><%= product.name %></td>
+                        <td><%= "$" + product.price.toLocaleString('es-ES') %></td>
+                        <td><%= product.brand.name %></td>
+                        <td>
+                            <form action="<%= product.id%>/edit" method="GET">
+                                <div>
+                                    <button type="submit" class="icon-button"><i class="fa-solid fa-edit"></i></button>
+                                </div>
+                            </form> 
+                        </td>
+                        <td>
+                            <form action="/product/delete/<%= product.id %>?_method=DELETE" method="POST">
+                                <div>
+                                    <button type="submit" class="icon-button"><i class="fa-solid fa-trash"></i></button>
+                                </div>
+                            </form> 
+                        </td>
+                    </tr>
+                <% }) %>
+            </table>
+        <% } %>
+    </main>
+    <%-include('../partials/footer.ejs')%>
+</body>
+</html>

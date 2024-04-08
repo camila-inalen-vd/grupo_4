@@ -33,16 +33,24 @@
         <div class="nav-3" >
             <ul>
                     <% if(locals.isLogged) { %>
-                        <li><a href="/user/logout">Cerrar sesion</a></li>                
-                        <li><a href="/user/profile">Perfil</a></li>  
+                         <li class="dropdown">
+                <a href="#" class="dropdown-boton">Perfil</a>
+                <ul class="dropdown-contenido">
+                    <li><a href="/user/profile">Mi Perfil</a></li>
+                    <% if(isLogged && userLogged.admin === 1) {%>
+                        <li><a href="/product/create">Crear Producto</a></li>
+                        <li><a href="/product/adminproduct">Administrar productos</a></li>
+                        <li><a href="/user/list">Administrar usuarios</a></li>
+                    <% } %>
+                </ul>
+            </li>
+                        <li><a href="/user/logout">Cerrar sesion</a></li>                 
+                        
                     <% } else { %>
                         <li><a href="/user/login">Ingresa</a></li>
                         <li><a href="/user/register">Crea tu cuenta</a></li>
                     <% } %>
-                    <% if(isLogged && userLogged.admin === 1) {%>
-                        <li><a href="/product/create">Crear Prod.</a></li>
-                        <li><a href="/product/delete">Eliminar Prod.</a></li>
-                    <% } %>
+
             </ul>
         </div>
         </nav>  

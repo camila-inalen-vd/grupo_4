@@ -98,6 +98,10 @@ header {
     padding: 10px;
     background-color: rgb(29, 52, 63);
 }
+nav ul li {
+    display: inline-block;
+    position: relative; /* Necesario para posicionar el dropdown */
+  }
 
 /*Haciendo flex el nav*/
 nav {
@@ -181,7 +185,53 @@ justify-content: center;
     margin-bottom: 10px;
     margin-top: 10px;
 }
+/* Contenido del dropdown */
+.dropdown-contenido {
+    display: none;
+    width: 180px;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 5px;
+    margin-top: 0;
+    border-radius: 5px;
+}
 
+/* Enlaces dentro del dropdown */
+.dropdown-contenido a {
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Cambia el color de fondo de letra del dropdown cuando pasas el mouse por arriba */
+.dropdown-contenido a:hover {
+    color: rgb(0, 162, 255);
+}
+
+/* Muestra el contenido del dropdown cuando pasas el mouse sobre el enlace "Perfil" */
+.nav-3 .dropdown:hover .dropdown-contenido {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    left: auto; /* Para que no se salga de la pantalla */
+}
+
+/* Estilo para el botón del dropdown */
+.nav-3 .dropdown .dropdown-boton {
+    display: inline-block;
+}
+
+/* Estilos para los li del dropdown */
+.dropdown-contenido li {
+    list-style-type: none;
+}
+
+/* Estilos del footer */
 footer{
     background-color: rgb(0, 16, 29);
     padding: 15px;
