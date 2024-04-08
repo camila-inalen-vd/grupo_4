@@ -316,7 +316,8 @@ const productsController = {
             }
         });
 
-        res.redirect('back')
+
+        res.render('/');
     }
 
 }
