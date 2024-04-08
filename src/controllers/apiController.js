@@ -59,5 +59,42 @@ getAllBrands: async (req, res) => {
     } catch (error) {
         res.json('Hubo un error al obtener las marcas')
     }   
+},
+getAllUsers: async (req, res) => {
+    try {
+        const users = await db.User.findAll();
+        const count = users.length;
+        let usersToReturn = [];
+
+        users.forEach(user => {
+            usersToReturn.push({
+                id: user.id,
+                name: user.name,
+                lastName: user.last_name,
+                email: user.email
+            })
+        });
+
+        return res.json({
+            count: count,
+            data: usersToReturn
+        })
+    } catch (error) {
+        res.json("Hubo un error al obtener los usuarios")
+    }
+},
+getOneUser: async (req, res) => {
+    try {
+        const user = await db.User.findByPk(req.params.id)
+        res.json({
+            id: user.id,
+            name: user.name,
+            lastName: user.last_name,
+            email: user.email,
+            image: user.image
+        })
+    } catch (error) {
+        res.json("Hubo un error al obtener al usuario")
+    }
 }
 };
