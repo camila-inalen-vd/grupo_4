@@ -30,6 +30,8 @@
     </div>
   
     <!-- Comienzo del main y sus productos -->
+
+    
     <!-- Se accede al json a través del controlador, se convierten los productos en objetos y se manipulan acá -->
     <main>
       <!-- Esta section también tiene su json a parte con marcas populares y es dinámica -->
@@ -65,7 +67,7 @@
                     <p class="descripcion-larga" style='display:none;'><%= offers[i].large_description%></p>
                     <h3><%= offers[i].name %></h3>
                   </div>
-                  <img src="/images/brands/<%=offers[i].brand.brand_image%>" alt="" style="width: 75px;">
+                  <img src="/images/brands/<%=offers[i].brand.brand_image%>" alt="" style="width: 70px; text-align: left;">
                 </div>
             </article>
           </div>
