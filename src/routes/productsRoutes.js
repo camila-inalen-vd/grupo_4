@@ -39,7 +39,7 @@ router.get('/list', productsController.productList)
 router.get('/detail/:id', productsController.productDetail)
 
 //Create
-router.get('/create', authMiddleware, adminMiddleware, productsController.create)
+router.get('/create', productsController.create)
 router.post('/create', upload.single('product-image'),  createValidator, productsController.createConfig);
 
 //Editar
