@@ -4,18 +4,18 @@ window.addEventListener("load", () => {
         let errors = false
 
         // Validación del campo Nombre
-        let name = document.querySelector("#nombre");
-        let nameErrorMsg;
-        if (name.value.trim() === "") {
-            nameErrorMsg = "Este campo no puede estar vacío";
+        let nombre = document.querySelector("#nombre");
+        let nombreErrorMsg;
+        if (nombre.value.trim() === "") {
+            nombreErrorMsg = "Ingresa un nombre";
             errors = true;
         }
 
         // Validación del campo Marca
-        let brand = document.querySelector("#marca");
-        let brandErrorMsg;
-        if (brand.value.trim() === "") {
-            brandErrorMsg = "Selecciona una marca";
+        let marca = document.querySelector("#marca");
+        let marcaErrorMsg;
+        if (marca.value.trim() === "") {
+            marcaErrorMsg = "Selecciona una marca";
             errors = true;
         }
 
@@ -126,13 +126,13 @@ window.addEventListener("load", () => {
 
         if(errors){
             event.preventDefault();
-            if (nameErrorMsg) {
-                let nameErrorP = document.querySelector("p.nombreError");
-                nameErrorP.innerHTML = nameErrorMsg;
+            if (nombreErrorMsg) {
+                let nombreErrorP = document.querySelector("p.nombreError");
+                nombreErrorP.innerHTML = nombreErrorMsg;
             }
-            if (brandErrorMsg) {
-                let brandErrorP = document.querySelector("p.marcaError");
-                brandErrorP.innerHTML = brandErrorMsg;
+            if (marcaErrorMsg) {
+                let marcaErrorP = document.querySelector("p.marcaError");
+                marcaErrorP.innerHTML = marcaErrorMsg;
             }
             if (precioErrorMsg) {
                 let precioErrorP = document.querySelector("p.precioError");
