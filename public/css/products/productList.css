@@ -2,7 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: roboto, Raleway, popin;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 body{
@@ -15,6 +17,16 @@ body{
 
 .aside-left{    
     display: none;
+}
+
+.aside-left a{    
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+.aside-left a:hover{    
+    color:rgb(52, 131, 250);
 }
 
 .section-right{   

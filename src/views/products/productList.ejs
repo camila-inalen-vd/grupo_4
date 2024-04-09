@@ -1,6 +1,9 @@
 <!DOCTYPE html>  
 <html lang="en">
     <%- include("../partials/head.ejs", {title: "Listado de producto", style: "/products/productList"}) %>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 <body>
     <%- include("../partials/header.ejs") %>
 <div class="falsobody">
@@ -38,19 +41,18 @@
             </div>
             <div class="gender-class">
                 <div>
-                    <h2>Género</h2>
+                    <h2>Precio</h2>
                 </div>
                 <div>
-                    <p>Hombre</p>
-                </div>
-                <div>
-                    <p>Mujer</p>
-                </div>
-                <div>
-                    <p>Niños</p>
-                </div>
-                <div>
-                    <p>Niñas</p>
+                    <form action="/product/list" method="get">
+                        <p>
+                            <input type="number" name="precioUno">
+                        </p>
+                        <p>
+                            <input type="number" name="precioDos">
+                        </p>
+                        <button type="submit">Enviar</button>
+                    </form>
                 </div>
             </div>
             <div class="waist-class">
@@ -58,28 +60,12 @@
                     </a><h2>Talle</h2>
                 </div>
                 <div>
-                    <p>38</p>
-                </div>
-                <div>
-                    <p>39</p>
-                </div>
-                <div>
-                    <p>39.5</p>
-                </div>
-                <div>
-                    <p>40</p>
-                </div>
-                <div>
-                    <p>41</p>
-                </div>
-                <div>
-                    <p>42</p>
-                </div>
-                <div>
-                    <p>43</p>
-                </div>
-                <div>
-                    <p>44</p>
+                    <form action="/product/list" method="get">
+                        <p>
+                            <input type="number" name="talleUno">
+                        </p>
+                        <button type="submit">Enviar</button>
+                    </form>
                 </div>
             </div>
             <div class="brand-class-aside">
@@ -130,35 +116,33 @@
                     <a href="/product/list?searchBar=wilson"><p>Wilson</p></a>
                 </div>
             </div>
-            <div class="condition-class">
-                <div>
-                    <h2>Condicion</h2>
-                </div>
-                <div>
-                    <p>Nuevo</p>
-                </div>
-                <div>
-                    <p>Usado</p>
-                </div>
-            </div>
             <div class="location-class">
                 <div>
-                    <h2>Ubicación</h2>
+                    <h2>Origen</h2>
                 </div>
                 <div>
-                    <p>Capital Federal</p>
+                    <a href="/product/list?searchBar=argentina"><p>Argentina</p></a>
                 </div>
                 <div>
-                    <p>Bs.As G.B.A Sur</p>
+                    <a href="/product/list?searchBar=españa"><p>España</p></a>
                 </div>
                 <div>
-                    <p>Bs.As G.B.A Norte</p>
+                    <a href="/product/list?searchBar=italia"><p>Italia</p></a>
                 </div>
                 <div>
-                    <p>Bs.As G.B.A Oeste</p>
+                    <a href="/product/list?searchBar=estados+unidos"><p>Estados Unidos</p></a>
                 </div>
-                <div class="class-show-more">
-                    <p>Mostrar más</p>
+                <div>
+                    <a href="/product/list?searchBar=alemania"><p>Alemania</p></a>
+                </div>
+                <div>
+                    <a href="/product/list?searchBar=china"><p>China</p></a>
+                </div>
+                <div>
+                    <a href="/product/list?searchBar=uruguay"><p>Uruguay</p></a>
+                </div>
+                <div>
+                    <a href="/product/list?searchBar=indonesia"><p>Indonesia</p></a>
                 </div>
             </div>
     </aside>
