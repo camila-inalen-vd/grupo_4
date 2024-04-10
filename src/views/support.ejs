@@ -12,7 +12,12 @@
           <h1>Formulario de Contacto</h1>
          </div>
           <div class="mitad1">
-        <div class="form-container">
+            <p class="suppDescription">Cuentanos en qué podemos ayudarte.</p>
+            <p class="suppDescription2">En ShoesMarket, además de preocuparnos porque tus pies lleven el mejor calzado, nos preocupamos por tu integridad. Te pedimos amablemente que no uses este medio para brindar datos personales.</p>
+            <div class="errores">
+
+            </div>
+            <div class="form-container">
         <% if(locals.mensaje){ %>
           <h1 style="background-color: skyblue; color: white; border-radius: 5px; text-align: center; margin: 10px;"><%= mensaje %></h1>
         <% } %>
@@ -27,7 +32,9 @@
             <textarea name="mensaje"></textarea><br><br>
             <button type="submit">Enviar</button>
         </form>
+        <div class="container-logo"> 
         <img src="images/logopng.png" id="logo" alt="">
+      </div>
       </div>
     </div>
       <div class="mitad2">
