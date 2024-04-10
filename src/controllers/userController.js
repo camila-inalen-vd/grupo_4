@@ -41,9 +41,7 @@ const userController = {
     processRegister: async (req, res) =>{
         const resultValidation = validationResult(req);
 
-        if(resultValidation.errors.length > 0){
-            const filePath = path.join(__dirname, '../../public/images/user', req.file.filename);
-            fs.unlinkSync(filePath);
+        if(resultValidation.errors.length > 0 ){
             return res.render("user/register", {
 				errorsObjeto: resultValidation.mapped(),
 				oldData: req.body
