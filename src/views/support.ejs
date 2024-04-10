@@ -1,33 +1,43 @@
-<!DOCTYPE html>
-<html lang="es">
-  <!-- Head -->
-  <%- include('./partials/head.ejs', {title: 'Ayuda', style: 'support'}) %>
-  <body>
-    <!-- Header -->
-    <%- include('./partials/header.ejs') %>
-  
-    <main>
-      <div class="form-container">
-      <h1>Formulario de Contacto</h1>
-      <% if(locals.mensaje){ %>
-        <h1 style="background-color: skyblue; color: white; border-radius: 5px; text-align: center; margin: 10px;"><%= mensaje %></h1>
-      <% } %>
-      <form action="/support" method="POST">
-          <label>Nombre:</label><br>
-          <input type="text" name="nombre"><br>
-          <label>Apellido:</label><br>
-          <input type="text" name="apellido"><br>
-          <label>Email:</label><br>
-          <input type="email" name="email"><br>
-          <label>Mensaje:</label><br>
-          <textarea name="mensaje"></textarea><br><br>
-          <button type="submit">Enviar</button>
-      </form>
-    </div>
-    </main>
+  <!DOCTYPE html>
+  <html lang="es">
+    <!-- Head -->
+    <%- include('./partials/head.ejs', {title: 'Ayuda', style: 'support'}) %>
+    <body>
+      <!-- Header -->
+      <%- include('./partials/header.ejs') %>
     
-    <!-- Footer -->
-    <%- include('./partials/footer.ejs') %>
-    <script src="/js/index/modals.js"></script>
-  </body>
-</html>
+      <main>
+        <div class="contenedor-padre">
+          <div class="title-support">
+          <h1>Formulario de Contacto</h1>
+         </div>
+          <div class="mitad1">
+        <div class="form-container">
+        <% if(locals.mensaje){ %>
+          <h1 style="background-color: skyblue; color: white; border-radius: 5px; text-align: center; margin: 10px;"><%= mensaje %></h1>
+        <% } %>
+        <form action="/support" method="POST">
+            <label>Nombre:</label><br>
+            <input type="text" name="nombre"><br>
+            <label>Apellido:</label><br>
+            <input type="text" name="apellido"><br>
+            <label>Email:</label><br>
+            <input type="email" name="email"><br>
+            <label>Mensaje:</label><br>
+            <textarea name="mensaje"></textarea><br><br>
+            <button type="submit">Enviar</button>
+        </form>
+        <img src="images/logopng.png" id="logo" alt="">
+      </div>
+    </div>
+      <div class="mitad2">
+      <img class="img-2" src="/images/register-zapas.jpg">
+      </div>
+      </div>
+      </main>
+      
+      <!-- Footer -->
+      <%- include('./partials/footer.ejs') %>
+      <script src="/js/index/modals.js"></script>
+    </body>
+  </html>
