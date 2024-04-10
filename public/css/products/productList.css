@@ -34,6 +34,36 @@ main {
     color:rgb(52, 131, 250);
 }
 
+aside input {
+    border-radius: 5px;
+    width: 90px;
+    height: 25px;
+}
+
+.aside-button {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(52, 131, 250);
+    color: white;
+    font-weight: 500;
+    font-size: 1em;
+}
+
+.aside-button:hover {
+    background-color: rgb(63, 91, 134);
+}
+
+.brand-name {
+    background-color: white;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.brand-name p {
+    padding: 5px;
+}
+
 .section-right{   
     width: 100%;
     display: flex;
@@ -48,8 +78,24 @@ article {
     justify-content: center;
     margin: 0 auto;
     padding: 10px;
+    transition: transform 0.3s ease;
+}
+article:hover {
+    transform: translateY(-10px); /* Levanta la tarjeta 10px hacia arriba en el eje Y */
 }
 
+.result {
+    background-color: rgb(52, 131, 250);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+.result-2 {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 5px;
+    border-radius: 5px;
+}
 
 
 .cart-class{    
@@ -134,7 +180,6 @@ article a {
 }
 
 
-
 @media (min-width: 769px) {   
 
     .aside-left{    
@@ -179,10 +224,6 @@ article a {
     
     .class-show-more p{
         color: rgb(52, 131, 250);
-    }
-    
-    .class-show-more p:hover{
-        color: rgb(66, 104, 202);
     }
 
     .section-right{    
