@@ -187,5 +187,9 @@ window.addEventListener("load", function () {
                 imageErrorP.innerHTML = imageErrorMsg;
             }
         }
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
     });
 });

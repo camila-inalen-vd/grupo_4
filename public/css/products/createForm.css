@@ -126,13 +126,8 @@ form select {
     margin: 5px;
 }
 
-.errores {
-    background-color: rgb(66, 24, 24);
-    border-radius: 3px;
-    color: white;
-    width: 90%;
-    margin: 0 auto;
-    margin-top: 10px;
+.errorMsg{
+    color: rgb(168, 25, 25);
 }
 form textarea {
     resize: none;

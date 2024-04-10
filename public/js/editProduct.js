@@ -151,5 +151,9 @@ window.addEventListener("load", function () {
             suelaErrorP.innerHTML = suelaErrorMsg;
             origenErrorP.innerHTML = origenErrorMsg;
         }
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
     });
 });
