@@ -38,6 +38,7 @@ aside input {
     border-radius: 5px;
     width: 90px;
     height: 25px;
+    margin-top: 5px;
 }
 
 .aside-button {
@@ -84,19 +85,6 @@ article {
 }
 article:hover {
     transform: translateY(-10px); /* Levanta la tarjeta 10px hacia arriba en el eje Y */
-}
-
-.result {
-    background-color: rgb(52, 131, 250);
-    color: white;
-    padding: 5px;
-    border-radius: 5px;
-}
-.result-2 {
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    padding: 5px;
-    border-radius: 5px;
 }
 
 
@@ -167,6 +155,18 @@ article a {
     max-height: 2em; 
   }
 
+  .result, .result-2 {
+    background-color: rgb(52, 131, 250);
+    color: white;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+.result-2{
+    background-color: white;
+    color: black;
+}
+
 @media (min-width: 461px) {
     article {
         width: 40%;
@@ -175,7 +175,33 @@ article a {
 
 }
 
+@keyframes desplazamiento {
+    0% { transform: translateY(0); } /* Estado inicial: sin desplazamiento */
+    50% { transform: translateY(-10px); } /* Desplazamiento hacia arriba */
+    100% { transform: translateY(0); } /* Vuelve a la posición original */
+  }
+
 @media (min-width: 1024px) {
+
+    .result {
+        background-color: rgb(52, 131, 250);
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+    .result-2 {
+        margin-top: 10px;
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    .div-animado {
+      animation: desplazamiento 2s ease-in-out infinite; /* Aplica la animación */
+     }
+
     .section-right {
         flex-direction: wrap;
         justify-content: flex-start;
