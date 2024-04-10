@@ -33,11 +33,14 @@
                             </ul>
                         </div>
                    </div>
+                   
             </div>
             </div>
         <section class="container-info-detail">
            <div class="info-product">
-              <div class="title-ofert"> SALE </div>
+            <% if (producto.price > 100) { %>
+            <div class="title-ofert"> SALE </div>
+            <% } %>
               <div class="product-name">
               <h4><%= producto.name %> </h4>
               </div>
@@ -89,7 +92,7 @@
                     <!--Comprar ahora con if--> 
                     <% if(producto.stock > 0) {%>
                     <button class="btn-add-to-cart">
-                   <p>COMPRAR AHORA</p>
+                    <p>COMPRAR AHORA</p>
                     </button>
                     <form action="/product/addToCart/<%= producto.id %>" method="POST">
                         <button type="submit" class="btn-add-to-cart">AGREGAR AL CARRITO</button>
@@ -111,6 +114,17 @@
                       <i class="fa-solid-fa-plus"></i>SIN STOCK</button>
                       <% } %>
                     </div>
+                    <section class="container-social">
+                        <span>COMPARTIR</span>
+                               <div class="container-buttons-social">
+                                   <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                                   <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                                   <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                   <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                   <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                               </div>
+                   </section>
+   
                 </div>
            </div>
         </section>
@@ -144,18 +158,6 @@
                           </div>
                                 <% }) %>
              </article>
-
-                <section class="container-social">
-                     <span>COMPARTIR</span>
-                            <div class="container-buttons-social">
-                                <a href="#"><i class="fa-solid fa-envelope"></i></a>
-                                <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                                <a href="#"><i class="fa-brands fa-pinterest"></i></a>
-                            </div>
-                </section>
-
                 <section class="banner-img">
                     <img src="/images/Banner-prodDetail/banner-card.jpg" alt="" />
                 </section>
