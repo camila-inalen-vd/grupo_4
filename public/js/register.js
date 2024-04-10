@@ -1,6 +1,6 @@
 window.addEventListener("load", () => {
-    let formulario = document.querySelector("form")
-    formulario.addEventListener("submit", (e) => {
+    let formulario = document.querySelector(".register-form")
+    formulario.addEventListener("submit", (event) => {
         let errors = [];
 
         let name = document.querySelector("input#name")
@@ -28,17 +28,10 @@ window.addEventListener("load", () => {
         let avatar = document.querySelector("input#avatar");
         if (avatar.files.length === 0) {
             errors.push("Debes seleccionar una imagen para el avatar");
-        } else {
-            let allowedExtensions = ['jpg', 'jpeg', 'png', 'gif'];
-            let avatarExtension = obtenerExtension(avatar.files[0].name);
-
-            if (!allowedExtensions.includes(avatarExtension)) {
-                errors.push("Formato de imagen no válido. Se permiten las extensiones: " + allowedExtensions.join(', '));
-            }
         }
 
         if(errors.length > 0){
-            e.preventDefault();
+            event.preventDefault();
             let ulErrors = document.querySelector(".errors")
             ulErrors.innerHTML = '';
             errors.forEach((error) => {

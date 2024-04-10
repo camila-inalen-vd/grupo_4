@@ -1,6 +1,6 @@
 window.addEventListener("load", () => {
-    let formulario = document.querySelector("form")
-    formulario.addEventListener("submit", (e) => {
+    let formulario = document.querySelector(".login-form")
+    formulario.addEventListener("submit", (event) => {
         let errors = [];
 
         let email = document.querySelector("input#email");
@@ -16,7 +16,7 @@ window.addEventListener("load", () => {
         }
 
         if(errors.length > 0){
-            e.preventDefault();
+            event.preventDefault();
             let ulErrors = document.querySelector(".errors")
             ulErrors.innerHTML = '';
             errors.forEach((error) => {
