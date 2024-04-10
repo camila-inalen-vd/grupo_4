@@ -1,11 +1,13 @@
+console.log('hola')
+
 window.addEventListener("load", function () {
-    var formulario = document.querySelector("form.createForm");
+    var formulario = document.querySelector("form.editForm");
     formulario.addEventListener("submit", function (event) {
         var errors = false;
 
         // Validación del campo Nombre
         var nombre = document.querySelector("#nombre");
-        var nombreErrorMsg;
+        var nombreErrorMsg = ""; 
         if (nombre.value.trim() === "") {
             nombreErrorMsg = "Ingresa un nombre";
             errors = true;
@@ -13,7 +15,7 @@ window.addEventListener("load", function () {
 
         // Validación del campo Marca
         var marca = document.querySelector("#marca");
-        var marcaErrorMsg;
+        var marcaErrorMsg = ""; 
         if (marca.value.trim() === "") {
             marcaErrorMsg = "Selecciona una marca";
             errors = true;
@@ -21,7 +23,7 @@ window.addEventListener("load", function () {
 
         // Validación del campo Precio
         var precio = document.querySelector("#precio");
-        var precioErrorMsg;
+        var precioErrorMsg = ""; 
         if (precio.value.trim() === "") {
             precioErrorMsg = "Ingresa un precio";
             errors = true;
@@ -29,7 +31,7 @@ window.addEventListener("load", function () {
 
         // Validación del campo Cuotas
         var cuotas = document.querySelector("#cuotas");
-        var cuotasErrorMsg;
+        var cuotasErrorMsg = ""; 
         if (cuotas.value.trim() === "") {
             cuotasErrorMsg = "Ingresa el número de cuotas";
             errors = true;
@@ -37,7 +39,7 @@ window.addEventListener("load", function () {
 
         // Validación del campo Descuento
         var descuento = document.querySelector("#descuento");
-        var descuentoErrorMsg;
+        var descuentoErrorMsg = ""; 
         if (descuento.value.trim() === "") {
             descuentoErrorMsg = "Ingresa un descuento";
             errors = true;
@@ -45,7 +47,7 @@ window.addEventListener("load", function () {
 
         // Validación del campo Stock
         var stock = document.querySelector("#stock");
-        var stockErrorMsg;
+        var stockErrorMsg = "";   
         if (stock.value.trim() === "") {
             stockErrorMsg = "Ingresa el stock";
             errors = true;
@@ -53,7 +55,7 @@ window.addEventListener("load", function () {
 
         // Validación del campo Descripcion
         var descripcion = document.querySelector("#descripcion");
-        var descripcionErrorMsg;
+        var descripcionErrorMsg = "";    
         if (descripcion.value.trim() === "") {
             descripcionErrorMsg = "Ingresa una descripción";
             errors = true;
@@ -61,7 +63,7 @@ window.addEventListener("load", function () {
 
         // Validación del campo Descripcion Larga
         var descripcionLarga = document.querySelector("#descripcionLarga");
-        var descripcionLargaErrorMsg;
+        var descripcionLargaErrorMsg = ""; 
         if (descripcionLarga.value.trim() === "") {
             descripcionLargaErrorMsg = "Ingresa una descripción larga";
             errors = true;
@@ -69,7 +71,7 @@ window.addEventListener("load", function () {
 
         // Validación de la selección de colores
         var coloresSeleccionados = document.querySelectorAll("input[name='color']:checked");
-        var coloresErrorMsg;
+        var coloresErrorMsg = "";      
         if (coloresSeleccionados.length === 0) {
             coloresErrorMsg = "Debes elegir al menos un color";
             errors = true;
@@ -77,7 +79,7 @@ window.addEventListener("load", function () {
 
         // Validación de la selección de talles
         var tallesSeleccionados = document.querySelectorAll("input[name='talle']:checked");
-        var tallesErrorMsg;
+        var tallesErrorMsg = ""; 
         if (tallesSeleccionados.length === 0) {
             tallesErrorMsg = "Debes elegir al menos un talle";
             errors = true;
@@ -85,7 +87,7 @@ window.addEventListener("load", function () {
 
         // Validación del campo Capellada
         var capellada = document.querySelector("#capellada");
-        var capelladaErrorMsg;
+        var capelladaErrorMsg = "";
         if (capellada.value.trim() === "") {
             capelladaErrorMsg = "Ingresa la capellada";
             errors = true;
@@ -93,7 +95,7 @@ window.addEventListener("load", function () {
 
         // Validación del campo Forro
         var forro = document.querySelector("#forro");
-        var forroErrorMsg;
+        var forroErrorMsg = ""; 
         if (forro.value.trim() === "") {
             forroErrorMsg = "Ingresa el forro";
             errors = true;
@@ -101,7 +103,7 @@ window.addEventListener("load", function () {
 
         // Validación del campo Suela
         var suela = document.querySelector("#suela");
-        var suelaErrorMsg;
+        var suelaErrorMsg = ""; 
         if (suela.value.trim() === "") {
             suelaErrorMsg = "Ingresa la suela";
             errors = true;
@@ -109,17 +111,9 @@ window.addEventListener("load", function () {
 
         // Validación del campo Origen
         var origen = document.querySelector("#origen");
-        var origenErrorMsg;
+        var origenErrorMsg = ""; 
         if (origen.value.trim() === "") {
             origenErrorMsg = "Ingresa el origen";
-            errors = true;
-        }
-
-        // Validación de la selección de una imagen
-        var imageInput = document.querySelector("input[name='product-image']");
-        var imageErrorMsg;
-        if (!imageInput.files || imageInput.files.length === 0) {
-            imageErrorMsg = "Debes seleccionar una imagen";
             errors = true;
         }
 
@@ -141,51 +135,21 @@ window.addEventListener("load", function () {
             var origenErrorP = document.querySelector("p.origenError");
             var imageErrorP = document.querySelector("p.imageError");
 
-            if (nombreErrorMsg) {
-                nombreErrorP.innerHTML = nombreErrorMsg;
-            }
-            if (marcaErrorMsg) {
-                marcaErrorP.innerHTML = marcaErrorMsg;
-            }
-            if (precioErrorMsg) {
-                precioErrorP.innerHTML = precioErrorMsg;
-            }
-            if (cuotasErrorMsg) {
-                cuotasErrorP.innerHTML = cuotasErrorMsg;
-            }
-            if (descuentoErrorMsg) {
-                descuentoErrorP.innerHTML = descuentoErrorMsg;
-            }
-            if (stockErrorMsg) {
-                stockErrorP.innerHTML = stockErrorMsg;
-            }
-            if (descripcionErrorMsg) {
-                descripcionErrorP.innerHTML = descripcionErrorMsg;
-            }
-            if (descripcionLargaErrorMsg) {
-                descripcionLargaErrorP.innerHTML = descripcionLargaErrorMsg;
-            }
-            if (coloresErrorMsg) {
-                coloresErrorP.innerHTML = coloresErrorMsg;
-            }
-            if (tallesErrorMsg) {
-                tallesErrorP.innerHTML = tallesErrorMsg;
-            }
-            if (capelladaErrorMsg) {
-                capelladaErrorP.innerHTML = capelladaErrorMsg;
-            }
-            if (forroErrorMsg) {
-                forroErrorP.innerHTML = forroErrorMsg;
-            }
-            if (suelaErrorMsg) {
-                suelaErrorP.innerHTML = suelaErrorMsg;
-            }
-            if (origenErrorMsg) {
-                origenErrorP.innerHTML = origenErrorMsg;
-            }
-            if (imageErrorMsg) {
-                imageErrorP.innerHTML = imageErrorMsg;
-            }
+
+            nombreErrorP.innerHTML = nombreErrorMsg;
+            marcaErrorP.innerHTML = marcaErrorMsg;
+            precioErrorP.innerHTML = precioErrorMsg;
+            cuotasErrorP.innerHTML = cuotasErrorMsg;
+            descuentoErrorP.innerHTML = descuentoErrorMsg;
+            stockErrorP.innerHTML = stockErrorMsg;
+            descripcionErrorP.innerHTML = descripcionErrorMsg;
+            descripcionLargaErrorP.innerHTML = descripcionLargaErrorMsg;
+            coloresErrorP.innerHTML = coloresErrorMsg;
+            tallesErrorP.innerHTML = tallesErrorMsg;
+            capelladaErrorP.innerHTML = capelladaErrorMsg;
+            forroErrorP.innerHTML = forroErrorMsg;
+            suelaErrorP.innerHTML = suelaErrorMsg;
+            origenErrorP.innerHTML = origenErrorMsg;
         }
     });
 });

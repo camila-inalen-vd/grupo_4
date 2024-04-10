@@ -50,9 +50,8 @@ aside input {
     font-weight: 500;
     font-size: 1em;
 }
-
 .aside-button:hover {
-    background-color: rgb(63, 91, 134);
+    background-color: #a9c4bd;
 }
 
 .brand-name {
@@ -84,7 +83,7 @@ article {
     transition: transform 0.3s ease;
 }
 article:hover {
-    transform: translateY(-10px); /* Levanta la tarjeta 10px hacia arriba en el eje Y */
+    transform: translateY(-10px);
 }
 
 
@@ -95,6 +94,7 @@ article:hover {
     border-radius: 8px;
     width: 100%;
 }
+
 
 .cart-image {
     display: inline-block;
@@ -169,7 +169,7 @@ article a {
 
 @media (min-width: 461px) {
     article {
-        width: 40%;
+        width: 30%;
     }
 
 
@@ -205,7 +205,8 @@ article a {
     .section-right {
         flex-direction: wrap;
         justify-content: flex-start;
-        margin-top: 0;
+        padding-left: 80px;
+        margin-top: 10px;
     }
 
     article {
@@ -234,6 +235,7 @@ article a {
         display: inline;  
         justify-content: flex-end;
         padding: 2%;
+        border-right: 3px solid rgb(219, 219, 219);
     }
     
     .aside-left h2, h4, p{
@@ -279,7 +281,7 @@ article a {
         flex-wrap: wrap;    
     }
     .cart-class:hover{
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.582);
     }
     
   

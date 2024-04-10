@@ -100,6 +100,24 @@ const productsController = {
                 }
             }
 
+            if (req.query.offers == "offers") {
+                const productosBuscados = await db.Product.findAll({
+                    include: [
+                        { association: 'brand', attributes: ['name'] },
+                        { association: 'size', attributes: ['number'] }
+                    ], 
+                    where: {
+                        discount: {
+                            [Op.gt]: 0
+                          }
+                    }        
+                });
+
+                if (productosBuscados.length > 0) {
+                    productos = productosBuscados;
+                }
+            }
+
             if (req.query.precioUno && req.query.precioDos) {
                 const productosBuscados = await db.Product.findAll({
                     include: [                        
@@ -119,6 +137,7 @@ const productsController = {
                 if (productosBuscados.length > 0) {
                     productos = productosBuscados;
                 }
+
             }
 
             return res.render('products/productList', { productos });
