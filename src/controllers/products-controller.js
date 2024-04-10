@@ -31,7 +31,7 @@ const productsController = {
                         [Op.ne]: 0
                     }
                 },
-         
+         limit: 12
             });
 
             res.render("products/productDetail", { producto, interes});
