@@ -21,16 +21,19 @@ const productsController = {
                 ]
             });
 
-             interes = await db.Product.findAll({
+            let interes = await db.Product.findAll(
+                {
                 include: [
                     { association: 'brand', attributes: ['name', 'brand_image'] }
                 ],
-                order: [
-                    ['id', 'DESC']
-                ],
-                limit: 4
+                where: {
+                    discount: {
+                        [Op.ne]: 0
+                    }
+                },
+         
             });
-    
+
             res.render("products/productDetail", { producto, interes});
         } catch (error) {
             res.send(error);
