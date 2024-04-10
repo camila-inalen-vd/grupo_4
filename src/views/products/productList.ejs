@@ -1,10 +1,11 @@
 <!DOCTYPE html>  
 <html lang="en">
-    <%- include("../partials/head.ejs", {title: "Listado de producto", style: "/products/productList"}) %>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-<body>
+    <%- include("../partials/head.ejs", {title: "Listado de producto", style: "/products/productList"}) %>
+    <body>
     <%- include("../partials/header.ejs") %>
 <div class="falsobody">
 
@@ -156,34 +157,25 @@
                 <article>                                       
                     <div class="cart-class">
                         <div class="cart-image">
-                           <a href="/product/detail/<%=product.id %>"> <img src="/images/products/<%=product.image %>" alt="Cafetera Moulinex"></a>
+                           <a href="/product/detail/<%=product.id %>"> <img src="/images/products/<%=product.image %>" alt="Cafetera Moulinex">
                         </div>             
                         <div class="item-box">
-                            <div class="brand-class">
-                                <h4> <%= product.brand ? product.brand.name : ""%> </h4>  
-                            </div>
-                            <div class="description-class">
-                                <p><%= product.description %></p>
-                            </div>
-                            <div by-brand>
-                                <p><%= product.name %></p>
-                            </div>
-                            <div class="reputation-icon">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star-half-stroke"></i>
-                            </div>
-                            <div class="price-class">
-                                <h2 class="precio">$ <%= product.price.toLocaleString('es-ES')%></h2>                            
-                            </div>
-                            <div class="arrives-class">
-                                <label for="arrives"></label>
-                                <input type="text" id="arrives" name="arrives" placeholder="Llega gratis hoy sabado">
-                            </div>                            
+                                <h4 class="brand-class"> <%= product.brand ? product.brand.name : ""%> </h4>  
+                                <p class="description-class"><%= product.description %></p>
+                                <p class="name-class"><%= product.name %></p></a> 
+       
+                                <i class="fa-solid fa-star reputation-icon"></i>
+                                <i class="fa-solid fa-star reputation-icon"></i>
+                                <i class="fa-solid fa-star reputation-icon"></i>
+                                <i class="fa-solid fa-star reputation-icon"></i>
+                                <i class="fa-solid fa-star-half-stroke reputation-icon"></i>
+                 
+                                <h2 class="precio price-class">$ <%= product.price.toLocaleString('es-ES')%></h2>                            
+               
+                                <p class="arrives">Llega gratis hoy sábado</p>
+                                                
                         </div>
-                    </div>                    
+                    </div>                  
                 </article>
                 <%    }); %>
             </section>
