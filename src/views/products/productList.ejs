@@ -1,56 +1,43 @@
 <!DOCTYPE html>  
 <html lang="en">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <%- include("../partials/head.ejs", {title: "Listado de producto", style: "/products/productList"}) %>
-<body>
+    <body>
     <%- include("../partials/header.ejs") %>
 <div class="falsobody">
 
     <!-- Fede -->
     <aside class="aside-left">
             <div class="aside-title">
-                <div>
-                    <h4>Ropa y Accesorios > Calzado</h4>
-                </div>
+
                 <div>
                     <h2>Zapatillas<h2>
                 </div>
-                <div>
-                    <h4>12 Resultados<h4>
+                <div class="resultados">
+                    <h4><span class="result"><%= productos.length %></span> <span class="result-2">Resultados</span><h4>
                 </div>
             </div>
             <div class="filter-class">            
                 <div class="class-arrive-today">
-                    <p>Llegan hoy</p>
-                    <i class="fa-solid fa-toggle-off toggle"></i>
-                </div>
-                <div class="class-arrive-free">
-                    <p>Te da envío gratis</p>
-                    <i class="fa-solid fa-toggle-off toggle"></i>
-                </div>
-                <div class="class-free">
-                    <p>Envio gratis</p>
-                    <i class="fa-solid fa-toggle-off toggle"></i>
-                </div>
-                <div class="price-with-discount">
-                    <p>Precio en cuotas</p>
-                    <i class="fa-solid fa-toggle-off toggle"></i>
+                    <p class="arrives div-animado" style="background-color: rgb(7, 140, 164); color: rgb(0, 0, 0);">ENVIOS GRATIS</p>
+                    <p class="arrives div-animado" style="background-color: rgb(0, 0, 0); color: white;">SOLO POR HOY</p>
                 </div>
             </div>
             <div class="gender-class">
                 <div>
-                    <h2>Género</h2>
+                    <h2>Precio</h2>
                 </div>
                 <div>
-                    <p>Hombre</p>
-                </div>
-                <div>
-                    <p>Mujer</p>
-                </div>
-                <div>
-                    <p>Niños</p>
-                </div>
-                <div>
-                    <p>Niñas</p>
+                    <form action="/product/list" method="get">
+                        <p>
+                            <input type="number" name="precioUno"> -
+                            <input type="number" name="precioDos">
+                        </p>
+                        <button type="submit" class="aside-button">Buscar</button>
+                    </form>
                 </div>
             </div>
             <div class="waist-class">
@@ -58,115 +45,95 @@
                     </a><h2>Talle</h2>
                 </div>
                 <div>
-                    <p>38</p>
-                </div>
-                <div>
-                    <p>39</p>
-                </div>
-                <div>
-                    <p>39.5</p>
-                </div>
-                <div>
-                    <p>40</p>
-                </div>
-                <div>
-                    <p>41</p>
-                </div>
-                <div>
-                    <p>42</p>
-                </div>
-                <div>
-                    <p>43</p>
-                </div>
-                <div>
-                    <p>44</p>
+                    <form action="/product/list" method="get">
+                        <p>
+                            <input type="number" name="talleUno">
+                        </p>
+                        <button type="submit" class="aside-button">Buscar</button>
+                    </form>
                 </div>
             </div>
             <div class="brand-class-aside">
                 <div>
                     <h2>Marca</h2>
                 </div>
-                <div>
+                <div class="brand-name">
                     <!-- ejemplo de filtro marca, y esto mismo podemos usar para buscar por talle o colores si los incluimos en lo que se obtiene query del searchBar -->
                     <a href="/product/list?searchBar=topper"><p>Topper</p></a> <!--Tenes que ponerle text-decoration: none; a los a de los filtros  de esta vista-->
                 </div>
-                <div>
+                <div class="brand-name">
                     <a href="/product/list?searchBar=jaguar"><p>Jaguar</p></a>
+                </div class="brand-name">
+                <div class="brand-name">
+                    <a href="/product/list?searchBar=new+balance"><p>New Balance</p></a>
                 </div>
-                <div>
-                    <p>New Balance</p>
+                <div class="brand-name">
+                    <a href="/product/list?searchBar=adidas"><p>Adidas</p></a>
                 </div>
-                <div>
-                    <p>Adidas</p>
+                <div class="brand-name">
+                    <a href="/product/list?searchBar=nike"><p>Nike</p></a>
                 </div>
-                <div>
-                    <p>Nike</p>
+                <div class="brand-name">
+                    <a href="/product/list?searchBar=kappa"><p>Kappa</p></a>
                 </div>
-                <div>
-                    <p>Kappa</p>
+                <div class="brand-name">
+                    <a href="/product/list?searchBar=puma"><p>Puma</p></a>
                 </div>
-                <div>
-                    <p>Puma</p>
+                <div class="brand-name">
+                    <a href="/product/list?searchBar=fila"><p>Fila</p></a>
                 </div>
-                <div>
-                    <p>44</p>
+                <div class="brand-name">
+                    <a href="/product/list?searchBar=atomik"><p>Atomik</p></a>
                 </div>
-                <div>
-                    <p>Atomik</p>
+                <div class="brand-name">
+                    <a href="/product/list?searchBar=converse"><p>Converse</p></a>
                 </div>
-                <div>
-                    <p>Converse</p>
+                <div class="brand-name">
+                    <a href="/product/list?searchBar=dc+shoes"><p>Dc Shoes</p></a>
                 </div>
-                <div>
-                    <p>All Star</p>
+                <div class="brand-name">
+                    <a href="/product/list?searchBar=john+foos"><p>John Foos</p></a>
                 </div>
-                <div>
-                    <p>Gola</p>
+                <div class="brand-name">
+                    <a href="/product/list?searchBar=reebok"><p>Reebok</p></a>
                 </div>
-                <div>
-                    <p>Under Armour</p>
-                </div>
-                <div>
-                    <p>Umbro</p>
-                </div>
-                <div>
-                    <p>Lacoste</p>
-                </div>
-            </div>
-            <div class="condition-class">
-                <div>
-                    <h2>Condicion</h2>
-                </div>
-                <div>
-                    <p>Nuevo</p>
-                </div>
-                <div>
-                    <p>Usado</p>
+                <div class="brand-name">
+                    <a href="/product/list?searchBar=wilson"><p>Wilson</p></a>
                 </div>
             </div>
             <div class="location-class">
                 <div>
-                    <h2>Ubicación</h2>
+                    <h2>Origen</h2>
                 </div>
-                <div>
-                    <p>Capital Federal</p>
+                <div class="brand-name">
+                    <a href="/product/list?searchBar=argentina"><p>Argentina</p></a>
                 </div>
-                <div>
-                    <p>Bs.As G.B.A Sur</p>
+                <div class="brand-name">
+                    <a href="/product/list?searchBar=españa"><p>España</p></a>
                 </div>
-                <div>
-                    <p>Bs.As G.B.A Norte</p>
+                <div class="brand-name">
+                    <a href="/product/list?searchBar=italia"><p>Italia</p></a>
                 </div>
-                <div>
-                    <p>Bs.As G.B.A Oeste</p>
+                <div class="brand-name">
+                    <a href="/product/list?searchBar=estados+unidos"><p>Estados Unidos</p></a>
                 </div>
-                <div class="class-show-more">
-                    <p>Mostrar más</p>
+                <div class="brand-name">
+                    <a href="/product/list?searchBar=alemania"><p>Alemania</p></a>
+                </div>
+                <div class="brand-name">
+                    <a href="/product/list?searchBar=china"><p>China</p></a>
+                </div>
+                <div class="brand-name">
+                    <a href="/product/list?searchBar=uruguay"><p>Uruguay</p></a>
+                </div>
+                <div class="brand-name">
+                    <a href="/product/list?searchBar=indonesia"><p>Indonesia</p></a>
                 </div>
             </div>
     </aside>
     <main>
             <section class="section-right">
+
 
                 <!---->
                 
@@ -175,34 +142,29 @@
                 <article>                                       
                     <div class="cart-class">
                         <div class="cart-image">
-                           <a href="/product/detail/<%=product.id %>"> <img src="/images/products/<%=product.image %>" alt="Cafetera Moulinex"></a>
+                           <a href="/product/detail/<%=product.id %>"> <img src="/images/products/<%=product.image %>" alt="Cafetera Moulinex">
                         </div>             
                         <div class="item-box">
-                            <div class="brand-class">
-                                <h4> <%= product.brand ? product.brand.name : ""%> </h4>  
-                            </div>
-                            <div class="description-class">
-                                <p><%= product.description %></p>
-                            </div>
-                            <div by-brand>
-                                <p><%= product.name %></p>
-                            </div>
-                            <div class="reputation-icon">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star-half-stroke"></i>
-                            </div>
-                            <div class="price-class">
-                                <h2 class="precio">$ <%= product.price.toLocaleString('es-ES')%></h2>                            
-                            </div>
-                            <div class="arrives-class">
-                                <label for="arrives"></label>
-                                <input type="text" id="arrives" name="arrives" placeholder="Llega gratis hoy sabado">
-                            </div>                            
+                                <h4 class="brand-class"> <%= product.brand ? product.brand.name : ""%> </h4>  
+                                <p class="description-class"><%= product.description %></p>
+                                <p class="name-class"><%= product.name %></p> 
+       
+                                <i class="fa-solid fa-star reputation-icon"></i>
+                                <i class="fa-solid fa-star reputation-icon"></i>
+                                <i class="fa-solid fa-star reputation-icon"></i>
+                                <i class="fa-solid fa-star reputation-icon"></i>
+                                <i class="fa-solid fa-star-half-stroke reputation-icon"></i>
+                 
+                                <h2 class="precio price-class">$ <%= product.price.toLocaleString('es-ES')%></h2>                            
+                                <% if(product.discount > 0){%>
+                                <div class="discount-class">
+                                    <p><%=product.discount + "%"%> Off</p>
+                                </div>
+                                <% } %>
+                                <p class="arrives">Llega gratis hoy</p>
+                            </a>
                         </div>
-                    </div>                    
+                    </div>                  
                 </article>
                 <%    }); %>
             </section>

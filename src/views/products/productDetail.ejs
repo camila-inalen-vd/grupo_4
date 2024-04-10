@@ -100,11 +100,13 @@
                    <% } %>
                  <% if(isLogged && userLogged.admin === 1) {%>
                     <form action="/product/<%= producto.id %>/edit" method="GET">
-                        <button class="btn-edit"type="submit">EDITAR PRODUCTO</button>
+                        <button class="btn-edit btn-add-to-cart"type="submit">EDITAR PRODUCTO</button>
                     </form> 
-                    <form action="/product/<%= producto.id %>/delete" method="GET">
-                        <button class="btn-delete"type="submit">ELIMINAR PRODUCTO</button>
-                    </form> 
+                    <form action="/product/delete/<%= producto.id %>?_method=DELETE" method="POST">
+                        <div>
+                            <button class="btn-edit btn-add-to-cart"type="submit">ELIMINAR PRODUCTO</button>
+                        </div>
+                    </form>  
                  <% } %>
                 </div>
                     <div class="last-product">

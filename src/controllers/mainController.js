@@ -25,7 +25,7 @@ const mainController = {
                         [Op.ne]: 0
                     }
                 },
-                limit: 4
+   /*              limit: 4 */
             });
     
             let featured = await db.Product.findAll({
@@ -35,7 +35,7 @@ const mainController = {
                 order: [
                     ['id', 'DESC']
                 ],
-                limit: 4
+                 limit: 8
             });
     
             let productosVistosBD = [];

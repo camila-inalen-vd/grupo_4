@@ -13,6 +13,12 @@ main{
     margin: auto;
     min-height: 50vh;
 }
+.caja-titulo{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    padding-top: 10px;
+}
 section{
     display: flex;
     flex-wrap: wrap;
@@ -52,8 +58,6 @@ section{
     align-items: center; 
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
     border-radius: 10px;
-    transition: all 450ms;
-
 }
 .detalle-producto{
     display: block;
@@ -74,7 +78,6 @@ section img{
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
     border-radius: 10px;
     width: 90%;
-    transition: all 450ms;
 }
 .resumen div{
     display: flex;
@@ -100,7 +103,6 @@ section input{
     color: white;
     margin-top: 15px;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    transition: all 450ms;
 }
 .boton, .boton-eliminar{
     margin: 0 0.3rem;
@@ -120,16 +122,6 @@ section input{
         background-color: rgba(58, 125, 159, 0.975);
         transform: scale(1.05);
         transition: transform 0.3s ease-in-out;        
-        font-size: 1.3rem;
-    }
-    .caja-producto:hover{
-        transform: scale(1.05);
-        transition: transform 0.3s ease-in-out;
-        font-size: 1.3rem;
-    }
-    .resumen:hover{
-        transform: scale(1.05);
-        transition: transform 0.3s ease-in-out;
         font-size: 1.3rem;
     }
 }

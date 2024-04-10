@@ -46,9 +46,9 @@ router.post('/create', upload.single('product-image'),  createValidator, product
 router.get('/:id/edit', authMiddleware, adminMiddleware, productsController.edit)
 router.put('/:id/edit', upload.single('product-image'), productsController.editConfig);
 
-//Eliminar
-router.get('/delete', authMiddleware, adminMiddleware, productsController.delete)
-router.delete('/delete', productsController.deleteConfig)
+//Admin product
+router.get('/adminproduct', authMiddleware, adminMiddleware, productsController.Adminlist)
+router.delete('/delete/:id', authMiddleware, adminMiddleware, productsController.deleteProduct)
 
 //Carrito
 router.get('/cart', authMiddleware, productsController.productCart)

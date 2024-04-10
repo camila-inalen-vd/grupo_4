@@ -3,131 +3,124 @@
 <!--Head-->
 <%-include('../partials/head.ejs', {title: 'Crear' , style:'/products/createForm'})%>
 
-    </head>
 
-    <body>
-        <%-include('../partials/header.ejs')%>
-            <br>
-            <div class="container-flex">
-                <form method="POST" action="/product/create" enctype="multipart/form-data"><br>
-                    <h1>Crear producto</h1><br>
-                    <hr><br><br>
-                    <p>
-                    <label for="nombre">Nombre</label>
-                    <p class="form-error error-nombre">*(Este campo no puede estar vacío)</p>
-                    <input type="text" name="nombre" id="nombre"
-                        value="<%= locals.errors && old.nombre ? old.nombre : ''%>">
-                    </p>
-                        <label for="marca">Marca</label>
-                    <p class="form-error error-marca">*(Este campo no puede estar vacío)</p>
+<body>
+    <%-include('../partials/header.ejs')%>
+    
+    <div class="contenedor-padre">
+        <div class="title-create">
+        <h1>CREAR PRODUCTO</h1>
+    </div>
+    <div class="errores">
+        
+        <p class="imageError errorMsg"></p>
+        <p class="nombreError errorMsg"></p>
+        <p class="marcaError errorMsg"></p>
+        <p class="precioError errorMsg"></p>
+        <p class="cuotasError errorMsg"></p>
+        <p class="descuentoError errorMsg"></p>
+        <p class="stockError errorMsg"></p>
+        <p class="descripcionError errorMsg"></p>
+        <p class="capelladaError errorMsg"></p>
+        <p class="forroError errorMsg"></p>
+        <p class="suelaError errorMsg"></p>
+        <p class="origenError errorMsg"></p>
+        <p class="descripcionLargaError errorMsg"></p>
+        <p class="colorError errorMsg"></p>
+        <p class="tallesError errorMsg"></p>
+
+        </div>
+        <form method="POST" action="/product/create" enctype="multipart/form-data" class="createForm">
+        <div class="contenedor-flex">
+    <div class="mitad1">
+            
+            <label class="label-prod">Imagen del producto</label>
+            <input type="file" id="imginput" name="product-image">
+
+            <input type="text" placeholder="Nombre" name="nombre" id="nombre" value="<%= locals.errors && old.nombre ? old.nombre : ''%>">
+
+
+            <select name="marca" id="marca">
+                <option value="">Selecciona una marca</option>
+                <% brand.forEach(marca=> { %>
+                <option value="<%= marca.id %>">
+                    <%=marca.name%>
+                </option>
+                <% }) %>
+            </select>
+
+            <input type="number" name="precio" id="precio" placeholder="Precio" value="<%= locals.errors && old.precio ? old.precio : ''%>">
+  
+
+            <input type="number" name="cuotas" id="cuotas" placeholder="Cuotas" value="<%= locals.errors && old.cuotas ? old.cuotas : ''%>">
+   
+
+            <input type="number" name="descuento" id="descuento" placeholder="Descuento" value="<%= locals.errors && old.descuento ? old.descuento : ''%>">
+     x
+
+            <input type="number" placeholder="Stock" name="stock" id="stock" value="<%= locals.errors && old.stock ? old.stock : ''%>">
+        
+
+            <input type="text" placeholder="Descripción" name="descripcion" id="descripcion" value="<%= locals.errors && old.descripcion ? old.descripcion : ''%>">
+       
+    </div>
+    <!--MITAD 2-->
+    <div class="mitad2">
+                    <input type="text" placeholder="Capellada" name="capellada" id="capellada" value="<%= locals.errors && old.capellada ? old.capellada : ''%>">
+              
+    
+                    <input type="text" placeholder="Forro" name="forro" id="forro" value="<%= locals.errors && old.forro ? old.forro : ''%>">
+            
+    
+                    <input type="text" placeholder="Suela" name="suela" id="suela" value="<%= locals.errors && old.suela ? old.suela : ''%>">
+              
+    
+                    <input type="text" placeholder="Origen" name="origen" id="origen" value="<%= locals.errors && old.origen ? old.origen : ''%>">
                     
-                    <!--Marcas-->
-                        <select name="marca" id="marca">
-                            <% brand.forEach(marca=> { %>
-                                <option value="<%= marca.id %>">
-                                    <%=marca.name%>
-                                </option>
-                                <% }) %>
-                        </select>
-                    <p>
-                    <label for="precio">Precio</label>
-                    <p class="form-error error-precio">*(Este campo no puede estar vacío)</p>
-                    <input type="number" name="precio" id="precio"
-                        value="<%= locals.errors && old.precio ? old.precio : ''%>">
-                    </p>
-                        <label for="cuotas">Cuotas</label>
-                    <p class="form-error error-cuotas">*(Este campo no puede estar vacío)</p>
-                    <input type="number" name="cuotas" id="cuotas"
-                        value="<%= locals.errors && old.cuotas ? old.cuotas : ''%>">
-                    <label for="descuento">Descuento</label>
-                    <p class="form-error error-descuento">*(Este campo no puede estar vacío)</p>
-                    <input type="number" name="descuento" id="descuento"
-                        value="<%= locals.errors && old.descuento ? old.descuento : ''%>">
-                    <label for="Stock">Stock</label>
-                    <p class="form-error error-stock">*(Este campo no puede estar vacío)</p>
-                    <input type="number" name="stock" id="stock"
-                        value="<%= locals.errors && old.stock ? old.stock : ''%>">
-                    <label for="descripcion">Descripcion</label>
-                    <p class="form-error error-descripcion">*(Este campo no puede estar vacío)</p>
-                    <input type="text" name="descripcion" id="descripcion"
-                        value="<%= locals.errors && old.descripcion ? old.descripcion : ''%>">
-                    <label for="descripcion">Descripcion Larga</label><br>
-                    <p class="form-error error-descripcionLarga">*(Este campo no puede estar vacío)</p>
-                    <p>
-                        <textarea id="descripcionLarga" name="descripcionLarga" rows="4" cols="50"></textarea>
-                    </p>
 
-                    <!--COLORES-->
-                    <h3>Colores</h3>
-                    <p class="form-error error-color">*(Debes elegir un color)</p>
-                    <div class="talles-colores-div">
-                    
+                    <h4 class="textarea-title">Descripción larga</h4>
+                    <textarea id="descripcionLarga" name="descripcionLarga" rows="4" cols="50" placeholder="Ingresa una descripción más larga aquí. (Esta estará disponible en la vista de detalle)"></textarea>
+            
+    </div>
+    <div class="parte3">
+        <br>
+        <hr>
+        <br>
+        <h4 class="colta-title">Colores</h3>
+        <div class="colores-y-talles">
+        <% color.forEach(colores => { %>
+        <div class="colores">
+        <label for="color<%=colores.name%>"><%=colores.name%>
+            <input name="color" type="checkbox" value="<%=colores.id%>" id="color<%=colores.name%>">
+        </label>
+        </div>
+        <% }) %>
 
-                    <% color.forEach(colores => { %>
-                    <label for="color<%=colores.name%>>"><%=colores.name%>
-                    <input name="color" type="checkbox" value="<%=colores.id%>" id="color<%=colores.name%>"></label>
-                    <% }) %>
-                    </div>
-                    <h3>Talles</h3>
-                    <p class="form-error error-color">*(Debes elegir los talles)</p>
-                    <div class="talles-colores-div">
-                    <!--Talles-->
-                    
+    </div>
 
-                    <% size.forEach(talles => { %>
-                    <label for="talle<%=talles.number%>>"><%=talles.number%>
-                    <input name="talle" type="checkbox" value="<%=talles.id%>" id="talle<%=talles.number%>"></label>
-                    <% }) %>
-                    </div>
+    <h4 class="colta-title">Talles</h3>
+    <div class="colores-y-talles">
+            <% size.forEach(talles => { %>
+            <div class="colores">
+            <label for="talle<%=talles.number%>"><%=talles.number%>
+                <input name="talle" type="checkbox" value="<%=talles.id%>" id="talle<%=talles.number%>">
+            </label>
+        </div>
+            <% }) %>
+    </div>
 
-                    <h3>Especificaciones</h3>
-                    <label for="capellada">Capellada</label>
-                    <p class="form-error error-capellada">*(Este campo no puede estar vacío)</p>
-                    <input type="text" name="capellada" id="capellada"
-                        value="<%= locals.errors && old.capellada ? old.capellada : ''%>">
-                    <label for="forro">Forro</label>
-                    <p class="form-error error-forro">*(Este campo no puede estar vacío)</p>
-                    <input type="text" name="forro" id="forro"
-                        value="<%= locals.errors && old.forro ? old.forro : ''%>">
-                    <label for="suela">Suela</label>
-                    <p class="form-error error-suela">*(Este campo no puede estar vacío)</p>
-                    <input type="text" name="suela" id="suela"
-                        value="<%= locals.errors && old.suela ? old.suela : ''%>">
-                    <label for="origen">Origen</label>
-                    <p class="form-error error-origen">*(Este campo no puede estar vacío)</p>
-                    <input type="text" name="origen" id="origen"
-                        value="<%= locals.errors && old.origen ? old.origen : ''%>">
-                    <label>Imagen del producto</label>
-                    <% if(locals.errors) {%>
-                        <% errors.forEach(error=> { %>
-                            <% if(error.path=='product-image' ) {%>
-                                <p style="color: white; background-color: rgb(87, 10, 10); padding: 5px; border-radius: 5px; margin: 5px;">
-                                    <%= error.msg %>
-                                </p>
-                                <% }})} %>
-                                    <input type="file" name="product-image">
+    <button type="submit" class="enviar-btn">Enviar</button>
+</form>
+    </div>
+    </div>
+    </div>
+    </div>
 
-                                    <button type="submit">Enviar</button>
-                </form>
-                <style>
-                    <% if (locals.errors) {
-                        %><% errors.forEach(error=> {
-                                %> .error-<%=error.path %> {
-                                    display: block;
-                                }
-
-                                <%
-                            }) %><%
-                    }
-
-                    %>
-                </style>
-
-            </div>
-
-
-            <!--Footer-->
-            <%-include('../partials/footer.ejs')%>
-    </body>
+    <!--Footer-->
+    <%- include('../partials/footer.ejs') %>
+    <script src="/js/createProduct.js"></script>
+</div>
+</body>
 
 </html>
+

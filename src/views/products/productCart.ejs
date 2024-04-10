@@ -8,7 +8,10 @@
         <% let finalPrice = 0 %>
         <% let quantity = 0 %>
         <% if (carts.length > 0) { %>   
-            <section>        
+            <section>
+                <div class="caja-titulo">
+                    <h2>Productos</h2>
+                </div>        
                 <% carts.forEach(cart => { %>
                     <div class="caja-producto">
                         <img src="/images/products/<%=cart.product.image %>" alt="">
@@ -39,6 +42,9 @@
                 <% }) %>
             </section>
             <section>
+                <div class="caja-titulo">
+                    <h2>Resumen</h2>
+                </div>
                 <div class="resumen">
                     <div>
                         <p>Productos(<%= quantity %>)</p>

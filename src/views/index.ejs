@@ -30,6 +30,8 @@
     </div>
   
     <!-- Comienzo del main y sus productos -->
+
+    
     <!-- Se accede al json a través del controlador, se convierten los productos en objetos y se manipulan acá -->
     <main>
       <!-- Esta section también tiene su json a parte con marcas populares y es dinámica -->
@@ -48,38 +50,54 @@
       </section>
       
       <section class="productos-a">
-        <h1 id="ofertas">OFERTAS</h1>
+ 
        
-        <div class="container-flex">
+        <!-- <div class="container-flex"> -->
+          <div class="carousel-container">
+            <div class="offer-class"><h1 id="ofertas">OFERTAS</h1></div>
+            <div class="carousel-left-button" id="carouselLeftButton">
+              <!-- Botón para ir a la izquierda -->
+              <i class="fa fa-chevron-left" aria-hidden="true"></i>
+            </div>
+            <div class="product-carousel" id="productCarousel">
           <!-- Implementada la lógica para que solo cargue productos que tengan el descuento mayor a 0 -->
           <% for(let i = 0; i < offers.length; i++){ %>
           
           <div class="article-container">
-            <article class="article">
+            <article class="article carousel-item">
               <p class = id-producto style="display: none;"><%= offers[i].id %></p>
                 <div class="product-card">
                   <img src="/images/products/<%= offers[i].image %>" alt="">
                   <div class="product-detail">
-                    <p class="discount"><%= offers[i].discount %>% Off</p>
+                    <% if(offers[i].discount > 0){%>
+                      <div class="discount-class">
+                          <p><%=offers[i].discount + "%" %> Off</p>
+                      </div>
+                      <% } %>
+             <!--        <p class="discount"><%= offers[i].discount %>% Off</p> -->
                     <p class="precio">$<%= offers[i].price.toLocaleString('es-ES')%></p>
                     <p class="descripcion-larga" style='display:none;'><%= offers[i].large_description%></p>
                     <h3><%= offers[i].name %></h3>
                   </div>
-                  <img src="/images/brands/<%=offers[i].brand.brand_image%>" alt="" style="width: 75px;">
+                  <img src="/images/brands/<%=offers[i].brand.brand_image%>" alt="" style="width: 70px; text-align: left;">
                 </div>
             </article>
           </div>
           <% } %>
-  
-          <!-- <button class="ver-mas">Ver más</button> -->
-          <!-- Arreglar la redireccion -->
         </div>
+        <div class="carousel-right-button" id="carouselRightButton">
+          <!-- Botón para ir a la derecha -->
+          <i class="fa fa-chevron-right" aria-hidden="true"></i>
+        </div>
+        <a href="/product/list?offers=offers"><button class="ver-mas-btn">Ver más ofertas</button></a>
+      </div>
       </section>
 
     
       <section class="productos-a">
         <br><br><br>
-        <h1>DESTACADO</h1>
+        <div class="dad-div">
+        <div class="offer-class"><h1 id="ofertas">PRODUCTOS DESTACADOS</h1></div>
         <div class="container-flex">
           <% for(let i = 0; i < featured.length; i++){ %>
           <div class="article-container">
@@ -89,7 +107,7 @@
                   <img src="/images/products/<%= featured[i].image %>" alt="">
                   <div class="product-detail">
                     <p class="precio">$<%= featured[i].price.toLocaleString('es-ES')%></p>
-                    <p class="descripcion-larga" style='display:none;'><%= offers[i].large_description%></p>
+                    <p class="descripcion-larga" style='display:none;'><%= offers[i]?.large_description%></p>
                     <h3><%= featured[i].name %></h3>
                     <img src="/images/brands/<%=featured[i].brand.brand_image%>" alt="" style="width: 75px;">
                   </div>
@@ -98,11 +116,16 @@
           </div>
           <% } %>
         </div>
+        <a href="/product/list"><button class="ver-mas-btn">Ver más productos</button></a>
+      </div>
       </section>
+
+
       <% if(productosVistosBD.length > 0){ %>
-      <section class="productos-a">
+        <section class="productos-a">
+        <div class="dad-div">
+          <div class="offer-class" style="background-color: rgb(0, 16, 29);"><h1 id="ofertas">TU HISTORIAL</h1></div>
         <br><br><br>
-        <h1>ALGO DE LO QUE VISTE</h1>
         <div class="container-flex">
          
           <% for(let i = 0; i < productosVistosBD.length; i++){ %>
@@ -122,6 +145,7 @@
           </div>
           <% } %>
         </div>
+      </div>
       </section>
       <% } %>
       <div class="overlay"></div>
@@ -130,6 +154,7 @@
 
     <!-- Footer -->
     <%- include('./partials/footer.ejs') %>
+    <script src="/js/index/carouselControl.js"></script>
     <script src="/js/index/modals.js"></script>
   </body>
 </html>
