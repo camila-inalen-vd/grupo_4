@@ -14,27 +14,31 @@
           <div class="mitad1">
             <p class="suppDescription">Cuentanos en qué podemos ayudarte.</p>
             <p class="suppDescription2">En ShoesMarket, además de preocuparnos porque tus pies lleven el mejor calzado, nos preocupamos por tu integridad, los datos brindados serán de total acceso confidencial.</p>
-            <div class="errores">
-
+            <div class="errors">
+              <% if (locals.errors && errors.email) { %>
+                <div>
+                    <p class="error-msg"> <%= errors.email.msg %></p>
+                </div>
+            <% } %>
             </div>
             <div class="form-container">
         <% if(locals.mensaje){ %>
           <h1 style="background-color: skyblue; color: white; border-radius: 5px; text-align: center; margin: 10px;"><%= mensaje %></h1>
         <% } %>
-        <form action="/support" method="POST">
+        <form class="formu" action="/support" method="POST">
             <label>Nombre:</label><br>
-            <input type="text" name="nombre"><br>
+            <input type="text" name="nombre" id="nombre"><br>
             <label>Apellido:</label><br>
-            <input type="text" name="apellido"><br>
+            <input type="text" name="apellido" id="apellido"><br>
             <label>Email:</label><br>
-            <input type="email" name="email"><br>
+            <input type="email" name="email" id="email"><br>
             <label>Mensaje:</label><br>
-            <textarea name="mensaje"></textarea><br><br>
+            <textarea name="mensaje" id="contenido"></textarea><br><br>
             <button type="submit">Enviar</button>
         </form>
-        <div class="container-logo"> 
+        <a href="/"><div class="container-logo"> 
         <img src="images/logopng.png" id="logo" alt="">
-      </div>
+      </div></a>
       </div>
     </div>
       <div class="mitad2">
@@ -45,6 +49,6 @@
       
       <!-- Footer -->
       <%- include('./partials/footer.ejs') %>
-      <script src="/js/index/modals.js"></script>
+      <script src="/js/support.js"></script>
     </body>
   </html>

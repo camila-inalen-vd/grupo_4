@@ -30,6 +30,8 @@ body {
     border-radius: 5px;
 }
 
+
+
 .title-support {
     background: rgb(7, 140, 164);
     border-radius: 5px 5px 0px 0px;
@@ -48,6 +50,7 @@ body {
     align-self: center;
     object-fit: cover;
 }
+
 
 #logo {
     width: 80%;
@@ -92,6 +95,12 @@ body {
     border-radius: 4px;
     box-sizing: border-box;
     resize: none;
+}
+
+.errors {
+    margin-left: 35px;
+    margin-top: 15px;
+    color: red;
 }
 
 .form-container input[type="email"],
