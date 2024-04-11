@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', function() {
 if (window.innerWidth > 1024) {
     let modalUno = document.querySelector('.modalUno');
     let overlay = document.querySelector('.overlay');
@@ -41,20 +42,23 @@ if (window.innerWidth > 1024) {
 }
 
 //Esta parte me la regaló chatGPT
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault(); 
 
-        const destino = document.querySelector(this.getAttribute('href'));
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault(); 
 
-        if (destino) {
-            const offsetTop = destino.offsetTop;
+            const destino = document.querySelector(this.getAttribute('href'));
 
-            window.scrollTo({
-                top: offsetTop,
-                behavior: 'smooth'
-            });
-        }
+            if (destino) {
+                const offsetTop = destino.offsetTop;
+
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
     });
 });
+
 

@@ -24,6 +24,7 @@ const userController = {
 
                 return res.redirect('profile');
             }
+        
         }
         return res.render('user/login', { 
             errors:{
@@ -81,10 +82,29 @@ const userController = {
         return res.redirect('/')
     },
 
-    profile: (req, res) => {
-        return res.render('user/profile', {
+    profile: async (req, res) => {
+
+        let productosVistosBD = [];
+        const productosVistos = req.session.productosVistos;
+        
+        try{
+        if (productosVistos && productosVistos.length > 0) {
+            productosVistosBD = await db.Product.findAll({
+                include: [
+                    { association: 'brand', attributes: ['name', 'brand_image'] }
+                ],
+                where: {
+                    id: productosVistos
+                }
+            });
+        }}
+        catch {
+                res.send('Este es el error de la linea 104')
+        }
+
+        res.render('user/profile', {
             user: req.session.userLogged
-        })
+       , productosVistosBD })
     },
 
     logout: (req, res) => {

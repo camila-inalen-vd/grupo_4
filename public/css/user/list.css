@@ -41,3 +41,29 @@ tr:nth-child(even){
     cursor: pointer;
     font-size: 1em;
   }
+
+  .crear-boton-container {
+    display: block;
+    width: 100%;
+  }
+
+  .crear-boton {
+    background-color: #007bff;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    width: 150px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .crear-boton:hover {
+    background-color: #a9c4bd;
+  }
+  
+  .crear-boton a {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+  }

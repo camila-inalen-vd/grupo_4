@@ -11,21 +11,32 @@ main{
     padding: 5% 0;
     margin: auto;
 }
+.avatar {
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.76);
+}
 section{
     width: 90%;
     margin: auto;
     max-width: 1000px;
-    text-align: center;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
     border-radius: 10px;
+    background-color: white;
 }
 .encabezado{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: start;
     align-items: center;
     padding: 20px;
-    border-bottom: solid 1px rgba(85, 84, 84, 0.4)
+    border-bottom: solid 1px rgba(85, 84, 84, 0.4);
+    color: white;
+    background-color: rgb(7, 140, 164);
+    border-radius: 10px 10px 0 0;
 }
+
+.user-image , .encabezadito {
+    width: 50%;
+}
+
 .avatar{
     width: 8rem;
     height: 8rem;
@@ -36,11 +47,130 @@ section{
 .nombre{
     font-size: 1.5rem;
 }
+
 .datos{
     display: flex;
+    flex-direction: column;
     padding: 20px;
-    font-size: 1rem;
+
     justify-content: center;
+    align-content: center;
+}
+
+.emailsito {
+    padding: 5px;
+    background-color: white;
+    border: 1px solid rgb(219, 219, 219);
+    margin-top: 15px;
+    border-radius: 5px;
+    color: black;
+    width: 200px;
+    text-wrap: stable;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.76);
+}
+
+.art-historial {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    background-color: white;
+    margin: 5px;
+    padding: 15px;
+    border-radius: 3px;
+    border: 1px solid rgb(219, 219, 219);
+    margin: 0 auto;
+    margin-top: 10px;
+    text-align: center;
+    border-radius: 10px;
+
+    width: 100%;
+}
+
+.discount {
+    background-color: green !important;
+    border-radius: 5px;
+    color: white;
+    width: 100px;
+    margin: 0 auto !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+    text-align: center;
+}
+
+.links {
+    text-decoration: none;
+    background-color: #007bff;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+}
+
+.links a, .links p {
+    font-weight: 700;
+}
+.links:hover {
+    background-color: #a9c4bd;
+}
+
+.botones {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.description {
+    display: flex;
+    align-content: center;
+    flex: column;
+    width: 60%;
+    display: block;
+    margin: 20px;
+}
+
+.description p {
+    padding: 5px;
+    margin: 5px;
+}
+
+.p-img {
+        display: block;
+        width: 30%;
+        height: 100%;
+        z-index: 1;
+}
+
+.p-img img {
+    width: 100%;
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 5px;
+}
+
+.nombre-p {
+    color: rgb(7, 140, 164);
+    font-weight: 700;
+}
+
+.descri-p {
+    color: rgb(0, 16, 29);
+}
+
+.hist-title {
+    text-align: center;
+    background-color: rgb(0, 16, 29);
+    color: white;
+    padding: 5PX;
+    border-radius: 10PX;
+}
+
+.price {
+    color: green;
+    font-weight: 700;
+}
+
+.marca {
+    font-weight: 700;
 }
 
 @media (min-width: 769px) {
@@ -48,10 +178,55 @@ section{
         width: 10rem;
         height: 10rem;
     }
-    .nombre{
-        font-size: 2rem;
+
+}
+@media (max-width: 769px) {
+    .encabezado {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
     }
-    .datos{
-        font-size: 1.2rem;
+    .encabezado , .encabezadito {
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .avatar{
+        margin: 0 auto;
+    }
+
+    .description {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 400px) {
+    .art-historial {
+        width: 90%;
+        align-content: center;
+        justify-content: center;
+    }
+    .p-img {
+        margin: 0 auto;
+        width: 50%;
+    }
+
+    .description {
+        width: 100%;
     }
 }
+@media (min-width: 400px) and (max-width: 769px) {
+    .art-historial {
+        width: 60%;
+        align-content: center;
+        justify-content: center;
+    }
+    .p-img {
+        margin: 0 auto;
+        width: 50%;
+    }
+
+  }

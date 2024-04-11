@@ -6,21 +6,50 @@
     <main>
         <section class="perfil">
             <div class="encabezado">
-                <div>
+                <div class="user-image">
                     <% if (user.image) { %>
                         <div style="background-image: url('/images/user/<%= user.image %>')" class="avatar"></div>
                     <% } else { %>
                         <div style="background-image: url('/images/user/default.jpeg')" class="avatar"></div>
                     <% } %>
                 </div>
-                <div>
-                   <p class="nombre"><%= user.name %> <%= user.last_name %></p>
+                <div class="encabezadito">
+                   <p class="nombre">Hola, <%= user.name %> <%= user.last_name %></p>
+                   <div class="emailsito">
+                   <p><%= user.email %></p>
+                </div>
                 </div>
             </div>
             <div class="datos">
-                <div>
-                    <p>Email: <%= user.email %></p>
+                <div class="botones">
+                <a class="links" href="/"><p>Ir al Inicio</p> </a>
+                <% if(isLogged && userLogged.admin === 1) {%>
+                    <a class="links" href="/product/adminproduct"><p>Administrar productos</p> </a>
+                    <a class="links" href="/user/list"><p>Administrar usuarios</p> </a>
+                <% } %>
                 </div>
+                <% if(productosVistosBD.length > 0){ %>
+                <div class="todo">
+                    <p class="hist-title">TU HISTORIAL</p>
+                    <% productosVistosBD.forEach( producto => { %>
+                    <article class="art-historial">
+                        <div class="p-img">
+                        <img src="/images/products/<%=producto.image %>" alt="">
+                        </div>
+                        <div class="description">
+                        <p class="nombre-p"><%= producto.name.toUpperCase() %></p><hr>
+                        <% if(producto.discount > 0) { %>
+                        <p class="discount"><%= producto.discount%>% Off</p><hr>
+                        <% } %>
+                        <p class="price">$<%= producto.price.toLocaleString('es-ES') %></p><hr>
+                        <p class="marca"><%= producto.brand.name %></p><hr>
+                        <p class="descri-p"><%= producto.description %></p><hr>
+                    </div>
+                    </article>
+                    <% }) %>
+                </div>
+                <% } %>
+                    
             </div>
         </section>
     </main>
