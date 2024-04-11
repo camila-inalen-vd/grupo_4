@@ -29,11 +29,12 @@ img{
     flex: 1;
   }
  .product-img img{
-    width: 100%;
+    width: 90%;
     height: auto;
     border-radius: 10px;
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
+    margin-left: 25px;
     /*margin-bottom: 10px; */
  } 
  .product-img img:hover{
@@ -79,6 +80,8 @@ img{
     font-size: 20px;
     text-align: center;
     max-width: 700px;
+    z-index: 0;
+
 }
 @keyframes moveTitle {
     0% { /* Definimos el estado inicial */
@@ -94,6 +97,7 @@ img{
 
 .title-ofert {
     animation: moveTitle 2s ease infinite; /* Aplicamos la animación al título */
+    z-index: 0;
 }
 .product-name h4 {
     margin-bottom: 10px;
