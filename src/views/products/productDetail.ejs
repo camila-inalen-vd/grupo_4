@@ -38,7 +38,7 @@
             </div>
         <section class="container-info-detail">
            <div class="info-product">
-            <% if (producto.price > 100) { %>
+            <% if (producto.discount) { %>
             <div class="title-ofert"> <p class="titulo-oferta">SALE</p> </div>
             <% } %>
               <div class="product-name">
@@ -57,7 +57,7 @@
                        <span>$ <%= producto.price.toLocaleString('es-ES')%></span>
                     </p>
                    <p class="container-dues">
-                        PAGÁ EN  <%= producto.dues%> CUOTAS
+                    <%= producto.dues%> CUOTAS SIN INTERES
                     </p>
                   <p class="free-return">
                         DEVOLUCIÓN GRATIS
@@ -114,7 +114,7 @@
                 </div>
                     <div class="last-product">
                       <% if(producto.stock) { %>
-                      <h4>¡ÚLTIMA DISPONIBLE!</h4>
+              <!--     <h4>¡ÚLTIMA DISPONIBLE!</h4> -->
                       <% }else { %>
                       <i class="fa-solid-fa-plus"></i>SIN STOCK</button>
                       <% } %>
