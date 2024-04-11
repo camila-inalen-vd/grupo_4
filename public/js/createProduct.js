@@ -7,7 +7,7 @@ window.addEventListener("load", function () {
         var nombre = document.querySelector("#nombre");
         var nombreErrorMsg;
         if (nombre.value.trim() === "") {
-            nombreErrorMsg = "Ingresa un nombre";
+            nombreErrorMsg = "• Ingresa un nombre";
             errors = true;
         }
 
@@ -15,7 +15,7 @@ window.addEventListener("load", function () {
         var marca = document.querySelector("#marca");
         var marcaErrorMsg;
         if (marca.value.trim() === "") {
-            marcaErrorMsg = "Selecciona una marca";
+            marcaErrorMsg = "• Selecciona una marca";
             errors = true;
         }
 
@@ -23,7 +23,7 @@ window.addEventListener("load", function () {
         var precio = document.querySelector("#precio");
         var precioErrorMsg;
         if (precio.value.trim() === "") {
-            precioErrorMsg = "Ingresa un precio";
+            precioErrorMsg = "• Ingresa un precio";
             errors = true;
         }
 
@@ -31,7 +31,7 @@ window.addEventListener("load", function () {
         var cuotas = document.querySelector("#cuotas");
         var cuotasErrorMsg;
         if (cuotas.value.trim() === "") {
-            cuotasErrorMsg = "Ingresa el número de cuotas";
+            cuotasErrorMsg = "• Ingresa el número de cuotas";
             errors = true;
         }
 
@@ -39,7 +39,7 @@ window.addEventListener("load", function () {
         var descuento = document.querySelector("#descuento");
         var descuentoErrorMsg;
         if (descuento.value.trim() === "") {
-            descuentoErrorMsg = "Ingresa un descuento";
+            descuentoErrorMsg = "• Ingresa un descuento";
             errors = true;
         }
 
@@ -47,7 +47,7 @@ window.addEventListener("load", function () {
         var stock = document.querySelector("#stock");
         var stockErrorMsg;
         if (stock.value.trim() === "") {
-            stockErrorMsg = "Ingresa el stock";
+            stockErrorMsg = "• Ingresa el stock";
             errors = true;
         }
 
@@ -55,7 +55,7 @@ window.addEventListener("load", function () {
         var descripcion = document.querySelector("#descripcion");
         var descripcionErrorMsg;
         if (descripcion.value.trim() === "") {
-            descripcionErrorMsg = "Ingresa una descripción";
+            descripcionErrorMsg = "• Ingresa una descripción";
             errors = true;
         }
 
@@ -63,7 +63,7 @@ window.addEventListener("load", function () {
         var descripcionLarga = document.querySelector("#descripcionLarga");
         var descripcionLargaErrorMsg;
         if (descripcionLarga.value.trim() === "") {
-            descripcionLargaErrorMsg = "Ingresa una descripción larga";
+            descripcionLargaErrorMsg = "• Ingresa una descripción larga";
             errors = true;
         }
 
@@ -71,7 +71,7 @@ window.addEventListener("load", function () {
         var coloresSeleccionados = document.querySelectorAll("input[name='color']:checked");
         var coloresErrorMsg;
         if (coloresSeleccionados.length === 0) {
-            coloresErrorMsg = "Debes elegir al menos un color";
+            coloresErrorMsg = "• Debes elegir al menos un color";
             errors = true;
         }
 
@@ -79,7 +79,7 @@ window.addEventListener("load", function () {
         var tallesSeleccionados = document.querySelectorAll("input[name='talle']:checked");
         var tallesErrorMsg;
         if (tallesSeleccionados.length === 0) {
-            tallesErrorMsg = "Debes elegir al menos un talle";
+            tallesErrorMsg = "• Debes elegir al menos un talle";
             errors = true;
         }
 
@@ -87,7 +87,7 @@ window.addEventListener("load", function () {
         var capellada = document.querySelector("#capellada");
         var capelladaErrorMsg;
         if (capellada.value.trim() === "") {
-            capelladaErrorMsg = "Ingresa la capellada";
+            capelladaErrorMsg = "• Ingresa la capellada";
             errors = true;
         }
 
@@ -95,7 +95,7 @@ window.addEventListener("load", function () {
         var forro = document.querySelector("#forro");
         var forroErrorMsg;
         if (forro.value.trim() === "") {
-            forroErrorMsg = "Ingresa el forro";
+            forroErrorMsg = "• Ingresa el forro";
             errors = true;
         }
 
@@ -103,7 +103,7 @@ window.addEventListener("load", function () {
         var suela = document.querySelector("#suela");
         var suelaErrorMsg;
         if (suela.value.trim() === "") {
-            suelaErrorMsg = "Ingresa la suela";
+            suelaErrorMsg = "• Ingresa la suela";
             errors = true;
         }
 
@@ -111,7 +111,7 @@ window.addEventListener("load", function () {
         var origen = document.querySelector("#origen");
         var origenErrorMsg;
         if (origen.value.trim() === "") {
-            origenErrorMsg = "Ingresa el origen";
+            origenErrorMsg = "• Ingresa el origen";
             errors = true;
         }
 
@@ -119,7 +119,7 @@ window.addEventListener("load", function () {
         var imageInput = document.querySelector("input[name='product-image']");
         var imageErrorMsg;
         if (!imageInput.files || imageInput.files.length === 0) {
-            imageErrorMsg = "Debes seleccionar una imagen";
+            imageErrorMsg = "• Debes seleccionar una imagen";
             errors = true;
         }
 

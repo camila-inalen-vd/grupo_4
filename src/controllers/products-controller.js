@@ -381,7 +381,7 @@ const productsController = {
         });
 
 
-        res.render('/');
+        res.redirect('/');
     }
 
 }

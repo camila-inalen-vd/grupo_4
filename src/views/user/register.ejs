@@ -7,8 +7,10 @@
     <%-include('../partials/header.ejs')%>
     <main>
         <section>
-            <h2>Crear cuenta</h2>
-            <form action="/user/register" method="POST" enctype="multipart/form-data">
+            <div class="register-title">
+            <h2 class="recuperar">Crear cuenta</h2>
+            </div>
+            <form action="/user/register" method="POST" enctype="multipart/form-data" class="register-form">
                 <div class="form">
                     <label for="name">Nombre</label>
                     <input type="text" name="name" id="name"
@@ -63,7 +65,7 @@
                     </div>
                 </div>
                 <div class="boton">
-                    <button type="submit">Crear cuenta</button>
+                    <button class="form-button" type="submit">Crear cuenta</button>
                 </div>
             </form>
             <p class="login">¿Ya tienes una cuenta? <a href="login">Iniciar sesion</a></p>
