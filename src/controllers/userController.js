@@ -98,6 +98,35 @@ const userController = {
         res.render('user/list', {users})
     },
 
+    toadmin: async (req, res) => {
+        await db.User.update({
+            admin: 1
+        }, {
+            where : {
+                id : req.params.id
+            }
+        })
+        res.redirect('back')
+    },
+
+    toclient: async (req, res) => {
+        const admins = await db.User.findAll({
+            where: { admin: 1 }
+        });
+        if (admins.length > 1) {
+            await db.User.update({
+                admin: 0
+            }, {
+                where: {
+                    id: req.params.id
+                }
+            });
+            return res.redirect('back');
+        } else {
+            return res.status(400).json({ error: "Debe haber por lo menos un administrador" });
+        }
+    },
+
     deleteUser: async (req, res) => {
         await db.User.destroy({
             where : {

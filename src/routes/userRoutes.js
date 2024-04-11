@@ -47,6 +47,10 @@ router.get('/logout', userController.logout)
 
 router.get('/list', authMiddleware, adminMiddleware ,userController.list)
 
+router.put('/toadmin/:id', authMiddleware, adminMiddleware, userController.toadmin)
+
+router.put('/toclient/:id', authMiddleware, adminMiddleware, userController.toclient)
+
 router.delete('/delete/:id', authMiddleware, adminMiddleware, userController.deleteUser)
 
 module.exports = router;
