@@ -5,7 +5,9 @@
     <%-include('../partials/header.ejs')%>
     <main>
         <section>
+            <div class="login-title">
             <h2>Iniciar sesion</h2>
+            </div>
             <form action="/user/login" method="POST" class="login-form">
                 <div class="form">
                     <label for="email">Email</label>
@@ -33,7 +35,7 @@
                     <button class="button-login" type="submit">Iniciar sesion</button>
                 </div>
             </form>
-            <p class="crear">¿No tienes una cuenta? <a href="register">Crear Cuenta</a></p>
+            <p class="recup">¿No tienes una cuenta? <a class="recuperar" href="register">Crear Cuenta</a></p>
         </section>
     </main>
     <%-include('../partials/footer.ejs')%>
